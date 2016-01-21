@@ -1,3 +1,7 @@
 baseurl = "http://pliutau.com/"
 languageCode = "en-us"
 title = "Aliaksandr Pliutau"
+comments = true
+
+[params]
+  disqus = "pliutau"
