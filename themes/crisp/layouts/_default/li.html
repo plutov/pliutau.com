@@ -8,11 +8,12 @@
         </time>
 		<span class="taglist">
 		{{if .Params.tags }}
-		&middot; 
+		&middot;
     	{{ range $index, $tag := .Params.tags }}
             <a href="{{ $baseurl }}tags/{{ $tag | urlize }}/">{{ $tag }}</a>
         {{ end }}
     	{{ end }}
 		</span>
 	</h3>
+	{{ .Summary }}
 </section>
