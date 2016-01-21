@@ -6,70 +6,7 @@
     <description>Recent content on Aliaksandr Pliutau</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 21 Jan 2016 00:04:23 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Go-client for PayPal API</title>
-      <link>http://localhost:1313/go-client-for-paypal/</link>
-      <pubDate>Thu, 21 Jan 2016 00:04:23 +0700</pubDate>
-      
-      <guid>http://localhost:1313/go-client-for-paypal/</guid>
-      <description>
-
-&lt;p&gt;&lt;img src=&#34;https://logpacker.com/img/blog_go_cropped.png&#34; alt=&#34;LogPacker&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;clients-in-go:480ed54711d96790956679e3ca42e9a5&#34;&gt;Clients in Go&lt;/h3&gt;
-
-&lt;p&gt;There are official SDK libraries for PHP, Java and Python, but our service is written in GO, and in this case SDK search mostly &lt;a href=&#34;https://github.com/search?q=paypal+golang&#34; title=&#34;GitHub&#34;&gt;fails&lt;/a&gt;. As a result we have found five projects on github, two of which seem worthily, but at the same time they have bounded functional:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/leebenson/paypal&#34; title=&#34;leebenson/paypal&#34;&gt;leebenson/paypal&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/crowdmob/paypal&#34; title=&#34;crowdmob/paypal&#34;&gt;crowdmob/paypal&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;contribute-to-open-source:480ed54711d96790956679e3ca42e9a5&#34;&gt;Contribute to Open Source&lt;/h3&gt;
-
-&lt;p&gt;So we decided to make a native client in Go with 100% API coverage.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/logpacker/PayPal-Go-SDK&#34; title=&#34;GitHub&#34;&gt;GitHub page&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://logpacker.com/blog/go-client-for-paypal-sdk?utm_source=pliutau&#34; title=&#34;LogPacker&#34;&gt;Full article and how we did it&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Hello folks</title>
-      <link>http://localhost:1313/hello-folks/</link>
-      <pubDate>Wed, 20 Jan 2016 14:10:50 +0700</pubDate>
-      
-      <guid>http://localhost:1313/hello-folks/</guid>
-      <description>
-
-&lt;h3 id=&#34;let-me-introduce-myself:e7367ee0d88a40b0f56a7e9cbfa10b7f&#34;&gt;Let me introduce myself&lt;/h3&gt;
-
-&lt;p&gt;I started my blogging with Russian content at &lt;a href=&#34;http://plutov.by&#34; title=&#34;plutov.by&#34;&gt;plutov.by&lt;/a&gt;. Then I decided to share my thoughts in English to reach more people interested in this stuff.&lt;/p&gt;
-
-&lt;p&gt;Currently I live and work in Saigon. Here we have an eCommerce project &lt;a href=&#34;https://lazada.com&#34; title=&#34;lazada.com&#34;&gt;Lazada&lt;/a&gt; where I work as Team Lead in DevOps team.&lt;/p&gt;
-
-&lt;h3 id=&#34;what-shall-i-post:e7367ee0d88a40b0f56a7e9cbfa10b7f&#34;&gt;What shall I post?&lt;/h3&gt;
-
-&lt;p&gt;Materials, examples, thoughts about Go, DevOps, PHP, CI/CD, open source and more.&lt;/p&gt;
-
-&lt;h3 id=&#34;contacts:e7367ee0d88a40b0f56a7e9cbfa10b7f&#34;&gt;Contacts&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://github.com/plutov&#34; title=&#34;GitHub&#34;&gt;GitHub&lt;/a&gt; - here you can find my email too&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.linkedin.com/in/pltvs&#34; title=&#34;LinkedIn&#34;&gt;LinkedIn&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.facebook.com/aplutov&#34; title=&#34;Facebook&#34;&gt;Facebook&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;hugo:e7367ee0d88a40b0f56a7e9cbfa10b7f&#34;&gt;Hugo&lt;/h3&gt;
-
-&lt;p&gt;Big thanks to &lt;a href=&#34;https://github.com/spf13&#34; title=&#34;spf13&#34;&gt;spf13&lt;/a&gt; for such a great project HUGO!&lt;/p&gt;
-</description>
-    </item>
     
   </channel>
 </rss>

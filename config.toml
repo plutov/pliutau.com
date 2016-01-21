@@ -5,3 +5,4 @@ comments = true
 
 [params]
   disqus = "pliutau"
+  ga = "UA-72731922-1"
