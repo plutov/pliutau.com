@@ -1,6 +1,5 @@
 +++
 date = "2016-01-20T14:10:50+07:00"
-draft = true
 title = "Hello folks"
 tags = [ "Hugo", "Blog", "Go", "Golang" ]
 +++

@@ -1,6 +1,5 @@
 +++
 date = "2016-01-21T00:04:23+07:00"
-draft = true
 title = "Go-client for PayPal API"
 tags = [ "Go", "Golang", "PayPal", "OpenSource" ]
 +++
