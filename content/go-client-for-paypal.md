@@ -5,14 +5,14 @@ tags = [ "Go", "Golang", "PayPal", "OpenSource" ]
 +++
 ![LogPacker](https://logpacker.com/img/blog_go-sm-2.png)
 <!--more-->
-### Clients in Go
+#### Clients in Go
 
 There are official SDK libraries for PHP, Java and Python, but our service is written in GO, and in this case SDK search mostly [fails](https://github.com/search?q=paypal+golang "GitHub"). As a result we have found five projects on github, two of which seem worthily, but at the same time they have bounded functional:
 
 * [leebenson/paypal](https://github.com/leebenson/paypal "leebenson/paypal")
 * [crowdmob/paypal](https://github.com/crowdmob/paypal "crowdmob/paypal")
 
-### Contribute to Open Source
+#### Contribute to Open Source
 
 So we decided to make a native client in Go with 100% API coverage.
 

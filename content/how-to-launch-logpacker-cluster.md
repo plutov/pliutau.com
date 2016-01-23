@@ -5,21 +5,21 @@ tags= [ "Go", "Golang", "Logs", "LogPacker" ]
 +++
 ![LogPacker](https://logpacker.com/img/cluster.png)
 
-### What is it?
+#### What is it?
 
 LogPacker – is a log management system. Application daemon is distinguished by simplicity, reliability and resource efficiency. Now you don’t have to spend a lot of time for service setting and support, and also to create a great number of “kludges”. LogPacker already contains “kludge” solutions...
 
-### Download Daemons
+#### Download Daemons
 
 Each LogPacker plan provides you with unique License (even free plan). You can have multiple plans under one account. And you can find it on [my.logpacker.com](https://my.logpacker.com).
 
 Once you got a license, you can download LogPacker as DEB/RPM or TAR file and deliver/install to your server(s).
 <!--more-->
-### Environment
+#### Environment
 
 Let's imagine that you have a website running on N Linux servers: some are for PHP app, some are for DB, etc.
 
-### Agents
+#### Agents
 
 On each server where we may to have a system logs we must to install a LogPacker Agent per server. Agent has no dependencies and works as a standalone app, which scans your system for logs data in all popular locations, aggregate it and save (we'll talk about LogPacker Server later).
 
@@ -59,7 +59,7 @@ paths=/tmp/myapp/*.log
 services=mysql,nginx,myapp
 ```
 
-### Servers
+#### Servers
 
 Agents scan, collect and send logs to the LogPacker Servers, while Servers receive logs and save it to the Storage. So LogPacker Server has a dependency in Storage (ElasticSearch, MySQL, Postgresql, MongoDB, etc.).
 
@@ -90,7 +90,7 @@ autorestart=true
 startretries=10
 ```
 
-### Clusterization
+#### Clusterization
 
 You can up few Servers and configure they to work together in Cluster, so Agents will select best node to store data. Edit configs/server.ini (cluster.nodes) of any Server and add another Server to the network.
 
@@ -103,7 +103,7 @@ Then tell Agent where to get Network Info:
 networkapi=127.0.0.1:9999
 ```
 
-### Visualize your logs
+#### Visualize your logs
 
 There are 3 ways now to visualize your logs data:
 
@@ -111,7 +111,7 @@ There are 3 ways now to visualize your logs data:
 * Use logpacker_api package (./logpacker_api -v)
 * Use your own driver to select data from Storage
 
-### Track JS errors from your website
+#### Track JS errors from your website
 
 When you start a Server you can choose an Public API endpoint, it's used to receive data from outer networks.
 
@@ -148,3 +148,7 @@ var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(lp
 })();
 </script>
 ```
+
+#### Read more
+
+[Read more about LogPacker configuration here](https://logpacker.com/resources)
