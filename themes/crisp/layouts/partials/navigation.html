@@ -1,0 +1,4 @@
+Tags:<br/>
+{{ range $name, $taxonomy := .Site.Taxonomies.tags }}
+    <a href="/tags/{{ $name | urlize }}">{{ $name }}</a>
+{{ end }}
