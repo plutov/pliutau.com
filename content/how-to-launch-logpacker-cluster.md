@@ -3,7 +3,7 @@ date = "2016-01-23T09:34:37+07:00"
 title = "How to launch a LogPacker Cluster"
 tags= [ "Go", "Golang", "Logs", "LogPacker" ]
 +++
-![LogPacker](https://logpacker.com/img/cluster.png)
+![LogPacker](/cluster.png)
 
 #### What is it?
 

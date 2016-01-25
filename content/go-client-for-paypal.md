@@ -3,7 +3,7 @@ date = "2016-01-21T00:04:23+07:00"
 title = "Go-client for PayPal API"
 tags = [ "Go", "Golang", "PayPal", "OpenSource" ]
 +++
-![LogPacker](https://logpacker.com/img/blog_go-sm-2.png)
+![LogPacker](/paypal.png)
 <!--more-->
 #### Clients in Go
 
