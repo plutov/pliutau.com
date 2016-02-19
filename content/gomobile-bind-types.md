@@ -1,7 +1,7 @@
 +++
 date = "2016-01-25T13:12:43+07:00"
 title = "Supported Go types for gomobile bind"
-tags = [ "Go", "Golang", "gomobile", "android", "java"]
+tags = [ "Go", "gomobile", "Android", "Java"]
 +++
 ![LogPacker](/gotypes.jpg)
 

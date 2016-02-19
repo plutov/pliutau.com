@@ -1,7 +1,7 @@
 +++
 date = "2016-01-21T00:04:23+07:00"
 title = "Go-client for PayPal API"
-tags = [ "Go", "Golang", "PayPal", "OpenSource" ]
+tags = [ "Go", "PayPal", "OpenSource" ]
 +++
 ![LogPacker](/paypal.png)
 <!--more-->

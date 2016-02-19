@@ -1,7 +1,7 @@
 +++
 date = "2016-01-20T14:10:50+07:00"
 title = "Hello folks"
-tags = [ "Hugo", "Blog", "Go", "Golang" ]
+tags = [ "Hugo", "Blog", "Go" ]
 +++
 #### Let me introduce myself
 I started my blogging with Russian content at [plutov.by](http://plutov.by "plutov.by"). Then I decided to share my thoughts in English to reach more people interested in this stuff.

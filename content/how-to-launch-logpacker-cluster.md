@@ -1,7 +1,7 @@
 +++
 date = "2016-01-23T09:34:37+07:00"
 title = "How to launch a LogPacker Cluster"
-tags= [ "Go", "Golang", "Logs", "LogPacker" ]
+tags= [ "Go", "Logs", "LogPacker" ]
 +++
 ![LogPacker](/cluster.png)
 

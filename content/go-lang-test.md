@@ -1,7 +1,7 @@
 +++
 date = "2016-02-05T18:08:43+07:00"
 title = "Golang test"
-tags = [ "Go", "Golang", "Test" ]
+tags = [ "Go", "Testing" ]
 +++
 30 basic questions to measure your Golang knowledge. Answers and .go files you can find on [GitHub page](https://github.com/logpacker/go-questions).
 
