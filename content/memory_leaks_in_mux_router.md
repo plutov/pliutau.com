@@ -26,9 +26,9 @@ There is our current version with memory leaking:
 http.ListenAndServe(adrr, r)
 ```
 
-The problem is that variables must be cleared at the end of a request, to remove all values that were stored. This can be done in an `http.Handler`, after a request was served. Just call `context.Clear()`` passing the request.
+The problem is that variables must be cleared at the end of a request, to remove all values that were stored. This can be done in an `http.Handler`, after a request was served. Just call `context.Clear()` passing the request.
 
-It's a documented behavior, but easy to miss, also `context` package has a special wrapper function, `ClearHandler()``, which conveniently wraps an `http.Handler` to clear variables at the end of a request lifetime.
+It's a documented behavior, but easy to miss, also `context` package has a special wrapper function, `ClearHandler()`, which conveniently wraps an `http.Handler` to clear variables at the end of a request lifetime.
 
 So here is an updated version of server without memory leaks:
 ```go
