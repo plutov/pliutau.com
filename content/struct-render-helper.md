@@ -4,7 +4,6 @@ title = "Go templates. Helper to render a struct"
 tags = [ "Go" ]
 +++
 
-
 The Go language comes with a powerful built-in template engine. In Go, we have the [template](https://golang.org/pkg/html/template/) package to help handle templates. We can use functions like `Parse`, `ParseFile` and `Execute` to load templates from plain text or files, then evaluate the dynamic parts. Also it's possible to create user-defined functions and call it from templates.
 <!--more-->
 
