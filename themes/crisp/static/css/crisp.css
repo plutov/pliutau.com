@@ -108,13 +108,13 @@ ul, ol {
 	margin-left: 3em;
 }
 code {
-	font-size:1.4em;
-	background: #eee;
+	font-size:1.1em;
+	background: #f9f9f9 !important;
 }
 pre {
 	font-size: 0.8em;
 	line-height: 2em;
-	background: #eee;
+	background: #f9f9f9 !important;
 	padding: 1em;
 	word-break: break-all;
 	word-wrap: break-word;
