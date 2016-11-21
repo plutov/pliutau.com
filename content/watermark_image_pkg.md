@@ -4,6 +4,7 @@ title = "Add a Watermark to the image with image go package"
 tags = [ "Go" ]
 +++
 Go is very rich for packages support. But I also can say that Go is a perfect language to write almost everything with help of `stdlib` only. At [Weelco][https://weelco.com] we are generating some images with watermarks in Go, and we are using only `image` package.
+<!--more-->
 
 Here is a simplified example of this process:
 
