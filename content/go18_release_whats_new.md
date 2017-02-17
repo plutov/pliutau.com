@@ -9,7 +9,7 @@ And in this article I will talk in short what's new in Go 1.8.
 
 ### HTTP graceful shutdown
 
- It is now possible to call `srv.Close()`` to halt an `http.Server` immediately, or `srv.Shutdown(ctx)`` to stop and gracefully drain the server of connections.
+ It is now possible to call `srv.Close() to halt an `http.Server` immediately, or `srv.Shutdown(ctx)` to stop and gracefully drain the server of connections.
 
 ### HTTP/2.0 server push via http.Pusher
 
