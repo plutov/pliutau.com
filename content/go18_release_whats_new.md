@@ -53,7 +53,7 @@ Some improvements in runtime:
  - defer (10-35% speedup)
  - cgo (45% speedup)
 
- ### SSA improvements
+### SSA improvements
 
   - 20-30% reduction in binary size
   - 5-35% speedup
