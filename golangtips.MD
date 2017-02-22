@@ -1,0 +1,3 @@
+ - Log an error or return it, don't do both.
+ - `defer` is slow.
+ - Use `iota` in constants if the value doesn't matter.
