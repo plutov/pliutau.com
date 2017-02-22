@@ -16,7 +16,7 @@ Please provide a function `FloydTriangle` that returns a Floyd's triangle matrix
 4 5 6
 7 8 9 10
 ```
-
+<!--more-->
 ### Run tests with benchmarks
 
 ```
