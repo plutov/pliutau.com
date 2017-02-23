@@ -6,3 +6,5 @@ comments = true
 [params]
   disqus = "pliutau"
   ga = "UA-72731922-1"
+  subscribe_rss = "/index.xml"
+  subscribe_email = "a.pliutau@gmail.com"
