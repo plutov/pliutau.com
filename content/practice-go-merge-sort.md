@@ -2,6 +2,7 @@
 date = "2017-03-08T12:37:17+07:00"
 tags = [ "Go", "Golang", "practice-go" ]
 title = "Practice Go: Merge Sort"
+type = "post"
 +++
 
 [Create a Pull Request for this exercise](https://github.com/plutov/practice-go/tree/master/mergesort)
