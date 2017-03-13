@@ -1,0 +1,27 @@
+version: '2'
+services:
+  app:
+    build:
+      context: ./app
+    ports:
+      - "8080:8080"
+    #entrypoint:
+      #- /go/bin/app
+    depends_on:
+      - db
+      - beanstalkd
+
+  beanstalkd:
+    image: schickling/beanstalkd:latest
+    ports:
+      - "11300:11300"
+
+  db:
+    image: mysql:5.7
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: app
+      MYSQL_PASSWORD: 12345
+      MYSQL_DATABASE: app
