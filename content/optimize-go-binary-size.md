@@ -2,6 +2,7 @@
 date = "2016-03-01T10:18:54+07:00"
 title = "Optimize Go binary size"
 tags = [ "Go", "ldflags" ]
+type = "post"
 +++
 
 #### ~21MB
@@ -14,7 +15,7 @@ Some people are complaining about huge size of Go compiled binaries. But it make
 go build logpacker_daemon.go && du -h logpacker_daemon
 21M	logpacker_daemon
 ```
-<!--more-->
+
 #### ~15MB
 
 We distribute this binary to our customers, and they do not need to debug this tool, so I decided to turn off it.

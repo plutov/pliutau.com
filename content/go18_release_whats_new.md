@@ -2,6 +2,7 @@
 date = "2017-02-17T10:32:23+07:00"
 title = "Go 1.8 released. What is new?"
 tags = [ "Go", "GoReleaseParty", "Go 1.8", "Golang" ]
+type = "post"
 +++
 Go team has released new version on February 16. You can get it from the [download](https://golang.org/dl/) page. To celebrate the release, Go User Groups around the world are holding release parties this week. Spread the word using hashtag [#GoReleaseParty](https://twitter.com/hashtag/goreleaseparty).
 

@@ -1,4 +1,5 @@
 +++
+type = "post"
 date = "2017-03-10T15:41:47+07:00"
 tags = [ "Go", "Golang", "practice-go" ]
 title = "Practice Go: Word Ladder"
@@ -23,7 +24,7 @@ WordLadder("hot", "dog", []string{"hot", "dog", "cog", "pot", "dot"})
 3 elements in transformation sequence
 ```
 
-<!--more-->
+
 ### Run tests with benchmarks
 
 ```

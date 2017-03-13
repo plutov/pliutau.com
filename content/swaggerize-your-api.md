@@ -2,10 +2,11 @@
 date = "2016-10-03T12:27:19+07:00"
 title = "Swaggerize your APIs"
 tags = [ "Go", "Swaggger" ]
+type = "post"
 +++
 
 [Swagger UI](http://swagger.io/swagger-ui/) is a great tool and a must have for any respectable API project. It has an intuitive design, all endpoints can be tested from the interface. For example, let's have a look at [Kubernetes API](http://kubernetes.io/kubernetes/third_party/swagger-ui/), where endpoints are grouped by version, and everything is accessible in easy way. In this post I'll show how to build it together with your API written in Go.
-<!--more-->
+
 
 There are 2 separate parts:
  - Generate `swagger.json` containing specs from your Go's annotations

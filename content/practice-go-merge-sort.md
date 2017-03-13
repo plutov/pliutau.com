@@ -10,7 +10,7 @@ The [merge sort](https://en.wikipedia.org/wiki/Merge_sort) is a recursive sort o
 
 Please write a function `MergeSort(input []int) []int` to sort integers from the lowest to the highest. 
 
-<!--more-->
+
 ### Run tests with benchmarks
 
 Tests are only checking if input is sorted in a correct order, they can't determine the sorting algorithm, so we will check it manually.

@@ -2,10 +2,11 @@
 date = "2016-09-08T10:17:34+07:00"
 title = "Go templates. Helper to render a struct"
 tags = [ "Go" ]
+type = "post"
 +++
 
 The Go language comes with a powerful built-in template engine. In Go, we have the [template](https://golang.org/pkg/html/template/) package to help handle templates. We can use functions like `Parse`, `ParseFile` and `Execute` to load templates from plain text or files, then evaluate the dynamic parts. Also it's possible to create user-defined functions and call it from templates.
-<!--more-->
+
 
 In real world (or good Go app architecture) all objects are described with help of Go structs. One type can be used in multiple places, can be rendered to HTML on different pages, etc.
 

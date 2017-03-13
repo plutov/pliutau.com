@@ -2,11 +2,12 @@
 date = "2016-09-30T14:11:48+07:00"
 title = "Golang Docker Skeleton"
 tags = [ "Go", "Docker" ]
+type = "post"
 +++
 ![GoDocker](/godocker.png)
 
 I really like templates and standards in the companies or a single team. Of course each company has it's own application layout, because it depends on tools, people and goals. Also everyone wants to save a time. In the SOA century we have to create new projects, repositories more often and often, create `Dockerfile` again, think about layout, write a documentation. In this post I want to share my template created for Go applications that work in Docker, which I am using in my projects.
-<!--more-->
+
 
 I called it [go-docker-skeleton](https://github.com/plutov/go-docker-skeleton).
 

@@ -2,10 +2,11 @@
 date = "2016-04-07T09:17:49+07:00"
 title = "Working with DB nulls in Golang"
 tags = [ "Go", "DB" ]
+type = "post"
 +++
 
 This post shows how to marshall NULL values from the database into Go struct and how to avoid mistakes during fetching optional values with SELECT query. I'll show standard types sql.NullString, sql.NullInt64, etc types.
-<!--more-->
+
 
 #### Customer table example
 

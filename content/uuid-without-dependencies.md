@@ -2,12 +2,13 @@
 date = "2016-08-26T14:17:34+07:00"
 title = "UUID without dependencies in Go"
 tags = [ "Go", "glide" ]
+type = "post"
 +++
 
 Today I realized that size of my `vendor/` folder in Golang project is around 150M. I am using `glide` there. There are 24 dependencies (it's a program with multiple data storage connectors, notifications, etc.), so I decided to review it and reduce amount of 3rd party libraries.
 
 First of all I have checked `glide-report` and removed 2 unused packages. Go-world has a lot of packages that are awesome and can save your time, but not your program's performance. I found few packages which I am using as helpers. For example [gouuid](https://github.com/nu7hatch/gouuid).
-<!--more-->
+
 
 What's happaned when you run `glide get`?
 

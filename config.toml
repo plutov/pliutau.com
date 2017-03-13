@@ -1,7 +1,46 @@
 baseurl = "http://pliutau.com/"
-languageCode = "en-us"
 title = "Aliaksandr Pliutau"
-comments = true
+theme = "ghostwriter"
+languageCode = "en-us"
+copyright = "Aliaksandr Pliutau"
+googleAnalytics = "UA-72731922-1"
+disqusShortname = "pliutau"
+
+[Author]
+    name = "Aliaksandr Pliutau"
+    profile = "https://google.com/+XXX"
+
+[Params]
+    intro = true
+    github = "https://github.com/plutov"
+    linkedin = "https://linkedin.com/in/pltvs/"
+    twitter = "https://twitter.com/pliutau"
+    stackoverflow = "http://stackoverflow.com/users/350294/pltvs"
+    email = "a.pliutau@gmail.com"
+    opengraph = true
+    shareTwitter = true
+    shareFacebook = true
+    shareGooglePlus = true
+    shareLinkedIn = false
+    dateFormat = "Mon, Jan 2, 2006"
+
+[Permalinks]
+    post = "/:year/:month/:day/:filename/"
+
+[[menu.main]]
+    name = "Blog"
+    url = "/"
+    weight = 1
+
+[[menu.main]]
+    name = "About"
+    url = "/page/about/"
+    weight = 2
+
+[[menu.main]]
+    name = "Subscribe"
+    url = "http://eepurl.com/cDoD09"
+    weight = 3
 
 [params]
   disqus = "pliutau"

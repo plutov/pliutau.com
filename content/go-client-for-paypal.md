@@ -2,9 +2,10 @@
 date = "2016-01-21T00:04:23+07:00"
 title = "Go-client for PayPal API"
 tags = [ "Go", "PayPal", "OpenSource" ]
+type = "post"
 +++
 ![LogPacker](/paypal.png)
-<!--more-->
+
 #### Clients in Go
 
 There are official SDK libraries for PHP, Java and Python, but our service is written in GO, and in this case SDK search mostly [fails](https://github.com/search?q=paypal+golang "GitHub"). As a result we have found five projects on github, two of which seem worthily, but at the same time they have bounded functional:

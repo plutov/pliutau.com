@@ -2,13 +2,14 @@
 date = "2016-01-25T13:12:43+07:00"
 title = "Supported Go types for gomobile bind"
 tags = [ "Go", "gomobile", "Android", "Java"]
+type = "post"
 +++
 ![LogPacker](/gotypes.jpg)
 
 #### gomobile bind
 
 With [gomobile](golang.org/x/mobile/cmd/gomobile) we can generate language bindings that make it possible to call Go functions from Java. And it's awesome. Now you can write Android applications in Go (unfortunately without UI features and with pure SDK coverage, but I hope it will grow up from experiment to production-ready tool).
-<!--more-->
+
 #### Requirements
 
 * golang 1.5+

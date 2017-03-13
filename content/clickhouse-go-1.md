@@ -2,11 +2,12 @@
 date = "2016-07-06T16:15:39+07:00"
 title = "Working with ClickHouse in Go. Part 1: Basics"
 tags = [ "Go", "ClickHouse" ]
+type = "post"
 +++
 ![ClickHouse](/clickhouse1.png)
 
 [ClickHouse](https://clickhouse.yandex/) is an open-source column-oriented database management system that allows generating analytical data reports in real time. Created by [Yandex](http://yandex.ru/) developers for internal purposes, but then has migrated as open-source tool. It currently powers Yandex.Metrica, world’s second largest web analytics platform, with over 13 trillion database records and over 20 billion events a day, generating customized reports on-the-fly, directly from non-aggregated data. So it is really fast.
-<!--more-->
+
 
 The reason I do really love ClickHouse is it supports SQL syntax. Now I’ll show how to start to work with it and get some basic profit.
 

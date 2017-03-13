@@ -2,9 +2,10 @@
 date = "2017-02-27T10:15:26+07:00"
 title = "How to mock exec.Command in Go"
 tags = [ "Go", "Testing", "Golang", "Mock" ]
+type = "post"
 +++
 In some of my projects we have code that needs to run external executables, and it's very difficult to test them, especially when your function is based on some kind of stdout parcing. So how to mock these commands in Go? Let's check how this goal is achieved in os/exec package. In [exec_test.go](https://github.com/golang/go/blob/master/src/os/exec/exec_test.go#L33) we can see a `helperCommand`. When running go tests, the go tool compiles an executable from your code, runs it and passes all the flags. Thus, while your tests are running, `os.Args[0]` is the name of the test executable. So the executable is already there and runnable, by definition.
-<!--more-->
+
 
 Let's mock our function to get `git rev-parse HEAD`.
 ```go

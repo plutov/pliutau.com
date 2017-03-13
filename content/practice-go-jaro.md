@@ -2,6 +2,7 @@
 date = "2017-03-03T12:25:20+07:00"
 title = "Practice Go. Exercise 4: Jaro distance"
 tags = [ "Go", "Golang", "practice-go" ]
+type = "post"
 +++
 
 [Create a Pull Request for this exercise](https://github.com/plutov/practice-go/tree/master/jaro)
@@ -22,7 +23,7 @@ Sample Jaro distance:
 ```
 jones, johnson, 0.790476
 ```
-<!--more-->
+
 ### Run tests with benchmarks
 
 ```

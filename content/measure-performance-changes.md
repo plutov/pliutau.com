@@ -2,12 +2,13 @@
 date = "2016-01-26T16:10:23+07:00"
 title = "Measure performance changes with benchcmp"
 tags = [ "Go", "Benchmarking", "Testing" ]
+type = "post"
 +++
 
 #### go test -bench=.
 
 Go has a great option to write your benchmarks and run it together with *go test* with option *-bench*. To create a benchmark function you must do the following:
-<!--more-->
+
 ```go
 package anonymizer
 

@@ -2,11 +2,12 @@
 date = "2016-02-05T18:08:43+07:00"
 title = "Golang test"
 tags = [ "Go", "Testing" ]
+type = "post"
 +++
 30 basic questions to measure your Golang knowledge. Answers and .go files you can find on [GitHub page](https://github.com/logpacker/go-questions).
 
 Don't hesitate to create a Pull Request in case of some found errors, typos.
-<!--more-->
+
 ##### What's the output of the following code?
 
 ```go

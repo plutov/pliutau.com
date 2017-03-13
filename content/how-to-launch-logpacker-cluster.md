@@ -2,6 +2,7 @@
 date = "2016-01-23T09:34:37+07:00"
 title = "How to launch a LogPacker Cluster"
 tags= [ "Go", "Logs", "LogPacker" ]
+type = "post"
 +++
 ![LogPacker](/cluster.png)
 
@@ -14,7 +15,7 @@ LogPacker – is a log management system. Application daemon is distinguished by
 Each LogPacker plan provides you with unique License (even free plan). You can have multiple plans under one account. And you can find it on [my.logpacker.com](https://my.logpacker.com).
 
 Once you got a license, you can download LogPacker as DEB/RPM or TAR file and deliver/install to your server(s).
-<!--more-->
+
 #### Environment
 
 Let's imagine that you have a website running on N Linux servers: some are for PHP app, some are for DB, etc.

@@ -2,11 +2,12 @@
 date = "2017-02-22T20:21:15+07:00"
 title = "playgo - CLI tool to send .go file to the Go Playground"
 tags = [ "Go", "Golang", "Open Source" ]
+type = "post"
 +++
 Usually when we share a runnable Go code we do: copy code, open [Go Playground](https://play.golang.org/), paste code, click Share.
 
 So `playgo` does it for you.
-<!--more-->
+
 ### Installation and Usage
 
 ```
