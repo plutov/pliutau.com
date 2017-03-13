@@ -10,7 +10,7 @@ Don't hesitate to create a Pull Request in case of some found errors, typos.
 
 ##### What's the output of the following code?
 
-```go
+```
 package main
 
 import "fmt"
@@ -63,7 +63,7 @@ var a, b, c = 3, 4, "foo"
 
 ##### Is it possible to have multiple tag strings in struct field?
 
-```go
+```
 package main
 
 import (
@@ -88,7 +88,7 @@ func main() {
 
 ##### What is the output of the following code?
 
-```go
+```
 package main
 
 import "fmt"
@@ -114,7 +114,7 @@ func main() {
 
 ##### Choose the correct statement regarding the output of the following code.
 
-```go
+```
 package main
 
 import "fmt"
@@ -148,7 +148,7 @@ func main() {
 
 ##### Which is the slowest concatenation method from the list?
 
-```go
+```
 package main
 
 import (
@@ -184,7 +184,7 @@ func main() {
 
 ##### What's the output of the following code?
 
-```go
+```
 package main
 
 import "fmt"
@@ -206,7 +206,7 @@ func main() {
 
 ##### Where should we use *defer* in the following code?
 
-```go
+```
 package main
 
 import "os"
@@ -265,7 +265,7 @@ func main() {
 
 ##### What is the size of the following struct?
 
-```go
+```
 package main
 
 import "fmt"
@@ -301,7 +301,7 @@ func main() {
 
 ##### Is it possible to define constant of an array type float32?
 
-```go
+```
 package main
 
 import "fmt"
@@ -340,7 +340,7 @@ func main() {
 
 ##### Which of the following variables are exportable from another external package?
 
-```go
+```
 package main
 
 var (
@@ -363,7 +363,7 @@ func main() {
 
 ##### What's the sequence for the output of the following code?
 
-```go
+```
 package main
 
 import (
@@ -398,7 +398,7 @@ func main() {
 
 ##### How to compile the following code to the binary file with name "eight"?
 
-```go
+```
 package main
 
 import "fmt"
@@ -414,7 +414,7 @@ func main() {
 
 ##### Can we set DEBUG=true with *go build*?
 
-```go
+```
 package main
 
 import (

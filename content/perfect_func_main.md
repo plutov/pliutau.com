@@ -9,7 +9,7 @@ It's the only one function all Go commands must have. You may say that everyone'
 Instead of having some logic in `main()` function it's better to isolate it in some package and just import it. What your command must have is a correct exit code, and main function is the only one place to have it. Why? Because if you put `os.Exit()` into your packages it can break your package. Developers can import this package and they will be unhappy if theirs tests are interrupted by this call (`os.Exit()` will break test executable).
 
 So let's see how ideal `main()` function looks:
-```go
+```
 // command docs
 package main
 

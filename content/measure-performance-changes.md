@@ -9,7 +9,7 @@ type = "post"
 
 Go has a great option to write your benchmarks and run it together with *go test* with option *-bench*. To create a benchmark function you must do the following:
 
-```go
+```
 package anonymizer
 
 import "testing"
@@ -42,7 +42,7 @@ ok  	anonymizer	4.042s
 
 Let me show you this Anonymizer():
 
-```go
+```
 package anonymizer
 
 import (
@@ -71,7 +71,7 @@ func Anonymizer(s string) string {
 
 Then I decided that this RegExp is a bit complicated and replaced it to the one sufficient for all practical purposes:
 
-```go
+```
 re, err := regexp.Compile("(\\w[-._\\w]*\\w@\\w[-._\\w]*\\w\\.\\w{2,3})")
 ```
 

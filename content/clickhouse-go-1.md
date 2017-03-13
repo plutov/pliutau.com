@@ -63,7 +63,7 @@ go get github.com/roistat/go-clickhouse
 ```
 
 Let’s establish connection:
-```go
+```
 transport := clickhouse.NewHttpTransport()
 conn := clickhouse.NewConn("localhost:8123", transport)
 err := conn.Ping()
@@ -73,7 +73,7 @@ if err != nil {
 ```
 
 If everything is fine here we can insert some data to this table and then fetch it.
-```go
+```
 q := clickhouse.NewQuery("INSERT INTO golang_test.logs VALUES (toDate(now()), ?, ?)", 1, "Log message")
 q.Exec(conn)
 

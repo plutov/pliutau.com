@@ -18,7 +18,7 @@ What's happaned when you run `glide get`?
 
 
 So I decided to remove `gouuid` and use `crypto/rand`:
-```go
+```
 package main
 
 import (

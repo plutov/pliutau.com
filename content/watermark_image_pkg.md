@@ -10,7 +10,7 @@ Go is very rich for packages support. But I also can say that Go is a perfect la
 
 Here is a simplified example of this process:
 
-```go
+```
 package main
 
 import (

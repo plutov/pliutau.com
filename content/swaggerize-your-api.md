@@ -31,7 +31,7 @@ Then let's provide annotations in our API code. There are several annotations th
 
 First four annotations are the most importand and enough to build a specification. Define `swagger:meta` first in your API root file (it can be a main package):
 
-```go
+```
 // Pet API
 //
 //     Schemes: http
@@ -54,7 +54,7 @@ package main
 
 Our Pet API will have 1 endpoint to get the list of something, `GET /list`. Let's create a route spec for this endpoint.
 
-```go
+```
 // swagger:route GET /v1/list listParams
 //
 // Get list of something
@@ -76,7 +76,7 @@ func (c *Context) Lisr(w http.ResponseWriter, r *web.Request) {
 
 Here we have defined types for input parameters `listParams` and response `errorResponse`, `listResponse`. Let's define `swagger:parameters` and `swagger:response` for structs.
 
-```go
+```
 // swagger:parameters listParams
 type listParams struct {}
 
@@ -95,7 +95,7 @@ swagger generate spec -o ./swagger.json
 ```
 
 You can add a `go:generate` comment to your main file for example, so it will be regenerated on any API change:
-```go
+```
 //go:generate swagger generate spec
 ```
 

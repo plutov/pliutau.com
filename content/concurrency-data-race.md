@@ -11,7 +11,7 @@ What does data race mean in Golang? Data race is a common mistake in concurrent 
 
 Here we have a sum function which is calling is parallel. I added WaitGroup to wait for execution of all goroutines and print a result. As you can see, for 100 sum(1) calls we have always different result (also depends on environment).
 
-```go
+```
 package main
 
 import (
@@ -79,7 +79,7 @@ Goroutine 6 (finished) created at:
 
 Mutex type from the sync package acquires exclusive lock. If some other goroutine has acquired the lock, this operation will block until the other goroutine calls Unlock.
 
-```go
+```
 package main
 
 import (

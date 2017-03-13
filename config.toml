@@ -24,9 +24,6 @@ disqusShortname = "pliutau"
     shareLinkedIn = false
     dateFormat = "Mon, Jan 2, 2006"
 
-[Permalinks]
-    post = "/:year/:month/:day/:filename/"
-
 [[menu.main]]
     name = "Blog"
     url = "/"
@@ -41,9 +38,3 @@ disqusShortname = "pliutau"
     name = "Subscribe"
     url = "http://eepurl.com/cDoD09"
     weight = 3
-
-[params]
-  disqus = "pliutau"
-  ga = "UA-72731922-1"
-  subscribe_rss = "/index.xml"
-  subscribe_email = "a.pliutau@gmail.com"

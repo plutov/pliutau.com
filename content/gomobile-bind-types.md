@@ -23,7 +23,7 @@ With [gomobile](golang.org/x/mobile/cmd/gomobile) we can generate language bindi
 Let's create some artificial code and try to import it into Java. The following package just returns random user and full Information.
 
 *gomobilebindtest.go*:
-```go
+```
 package gomobilebindtest
 
 // UserInfo struct
@@ -67,7 +67,7 @@ panic: unsupported seqType: interface{} / *types.Interface
 ```
 
 Ugh... it gives me a lot of errors, because not all Go types are supported in bindings. Let's comment these restricted types and run *bind* again:
-```go
+```
 type UserInfo struct {
 	Email string
 	Age   int

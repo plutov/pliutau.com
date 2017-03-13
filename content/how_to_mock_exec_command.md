@@ -8,7 +8,7 @@ In some of my projects we have code that needs to run external executables, and 
 
 
 Let's mock our function to get `git rev-parse HEAD`.
-```go
+```
 package git
 
 import (
@@ -20,13 +20,13 @@ func GetHeadHash() ([]byte, error) {
 }
 ```
 I use a `Commander` interface with `CombinedOutput` function that accepts command string and multiple arguments.
-```go
+```
 type Commander interface {
 	CombinedOutput(string, ...string) ([]byte, error)
 }
 ```
 And now we need 2 implementations of this interface.
-```go
+```
 type RealCommander struct{}
 
 func (c RealCommander) CombinedOutput(command string, args ...string) ([]byte, error) {
@@ -34,7 +34,7 @@ func (c RealCommander) CombinedOutput(command string, args ...string) ([]byte, e
 }
 ```
 
-```go
+```
 const testHash = "3a9a4f7b8a8e1a62691cb3715769f03972fe5597"
 
 type TestCommander struct{}

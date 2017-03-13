@@ -11,7 +11,7 @@ The Go language comes with a powerful built-in template engine. In Go, we have t
 In real world (or good Go app architecture) all objects are described with help of Go structs. One type can be used in multiple places, can be rendered to HTML on different pages, etc.
 
 For example we have a service with videos, they can be rendered on various pages. Let's describe our Video type in Go:
-```go
+```
 type Video struct {
 	ID   int
 	Name string
@@ -20,7 +20,7 @@ type Video struct {
 ```
 
 Then how we render it in HTML with help of `html/template` (`index.html`). In this example we have 2 videos:
-```go
+```
 {{define "base"}}
 <div class="video">
     <img src="{{ .Video1.URL }}">
@@ -35,7 +35,7 @@ Then how we render it in HTML with help of `html/template` (`index.html`). In th
 ```
 
 And we can have more pages with the same Video layout, so we need some kind of helper. It can be done by creating a new template and parse it, but I prefer (and I'll show) a struct helper-function. The idea is that renderable structs must have a function(s) to render a struct in the specific way, it's very similar to `ToString()` function, but let's call our function `HTML()`.
-```go
+```
 func (v *Video) HTML() template.HTML {
 	var out bytes.Buffer
 	t := template.Must(template.ParseFiles("partials/video.html"))
@@ -45,7 +45,7 @@ func (v *Video) HTML() template.HTML {
 ```
 
 And put our video's div into `partials/video.html`:
-```go
+```
 <div class="video">
     <img src="{{ .URL }}">
     <h3><a href="/v/{{ .ID }}">{{ .Name }}</a></h3>
@@ -53,7 +53,7 @@ And put our video's div into `partials/video.html`:
 ```
 
 So let's see how our `index.html` has been changed.
-```go
+```
 {{define "base"}}
 {{ .Video1.HTML }}
 {{ .Video2.HTML }}
@@ -61,7 +61,7 @@ So let's see how our `index.html` has been changed.
 ```
 
 Or if somewhere we have a loop of videos:
-```go
+```
 {{range .Videos}}
     {{ .HTML }}
 {{end}}
