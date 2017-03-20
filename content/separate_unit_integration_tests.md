@@ -16,7 +16,7 @@ package paypalsdk
 
 And run Integration tests with `tags` flag:
 ```
-go test --tags=integration
+go test -tags=integration
 ```
 
 When you do not pass `tags` only Unit tests will be executed:
