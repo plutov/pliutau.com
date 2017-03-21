@@ -5,3 +5,5 @@
  - Consider structuring your program so that only one goroutine at a time is ever responsible for a particular piece of data.
  - Always run your tests with race detector.
  - Use `%+v` to print the error with sufficient detail.
+ - Declare type's methods on *T.
+ - Go maps are not goroutine safe, you must use a sync.Mutex, sync.RWMutex to ensure reads and writes are properly synchronised.
