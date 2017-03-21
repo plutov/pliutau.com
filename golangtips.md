@@ -4,3 +4,4 @@
  - It is not required to close an unused channel. If no goroutine is left referencing the channel, it will be garbage collected. it is only necessary to close a channel if the receiver is looking for a close.
  - Consider structuring your program so that only one goroutine at a time is ever responsible for a particular piece of data.
  - Always run your tests with race detector.
+ - Use `%+v` to print the error with sufficient detail.
