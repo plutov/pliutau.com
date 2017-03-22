@@ -6,7 +6,7 @@ title = "gh: a tiny tool to manage GitHub repositories in your GOPATH"
 +++
 As a Golang developer I have to clone a lot of packages/tools/etc into `$GOPATH/src/github.com`. Sometimes I do `go get`, sometimes it's necessary to do a combination of `mkdir` + `git clone`. So to save my time I wrote a tiny function `gh`, that actually is the same as `cd` thatbut also can close repo if it doesn't exist.
 
-<iframe src="http://showterm.io/c758ba14c5ce1fd0d986e" width="640" height="480">
+<iframe src="http://showterm.io/c758ba14c5ce1fd0d986e" width="100%" height="480">
 </iframe>
 
 Here it is, just add it to your `~/.bashrc`:
