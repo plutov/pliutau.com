@@ -7,3 +7,4 @@
  - Use `%+v` to print the error with sufficient detail.
  - Declare type's methods on *T.
  - Go maps are not goroutine safe, you must use a sync.Mutex, sync.RWMutex to ensure reads and writes are properly synchronised.
+ - Channel axioms: a send to a nil channel blocks forever, a receive from a nil channel blocks forever, a send to a closed channel panics, a receive from a closed channel returns the zero value immediately.
