@@ -21,3 +21,5 @@ It may seem obvious if you took the time to learn the official spec, wiki, maili
 8. Declare type's methods on *T.
 9. Go maps are not goroutine safe, you must use a sync.Mutex, sync.RWMutex to ensure reads and writes are properly synchronised.
 10. Channel axioms: a send to a nil channel blocks forever, a receive from a nil channel blocks forever, a send to a closed channel panics, a receive from a closed channel returns the zero value immediately.
+
+To be continued...
