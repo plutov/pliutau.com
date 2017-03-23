@@ -2,6 +2,7 @@
 date = "2017-03-23T12:40:02+07:00"
 tags = [ "Go" ]
 title = "Golang tips. Part 1"
+type = "post"
 +++
 Go is a simple and fun language, and as any other language, Go has a lot of unspoken tips.
 
