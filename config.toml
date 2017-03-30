@@ -23,6 +23,7 @@ disqusShortname = "pliutau"
     shareGooglePlus = true
     shareLinkedIn = false
     dateFormat = "Mon, Jan 2, 2006"
+    description = "Aliaksandr Pliutau's Golang blog. My thoughts about go(golang), programming, backend, devops, docker, etc."
 
 [[menu.main]]
     name = "Blog"
