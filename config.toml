@@ -5,13 +5,11 @@ languageCode = "en-us"
 copyright = "Aliaksandr Pliutau"
 googleAnalytics = "UA-72731922-1"
 disqusShortname = "pliutau"
+paginate= 20
 
 [Author]
     name = "Aliaksandr Pliutau"
     profile = "http://pliutau.com"
-
-[Paginate]
-    default=50
 
 [Params]
     intro = true
