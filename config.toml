@@ -10,6 +10,9 @@ disqusShortname = "pliutau"
     name = "Aliaksandr Pliutau"
     profile = "http://pliutau.com"
 
+[Paginate]
+    default=50
+
 [Params]
     intro = true
     github = "https://github.com/plutov"
