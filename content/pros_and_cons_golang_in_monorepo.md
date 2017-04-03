@@ -6,13 +6,13 @@ title = "Pros and Cons: Golang in a Monorepo"
 +++
 ![git-repository-comparison](/git-repository-comparison.png)
 
-Monorepo - is a monolithic code repository which can contain different services (or whatever you want to call them), CLI, libraries, etc. Did you hear that Facebook/Google uses a giant monorepo? And they do it for [reasons](http://cacm.acm.org/magazines/2016/7/204032-why-google-stores-billions-of-lines-of-code-in-a-single-repository/fulltext).
+Monorepo - is a monolithic code repository which can contain different services (or whatever you want to call them), CLI, libraries, etc. Did you hear that Facebook/Google uses a giant monorepo? And they do it for reasons.
 
-I tried both approaches in Go: with monorepo or with multirepo. And I personally prefer the first one.
+I tried both approaches in Go: with monorepo or with multirepo. And I personally prefer the first one (but of course depending on a project).
 
 ### Advantage 1. Simplified organization
 
-A structure of your project is important for organization. The quicker someone can visualize the project as a whole the faster they can contribute. In Golang we are not forced with a folder convention so your team can use their ideals and preferences to find a solution. Below is an example from [LogPacker](https://logpacker.com):
+A structure of your project is important for organization. The quicker someone can visualize the project as a whole the faster they can contribute. In Golang we are not forced with a folder convention so your team can use their ideals to find a solution. Below is an example from [LogPacker](https://logpacker.com):
 
 ```
 ├──cmd
@@ -30,7 +30,6 @@ A structure of your project is important for organization. The quicker someone c
 │  ├──mailer
 │  └──...
 ├──templates
-│  └──page.html
 ├──vendor
 ├──glide.yaml
 ├──Makefile
@@ -42,19 +41,19 @@ Layout of the codebase is easily understood, as it is organized in a single tree
 
 ### Advantage 2. Devenv
 
-It's very easy now to get a dev environment set up to run builds and tests, you need only clone one repo and use Docker Compose (or whatever you have). Technically it's possible to make it with multiple repositories, but monorepo does a good design work for it.
+It's very easy now to get a development environment set up to run builds and tests, you need only clone one repo and use Docker Compose (or whatever you have). Technically it's possible to make it with multiple repositories, but monorepo does a good design work for it.
 
-### Advantage 3. External Dependencies
+### Advantage 3. Third party Dependencies
 
-Using a monorepo solves the issue of vendoring third party dependencies. Every service within monorepo uses the same version of a third party library, and whenever the library is bumped, every project which makes use of it is built and tested automatically. In our example we have common `glide.yaml` for all services.
+Using a monorepo solves the issue of vendoring third party dependencies. Every service within monorepo uses the same version of a third party library, and whenever the library is upgraded, every project which makes use of it is built and tested automatically. In our example we have common `glide.yaml` for all services.
 
 ### Advantage 4. Tooling
 
-Many of the tools in the Go ecosystem work even better when used in a monorepo. For example, `gorename` is incredibly useful. Any changes made will be compiled and tested across all internal Go projects. Also we can have single `Makefile` with targets test, build, run, etc.
+Many of the tools in the Go ecosystem work even better when used in a monorepo. For example, `gorename` is incredibly useful. Any changes made will be compiled and tested across all internal services. Also we can have single `Makefile` with targets test, build, run, etc.
 
 ### Advantage 5. Productivity increases
 
-The ability to make atomic changes is also a very powerful feature of the monolithic model. A developer can make a major change touching hundreds or thousands of files across the repository in a single consistent operation. For instance, a developer can rename a class or function in a single commit and yet not break any builds or tests.
+The ability to make atomic changes is also a very powerful feature of the monolithic model. A developer can make a major change touching hundreds or thousands of files across the repository in a single consistent operation. For instance, a developer can rename a type or function in a single commit and yet not break any builds or tests.
 
 With a monorepo, you just refactor the API and all of its callers in one commit. That’s not always trivial, but it’s much easier than it would be with lots of small repos.
 
