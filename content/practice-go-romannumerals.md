@@ -8,6 +8,7 @@ type = "post"
 [Create a Pull Request for this exercise](https://github.com/plutov/practice-go/tree/master/romannumerals)
 
 Create 2 functions:
+
  - `Encode(n int) (string, bool)` - takes an integer as its parameter and returns a string containing the Roman numeral representation of that integer.
  - `Decode(s string) (int, bool)` - takes a Roman numeral as its argument and returns its value as a numeric decimal integer.
 
