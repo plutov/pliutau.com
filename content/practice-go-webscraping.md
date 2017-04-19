@@ -1,7 +1,6 @@
 +++
-author = ""
+type = "post"
 date = "2017-04-19T20:32:35+07:00"
-description = ""
 tags = [ "Go", "Golang", "practice-go" ]
 title = "Practice Go: Web Scraping"
 
