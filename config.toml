@@ -1,14 +1,14 @@
 baseurl = "http://pliutau.com/"
-title = "Aliaksandr Pliutau"
+title = "Alex Pliutau"
 theme = "ghostwriter"
 languageCode = "en-us"
-copyright = "Aliaksandr Pliutau"
+copyright = "Alex Pliutau"
 googleAnalytics = "UA-72731922-1"
 disqusShortname = "pliutau"
 paginate= 50
 
 [Author]
-    name = "Aliaksandr Pliutau"
+    name = "Alex Pliutau"
     profile = "http://pliutau.com"
 
 [Params]
@@ -24,7 +24,7 @@ paginate= 50
     shareGooglePlus = true
     shareLinkedIn = false
     dateFormat = "Mon, Jan 2, 2006"
-    description = "Aliaksandr Pliutau's Golang blog. My thoughts about go(golang), programming, backend, devops, docker, etc."
+    description = "Alex Pliutau's Golang blog. My thoughts about go(golang), programming, backend, devops, docker, etc."
 
 [[menu.main]]
     name = "Blog"
