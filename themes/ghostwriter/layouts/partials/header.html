@@ -18,6 +18,7 @@
         {{ if .RSSLink }}
             <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml">
         {{ end }}
+		<link rel="icon" href="/favicon.ico" type="image/png">
     </head>
     <body>
         {{ template "_internal/google_analytics.html" . }}
