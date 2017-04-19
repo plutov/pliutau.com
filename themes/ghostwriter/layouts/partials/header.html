@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>{{ with .Description }}{{ .Title }}{{ else }}{{ if .IsPage }}{{ .Title }}{{ else }}Alex Pliautau's Golang Blog{{ end }}{{ end }}</title>
         <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ if .IsPage }}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
-        <meta name="keywords" content="{{ if .IsPage }}{{ if .Params.tags }}{{ range .Params.tags }}{{ . }},{{end}}{{end}}{{end}}">
+        <meta name="keywords" content="{{ if .IsPage }}{{ if .Params.tags }}{{ range .Params.tags }}{{ . }}, {{end}}{{end}}{{end}}alex pliutau, golang blog, go blog">
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
         {{ .Hugo.Generator }}
