@@ -89,25 +89,8 @@ func main() {
 }
 ```
 
-### 7. Of course time.Sleep
-
-Works for channel created without `make`.
-
-```
-package main
-
-import (
-	"time"
-	"math"
-)
-
-func main() {
-	time.Sleep(time.Duration(math.MaxInt64))
-}
-```
-
 ### Conclusion
 
-I have found 7 ways to block a Go program. It can be useful when you start multiple goroutines in a `main()` function and don't want to terminate a whole program after that. But some of these examples are just for fun.
+I have found 6 ways to block a Go program. It can be useful when you start multiple goroutines in a `main()` function and don't want to terminate a whole program after that. But some of these examples are just for fun.
 
 If you know another way - please share it in comments, I will add it here.
