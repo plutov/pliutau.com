@@ -1,6 +1,6 @@
 +++
 date = "2016-02-05T18:08:43+07:00"
-title = "Golang test"
+title = "Quiz yourself in Golang. Part 1"
 tags = [ "Go", "Testing" ]
 type = "post"
 +++

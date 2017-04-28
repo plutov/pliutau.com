@@ -24,7 +24,7 @@ paginate= 50
     shareGooglePlus = true
     shareLinkedIn = false
     dateFormat = "Mon, Jan 2, 2006"
-    description = "Alex Pliutau's Golang blog. My thoughts about go(golang), programming, backend, devops, docker, etc."
+    description = "Alex Pliutau's blog. My thoughts about golang, programming, backend, devops, docker, etc."
 
 [[menu.main]]
     name = "Blog"
