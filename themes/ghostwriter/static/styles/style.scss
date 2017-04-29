@@ -10,8 +10,6 @@ $background: #FEFEFE;
 /* Base */
 /* ============================================================ */
 
-.dsq-brlink { display: none; }
-
 html, body { height: 100%; }
 
 body {
@@ -207,6 +205,10 @@ table {
 
 .comments {
     margin-top: 10px;
+
+	.dsq-brlink {
+		display: none;
+	}
 }
 
 /* ============================================================ */
