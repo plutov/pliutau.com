@@ -4,6 +4,7 @@ tags = [ "Git", "gitconfig", "gitignore" ]
 title = "Useful Git global config and ignore rules"
 type = "post"
 +++
+![git-pretty-log](/git-pretty-log.png)
 
 I am working with `git` every single day, from different machines and accounts. And all these hosts have the same global git configuration. I sync it using tiny bash script.
 
