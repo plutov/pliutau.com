@@ -3,9 +3,8 @@ type = "post"
 date = "2017-05-07T14:12:12+07:00"
 tags = [ "go", "golang", "practice-go" ]
 title = "Practice Go: First Letter, Last Letter game"
+image = "/lastletter.jpg"
 +++
-
-![lastletter](/lastletter.jpg)
 
 [Create a Pull Request for this exercise](https://github.com/plutov/practice-go/tree/master/lastlettergame)
 
