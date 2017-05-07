@@ -5,6 +5,8 @@ tags = [ "go", "golang", "practice-go" ]
 title = "Practice Go: First Letter, Last Letter game"
 +++
 
+![lastletter](/lastletter.jpg)
+
 [Create a Pull Request for this exercise](https://github.com/plutov/practice-go/tree/master/lastlettergame)
 
 ### First Letter, Last Letter game
