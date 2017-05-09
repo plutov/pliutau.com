@@ -30,6 +30,8 @@ With multi-stage builds, a Dockerfile allows multiple FROM directives, and the i
 
 `COPY –from=0` takes the file `app` from the previous stage and copies it to the `WORKDIR`. This basically copies the compiled go binary created from the previous stage.
 
+The `--from` flag uses a zero-based index for the stage. You either reference stages by using offsets (like `--from=0`) or by using names. To name a stage use the syntax FROM [image] as [name].
+
 ```
 FROM golang:1.8.1
 
@@ -55,6 +57,7 @@ CMD ["./app"]
 docker build .
 ```
 
+Container size now is small, because it contains only binary file.
 ```
 docker ps
 REPOSITORY          TAG     IMAGE ID            CREATED           SIZE
