@@ -6,7 +6,7 @@ title = "One month since I joined Wizeline"
 +++
 ![Wizeline](/wizeline.png)
 
-Today is already a month since I joined [Wizeline](https://www.wizeline.com) Vietnam. And I would love to share my feelings and thoughts about it.
+It has been a month since I joined [Wizeline](https://www.wizeline.com) Vietnam. And I would love to share my feelings and thoughts about it.
 
 ### Culture
 
