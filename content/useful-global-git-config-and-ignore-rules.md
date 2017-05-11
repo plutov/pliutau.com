@@ -3,6 +3,7 @@ date = "2017-04-28T10:47:24+07:00"
 tags = [ "Git", "gitconfig", "gitignore" ]
 title = "Useful Git global config and ignore rules"
 type = "post"
+og_image = "/git-pretty-log.png"
 +++
 ![git-pretty-log](/git-pretty-log.png)
 

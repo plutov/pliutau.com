@@ -22,7 +22,7 @@ paginate= 50
     shareTwitter = true
     shareFacebook = true
     shareGooglePlus = true
-    shareLinkedIn = false
+    shareLinkedIn = true
     dateFormat = "Mon, Jan 2, 2006"
     description = "Alex Pliutau's blog. My thoughts about golang, programming, backend, devops, docker, etc."
 

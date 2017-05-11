@@ -3,6 +3,7 @@ date = "2017-04-30T12:47:27+07:00"
 type = "post"
 tags = ["go", "golang", "docker", "dockerfile"]
 title = "Multi-stage Dockerfile for Golang application"
+og_image = "/multi-stage.png"
 +++
 
 ![multi-stage](/multi-stage.png)

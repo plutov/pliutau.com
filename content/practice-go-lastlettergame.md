@@ -3,6 +3,7 @@ type = "post"
 date = "2017-05-07T14:12:12+07:00"
 tags = [ "go", "golang", "practice-go" ]
 title = "Practice Go: First Letter, Last Letter game"
+og_image = "/lastletter.png"
 +++
 
 ![lastletter](/lastletter.jpg)

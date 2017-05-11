@@ -3,6 +3,7 @@ type = "post"
 date = "2017-04-03T12:47:55+07:00"
 tags = [ "Go", "Golang", "Monorepo", "LogPacker" ]
 title = "Pros and Cons: Golang in a Monorepo"
+og_image = "/git-repository-comparison.png"
 +++
 ![git-repository-comparison](/git-repository-comparison.png)
 

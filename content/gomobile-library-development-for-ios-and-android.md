@@ -3,6 +3,7 @@ date = "2016-03-13T15:11:13+07:00"
 title = "GoMobile: Library development for IOS/Android"
 tags = [ "Mobile", "Go", "LogPacker", "Android", "Java", "iOS" ]
 type = "post"
+og_image = "/gomobile.png"
 +++
 ![Gomobile](/gomobile.png)
 

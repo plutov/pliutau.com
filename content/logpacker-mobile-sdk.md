@@ -3,6 +3,7 @@ date = "2016-02-19T13:39:16+07:00"
 title = "LogPacker mobile SDK"
 tags = [ "Mobile", "Go", "LogPacker", "Android", "Java", "iOS" ]
 type = "post"
+og_image = "/android.png"
 +++
 ![GoAndroid](/android.png)
 

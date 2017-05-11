@@ -3,6 +3,7 @@ date = "2016-07-06T16:15:39+07:00"
 title = "Working with ClickHouse in Go. Part 1: Basics"
 tags = [ "Go", "ClickHouse" ]
 type = "post"
+og_image = "/clickhouse1.png"
 +++
 ![ClickHouse](/clickhouse1.png)
 

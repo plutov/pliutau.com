@@ -3,6 +3,7 @@ date = "2016-04-07T13:21:51+07:00"
 title = "Game Of Logs: 2 tests about Go"
 tags = [ "Go", "LogPacker" ]
 type = "post"
+og_image = "/game-of-logs.png"
 +++
 ![GameOfLogs](/game-of-logs.png)
 

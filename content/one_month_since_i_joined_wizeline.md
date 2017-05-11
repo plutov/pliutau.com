@@ -3,6 +3,7 @@ type = "post"
 date = "2017-05-10T16:56:08+07:00"
 tags = ["wizeline","vietnam"]
 title = "One month since I joined Wizeline"
+og_image = "/wizeline.png"
 +++
 ![Wizeline](/wizeline.png)
 

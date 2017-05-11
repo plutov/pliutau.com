@@ -3,6 +3,7 @@ date = "2016-01-21T00:04:23+07:00"
 title = "Go-client for PayPal API"
 tags = [ "Go", "PayPal", "OpenSource" ]
 type = "post"
+og_image = "/paypal.png"
 +++
 ![LogPacker](/paypal.png)
 

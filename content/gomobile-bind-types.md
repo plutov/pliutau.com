@@ -3,6 +3,7 @@ date = "2016-01-25T13:12:43+07:00"
 title = "Supported Go types for gomobile bind"
 tags = [ "Go", "gomobile", "Android", "Java"]
 type = "post"
+og_image = "/gotypes.jpg"
 +++
 ![LogPacker](/gotypes.jpg)
 

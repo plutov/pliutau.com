@@ -3,6 +3,7 @@ date = "2016-01-30T20:02:55+07:00"
 title = "Docker test environment"
 tags = [ "Docker", "LogPacker" ]
 type = "post"
+og_image = "/docker.png"
 +++
 ![LogPacker](/docker.png)
 

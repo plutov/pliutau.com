@@ -3,6 +3,7 @@ date = "2016-03-09T17:09:35+07:00"
 title = "How to collect Mobile crash logs"
 tags= [ "Go", "Logs", "LogPacker" ]
 type = "post"
+og_image = "/mobile-platforms.png"
 +++
 ![Mobile](/mobile-platforms.png)
 

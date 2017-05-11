@@ -3,6 +3,7 @@ date = "2016-09-30T14:11:48+07:00"
 title = "Golang Docker Skeleton"
 tags = [ "Go", "Docker" ]
 type = "post"
+og_image = "/godocker.png"
 +++
 ![GoDocker](/godocker.png)
 
