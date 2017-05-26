@@ -40,7 +40,7 @@ func GetCustomerByEmail(db *sql.DB, email string) (*Customer, error) {
 
 #### Error
 
-Now let's imagine that our Customer has an empty Phone (NULL in the DB), in this case SQL driver will fail to marshall DB NULL into *string with the following error:
+Now let's imagine that our Customer has an empty Phone (NULL in the DB), in this case SQL driver will fail to marshall DB NULL into string with the following error:
 ```
 sql: Scan error on column index 1: unsupported driver -> Scan pair: <nil> -> *string
 ```
@@ -59,7 +59,7 @@ type Customer struct {
 }
 ```
 
-#### Retreive value from sql.NullString
+#### Retrieve value from sql.NullString
 
 The sql.Null[String,Int64,Float64,Bool] types have two fields: a typed value and a boolean Valid. You can use the typed value to get either the value that's been set, or the type's "zero value" if it hasn't been set. You can get customer's phone number with the following code now:
 ```
