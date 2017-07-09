@@ -1,5 +1,5 @@
 +++
-date = "2017-02-17T10:32:23+07:00"
+date = "2017-07-09T22:28:23+07:00"
 title = "Using different Git emails"
 tags = [ "Git" ]
 type = "post"
