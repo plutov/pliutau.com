@@ -7,21 +7,25 @@ type = "post"
 Usually at work and at home we use different Git name/email pairs, or even per project. Pushing with correct email guarantees that your commits will be authored with a correct user identity.
 
 This configuration stored in `.gitconfig` file and looks like:
-```[user]
+```
+[user]
     name = Alex Pliutau
     email = home@example.com
 ```
 
-Git *2.13* introduces [conditional configuration includes](https://git-scm.com/docs/git-config#_includes). For now, the only supported condition is matching the filesystem path of the repository, but that's exactly what we need in this case. You can configure two conditional includes in your home directory's ``~/.gitconfig` file:
+Git **2.13** introduces [conditional configuration includes](https://git-scm.com/docs/git-config#_includes). For now, the only supported condition is matching the filesystem path of the repository, but that's exactly what we need in this case. You can configure two conditional includes in your home directory's **~/.gitconfig** file:
 
-```[user]
+```
+[user]
     name = Alex Pliutau
     email = home@example.com
 [includeIf "gitdir:~/wizeline/"]
-    path = ~/.gitconfig-wizeline```
+    path = ~/.gitconfig-wizeline
+```
 
-`~/.gitconfig-wizeline`:
-```[user]
+**~/.gitconfig-wizeline**
+```
+[user]
     name = Alex Pliutau
     email = wizeline@example.com
 ```
