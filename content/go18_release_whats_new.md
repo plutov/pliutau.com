@@ -1,5 +1,5 @@
 +++
-date = "2017-02-17T10:32:23+07:00"
+date = "2017-07-09T22:28:23+07:00"
 title = "Go 1.8 released. What is new?"
 tags = [ "Go", "GoReleaseParty", "Go 1.8", "Golang" ]
 type = "post"
