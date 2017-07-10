@@ -19,11 +19,11 @@ Git **2.13** introduces [conditional configuration includes](https://git-scm.com
 [user]
     name = Alex Pliutau
     email = home@example.com
-[includeIf "gitdir:~/wizeline/"]
-    path = ~/.gitconfig-wizeline
+[includeIf "gitdir:~/wzln/"]
+    path = ~/.gitconfig-wzln
 ```
 
-**~/.gitconfig-wizeline**
+**~/.gitconfig-wzln**
 ```
 [user]
     name = Alex Pliutau
