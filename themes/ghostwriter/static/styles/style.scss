@@ -758,4 +758,42 @@ table {
     }
 
     .footer-copyright { padding: 0 10px; }
+
+	.comments-count {
+		display: inline;
+		position: relative;
+		padding: 0 4px 0 4px;;
+		-webkit-border-radius: 4px;
+		-moz-border-radius: 4px;
+		border-radius: 4px;
+		border: #CCCCCC solid 1px;
+	}
+
+	.comments-count:after {
+		content: '';
+		position: absolute;
+		border-style: solid;
+		border-width: 4px 4px 4px 0;
+		border-color: transparent #FFFFFF;
+		display: block;
+		width: 0;
+		z-index: 1;
+		margin-top: -4px;
+		left: -4px;
+		top: 50%;
+	}
+
+	.comments-count:before  {
+		content: '';
+		position: absolute;
+		border-style: solid;
+		border-width: 4px 4px 4px 0;
+		border-color: transparent #CCCCCC;
+		display: block;
+		width: 0;
+		z-index: 0;
+		margin-top: -4px;
+		left: -5px;
+		top: 50%;
+	}
 }
