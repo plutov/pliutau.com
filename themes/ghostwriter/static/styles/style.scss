@@ -426,6 +426,7 @@ table {
             padding: 20px 12px;
 
             .post-stub-tag { background: $primary; }
+			.comments-count:after { border-color: transparent #FCF5F5; }
         }
     }
 }
