@@ -368,6 +368,10 @@ table {
     a:hover { background: $secondary; }
 }
 
+.share-middle .share {
+	float: none;
+}
+
 .post-navigation {
     display: table;
     margin: 70px auto 100px;
