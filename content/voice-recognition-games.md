@@ -4,6 +4,8 @@ title = "Games based on Voice Recognition"
 tags = [ "Go", "Google Speech API", "Voice Recognition", "Wizeline" ]
 type = "post"
 +++
+![voice](/voice.png)
+
 Hi folks!
 
 Last Saturday I was very inspired by [Alexa skills using server-side Swift](http://academy.wizeline.com/alexa-skills-using-server-side-swift/) talk organized by Wizeline Vietnam team. Speakers made a demo of how can we use Alex Skill in League of Legends (LoL). This Skill enables a user to retrieve the statistics of the enemy team mid-match using voice-enabled commands.
