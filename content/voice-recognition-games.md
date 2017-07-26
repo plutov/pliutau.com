@@ -1,6 +1,6 @@
 +++
 date = "2017-07-26T14:50:34+07:00"
-title = "Games based of Voice Recognition"
+title = "Games based on Voice Recognition"
 tags = [ "Go", "Google Speech API", "Voice Recognition", "Wizeline" ]
 type = "post"
 +++
