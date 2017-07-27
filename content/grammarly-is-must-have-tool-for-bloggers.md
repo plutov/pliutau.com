@@ -7,7 +7,7 @@ og_image = "/grammarly.png"
 +++
 ![Gomobile](/grammarly.png)
 
-English is not my native language, and I always feel that my texts which I post here are hard to read. Sometimes I find myself wondering something as basic as whether or not a sentence needs another comma. We use Grammarly in Wizeline for polishing our Client communication.
+English is not my native language, and I always feel that my texts which I post here are hard to read. Sometimes I find myself wondering something as basic as whether or not a sentence needs another comma. We use Grammarly at Wizeline for polishing our Client communication.
 
 And I found that I can use it now for all posts in my blog. Grammarly has Free and [Premium](https://www.grammarly.com/premium) versions. Also, it has Chrome extension and Desktop application.
 
