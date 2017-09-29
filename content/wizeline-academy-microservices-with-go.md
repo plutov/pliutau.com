@@ -3,7 +3,10 @@ date = "2017-09-30T00:29:24+07:00"
 tags = ["wizeline", "go", "workshop", "microservices"]
 title = "Wizeline Academy: Microservices with Go"
 type = "post"
+og_image = "/workshop1.jpg"
 +++
+![workshop1](/workshop1.jpg)
+
 What I really like about Wizeline is that we have amazing [Academy](https://www.facebook.com/WizelineAcademy/), both internal and public. Yesterday I was in Mexico, Guadalajara office of Wizeline and I was doing a workshop about Microservices with Go.
 
 The idea was to tell people about SOA approach, gRPC, Protocol Buffers and code a fictional application based on these principles in Go.
