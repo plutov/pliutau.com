@@ -1,6 +1,6 @@
 +++
 title = "Handle HTTP Request Errors in Go"
-date = 2017-10-05T08:36:05+07:00
+date = "2017-10-05T08:36:05+07:00"
 type = "post"
 tags = ["go"]
 +++
