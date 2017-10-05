@@ -1,9 +1,10 @@
 +++
-title: "Handle HTTP Request Errors in Go"
-date: 2017-10-05T08:36:05+07:00
+title = "Handle HTTP Request Errors in Go"
+date = 2017-10-05T08:36:05+07:00
 type = "post"
 tags = ["go"]
 +++
+
 In this short post I want to discuss handling HTTP request errors in Go. I see people write code and they believe to be handling errors when making HTTP requests, but actually they are missing real errors.
 
 Here is an example of simple http server and GET request to itself.
