@@ -8,6 +8,10 @@ I always wanted to try Elixir because of it's nice Erlang ecosystem and because 
 
 I built a small `items` API using JSON and [Agent](http://elixir-lang.org/getting-started/mix-otp/agent.html) as storage. Let me go through all actions to build.
 
+#### Prerequisites
+
+You should only [install Elixir](https://elixir-lang.org/install.html), if you're using brew: `brew install elixir`.
+
 #### Create new Mix project
 
 Mix is installed together with Elixir, so you just need to run one command to create a project, Mix will create all initial files for you: config, deps, lib, tests, README.
