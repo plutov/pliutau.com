@@ -1,0 +1,55 @@
+==================================================================
+https://keybase.io/pliutau
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://pliutau.com
+  * I am pliutau (https://keybase.io/pliutau) on keybase.
+  * I have a public key ASCQ2BQRF0sie5Go5wpnhRV617iLqHEU4uDF1bA3OKMX4Ao
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "012090d81411174b227b91a8e70a6785157ad7b88ba87114e2e0c5d5b03738a317e00a",
+      "host": "keybase.io",
+      "kid": "012090d81411174b227b91a8e70a6785157ad7b88ba87114e2e0c5d5b03738a317e00a",
+      "uid": "257d09ff94e7c4d56705c9dcf059e919",
+      "username": "pliutau"
+    },
+    "merkle_root": {
+      "ctime": 1507253825,
+      "hash": "907cf3cade5efb3a1734d2ba14979b0b9c123fdfa670b888b64a9039e558abc8aadbe54dbb2b18334fdd5e963853faf88ef23e27fa12c3c19aa23de1d849d8f4",
+      "hash_meta": "9c646003e2a00f89095e0103e3fb2f3ce24f1991970fd10657995c9e6004adb6",
+      "seqno": 1521613
+    },
+    "service": {
+      "hostname": "pliutau.com",
+      "protocol": "http:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "1.0.33"
+  },
+  "ctime": 1507253878,
+  "expire_in": 504576000,
+  "prev": "492e3ed3d4245412facc2d7255460ca388d9f9fe47d3d3d181c37bf7bf81824b",
+  "seqno": 14,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgkNgUERdLInuRqOcKZ4UVete4i6hxFOLgxdWwNzijF+AKp3BheWxvYWTFA0J7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwOTBkODE0MTExNzRiMjI3YjkxYThlNzBhNjc4NTE1N2FkN2I4OGJhODcxMTRlMmUwYzVkNWIwMzczOGEzMTdlMDBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwOTBkODE0MTExNzRiMjI3YjkxYThlNzBhNjc4NTE1N2FkN2I4OGJhODcxMTRlMmUwYzVkNWIwMzczOGEzMTdlMDBhIiwidWlkIjoiMjU3ZDA5ZmY5NGU3YzRkNTY3MDVjOWRjZjA1OWU5MTkiLCJ1c2VybmFtZSI6InBsaXV0YXUifSwibWVya2xlX3Jvb3QiOnsiY3RpbWUiOjE1MDcyNTM4MjUsImhhc2giOiI5MDdjZjNjYWRlNWVmYjNhMTczNGQyYmExNDk3OWIwYjljMTIzZmRmYTY3MGI4ODhiNjRhOTAzOWU1NThhYmM4YWFkYmU1NGRiYjJiMTgzMzRmZGQ1ZTk2Mzg1M2ZhZjg4ZWYyM2UyN2ZhMTJjM2MxOWFhMjNkZTFkODQ5ZDhmNCIsImhhc2hfbWV0YSI6IjljNjQ2MDAzZTJhMDBmODkwOTVlMDEwM2UzZmIyZjNjZTI0ZjE5OTE5NzBmZDEwNjU3OTk1YzllNjAwNGFkYjYiLCJzZXFubyI6MTUyMTYxM30sInNlcnZpY2UiOnsiaG9zdG5hbWUiOiJwbGl1dGF1LmNvbSIsInByb3RvY29sIjoiaHR0cDoifSwidHlwZSI6IndlYl9zZXJ2aWNlX2JpbmRpbmciLCJ2ZXJzaW9uIjoxfSwiY2xpZW50Ijp7Im5hbWUiOiJrZXliYXNlLmlvIGdvIGNsaWVudCIsInZlcnNpb24iOiIxLjAuMzMifSwiY3RpbWUiOjE1MDcyNTM4NzgsImV4cGlyZV9pbiI6NTA0NTc2MDAwLCJwcmV2IjoiNDkyZTNlZDNkNDI0NTQxMmZhY2MyZDcyNTU0NjBjYTM4OGQ5ZjlmZTQ3ZDNkM2QxODFjMzdiZjdiZjgxODI0YiIsInNlcW5vIjoxNCwidGFnIjoic2lnbmF0dXJlIn2jc2lnxEAbjC3UgdxzVxDsE9KWyDrWPRb+ehIx6qyLwnLU/gQcCo5O0ghJW4I7g0/8zjUP5C9VKivSaCCpFd/WnXWuT5UNqHNpZ190eXBlIKRoYXNogqR0eXBlCKV2YWx1ZcQg77/ZNA+wcVj+r9bMiSTt9bn0XsnpRZF8fSOULg16lCmjdGFnzQICp3ZlcnNpb24B
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/pliutau
+
+==================================================================
