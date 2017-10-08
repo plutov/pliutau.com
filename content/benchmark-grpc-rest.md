@@ -13,11 +13,11 @@ gRPC uses protobuf by default, and it's faster because it's binary and it's type
 
 This repository contains 2 equal APIs. The goal is to run benchmarks for 2 approaches and compare them. APIs have 1 endpoint to create user, containing validation of request. Request, validation and response are the same in 2 packages, so we're benchmarking only mechanism itself. Benchmarks also include response parsing.
 
-I use Go 1.9 and results show that gRPC is **3 times faster** for my API:
+I use Go 1.9 and results show that gRPC is **10 times faster** for my API:
 
 ```
-BenchmarkGRPC-4   	   10000	    206301 ns/op
-BenchmarkREST-4   	    3000	    497311 ns/op
+BenchmarkGRPC-4   	   10000	    197919 ns/op
+BenchmarkREST-4   	    1000	   1720124 ns/op
 ```
 
 ### Test it by your own
