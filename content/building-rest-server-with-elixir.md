@@ -24,15 +24,7 @@ mix new elixirrest
 
 As we decided to use `maru` package, we have to add it to `mix.exs` file.
 
-```
-def application do
-	[applications: [:logger, :maru], mod: {Elixirrest, []}]
-end
-
-defp deps do
-	[{:maru, "~> 0.2.8"}]
-end
-```
+{{< gist plutov a54eaddd7f108fae6190ca098bdc2b9f >}}
 
 To get and compile dependencies you have to run this command in `elixirrest` folder:
 
