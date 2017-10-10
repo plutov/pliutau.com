@@ -36,12 +36,7 @@ mix do deps.get, compile
 
 Mix created a file `config/config.exs`, where we can put all configuration we need, for different environments you can create a separate file, but in our example let's have only one with port `3030`:
 
-```
-use Mix.Config
-
-config :maru, Elixirrest.Api,
-	http: [port: 3030]
-```
+{{< gist plutov 8b2cb14df0595d49e36d1211a324992e >}}
 
 #### API
 
@@ -49,48 +44,13 @@ I created a folder `lib/elixirrest` with 2 files: `api.ex`, `agent.ex`. In the f
 
 API contains only 2 endpoints: GET to list all items and POST to create new item, they use Agent as storage.
 
-```
-defmodule Elixirrest.Api do
-	use Maru.Router
-	alias Elixirrest.Agent, as: Store
-
-	namespace :items do
-		desc "get all items"
-		get do
-			Store.get |> json
-		end
-
-		desc "creates an item"
-		params do
-			requires :name, type: String
-		end
-		post do
-			Store.insert(params) |> json
-		end
-	end
-end
-```
+{{< gist plutov e44383591600749ac259a36355a0bac7 >}}
 
 #### Supervisor
 
 To start Agent we just add it to supervision tree in `lib/elixirrest.ex`:
 
-```
-defmodule Elixirrest do
-	use Maru.Router
-
-	def start(_type, _args) do
-		import Supervisor.Spec, warn: false
-
-		children = [
-			worker(Elixirrest.Agent, [])
-		]
-
-		opts = [strategy: :one_for_one, name: Elixirrest.Supervisor]
-		Supervisor.start_link(children, opts)
-	end
-end
-```
+{{< gist plutov 87a29857a19efd937dee3b6c4c316914 >}}
 
 #### Run and Test
 
