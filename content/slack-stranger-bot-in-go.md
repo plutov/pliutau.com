@@ -52,10 +52,10 @@ Here is an example of how it works a Wizeline:
 > **Random WizelinerAPP** [10:31 PM]
 >
 > Bye! You finished conversation with the Stranger. Type hi again if you want to start a new random one.
-
-Random WizelinerAPP [10:31 PM]
-Bye! You finished conversation with the Stranger. _Type hi again if you want to start a new random one._
-```
+>
+> **Random WizelinerAPP** [10:31 PM]
+>
+> Bye! You finished conversation with the Stranger. Type "hi" again if you want to start a new random one.
 
 ### Try it
 
