@@ -19,7 +19,7 @@ So I wrote this Stranger Bot to meet strangers in your Slack, explore new people
  - Bot will forward all next messages sent by user to Bot to the Stranger user. Without mentioning who sent this message.
  - Any user can type `Bye` to finish the conversation, and type `Hi` again to start a new random one.
 
-Here is an example of how it works a Wizeline:
+Here is an example of how it works at Wizeline:
 
 > **alex.pliutau** [10:29 PM]
 >
