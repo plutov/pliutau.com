@@ -29,7 +29,7 @@ Here is an example of how it works a Wizeline:
 >
 > Connecting to a random Stranger ...
 >
-> Stranger found! Say hello, and please be polite :wave: _Type bye to finish the conversation_
+> Stranger found! Say hello, and please be polite. Type "bye" to finish the conversation
 >
 > hola!!
 >
@@ -37,11 +37,11 @@ Here is an example of how it works a Wizeline:
 >
 > Nice, super private
 >
-> So it will work to find random person to talk :slightly_smiling_face:
+> So it will work to find random person to talk
 >
 > **Random WizelinerAPP** [10:31 PM]
 >
-> :wat:
+> wat
 >
 > hahaha
 >
