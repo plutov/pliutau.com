@@ -1,6 +1,6 @@
 +++
 date = "2017-11-26T13:23:53+07:00"
-tags = ["python", "bot", "rasa]
+tags = ["python", "bot", "rasa"]
 title = "Create a bot with NLU in Python"
 type = "post"
 
