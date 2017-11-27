@@ -68,7 +68,7 @@ SLACK_TOKEN=<token> WOLFRAM_APP_ID=<app_id> python3 bot.py
 
 ### Training time
 
-RASA should be trained before using prediction, it's done on application start in [nlp/rasa.py[(https://github.com/plutov/bot/blob/master/nlp/rasa.py):
+RASA should be trained before using prediction, it's done on application start in [nlp/rasa.py](https://github.com/plutov/bot/blob/master/nlp/rasa.py) :
 
 ```
 self.rasa_config = RasaNLUConfig(config_file)
