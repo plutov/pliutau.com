@@ -44,6 +44,11 @@
                                 <i class="fa fa-twitter"></i>
                             </a>
                         {{ end }}
+                        {{ with .Site.Params.youtube }}
+                            <a class="button-square button-social hint--top" data-hint="Youtube" title="Youtube" href="{{ . }}">
+                                <i class="fa fa-youtube"></i>
+                            </a>
+                        {{ end }}
                         {{ with .Site.Params.gitlab }}
                             <a class="button-square button-social hint--top" data-hint="Gitlab" title="Gitlab" href="{{ . }}">
                                 <i class="fa fa-gitlab"></i>
@@ -74,6 +79,7 @@
                                 <i class="fa fa-envelope"></i>
                             </a>
                         {{ end }}
+                        
                     </div>
 
                     <ul class="site-nav">
