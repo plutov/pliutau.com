@@ -29,7 +29,7 @@ go build -ldflags="-w"
 The -s ldflag will omit the symbol table and debugging information when building your executable:
 
 ```
-go build -ldflags="-w"
+go build -ldflags="-s"
 ```
 
 Result:
