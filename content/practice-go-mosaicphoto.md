@@ -8,6 +8,7 @@ og_image = "https://raw.githubusercontent.com/plutov/practice-go/master/mosaicph
 ![mosaicphoto](https://raw.githubusercontent.com/plutov/practice-go/master/mosaicphoto/example.jpg)
 
 Your mission is to write a mosaic-photo generating command line program that:
+
  - Allows the user to select a target picture.
  - Allows the user to select a directory containing a set of tile pictures.
  - Generates a mosaic-photo of the target picture using the tile pictures.
