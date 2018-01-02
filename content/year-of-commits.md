@@ -3,6 +3,7 @@ title = "Year Of Commits: simple systray program in Go"
 date = "2018-01-02T14:35:14+07:00"
 type = "post"
 tags = ["go", "systray", "html/template" , "go-bindata", "github"]
+og_image = "/yearofcommits-full.jpg"
 +++
 Happy New Year Gophers! One of my goals for 2018 is to commit a code to GitHub every single day. So "Contributions" on GitHub will look like this:
 
