@@ -80,7 +80,8 @@ func main() {
 	st := reflect.TypeOf(u)
 	field := st.Field(0)
 	fmt.Println(field.Tag.Get("key"))
-}```
+}
+```
 
  - a. Yes. They should be comma-separated: `key:"name",maxlength:"128"`
  - b. Yes. They should be space-separated: `key:"name" maxlength:"128"`
