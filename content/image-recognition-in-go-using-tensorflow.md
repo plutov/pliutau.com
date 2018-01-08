@@ -23,18 +23,7 @@ We'll build a small command line application that takes URL to an image as input
 
 First of all we need to install TensorFlow, and here Docker can be really helpful, because installation of Tensorflow may be complicated. There is a Docker image with Tensorflow, but without Go, so I found an image with Tensorflow plus Go to reduce the Dockerfile.
 
-```
-FROM ctava/tensorflow-go
-
-RUN mkdir -p /model && \
-  curl -o /model/inception5h.zip -s "http://download.tensorflow.org/models/inception5h.zip" && \
-  unzip /model/inception5h.zip -d /model
-
-WORKDIR /go/src/imgrecognition
-COPY . .
-RUN go build
-ENTRYPOINT [ "/go/src/imgrecognition/imgrecognition" ]
-```
+{{< gist plutov 285947413105cac01a19da4a1e6e6639 >}}
 
 Let's start with simple main.go which will parse command line arguments and download image from URL:
 
