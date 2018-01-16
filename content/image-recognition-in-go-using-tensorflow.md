@@ -58,4 +58,4 @@ That's it, we're able to test our image and find what program will say:
 
 Here we used pre-trained model but it's also possible to train our models from Go in TensorFlow, and I will definitely do a video about it.
 
-[Full code of this program](https://github.com/plutov/packagemain/tree/master/05-tensorflow-image-recognition)
+[Full code of this program](https://github.com/plutov/packagemain/tree/master/04-tensorflow-image-recognition)
