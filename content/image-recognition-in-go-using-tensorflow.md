@@ -5,7 +5,7 @@ type = "post"
 tags = ["go", "golang", "image recognition", "tensorflow", "machine learning", "docker"]
 og_image = "/IRiGuTF.jpg"
 +++
-![LogPacker](/IRiGuTF.jpg)
+![image_recognition_in_go_using_tensorflow](/IRiGuTF.jpg)
 
 This is a text version of this video: [packagemain #4: Image Recognition in Go using Tensorflow](https://youtu.be/P8MZ1Z2LHrw).
 
