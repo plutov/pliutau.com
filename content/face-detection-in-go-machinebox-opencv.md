@@ -37,7 +37,7 @@ source env.sh
 
 Now let's create a main.go file and capture video from web camera:
 
-```golang
+
 package main
 
 import (
@@ -77,7 +77,7 @@ func main() {
 
 With OpenCV we can also use classifier to recognize faces on the image. Let's do it, for this we'll use Haar Cascades classifier. I already downloaded this XML file to use, you can find it in GoCV repository. With GoCV it's also possible to draw rectangle for each face to highlight it.
 
-```golang
+
 var (
 	blue          = color.RGBA{0, 0, 255, 0}
 	faceAlgorithm = "haarcascade_frontalface_default.xml"
@@ -113,7 +113,7 @@ for {
 
 To be able to recognize faces we need to train our model, in Facebox it's very easy, we can just upload few images and set the name. I will do it by saving images of my face into a folder.
 
-```golang
+
 imgName := fmt.Sprintf("%d.jpg", time.Now().UnixNano())
 gocv.IMWrite(imgName, imgFace)
 ```
@@ -124,13 +124,13 @@ For this example the easiest way is to use form from web page.
 
 Now after we trained it we can check if Facebox can find my face on the image and we can print my name.
 
-```golang
+
 fbox = facebox.New("http://localhost:8080")
 ```
 
 GoCV has no option to get `io.Reader` of an image, so we will open our saved file.
 
-```golang
+
 buf, err := gocv.IMEncode("jpg", imgFace)
 if err != nil {
 	log.Printf("unable to encode matrix: %v", err)
