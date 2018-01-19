@@ -9,7 +9,7 @@ og_image = "/DETECT.jpg"
 
 This is a text version of this video: [packagemain #5: Face Detection in Go using OpenCV and MachineBox](https://youtu.be/rbZeZNVA-Q4).
 
-I found a very nice developer-friendly project [MachineBox](https://machinebox.io/), which provides some machine learning tools inside Docker Container, including face detection, natural language understanding and few more. And it has SDK in Go, so in this video we will build a program which will detect my face. We will also use OpenCV to capture video from Web camera, it also has Go bindings.
+I found a very nice developer-friendly project [MachineBox](https://machinebox.io/), which provides some machine learning tools inside Docker Container, including face detection, natural language understanding and few more. And it has SDK in Go, so we will build a program which will detect my face. We will also use OpenCV to capture video from Web camera, it also has Go bindings.
 
 MachineBox can be installed very easily by running Docker container. First of all we need to register on [machinebox.io](https://machinebox.io/) and get key, then we can set environment variable `MB_KEY` and run facebox on port 8080:
 
