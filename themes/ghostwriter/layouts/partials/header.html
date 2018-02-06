@@ -32,13 +32,6 @@
             <header class="site-header">
                 <div class="container">
                     <div class="site-title-wrapper">
-                        {{ with .Site.Params.logo }}
-                            <a class="site-logo" title="{{ .Title }}" href="{{ .Site.BaseURL }}">
-                                <img src="{{ . }}" alt="{{ .Title }}" />
-                            </a>
-                        {{ else }}
-                        {{ end }}
-                        <a style="margin: 0px;" class="button-square" href="{{ .Site.BaseURL }}index.xml"><i class="fa fa-rss"></i></a>
                         {{ with .Site.Params.twitter }}
                             <a class="button-square button-social hint--top" data-hint="Twitter" title="Twitter" href="{{ . }}">
                                 <i class="fa fa-twitter"></i>
