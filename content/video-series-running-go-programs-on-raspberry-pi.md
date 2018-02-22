@@ -17,5 +17,5 @@ I started new video series about writing and running Go programs on Raspberry Pi
 Videos:
 
  - [Part 1](https://youtu.be/t5ehIsa_e_U)
- - Part 2
+ - [Part 2](https://youtu.be/8C9Nx8WZDXo)
  - Part 3
