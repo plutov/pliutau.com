@@ -45,7 +45,7 @@ Go to Fulfillment. There are 2 options to write a backend logic: using custom we
 
 You should already have Google Cloud project and `gcloud` SDK installed, so we can write `app.yaml` file to describe handlers and runtime:
 
-```go
+```golang
 runtime: go
 api_version: go1
 
@@ -56,7 +56,7 @@ handlers:
 
 Dialogflow will send 2 different requests to 1 endpoint: 1 for `location_permission` and 2 to `get` results.
 
-```go
+```golang
 package app
 
 import (
@@ -92,7 +92,7 @@ func handle(w http.ResponseWriter, r *http.Request) {
 
 In `handleLocationPermissionAction` we need to send back a specific response which will tell Dialogflow to ask for `DEVICE_PRECISE_LOCATION` permission. We set a question message telling user why we need location.
 
-```go
+```golang
 func handleLocationPermissionAction(w http.ResponseWriter, r *http.Request, dfReq DialogFlowRequest) {
 	json.NewEncoder(w).Encode(DialogFlowLocationResponse{
 		Speech: "PLACEHOLDER_FOR_PERMISSION",
@@ -118,7 +118,7 @@ func handleLocationPermissionAction(w http.ResponseWriter, r *http.Request, dfRe
 
 When user replies that it's ok to check location, dialogflow will send us coordinates in `get` action, so we can use it to check air quality index.
 
-```go
+```golang
 func handleGetAction(w http.ResponseWriter, r *http.Request, dfReq DialogFlowRequest) {
 	lat := dfReq.OriginalRequest.Data.Device.Location.Coordinates.Lat
 	long := dfReq.OriginalRequest.Data.Device.Location.Coordinates.Long
