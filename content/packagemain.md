@@ -11,7 +11,7 @@ I'm really enjoying to share some stuff about Golang and related technologies. I
 
 But I want to try the new way to share things, by doing live streams or record a videos where I'll share my screen and we can implement together some interesting functionality.
 
-So I just created a channel [packagemain](https://www.youtube.com/channel/UCI39wKG8GQnuzFPN5SM55qw) where I share the following topics:
+So I just created a channel [packagemain](https://www.youtube.com/packagemain) where I share the following topics:
  - Programming in Go
  - Go code review
  - Solving Algorithms with Go
