@@ -2,10 +2,12 @@
 title = "Transitioning from Engineer to Engineering Manager"
 date = "2018-05-12T09:21:50+07:00"
 type = "post"
-tags = ["engineering manager", "radical candor"]
+tags = ["engineering manager", "radical candor", "wizeline"]
+og_image = "/em.jpg"
 +++
+![em.jpg](/em.jpg)
 
-A couple of months ago I moved from a Team Lead position to being an engineering manager at Wizeline Vietnam on a small sized team. I've found this role change come with a mindset change, something what mattered before when I was an individual contributor (writing good code, apply best engineering practices) became less important. On the other hand, other things became more important, like team health, team success and team career growth.
+A couple of months ago I moved from a Team Lead position to being an engineering manager at Wizeline Vietnam on a small sized team. I've found this role change come with a mindset change. Something what mattered before when I was an individual contributor (writing good code, apply best engineering practices) became less important. On the other hand, other things became more important, like team health, team success and team career growth.
 
 In this post I will summarize what worked well for me during the early phase of this transition.
 
@@ -13,7 +15,7 @@ In this post I will summarize what worked well for me during the early phase of 
 
 It's all about the work behind the scenes to put engineers in position to succeed and highlight their successes, while we stay in the shadow.
 
-Most engineering managers were successful engineers first. Losing that can hurt, but being a manager offers a chance to have a bigger impact, on people’s lives as well. And many managers find that helping others helps them grow, too.
+Most engineering managers were successful engineers first. Losing that can hurt, but being a manager offers a chance to have a bigger impact, on people's lives as well. And many managers find that helping others helps them grow, too.
 
 ### Mentoring is important
 
@@ -33,12 +35,27 @@ I didn't have too many meetings when I was an individual contributor. However, a
 
 It's very important to keep track on your tasks and don't let them be forgotten. Everyone has own technique to manage tasks, and if something works for me, it doesn't mean that it'll work for someone else.
 
-I started to experiment with GSD process that already works better than my original ad hoc approach I did when I was an individual controbutor.
+I started to experiment with GSD process that already works better than my original ad hoc approach I did when I was an individual contributor.
+
+![gsd.png](/gsd.png)
 
 ### Start with yourself
 
-Self clear vision, short ang long term goals.
+Set clear vision, short and long term goals.
 
 Most people find it harder to be humble when they're mad, hungry or tired. If I focus on managing my emotions it's easier for me to prevent my ego from getting the better of me. Ask yourself what you need to stay centered, and make sure to do those things to take care of yourself.
 
 If you feel sad, it's maybe better to stay at home for a day and don't spread your mental desease in the office.
+
+### Should Engineering Managers code?
+
+Becoming a manager was a choice. It was easy to convince myself that it was necessary (or at least acceptable) to continue writing code. But...
+
+1. You have a new job to master. That takes work and time. Every minute you spend coding is a minute you could have spent reading, talking to peers, etc. to become a better manager.
+2. The balance of power is no longer the same on your team. People will treat you differently, and that's a problem. They'll be less critical in code reviews.
+
+It's important that engineering managers have software engineering background and have the ability to get their hands dirty if required. But continuing to write code regularly or writing code during crunch times actually hurts the team in the long run.
+
+### Conclusion
+
+So far, transitioning to the engineering manager has been a really interesting and exciting journey. Looking forward to learn more and share these learnings along the way.
