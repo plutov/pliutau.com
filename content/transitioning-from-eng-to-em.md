@@ -35,7 +35,7 @@ I didn't have too many meetings when I was an individual contributor. As a manag
 
 It's very important to keep track on your tasks and don't let them be forgotten. Everyone has own technique to manage tasks and if something works for me, it doesn't mean that it'll work for someone else.
 
-I started experimenting with GSD (Get Shit Done) process and I found that it already works better for me than my original ad hoc approach I used when I was an individual contributor.
+I started experimenting with GSD (Get Shit Done) process and I found out that it already works better for me than ad hoc approach I used when I was an individual contributor.
 
 ![gsd.png](/gsd.png)
 
@@ -43,18 +43,18 @@ I started experimenting with GSD (Get Shit Done) process and I found that it alr
 
 Set clear vision, short and long term goals.
 
-Most people find it harder to be humble when they're mad, hungry or tired. If I focus on managing my emotions it's easier for me to prevent my ego from getting the better of me. Ask yourself what you need to stay centered, and make sure to do those things to take care of yourself.
+Most people find it harder to be humble when they're mad, hungry or tired. If I'm focusing on my emotions it's easier to prevent my ego from getting the better result. Ask yourself what you need to stay centered and make sure you do those things and take care of yourself.
 
-If you feel sad, it's maybe better to stay at home for a day and don't spread your mental desease in the office.
+If you feel sad it's maybe better to stay at home for a day and don't spread your mental desease in the office.
 
 ### Should Engineering Managers code?
 
 Becoming a manager was a choice. It was easy to convince myself that it was necessary (or at least acceptable) to continue writing code. But...
 
-1. You have a new job to master. That takes work and time. Every minute you spend coding is a minute you could have spent reading, talking to peers, etc. to become a better manager.
+1. You have a new job to master. That requires hard work and a lot of time. Every minute you spend coding is a minute you could have spent reading, talking to peers, etc. to become a better manager.
 2. The balance of power is no longer the same on your team. People will treat you differently, and that's a problem. They'll be less critical in code reviews.
 
-It's important that engineering managers have software engineering background and have the ability to get their hands dirty if required. But continuing to write code regularly or writing code during crunch times actually hurts the team in the long run.
+It's important that engineering managers have software engineering background and have the ability to get their hands dirty if required. But continuing to write code regularly or write code during crunch times actually hurts the team in the long run.
 
 ### Conclusion
 
