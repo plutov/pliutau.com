@@ -1,5 +1,5 @@
 +++
-title = "Building Slack- Bot with Go and Wit.ai"
+title = "Building a Slack Bot with Go and Wit.ai"
 date = "2018-05-23T08:27:36+07:00"
 type = "post"
 tags = ["go", "bot", "slack", "nlu", "wit", "packagemain"]
