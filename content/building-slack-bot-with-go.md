@@ -168,12 +168,22 @@ log.Printf("unable to get data from wolfram: %v", err)
 
 #### Testing part
 
-> Hi
+> me: Hi
 
-> Hola
+> Bot: Hello user! How can I help you?
 
-> Who is the president of US?
+> me: Hola
 
-> What is the meaning of life?
+> Bot: Hello user! How can I help you?
 
-> bye
+> me: Who is the president of US?
+
+> Bot: Donald Trump (from 20/01/2017 to present)
+
+> me: What is the meaning of life?
+
+> Bot: 42
+
+> me: bye
+
+> Bot: ¯\\_(o_o)_/¯
