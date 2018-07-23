@@ -1,126 +1,87 @@
 <!DOCTYPE html>
-<html{{ if .Site.Params.opengraph }} prefix="og: http://ogp.me/ns#" {{ end }}>
-
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>{{ with .Description }}{{ .Title }} @ Alex Pliautau's Blog{{ else }}{{ if .IsPage }}{{ .Title }} @ Alex Pliautau's Blog{{
-			else }}Alex Pliautau's Blog{{ end }}{{ end }}</title>
-		<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ if .IsPage }}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
-		<meta name="keywords" content="{{ if .IsPage }}{{ if .Params.tags }}{{ range .Params.tags }}{{ . | urlize }}, {{end}}{{end}}{{end}}alex pliutau, golang, go, programming, docker, swagger, git">
-		<meta name="HandheldFriendly" content="True">
-		<meta name="MobileOptimized" content="320"> {{ .Hugo.Generator }}
-		<meta name="robots" content="index,follow">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"> {{ if .Site.Params.opengraph }}{{ partial "opengraph.html" . }}{{ end }}
-		<link rel="stylesheet" href="{{ .Site.BaseURL }}dist/styles.css">
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> {{ if .RSSLink }}
-		<link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml"> {{ end }}
+<html{{ if .Site.Params.opengraph }} prefix="og: http://ogp.me/ns#"{{ end }}>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>{{ with .Description }}{{ .Title }} @ Alex Pliautau's Blog{{ else }}{{ if .IsPage }}{{ .Title }} @ Alex Pliautau's Blog{{ else }}Alex Pliautau's Blog{{ end }}{{ end }}</title>
+        <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ if .IsPage }}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
+        <meta name="keywords" content="{{ if .IsPage }}{{ if .Params.tags }}{{ range .Params.tags }}{{ . | urlize }}, {{end}}{{end}}{{end}}alex pliutau, golang, go, programming, docker, swagger, git">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        {{ .Hugo.Generator }}
+        <meta name="robots" content="index,follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {{ if .Site.Params.opengraph }}{{ partial "opengraph.html" . }}{{ end }}
+        <link rel="stylesheet" href="{{ .Site.BaseURL }}dist/styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        {{ if .RSSLink }}
+            <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml">
+        {{ end }}
 		<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
 		<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
-		<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96"> {{ if .Site.DisqusShortname }}
-		<script id="dsq-count-scr" src="//{{ .Site.DisqusShortname }}.disqus.com/count.js" async></script> {{ end }}
-	</head>
+		<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+		{{ if .Site.DisqusShortname }}
+			<script id="dsq-count-scr" src="//{{ .Site.DisqusShortname }}.disqus.com/count.js" async></script>
+		{{ end }}
+    </head>
+    <body>
+        {{ template "_internal/google_analytics.html" . }}
 
-	<body>
-		{{ template "_internal/google_analytics.html" . }}
-
-		<div id="wrapper">
-			<header class="site-header">
-				<div class="container">
+        <div id="wrapper">
+            <header class="site-header">
+                <div class="container">
 					<div class="site-title-wrapper">
-						<style>
-							.bmc-button img {
-								width: 27px !important;
-								margin-bottom: 1px !important;
-								box-shadow: none !important;
-								border: none !important;
-								vertical-align: middle !important;
-							}
-
-							.bmc-button {
-								line-height: 36px !important;
-								height: 37px !important;
-								text-decoration: none !important;
-								display: inline-flex !important;
-								color: #FFFFFF !important;
-								background-color: #FF813F !important;
-								border-radius: 3px !important;
-								border: 1px solid transparent !important;
-								padding: 1px 9px !important;
-								font-size: 23px !important;
-								letter-spacing: 0.6px !important;
-								;
-								box-shadow: 0px 1px 2px rgba(190, 190, 190, 0.5) !important;
-								-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;
-								margin: 0 auto !important;
-								font-family: 'Cookie', cursive !important;
-								-webkit-box-sizing: border-box !important;
-								box-sizing: border-box !important;
-								-o-transition: 0.3s all linear !important;
-								-webkit-transition: 0.3s all linear !important;
-								-moz-transition: 0.3s all linear !important;
-								-ms-transition: 0.3s all linear !important;
-								transition: 0.3s all linear !important;
-							}
-
-							.bmc-button:hover,
-							.bmc-button:active,
-							.bmc-button:focus {
-								-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;
-								text-decoration: none !important;
-								box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;
-								opacity: 0.85 !important;
-								color: #FFFFFF !important;
-							}
-						</style>
-						<link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">
-						<a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/packagemain">
-							<img src="https://www.buymeacoffee.com/assets/img/BMC-btn-logo.svg" alt="Buy me a coffee">
-							<span style="margin-left:5px">Buy me a coffee</span>
-						</a>
+						<style>.bmc-button img{width: 27px !important;margin-bottom: 1px !important;box-shadow: none !important;border: none !important;vertical-align: middle !important;}.bmc-button{line-height: 36px !important;height:37px !important;text-decoration: none !important;display:inline-flex !important;color:#FFFFFF !important;background-color:#FF813F !important;border-radius: 3px !important;border: 1px solid transparent !important;padding: 1px 9px !important;font-size: 23px !important;letter-spacing:0.6px !important;;box-shadow: 0px 1px 2px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;margin: 0 auto !important;font-family:'Cookie', cursive !important;-webkit-box-sizing: border-box !important;box-sizing: border-box !important;-o-transition: 0.3s all linear !important;-webkit-transition: 0.3s all linear !important;-moz-transition: 0.3s all linear !important;-ms-transition: 0.3s all linear !important;transition: 0.3s all linear !important;}.bmc-button:hover, .bmc-button:active, .bmc-button:focus {-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;text-decoration: none !important;box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;opacity: 0.85 !important;color:#FFFFFF !important;}</style><link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet"><a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/packagemain"><img src="https://www.buymeacoffee.com/assets/img/BMC-btn-logo.svg" alt="Buy me a coffee"><span style="margin-left:5px">Buy me a coffee</span></a>
 					</div>
-					<div class="site-title-wrapper">
-						{{ with .Site.Params.twitter }}
-						<a class="button-square button-social hint--top" data-hint="Twitter" title="Twitter" href="{{ . }}">
-							<i class="fa fa-twitter"></i>
-						</a>
-						{{ end }} {{ with .Site.Params.youtube }}
-						<a class="button-square button-social hint--top" data-hint="Youtube" title="Youtube" href="{{ . }}">
-							<i class="fa fa-youtube"></i>
-						</a>
-						{{ end }} {{ with .Site.Params.gitlab }}
-						<a class="button-square button-social hint--top" data-hint="Gitlab" title="Gitlab" href="{{ . }}">
-							<i class="fa fa-gitlab"></i>
-						</a>
-						{{ end }} {{ with .Site.Params.github }}
-						<a class="button-square button-social hint--top" data-hint="Github" title="Github" href="{{ . }}">
-							<i class="fa fa-github-alt"></i>
-						</a>
-						{{ end }} {{ with .Site.Params.stackoverflow }}
-						<a class="button-square button-social hint--top" data-hint="Stack Overflow" title="Stack Overflow" href="{{ . }}">
-							<i class="fa fa-stack-overflow"></i>
-						</a>
-						{{ end }} {{ with .Site.Params.linkedin }}
-						<a class="button-square button-social hint--top" data-hint="LinkedIn" title="LinkedIn" href="{{ . }}">
-							<i class="fa fa-linkedin"></i>
-						</a>
-						{{ end }} {{ with .Site.Params.gplus }}
-						<a class="button-square button-social hint--top" data-hint="Google+" title="Google+" href="{{ . }}">
-							<i class="fa fa-google-plus"></i>
-						</a>
-						{{ end }} {{ with .Site.Params.email }}
-						<a class="button-square button-social hint--top" data-hint="Email" title="Email" href="mailto:{{ . }}">
-							<i class="fa fa-envelope"></i>
-						</a>
-						{{ end }}
+                    <div class="site-title-wrapper">
+                        {{ with .Site.Params.twitter }}
+                            <a class="button-square button-social hint--top" data-hint="Twitter" title="Twitter" href="{{ . }}">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                        {{ end }}
+                        {{ with .Site.Params.youtube }}
+                            <a class="button-square button-social hint--top" data-hint="Youtube" title="Youtube" href="{{ . }}">
+                                <i class="fa fa-youtube"></i>
+                            </a>
+                        {{ end }}
+                        {{ with .Site.Params.gitlab }}
+                            <a class="button-square button-social hint--top" data-hint="Gitlab" title="Gitlab" href="{{ . }}">
+                                <i class="fa fa-gitlab"></i>
+                            </a>
+                        {{ end }}
+                        {{ with .Site.Params.github }}
+                            <a class="button-square button-social hint--top" data-hint="Github" title="Github" href="{{ . }}">
+                                <i class="fa fa-github-alt"></i>
+                            </a>
+                        {{ end }}
+                        {{ with .Site.Params.stackoverflow }}
+                            <a class="button-square button-social hint--top" data-hint="Stack Overflow" title="Stack Overflow" href="{{ . }}">
+                                <i class="fa fa-stack-overflow"></i>
+                            </a>
+                        {{ end }}
+                        {{ with .Site.Params.linkedin }}
+                            <a class="button-square button-social hint--top" data-hint="LinkedIn" title="LinkedIn" href="{{ . }}">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                        {{ end }}
+                        {{ with .Site.Params.gplus }}
+                            <a class="button-square button-social hint--top" data-hint="Google+" title="Google+" href="{{ . }}">
+                                <i class="fa fa-google-plus"></i>
+                            </a>
+                        {{ end }}
+                        {{ with .Site.Params.email }}
+                            <a class="button-square button-social hint--top" data-hint="Email" title="Email" href="mailto:{{ . }}">
+                                <i class="fa fa-envelope"></i>
+                            </a>
+                        {{ end }}
+                        
+                    </div>
 
-					</div>
+                    <ul class="site-nav">
+                        {{ partial "navigation.html" . }}
+                    </ul>
+                </div>
+            </header>
 
-					<ul class="site-nav">
-						{{ partial "navigation.html" . }}
-					</ul>
-				</div>
-			</header>
-
-			<div id="container">
+            <div id="container">
