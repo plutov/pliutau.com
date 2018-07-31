@@ -3,10 +3,7 @@ title = "Microservices with go-kit. Part 1"
 date = "2018-07-30T11:28:51+07:00"
 type = "post"
 tags = ["go", "packagemain"]
-og_image = "/go-kit-1.jpg"
 +++
-![go-kit](/go-kit-1.jpg)
-
 This is a text version of [the "packagemain #12: Microservices with go-kit. Part 1"](https://youtu.be/1ScP5DyS1_g) video.
 
 Nowadays, Microservices is one of the most popular buzz-word in the field of software architecture.
