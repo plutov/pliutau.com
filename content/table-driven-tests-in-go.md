@@ -29,7 +29,7 @@ var tests = []struct {
 }
 ```
 
-Usually table is a slice of anonymous structs, however you may define struct first or use an existing one. Also we have a `name` propery describing the paarticular test case.
+Usually table is a slice of anonymous structs, however you may define struct first or use an existing one. Also we have a `name` property describing the particular test case.
 
 After we have a table we can simply iterate over it and do an assertion:
 
