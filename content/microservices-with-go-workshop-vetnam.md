@@ -5,7 +5,7 @@ type = "post"
 tags = ["wizeline", "go", "workshop", "microservices"]
 +++
 
-One month ago Wizline organized the [Microservices with Go](http://pliutau.com/wizeline-academy-microservices-with-go/) Workshop in Mexico, GDL as part of Wizeline Academy
+One month ago Wizline organized the [Microservices with Go](/wizeline-academy-microservices-with-go/) Workshop in Mexico, GDL as part of Wizeline Academy
 
 I am happy to announce that we're opening Wizeline Academy now in Vietnam, HCMC. And we will do similar workshop here, don't miss it.
 

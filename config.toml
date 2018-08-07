@@ -1,4 +1,4 @@
-baseurl = "http://pliutau.com/"
+baseurl = "https://pliutau.com/"
 title = "Alex Pliutau"
 theme = "ghostwriter"
 languageCode = "en-us"
@@ -9,7 +9,7 @@ paginate= 50
 
 [Author]
     name = "Alex Pliutau"
-    profile = "http://pliutau.com"
+    profile = "https://pliutau.com"
 
 [Params]
     intro = false

@@ -1,4 +1,4 @@
-The content of [pliutau.com](http://pliutau.com) blog.
+The content of [pliutau.com](https://pliutau.com) blog.
 
 ### Run locally
 

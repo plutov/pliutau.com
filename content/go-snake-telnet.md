@@ -10,12 +10,6 @@ I wanted to create something in Go, and I wrote this [Snake game over Telnet](ht
 
 Go is awesome in this case, no need any dependencies to build this funny stuff.
 
-Try it:
-
-```
-telnet pliutau.com 8080
-```
-
 ![go-snake-telnet](/go-snake-telnet.gif)
 
 ### Development

@@ -14,7 +14,7 @@ I went home with an idea of building a game, fully based on voice recognition, w
 
 And of course, Go!
 
-I created a [PoC open source project](https://github.com/plutov/games) to implement a `20 questions` game, a simple fun game where you should guess a noun by asking a maximum of 20 questions. A question can be answered only with "Yes", "No" and "Don't know". The demo page is located [here](http://pliutau.com/games/).
+I created a [PoC open source project](https://github.com/plutov/games) to implement a `20 questions` game, a simple fun game where you should guess a noun by asking a maximum of 20 questions. A question can be answered only with "Yes", "No" and "Don't know".
 
 For now, I am doing voice recognition using webkit technologies, but I have plans to move it to a backend and use Google Speech API. Also I want to support all possible languages using Google Translate API.
 

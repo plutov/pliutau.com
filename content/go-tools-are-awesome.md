@@ -46,7 +46,7 @@ mkdir -p $WORK/github.com/plutov/go-snake-telnet/_obj/exe/
 ```
 
 I often use `-ldflags` option when build Go programs:
- - To [optimize Go Binary Size](http://pliutau.com/optimize-go-binary-size/).
+ - To [optimize Go Binary Size](/optimize-go-binary-size/).
  - To set variable value during the build.
 
 ```

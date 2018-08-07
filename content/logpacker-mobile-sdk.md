@@ -7,7 +7,7 @@ og_image = "/android.png"
 +++
 ![GoAndroid](/android.png)
 
-This article is an addition to the [post](http://pliutau.com/how-to-launch-logpacker-cluster/) how to launch LogPacker Cluster for free.
+This article is an addition to the [post](/how-to-launch-logpacker-cluster/) how to launch LogPacker Cluster for free.
 
 ##### Goals
 
