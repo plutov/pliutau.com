@@ -21,9 +21,9 @@ Go to Services -> ECS and click [Get Started](https://console.aws.amazon.com/ecs
 
 Select `custom` image and click `Configure`.
 
-### Container Configuration
-
 ![Deploying Facebox to AWS ECS](/facebox-ecs1.png)
+
+### Container Configuration
 
 Set the container name and `machinebox/facebox` image, ECS will pull the one from Docker Hub. Machine Box team is [suggesting](https://machinebox.io/docs/setup/docker) to set at least 4GM RAM for your boxes, so we will set the memory limit as 4096. Facebox API is running on container port 8080, so we should expose it.
 
@@ -53,4 +53,4 @@ Set a cluster name, and click `Create`. It will take few minutes for ECS to pull
 
 As we enabled Application Load Balancing you will be able to access your Facebox Console by public IP (do not forget to add `:8080`).
 
-![Deploying Facebox to AWS ECS](/facebox-ecs5.png)
+![Deploying Facebox to AWS ECS](/facebox-ecs6.png)
