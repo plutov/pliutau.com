@@ -25,11 +25,15 @@ Select `custom` image and click `Configure`.
 
 ### Container Configuration
 
-Set the container name and `machinebox/facebox` image, ECS will pull the one from Docker Hub. Machine Box team is [suggesting](https://machinebox.io/docs/setup/docker) to set at least 4GM RAM for your boxes, so we will set the memory limit as 4096. Facebox API is running on container port 8080, so we should expose it.
+Set the container name and `machinebox/facebox` image, ECS will pull the one from Docker Hub. Machine Box team is [suggesting](https://machinebox.io/docs/setup/docker) to set at least 4GM RAM for your boxes, so we will set the memory limit as 4096. Facebox API is running on container port 8080, so we should expose it. Fargate mode doesn't allow to specify different host port for mapping, so later we're gonna to fix it in EC2 Load Balancing section.
 
 ![Deploying Facebox to AWS ECS](/facebox-ecs2.png)
 
+### Environment variables
+
 When you sign up on [machinebox.io](https://machinebox.io) you will get a MB_KEY, which you should set as environment variable in `Advanced container configuration` section.
+
+Also as our Facebox will be accessible by public IP, it's better to protect it with [Basic Auth](https://machinebox.io/docs/machine-box-apis#basic-authentication), so we set `MB_BASICAUTH_USER` and `MB_BASICAUTH_PASS` environment variables. All requests to the box must now include the Basic Authentication HTTP header.
 
 ![Deploying Facebox to AWS ECS](/facebox-ecs3.png)
 
@@ -51,6 +55,12 @@ Set a cluster name, and click `Create`. It will take few minutes for ECS to pull
 
 ### Check it out
 
-As we enabled Application Load Balancing you will be able to access your Facebox Console by public IP (do not forget to add `:8080`).
+Now let's change listener port from 8080 to 80, open EC2 -> Load Balancers, go to Listeners tab, find 8080 listener and click `Edit`. Change 8080 to 80.
+
+![Deploying Facebox to AWS ECS](/facebox-ecs7.png)
+
+As we enabled Application Load Balancing you will be able to access your Facebox Console by a public endpoint. You can find it in your ECS service or in Load Balancer description.
+
+Enter your Basic Auth username / password and you will be able to see the Console.
 
 ![Deploying Facebox to AWS ECS](/facebox-ecs6.png)
