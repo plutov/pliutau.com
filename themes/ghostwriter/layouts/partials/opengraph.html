@@ -1,7 +1,7 @@
 <meta property="og:title" content="{{ .Title }}">
 <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ if .IsPage }}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
 <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
-<meta property="og:url" content="https://pliutau.com{{ .Permalink }}">
+<meta property="og:url" content="{{ .Permalink }}">
 {{ if .Params.og_image }}
 <meta property="og:image" content="{{ .Params.og_image | absURL }}" />
 {{ end }}
