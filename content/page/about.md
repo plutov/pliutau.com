@@ -3,8 +3,11 @@ type = "page"
 title = "About"
 date = "2016-01-20T14:10:50+07:00"
 +++
-> Hi, my name is Alex Pliutau. I write mostly Go these days. And I love to share what I'm doing on this blog and on the ["package main" Youtube channel](https://www.youtube.com/packagemain).
+I'm a senior backend engineer with over 8 years of experience, currently working mostly with Go and Microservices, applying [twelve-factor](https://12factor.net/) methodology. I've worked at both small and large companies bringing products from concept
+to release in a variety of environments.
 
-> [@pliutau](https://twitter.com/pliutau)
+Recently I started my YouTube [channel](https://www.youtube.com/packagemain) about programming in Go 📹.
 
-> Currently I am working as an Engineering Manager at [Wizeline Vietnam](http://wizeline.com/) based in Ho Chi Minh City, Vietnam.
+If you think I'm a good fit for your organization, please drop an email at [mailto:a.pliutau@gmail.com](a.pliutau@gmail.com).
+
+[@pliutau](https://twitter.com/pliutau)
