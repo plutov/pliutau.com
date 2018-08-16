@@ -37,6 +37,6 @@ to release in a variety of environments.
 
 Recently I started my YouTube [channel](https://www.youtube.com/packagemain) about programming in Go 📹.
 
-If you think I'm a good fit for your organization, please drop an email at [mailto:a.pliutau@gmail.com](a.pliutau@gmail.com).
+If you think I'm a good fit for your organization, please drop an email at [a.pliutau@gmail.com](mailto:a.pliutau@gmail.com).
 
 For more details about my work experience, you can find my CV [here](https://s3.amazonaws.com/pliutau.com/cv.pdf).
