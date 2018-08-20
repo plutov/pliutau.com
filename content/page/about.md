@@ -2,7 +2,10 @@
 type = "page"
 title = "About"
 date = "2016-01-20T14:10:50+07:00"
+og_image = "https://pliutau.com/me.png"
 +++
+![Alex Pliutau](https://pliutau.com/me.png)
+
 I'm a senior backend engineer with over 8 years of experience, currently working mostly with Go and Microservices, applying [twelve-factor](https://12factor.net/) methodology. I've worked at both small and large companies bringing products from concept
 to release in a variety of environments.
 
