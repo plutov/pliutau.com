@@ -1,4 +1,4 @@
-FROM alpine
+FROM ctava/tfcgo
 
 ADD . /go/src/github.com/plutov/hugo-blog
 WORKDIR /go/src/github.com/plutov/hugo-blog
