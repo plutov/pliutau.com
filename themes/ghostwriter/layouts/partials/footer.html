@@ -3,21 +3,15 @@
 
         <footer class="footer">
             <div class="container">
-                <div class="site-title-wrapper">
-                    <a class="button-square button-jump-top js-jump-top" href="#">
-                        <i class="fa fa-angle-up"></i>
-                    </a>
-                </div>
-
-                <p class="footer-copyright">
+                <p class="footer-copyright site-title-wrapper">
                     <span>&copy; {{ .Site.LastChange.Format "2006" }} Alex Pliutau. All rights reserved.</span>
                 </p>
             </div>
         </footer>
 
-        <script src="/js/jquery-1.11.3.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
-        <script src="/js/jquery.fitvids.js"></script>
-        <script src="/js/scripts.js"></script>
+		<script type="text/javascript">
+			hljs.initHighlightingOnLoad();
+		</script>
     </body>
 </html>
