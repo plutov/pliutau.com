@@ -1,7 +1,7 @@
 FROM alpine
 
-ADD . /go/src/github.com/plutov/hugo-blog
-WORKDIR /go/src/github.com/plutov/hugo-blog
+ADD . /go/src/github.com/plutov/pliutau.com
+WORKDIR /go/src/github.com/plutov/pliutau.com
 
 ADD https://github.com/gohugoio/hugo/releases/download/v0.45.1/hugo_0.45.1_Linux-64bit.tar.gz .
 RUN tar -zxvf hugo_0.45.1_Linux-64bit.tar.gz

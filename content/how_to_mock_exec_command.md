@@ -66,5 +66,3 @@ func TestGetHeadHash(t *testing.T) {
 }
 ```
 You may find something strange in `TestCommander`, but as I explained before, this function builds up a command to run the current test file and run the `TestOutput` function passing along all the args you originally sent. This lets you do things like return different output for different commands you want to run.
-
-You can find full version of `git.go` and `git_test.go` [here](https://github.com/plutov/hugo-blog/tree/master/go/git).
