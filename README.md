@@ -1,5 +1,4 @@
-The content of [pliutau.com](https://pliutau.com) blog.
-
+[pliutau.com](https://pliutau.com) - My blog about Go, built with [Hugo](https://gohugo.io/).
 ### Run locally
 
 ```
