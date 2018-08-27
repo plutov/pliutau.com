@@ -18,7 +18,6 @@ Materials, examples, thoughts about Go, DevOps, PHP, CI/CD, open source and more
 
 * [GitHub](http://github.com/plutov) - here you can find my email too
 * [LinkedIn](https://www.linkedin.com/in/pltvs)
-* [Facebook](https://www.facebook.com/pltvs)
 
 #### Hugo
 
