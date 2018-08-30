@@ -11,66 +11,30 @@ In [practice-go](https://github.com/plutov/practice-go) we often use table drive
 
 Imagine we have this function:
 
-```
-FindAnagrams(string word) []string
-```
+{{< gist plutov 396aeefea0c461344ff69ec796367e0b >}}
 
 Here is how our table may look like:
 
-```
-var tests = []struct {
-	name string
-	word string
-	want []string
-}{
-	{"empty input string", "", []string{}},
-	{"two anagrams", "Protectionism", []string{"Cite no imports", "Nice to imports"}},
-	{"input with space", "Real fun", []string{"funeral"}},
-}
-```
+{{< gist plutov 667342606fa7a18bc32580b1eaa4a016 >}}
 
 Usually table is a slice of anonymous structs, however you may define struct first or use an existing one. Also we have a `name` property describing the particular test case.
 
 After we have a table we can simply iterate over it and do an assertion:
 
-```
-func TestFindAnagrams(t *testing.T) {
-	for _, tt := range tests {
-		t.Run(tt.name, func(t *testing.T) {
-			got := FindAnagrams(tt.word)
-			if !reflect.DeepEqual(got, tt.want) {
-				t.Errorf("FindAnagrams(%s) got %v, want %v", tt.word, got, tt.want)
-			}
-		})
-	}
-}
-```
+{{< gist plutov 90be9480c5ab9e73c8f36cc23a98de0d >}}
 
 You may use another function instead of `t.Errorf()`, `t.Errorf()` just logs the error and test continues.
 
 The [testify](https://github.com/stretchr/testify) package is very popular Go assertion package to make unit tests clear, for example:
 
-```
-assert.Equal(t, got, tt.want, "they should be equal")
-```
+{{< gist plutov 4f44253927bd26fcf3897115f1eb5fd5 >}}
 
 `t.Run()` will launch a subtest, and if you run tests in verbose mode (`go test -v`) you will see each subtest result:
 
-```
-=== RUN   TestFindAnagrams
-=== RUN   TestFindAnagrams/empty_input_string
-=== RUN   TestFindAnagrams/two_anagrams
-=== RUN   TestFindAnagrams/input_with_space
-```
+{{< gist plutov 930892d47a1c3a283bd49e6ea9ccf85c >}}
 
 Since Go 1.7 testing package enables to be able to parallelize the subtests by using `(*testing.T).Parallel()`. Please make sure that it makes sense to parallelize your tests!
 
-```
-t.Run(tt.name, func(subtest *testing.T) {
-	subtest.Parallel()
-	got := FindAnagrams(tt.word)
-	// assertion
-})
-```
+{{< gist plutov eeb79ecf4df510700a3b2e965b350241 >}}
 
 That's it, enjoy writing table driven tests in Go!
