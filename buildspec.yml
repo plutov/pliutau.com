@@ -14,6 +14,7 @@ phases:
     commands:
       - echo Pushing the Docker images...
       - docker push pltvs/blog
+      - printf '[{"name":"blog","imageUri":"pltvs/blog"}]' > imagedefinitions.json
 
 artifacts:
     files: imagedefinitions.json
