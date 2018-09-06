@@ -1,0 +1,16 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - echo Logging in to Docker Hub...
+      - docker login -u $DOCKER_HUB_USER -p $DOCKER_HUB_PASS
+  build:
+    commands:
+      - echo Building the Docker image...
+      - docker build -t blog --no-cache .
+      - docker tag blog pltvs/blog
+  post_build:
+    commands:
+      - echo Pushing the Docker images...
+      - docker push pltvs/blog
