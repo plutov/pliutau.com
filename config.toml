@@ -16,7 +16,7 @@ paginate= 50
     linkedin = "https://linkedin.com/in/pltvs/"
     twitter = "https://twitter.com/pliutau"
     youtube = "https://www.youtube.com/packagemain"
-    stackoverflow = "http://stackoverflow.com/users/350294/pltvs"
+    stackoverflow = "https://stackoverflow.com/users/350294/pltvs"
     email = "a.pliutau@gmail.com"
     opengraph = true
     shareTwitter = true
@@ -43,7 +43,7 @@ paginate= 50
 
 [[menu.main]]
     name = "Subscribe"
-    url = "http://eepurl.com/cDoD09"
+    url = "https://eepurl.com/cDoD09"
     weight = 4
 
 [[menu.main]]

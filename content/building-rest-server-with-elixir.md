@@ -6,7 +6,7 @@ tags = ["elixir","rest"]
 +++
 I always wanted to try Elixir because of it's nice Erlang ecosystem and because it's similar to Go in a lot of points. I was thinking what I can start with, and I decided to build, yes... a REST server. It took me around 1 hour to install Elixir, and build a simple REST server using [maru](https://github.com/falood/maru) RESTful framework.
 
-I built a small `items` API using JSON and [Agent](http://elixir-lang.org/getting-started/mix-otp/agent.html) as storage. Let me go through all actions to build.
+I built a small `items` API using JSON and [Agent](https://elixir-lang.org/getting-started/mix-otp/agent.html) as storage. Let me go through all actions to build.
 
 #### Prerequisites
 
