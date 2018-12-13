@@ -1,5 +1,5 @@
 +++
-title = "Nasa-Collage"
+title = "NASA Collage"
 date = "2018-12-13T21:23:27+01:00"
 type = "post"
 tags = ["go", "nasa", "apod"]
