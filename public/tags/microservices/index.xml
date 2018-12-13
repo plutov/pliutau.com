@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Microservices on Alex Pliutau</title>
+    <link>/tags/microservices/</link>
+    <description>Recent content in Microservices on Alex Pliutau</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Alex Pliutau</copyright>
+    <lastBuildDate>Tue, 14 Aug 2018 16:29:32 +0700</lastBuildDate>
+    
+	<atom:link href="/tags/microservices/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Microservices with go-kit. Part 2</title>
+      <link>/go-kit-2/</link>
+      <pubDate>Tue, 14 Aug 2018 16:29:32 +0700</pubDate>
+      
+      <guid>/go-kit-2/</guid>
+      <description>This is a text version of the &amp;ldquo;packagemain #13: Microservices with go-kit. Part 2&amp;rdquo; video.
+ Part 1  In the previous video we prepared a local environment for our services using kit command line tool. In this video we&amp;rsquo;ll continue to work with this code.
+Let&amp;rsquo;s implement our Notificator service first by writing the proto definition as it&amp;rsquo;s supposed to be a gRPC service. We aleady have pre-generated file notificator/pkg/grpc/pb/notificator.</description>
+    </item>
+    
+    <item>
+      <title>Coming soon: Microservices with Go Workshop, Vietnam, HCMC</title>
+      <link>/microservices-with-go-workshop-vetnam/</link>
+      <pubDate>Wed, 08 Nov 2017 15:30:11 +0700</pubDate>
+      
+      <guid>/microservices-with-go-workshop-vetnam/</guid>
+      <description>One month ago Wizline organized the Microservices with Go Workshop in Mexico, GDL as part of Wizeline Academy
+I am happy to announce that we&amp;rsquo;re opening Wizeline Academy now in Vietnam, HCMC. And we will do similar workshop here, don&amp;rsquo;t miss it.
+ Date: December 9 FB Page Event Page  </description>
+    </item>
+    
+    <item>
+      <title>Wizeline Academy: Microservices with Go</title>
+      <link>/wizeline-academy-microservices-with-go/</link>
+      <pubDate>Sat, 30 Sep 2017 00:29:24 +0700</pubDate>
+      
+      <guid>/wizeline-academy-microservices-with-go/</guid>
+      <description>What I like about Wizeline is that we have an amazing Academy, both internal and public. Yesterday I was in Mexico, Guadalajara office of Wizeline and I was doing a workshop about Microservices with Go.
+The idea was to tell people about SOA approach, gRPC, Protocol Buffers and code a fictional application based on these principles in Go.
+I am happy with results, especially when I saw how talented people are, even with new language for them.</description>
+    </item>
+    
+  </channel>
+</rss>

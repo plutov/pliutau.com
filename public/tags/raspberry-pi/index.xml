@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Raspberry Pi on Alex Pliutau</title>
+    <link>/tags/raspberry-pi/</link>
+    <description>Recent content in Raspberry Pi on Alex Pliutau</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Alex Pliutau</copyright>
+    <lastBuildDate>Mon, 05 Feb 2018 10:02:15 +0700</lastBuildDate>
+    
+	<atom:link href="/tags/raspberry-pi/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Video series: Running Go programs on Raspberry Pi</title>
+      <link>/video-series-running-go-programs-on-raspberry-pi/</link>
+      <pubDate>Mon, 05 Feb 2018 10:02:15 +0700</pubDate>
+      
+      <guid>/video-series-running-go-programs-on-raspberry-pi/</guid>
+      <description>I started new video series about writing and running Go programs on Raspberry Pi. In these videos I will cover:
+ Capture image on Raspberry Pi 3 from webcamera Use Facebox from https://machinebox.io to detect faces on image Greet user using Text-To-Speech Receive and parse user reply using Speech-To-Text  Videos:
+ Part 1 Part 2 Part 3  </description>
+    </item>
+    
+  </channel>
+</rss>

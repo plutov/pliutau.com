@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Thoughts on Alex Pliutau</title>
+    <link>/tags/thoughts/</link>
+    <description>Recent content in Thoughts on Alex Pliutau</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Alex Pliutau</copyright>
+    <lastBuildDate>Sat, 13 May 2017 16:39:24 +0700</lastBuildDate>
+    
+	<atom:link href="/tags/thoughts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>What is your life purpose?</title>
+      <link>/what_is_your_life_purpose/</link>
+      <pubDate>Sat, 13 May 2017 16:39:24 +0700</pubDate>
+      
+      <guid>/what_is_your_life_purpose/</guid>
+      <description>Each of us has a story. Own your story, it&amp;rsquo;s yours. Don&amp;rsquo;t pretend to be something you are not. Worrying about what people think blocks us from being real and unique. But being real is the highest truth.
+People around us have a big influence over what we think and how we behave. But we need sometimes to distance ourselves from those influences and have times of silence so we can hear our true voice.</description>
+    </item>
+    
+  </channel>
+</rss>

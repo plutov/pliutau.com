@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Image Recognition on Alex Pliutau</title>
+    <link>/tags/image-recognition/</link>
+    <description>Recent content in Image Recognition on Alex Pliutau</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Alex Pliutau</copyright>
+    <lastBuildDate>Mon, 08 Jan 2018 17:25:16 +0700</lastBuildDate>
+    
+	<atom:link href="/tags/image-recognition/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Image Recognition in Go using Tensorflow</title>
+      <link>/image-recognition-in-go-using-tensorflow/</link>
+      <pubDate>Mon, 08 Jan 2018 17:25:16 +0700</pubDate>
+      
+      <guid>/image-recognition-in-go-using-tensorflow/</guid>
+      <description>This is a text version of this video: packagemain #4: Image Recognition in Go using Tensorflow.
+Tensorflow is a computation library that represents computations with graphs. Its core is implemented in C++ and there are also bindings for different languages, including Go.
+In the last few years the field of machine learning has made tremendous progress on addressing the difficult problem of image recognition.
+One of the challenges with machine learning is figuring out how to deploy trained models into production environments.</description>
+    </item>
+    
+  </channel>
+</rss>

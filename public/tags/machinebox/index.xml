@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Machinebox on Alex Pliutau</title>
+    <link>/tags/machinebox/</link>
+    <description>Recent content in Machinebox on Alex Pliutau</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Alex Pliutau</copyright>
+    <lastBuildDate>Thu, 09 Aug 2018 14:35:51 +0700</lastBuildDate>
+    
+	<atom:link href="/tags/machinebox/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Deploying Facebox to AWS ECS</title>
+      <link>/deploying-facebox-to-aws-ecs/</link>
+      <pubDate>Thu, 09 Aug 2018 14:35:51 +0700</pubDate>
+      
+      <guid>/deploying-facebox-to-aws-ecs/</guid>
+      <description>Currently I am building a product on top of face recognition functionality and I am using Facebox with go-sdk as it&amp;rsquo;s the easiest way to add face recognition features to your project. And it&amp;rsquo;s super developer friendly:
+docker run -p 8080:8080 -e &amp;quot;MB_KEY=$MB_KEY&amp;quot; machinebox/facebox  Today it&amp;rsquo;s time for me to deploy the project. And since we use AWS I have to deploy my Facebox instance to ECS (Elastic Container Service).</description>
+    </item>
+    
+    <item>
+      <title>Video series: Running Go programs on Raspberry Pi</title>
+      <link>/video-series-running-go-programs-on-raspberry-pi/</link>
+      <pubDate>Mon, 05 Feb 2018 10:02:15 +0700</pubDate>
+      
+      <guid>/video-series-running-go-programs-on-raspberry-pi/</guid>
+      <description>I started new video series about writing and running Go programs on Raspberry Pi. In these videos I will cover:
+ Capture image on Raspberry Pi 3 from webcamera Use Facebox from https://machinebox.io to detect faces on image Greet user using Text-To-Speech Receive and parse user reply using Speech-To-Text  Videos:
+ Part 1 Part 2 Part 3  </description>
+    </item>
+    
+    <item>
+      <title>Face Detection in Go using OpenCV and MachineBox</title>
+      <link>/face-detection-in-go-machinebox-opencv/</link>
+      <pubDate>Fri, 19 Jan 2018 10:32:25 +0700</pubDate>
+      
+      <guid>/face-detection-in-go-machinebox-opencv/</guid>
+      <description>This is a text version of this video: packagemain #5: Face Detection in Go using OpenCV and MachineBox.
+I found a very nice developer-friendly project MachineBox, which provides some machine learning tools inside Docker Container, including face detection, natural language understanding and few more. And it has SDK in Go, so we will build a program which will detect my face. We will also use OpenCV to capture video from Web camera, it also has Go bindings.</description>
+    </item>
+    
+  </channel>
+</rss>

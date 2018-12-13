@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on Alex Pliutau</title>
+    <link>/tags/python/</link>
+    <description>Recent content in Python on Alex Pliutau</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Alex Pliutau</copyright>
+    <lastBuildDate>Sun, 26 Nov 2017 13:23:53 +0700</lastBuildDate>
+    
+	<atom:link href="/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Create a bot with NLU in Python</title>
+      <link>/create-bot-with-nlu-in-python/</link>
+      <pubDate>Sun, 26 Nov 2017 13:23:53 +0700</pubDate>
+      
+      <guid>/create-bot-with-nlu-in-python/</guid>
+      <description>At Wizeline we have Python courses, and recent topic was how to build a Bot in Python. I always wanted to try Natural Language Understanding (NLU) as a subtopic of natural language processing in artificial intelligence that deals with machine reading comprehension.
+As we use Python, I checked which libraries we already have to do it and I decided to try RASA NLU, a tool for understanding what is being said in short pieces of text.</description>
+    </item>
+    
+  </channel>
+</rss>

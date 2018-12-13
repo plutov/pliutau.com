@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Facebox on Alex Pliutau</title>
+    <link>/tags/facebox/</link>
+    <description>Recent content in Facebox on Alex Pliutau</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Alex Pliutau</copyright>
+    <lastBuildDate>Thu, 09 Aug 2018 14:35:51 +0700</lastBuildDate>
+    
+	<atom:link href="/tags/facebox/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Deploying Facebox to AWS ECS</title>
+      <link>/deploying-facebox-to-aws-ecs/</link>
+      <pubDate>Thu, 09 Aug 2018 14:35:51 +0700</pubDate>
+      
+      <guid>/deploying-facebox-to-aws-ecs/</guid>
+      <description>Currently I am building a product on top of face recognition functionality and I am using Facebox with go-sdk as it&amp;rsquo;s the easiest way to add face recognition features to your project. And it&amp;rsquo;s super developer friendly:
+docker run -p 8080:8080 -e &amp;quot;MB_KEY=$MB_KEY&amp;quot; machinebox/facebox  Today it&amp;rsquo;s time for me to deploy the project. And since we use AWS I have to deploy my Facebox instance to ECS (Elastic Container Service).</description>
+    </item>
+    
+  </channel>
+</rss>

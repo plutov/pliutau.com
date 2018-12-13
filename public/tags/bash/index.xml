@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bash on Alex Pliutau</title>
+    <link>/tags/bash/</link>
+    <description>Recent content in Bash on Alex Pliutau</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Alex Pliutau</copyright>
+    <lastBuildDate>Tue, 15 Aug 2017 23:09:17 +0700</lastBuildDate>
+    
+	<atom:link href="/tags/bash/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>o means open. Simple CLI tool to open repository in browser.</title>
+      <link>/o_simple_cli_to_open_repo_in_browser/</link>
+      <pubDate>Tue, 15 Aug 2017 23:09:17 +0700</pubDate>
+      
+      <guid>/o_simple_cli_to_open_repo_in_browser/</guid>
+      <description>Here is my small bash function! When you run it from the terminal it opens the GitHub/BitBucket/GitLab page in your browser for the git repository you are currently in. It has a short simple name o. I find myself doing this quite a lot as I am working with multiple repositories at the same time and switching to a browser, searching for correct link, etc.
+Just type o :)</description>
+    </item>
+    
+    <item>
+      <title>gh: a tiny tool to manage GitHub repositories in your GOPATH</title>
+      <link>/gh_in_gopath/</link>
+      <pubDate>Wed, 22 Mar 2017 15:54:14 +0700</pubDate>
+      
+      <guid>/gh_in_gopath/</guid>
+      <description>As a Golang developer I have to clone a lot of packages/tools/etc into $GOPATH/src/github.com. Sometimes I do go get, sometimes it&amp;rsquo;s necessary to do a combination of mkdir + git clone. So to save my time I wrote a tiny function gh, that actually is the same as cd thatbut also can close repo if it doesn&amp;rsquo;t exist.
+ Here it is, just add it to your ~/.bashrc:
+gh() { if [[ $# -ne 2 ]]; then echo &amp;quot;USAGE: gh [user] [repo]&amp;quot; return fi GOPATH=${GOPATH:-$HOME/go} user_path=$GOPATH/src/github.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Building a Slack Bot with Go and Wit.ai @ Alex Pliutau's Blog</title>
+        <meta name="description" content="Building a Slack Bot with Go and Wit.ai This is a text version of this video: packagemain #9: Building Slack Bot with Go and Wit.ai.
+We will build a simple Slack Bot with NLU functionality to get some useful information from Wolfram. No worries if you didn&rsquo;t use Wolfram before, it&rsquo;s a computational knowledge engine which can give you a short answer to your question.
+There are different platforms for NLU, such as LUIS.">
+        <meta name="keywords" content="go, bot, slack, nlu, wit, packagemain, alex pliutau, golang, go, programming, docker, swagger, git">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="generator" content="Hugo 0.52" />
+        <meta name="robots" content="index,follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:title" content="Building a Slack Bot with Go and Wit.ai">
+<meta property="og:description" content="Building a Slack Bot with Go and Wit.ai This is a text version of this video: packagemain #9: Building Slack Bot with Go and Wit.ai.
+We will build a simple Slack Bot with NLU functionality to get some useful information from Wolfram. No worries if you didn&rsquo;t use Wolfram before, it&rsquo;s a computational knowledge engine which can give you a short answer to your question.
+There are different platforms for NLU, such as LUIS.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="/building-slack-bot-with-go/">
+
+<meta property="og:image" content="/wit.jpg" />
+
+
+        <link rel="stylesheet" href="/dist/styles.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+		<link rel="shortcut icon" href="/favicon.ico">
+		
+			<script id="dsq-count-scr" src="//pliutau.disqus.com/count.js" async></script>
+		
+    </head>
+    <body>
+        
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-72731922-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+        <div id="wrapper">
+            <header class="site-header">
+                <div class="container">
+                    <div class="site-title-wrapper">
+                        
+                            <a class="button-square button-social hint--top" data-hint="Twitter" title="Twitter" href="https://twitter.com/pliutau">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Youtube" title="Youtube" href="https://www.youtube.com/packagemain">
+                                <i class="fa fa-youtube"></i>
+                            </a>
+                        
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Github" title="Github" href="https://github.com/plutov">
+                                <i class="fa fa-github-alt"></i>
+                            </a>
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Stack Overflow" title="Stack Overflow" href="https://stackoverflow.com/users/350294/pltvs">
+                                <i class="fa fa-stack-overflow"></i>
+                            </a>
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="LinkedIn" title="LinkedIn" href="https://linkedin.com/in/pltvs/">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                        
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Email" title="Email" href="mailto:a.pliutau@gmail.com">
+                                <i class="fa fa-envelope"></i>
+                            </a>
+                        
+                        
+                    </div>
+
+                    <ul class="site-nav">
+                        
+    <li class="site-nav-item">
+        <a title="Blog" href="/">Blog</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="About" href="/page/about/">About</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Hire Me" href="/page/hire-me/">Hire Me</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Subscribe" href="https://eepurl.com/cDoD09">Subscribe</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Buy me a coffee" href="https://www.buymeacoffee.com/packagemain">Buy me a coffee</a>
+    </li>
+
+                    </ul>
+                </div>
+            </header>
+
+            <div id="container">
+
+
+<div class="container">
+    <article class="post-container" itemscope="" itemtype="http://schema.org/BlogPosting">
+        <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Building a Slack Bot with Go and Wit.ai</h1>
+    
+    <p class="post-date">
+        <span>Published <time datetime="2018-05-23"  itemprop="datePublished">Wed, May 23, 2018</time></span>
+        <span>by</span>
+        <span itemscope="" itemprop="author" itemtype="https://schema.org/Person">
+            <span itemprop="name">
+                <a href="https://pliutau.com" itemprop="url" rel="author">Alex Pliutau</a>
+            </span>
+        </span>
+    </p>
+</header>
+		<footer class="post-footer clearfix share-middle">
+    <div class="share">
+	<a class="icon-twitter" href="https://twitter.com/share?text=Building%20a%20Slack%20Bot%20with%20Go%20and%20Wit.ai&url=%2fbuilding-slack-bot-with-go%2f"
+		onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+		<i class="fa fa-twitter"></i>
+		<span class="hidden">Twitter</span>
+	</a>
+
+	<a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=%2fbuilding-slack-bot-with-go%2f"
+		onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+		<i class="fa fa-facebook"></i>
+		<span class="hidden">Facebook</span>
+	</a>
+
+	<a class="icon-google-plus" href="https://plus.google.com/share?url=%2fbuilding-slack-bot-with-go%2f"
+	  onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+	  <i class="fa fa-google-plus"></i>
+		<span class="hidden">Google+</span>
+	</a>
+
+	<a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&title=Building%20a%20Slack%20Bot%20with%20Go%20and%20Wit.ai&url=%2fbuilding-slack-bot-with-go%2f&summary="
+	   onclick="window.open(this.href, 'linkedin-share', 'width=554,height=481');return false;">
+	   <i class="fa fa-linkedin"></i>
+	   <span class="hidden">LinkedIn</span>
+	</a>
+</div>
+
+</footer>
+
+		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:inline-block;width:100%;height:90px;margin-top:20px;margin-bottom:20px;"
+     data-ad-client="ca-pub-9796117147060610"
+     data-ad-slot="8595828683"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+        <div class="post-content clearfix" itemprop="articleBody">
+    
+
+    
+
+<p><img src="/wit.jpg" alt="wit" /></p>
+
+<h3 id="building-a-slack-bot-with-go-and-wit-ai">Building a Slack Bot with Go and Wit.ai</h3>
+
+<p>This is a text version of this video: <a href="https://www.youtube.com/watch?v=zkB_c3cgtd0">packagemain #9: Building Slack Bot with Go and Wit.ai</a>.</p>
+
+<p>We will build a simple Slack Bot with NLU functionality to get some useful information from Wolfram. No worries if you didn&rsquo;t use Wolfram before, it&rsquo;s a computational knowledge engine which can give you a short answer to your question.</p>
+
+<p>There are different platforms for NLU, such as LUIS.ai, Wit.ai, RASA_NLU, we will use Wit.ai, an NLU platform acquired by Facebook, provides you functionality to parse text and extract useful information.</p>
+
+<p>Our Bot will have minimal functionality, such as: &ldquo;Reply to user on greeting&rdquo; and then &ldquo;Search in Wolfram and reply back&rdquo;. Why do we need NLU here? Because we don&rsquo;t know how user greets us, also we don&rsquo;t know how user will ask our Bot, will it be something like &ldquo;Do you know who is the president of USA?&rdquo; or &ldquo;Can you tell me who is the president of USA.&rdquo;. Also it could be a typo from user. And NLU will help us to extract useful info from a custom message.</p>
+
+<p>Let&rsquo;s start with creating our new Bot in Slack, for this I created new Slack team.</p>
+
+<ul>
+<li><a href="https://packagemain.slack.com/apps">https://packagemain.slack.com/apps</a></li>
+<li>Search for Bots</li>
+<li>Add Configuration</li>
+<li>Username &ldquo;packagemain&rdquo;</li>
+<li>Configure other settigns if you need and get token</li>
+<li>Now we can check if bot exists: type <code>Hi</code></li>
+</ul>
+
+<p>Let&rsquo;s write some simple program which will use Slack real time messaging to receive user input. We need to use Slack token, which I already set locally.</p>
+
+<p>Let&rsquo;s handle each incoming message in separate go routine.</p>
+
+<pre><code>go get github.com/nlopes/slack
+</code></pre>
+
+<pre><code>var (
+	slackClient   *slack.Client
+)
+
+func main() {
+	slackClient = slack.New(os.Getenv(&quot;SLACK_ACCESS_TOKEN&quot;))
+
+	rtm := slackClient.NewRTM()
+	go rtm.ManageConnection()
+
+	for msg := range rtm.IncomingEvents {
+		switch ev := msg.Data.(type) {
+		case *slack.MessageEvent:
+			go handleMessage(ev)
+		}
+	}
+}
+
+func handleMessage(ev *slack.MessageEvent) {
+	fmt.Printf(&quot;%v\n&quot;, ev)
+}
+</code></pre>
+
+<h4 id="setup-wit-ai">Setup Wit.ai</h4>
+
+<p>Before we&rsquo;re going to make Bot reply to user, we should configure Wit.ai. We&rsquo;re going to create an application there now.</p>
+
+<ul>
+<li>Go to <a href="https://wit.ai/home">https://wit.ai/home</a></li>
+<li>New App</li>
+<li>Define Entities</li>
+</ul>
+
+<p>Wit.ai has predefined entities and we will use 2 of them. We can also define our own and train Wit.ai to understand it, but I&rsquo;ll leave it to you as a homework.</p>
+
+<ol>
+<li>wit/greetings: Hi, Hello.</li>
+<li>wit/wolfram_search_query: Who is the president of Belarus, distance between Earth and Mars, formula of ethanol.</li>
+</ol>
+
+<p>I searched for Wit.ai Go package, there are 5 packages on godoc.org and 4 of them are not compatible with new API. And one which is working has 2 stars on GitHub. We will use it, but I don&rsquo;t recommend to use it in Production environments. Wanna try to create Go package - create Wit.ai SDK please.</p>
+
+<p>Get server access token in Settings.</p>
+
+<pre><code>go get github.com/christianrondeau/go-wit
+</code></pre>
+
+<pre><code>result, err := witClient.Message(ev.Msg.Text)
+if err != nil {
+	log.Printf(&quot;unable to get wit.ai result: %v&quot;, err)
+	return
+}
+
+fmt.Printf(&quot;%v\n&quot;, result)
+</code></pre>
+
+<p>Wit.ai will return us list of entities, each entity contains value and confidence, so let&rsquo;s filter entities with low confidence, for that we will set a confidence threshold as 0.5.</p>
+
+<pre><code>const confidenceThreshold = 0.5
+</code></pre>
+
+<p>As you can see when we type &ldquo;hi&rdquo; Wit.ai returns us 2 successfull entities as &ldquo;hi&rdquo; is a valid wolfram search also. But greetings entity has a higher confidence, let&rsquo;s use one with highest confidence.</p>
+
+<pre><code>var (
+	topEntity    wit.MessageEntity
+	topEntityKey string
+)
+
+for key, entityList := range result.Entities {
+	for _, entity := range entityList {
+		if entity.Confidence &gt; confidenceThreshold &amp;&amp; entity.Confidence &gt; topEntity.Confidence {
+			topEntity = entity
+			topEntityKey = key
+		}
+	}
+}
+</code></pre>
+
+<p>Now we can reply to user based on input:</p>
+
+<pre><code>func replyToUser(ev *slack.MessageEvent, topEntity wit.MessageEntity, topEntityKey string) {
+	switch topEntityKey {
+	case &quot;greetings&quot;:
+		slackClient.PostMessage(ev.User, &quot;Hello user! How can I help you?&quot;, slack.PostMessageParameters{
+			AsUser: true,
+		})
+		return
+	case &quot;wolfram_search_query&quot;:
+		// TODO
+	}
+
+	slackClient.PostMessage(ev.User, &quot;¯\\_(o_o)_/¯&quot;, slack.PostMessageParameters{
+		AsUser: true,
+	})
+}
+</code></pre>
+
+<p>We can see that our program also handles messages send by itself, let&rsquo;s fix that.</p>
+
+<pre><code>if len(ev.BotID) == 0 {
+	go handleMessage(ev)
+}
+</code></pre>
+
+<h4 id="setup-wolfram">Setup Wolfram</h4>
+
+<p>We can say hello, let&rsquo;s now get answer to user&rsquo;s question from Wolfram:</p>
+
+<ul>
+<li>Go to <a href="https://developer.wolframalpha.com/portal/myapps">https://developer.wolframalpha.com/portal/myapps</a></li>
+<li>Click Get App ID</li>
+<li>Copy APP ID</li>
+</ul>
+
+<pre><code>go get github.com/Krognol/go-wolfram
+</code></pre>
+
+<pre><code>res, err := wolframClient.GetSpokentAnswerQuery(topEntity.Value.(string), wolfram.Metric, 1000)
+if err == nil {
+	slackClient.PostMessage(ev.User, res, slack.PostMessageParameters{
+		AsUser: true,
+	})
+	return
+}
+
+log.Printf(&quot;unable to get data from wolfram: %v&quot;, err)
+</code></pre>
+
+<h4 id="testing-part">Testing part</h4>
+
+<blockquote>
+<p>me: Hi</p>
+
+<p>Bot: Hello user! How can I help you?</p>
+
+<p>me: Hola</p>
+
+<p>Bot: Hello user! How can I help you?</p>
+
+<p>me: Who is the president of US?</p>
+
+<p>Bot: Donald Trump (from 20/01/2017 to present)</p>
+
+<p>me: What is the meaning of life?</p>
+
+<p>Bot: 42</p>
+
+<p>me: bye</p>
+
+<p>Bot: ¯\_(o<em>o)</em>/¯</p>
+</blockquote>
+
+</div>
+
+        <footer class="post-footer clearfix">
+    
+        <p class="post-tags">
+            <span>Tagged:</span>
+            
+            
+                <a href="/tags/go/">go</a>
+                , 
+            
+                <a href="/tags/bot/">bot</a>
+                , 
+            
+                <a href="/tags/slack/">slack</a>
+                , 
+            
+                <a href="/tags/nlu/">nlu</a>
+                , 
+            
+                <a href="/tags/wit/">wit</a>
+                , 
+            
+                <a href="/tags/packagemain/">packagemain</a>
+                
+            
+        </p>
+    
+
+    <div class="share">
+	<a class="icon-twitter" href="https://twitter.com/share?text=Building%20a%20Slack%20Bot%20with%20Go%20and%20Wit.ai&url=%2fbuilding-slack-bot-with-go%2f"
+		onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+		<i class="fa fa-twitter"></i>
+		<span class="hidden">Twitter</span>
+	</a>
+
+	<a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=%2fbuilding-slack-bot-with-go%2f"
+		onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+		<i class="fa fa-facebook"></i>
+		<span class="hidden">Facebook</span>
+	</a>
+
+	<a class="icon-google-plus" href="https://plus.google.com/share?url=%2fbuilding-slack-bot-with-go%2f"
+	  onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+	  <i class="fa fa-google-plus"></i>
+		<span class="hidden">Google+</span>
+	</a>
+
+	<a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&title=Building%20a%20Slack%20Bot%20with%20Go%20and%20Wit.ai&url=%2fbuilding-slack-bot-with-go%2f&summary="
+	   onclick="window.open(this.href, 'linkedin-share', 'width=554,height=481');return false;">
+	   <i class="fa fa-linkedin"></i>
+	   <span class="hidden">LinkedIn</span>
+	</a>
+</div>
+
+</footer>
+
+		<link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+	#mc_embed_signup{
+		width:100%;
+		border: 1px solid #dddbcc;
+		border-radius: 3px;
+		margin: 20px 0;
+		background: #f1f0ea;
+	}
+	#mc_embed_signup .button { background: #f03838 !important; }
+</style>
+<div id="mc_embed_signup">
+<form action="//pliutau.us15.list-manage.com/subscribe/post?u=48e0bc513d92114dd04b36ffa&amp;id=862c25c5fb" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <div id="mc_embed_signup_scroll">
+	<label for="mce-EMAIL">Get the latest posts delivered right to your inbox.</label>
+	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+    
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_48e0bc513d92114dd04b36ffa_862c25c5fb" tabindex="-1" value=""></div>
+    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+    </div>
+</form>
+</div>
+
+        
+    <div class="comments">
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "pliutau" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:inline-block;width:100%;height:90px;margin-top:20px;margin-bottom:20px;"
+     data-ad-client="ca-pub-9796117147060610"
+     data-ad-slot="8595828683"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+    </article>
+</div>
+
+                </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <p class="footer-copyright site-title-wrapper">
+                    <span>&copy; 2018 Alex Pliutau. All rights reserved.</span>
+                </p>
+            </div>
+        </footer>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+		<script type="text/javascript">
+			hljs.initHighlightingOnLoad();
+		</script>
+    </body>
+</html>
+

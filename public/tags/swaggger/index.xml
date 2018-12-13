@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Swaggger on Alex Pliutau</title>
+    <link>/tags/swaggger/</link>
+    <description>Recent content in Swaggger on Alex Pliutau</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Alex Pliutau</copyright>
+    <lastBuildDate>Mon, 03 Oct 2016 12:27:19 +0700</lastBuildDate>
+    
+	<atom:link href="/tags/swaggger/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Swaggerize your APIs</title>
+      <link>/swaggerize-your-api/</link>
+      <pubDate>Mon, 03 Oct 2016 12:27:19 +0700</pubDate>
+      
+      <guid>/swaggerize-your-api/</guid>
+      <description>Swagger UI is a great tool and a must have for any respectable API project. It has an intuitive design, all endpoints can be tested from the interface. For example, let&amp;rsquo;s have a look at Kubernetes API, where endpoints are grouped by version, and everything is accessible in easy way. In this post I&amp;rsquo;ll show how to build it together with your API written in Go.
+There are 2 separate parts: - Generate swagger.</description>
+    </item>
+    
+  </channel>
+</rss>

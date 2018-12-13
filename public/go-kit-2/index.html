@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Microservices with go-kit. Part 2 @ Alex Pliutau's Blog</title>
+        <meta name="description" content="This is a text version of the &ldquo;packagemain #13: Microservices with go-kit. Part 2&rdquo; video.
+ Part 1  In the previous video we prepared a local environment for our services using kit command line tool. In this video we&rsquo;ll continue to work with this code.
+Let&rsquo;s implement our Notificator service first by writing the proto definition as it&rsquo;s supposed to be a gRPC service. We aleady have pre-generated file notificator/pkg/grpc/pb/notificator.">
+        <meta name="keywords" content="go, packagemain, microservices, grpc, docker, alex pliutau, golang, go, programming, docker, swagger, git">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="generator" content="Hugo 0.52" />
+        <meta name="robots" content="index,follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:title" content="Microservices with go-kit. Part 2">
+<meta property="og:description" content="This is a text version of the &ldquo;packagemain #13: Microservices with go-kit. Part 2&rdquo; video.
+ Part 1  In the previous video we prepared a local environment for our services using kit command line tool. In this video we&rsquo;ll continue to work with this code.
+Let&rsquo;s implement our Notificator service first by writing the proto definition as it&rsquo;s supposed to be a gRPC service. We aleady have pre-generated file notificator/pkg/grpc/pb/notificator.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="/go-kit-2/">
+
+
+        <link rel="stylesheet" href="/dist/styles.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+		<link rel="shortcut icon" href="/favicon.ico">
+		
+			<script id="dsq-count-scr" src="//pliutau.disqus.com/count.js" async></script>
+		
+    </head>
+    <body>
+        
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-72731922-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+        <div id="wrapper">
+            <header class="site-header">
+                <div class="container">
+                    <div class="site-title-wrapper">
+                        
+                            <a class="button-square button-social hint--top" data-hint="Twitter" title="Twitter" href="https://twitter.com/pliutau">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Youtube" title="Youtube" href="https://www.youtube.com/packagemain">
+                                <i class="fa fa-youtube"></i>
+                            </a>
+                        
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Github" title="Github" href="https://github.com/plutov">
+                                <i class="fa fa-github-alt"></i>
+                            </a>
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Stack Overflow" title="Stack Overflow" href="https://stackoverflow.com/users/350294/pltvs">
+                                <i class="fa fa-stack-overflow"></i>
+                            </a>
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="LinkedIn" title="LinkedIn" href="https://linkedin.com/in/pltvs/">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                        
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Email" title="Email" href="mailto:a.pliutau@gmail.com">
+                                <i class="fa fa-envelope"></i>
+                            </a>
+                        
+                        
+                    </div>
+
+                    <ul class="site-nav">
+                        
+    <li class="site-nav-item">
+        <a title="Blog" href="/">Blog</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="About" href="/page/about/">About</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Hire Me" href="/page/hire-me/">Hire Me</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Subscribe" href="https://eepurl.com/cDoD09">Subscribe</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Buy me a coffee" href="https://www.buymeacoffee.com/packagemain">Buy me a coffee</a>
+    </li>
+
+                    </ul>
+                </div>
+            </header>
+
+            <div id="container">
+
+
+<div class="container">
+    <article class="post-container" itemscope="" itemtype="http://schema.org/BlogPosting">
+        <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Microservices with go-kit. Part 2</h1>
+    
+    <p class="post-date">
+        <span>Published <time datetime="2018-08-14"  itemprop="datePublished">Tue, Aug 14, 2018</time></span>
+        <span>by</span>
+        <span itemscope="" itemprop="author" itemtype="https://schema.org/Person">
+            <span itemprop="name">
+                <a href="https://pliutau.com" itemprop="url" rel="author">Alex Pliutau</a>
+            </span>
+        </span>
+    </p>
+</header>
+		<footer class="post-footer clearfix share-middle">
+    <div class="share">
+	<a class="icon-twitter" href="https://twitter.com/share?text=Microservices%20with%20go-kit.%20Part%202&url=%2fgo-kit-2%2f"
+		onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+		<i class="fa fa-twitter"></i>
+		<span class="hidden">Twitter</span>
+	</a>
+
+	<a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=%2fgo-kit-2%2f"
+		onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+		<i class="fa fa-facebook"></i>
+		<span class="hidden">Facebook</span>
+	</a>
+
+	<a class="icon-google-plus" href="https://plus.google.com/share?url=%2fgo-kit-2%2f"
+	  onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+	  <i class="fa fa-google-plus"></i>
+		<span class="hidden">Google+</span>
+	</a>
+
+	<a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&title=Microservices%20with%20go-kit.%20Part%202&url=%2fgo-kit-2%2f&summary="
+	   onclick="window.open(this.href, 'linkedin-share', 'width=554,height=481');return false;">
+	   <i class="fa fa-linkedin"></i>
+	   <span class="hidden">LinkedIn</span>
+	</a>
+</div>
+
+</footer>
+
+		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:inline-block;width:100%;height:90px;margin-top:20px;margin-bottom:20px;"
+     data-ad-client="ca-pub-9796117147060610"
+     data-ad-slot="8595828683"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+        <div class="post-content clearfix" itemprop="articleBody">
+    
+
+    
+
+<p>This is a text version of <a href="https://youtu.be/SU9t6fUQltE">the &ldquo;packagemain #13: Microservices with go-kit. Part 2&rdquo;</a> video.</p>
+
+<ul>
+<li><a href="https://pliutau.com/gi-kit-1/">Part 1</a></li>
+</ul>
+
+<p>In the previous video we prepared a local environment for our services using kit command line tool. In this video we&rsquo;ll continue to work with this code.</p>
+
+<p>Let&rsquo;s implement our Notificator service first by writing the proto definition as it&rsquo;s supposed to be a gRPC service. We aleady have pre-generated file <code>notificator/pkg/grpc/pb/notificator.pb</code>, let&rsquo;s make it really simple.</p>
+
+<script type="application/javascript" src="//gist.github.com/plutov/187576b2142c61ec6e281eb2427a9525.js"></script>
+
+<p>Now we need to generate server and client stubs, we can use the <code>compile.sh</code> script already given us by kit tool, it basically contains the <code>protoc</code> command.</p>
+
+<pre><code>cd notificator/pkg/grpc/pb
+./compile.sh
+</code></pre>
+
+<p>If we check <code>notificator.pb.go</code> - it was updated.</p>
+
+<p>Now we need to implement the service itself. Instead of sending a real email let&rsquo;s generate a uuid only and return it, pretending that it&rsquo;s sent. But first we have to edit a bit the service to match our Request / Response formats (new <code>id</code> return argument).</p>
+
+<script type="application/javascript" src="//gist.github.com/plutov/b0c2b697dea745704f3a6c46ea0daa4b.js"></script>
+
+<script type="application/javascript" src="//gist.github.com/plutov/604598aebd68f510658dee6348b916d2.js"></script>
+
+<script type="application/javascript" src="//gist.github.com/plutov/62ae4ddae9fc7c4ac7b4cc26ea1225c6.js"></script>
+
+<p>If we search for TODO <code>grep -R &quot;TODO&quot; notificator</code> we can see that we still need to implement Encoder and Decoder for gRPC request and response.</p>
+
+<script type="application/javascript" src="//gist.github.com/plutov/70f7d087505be4983d2bfd1fae787aa8.js"></script>
+
+<h3 id="service-discovery">Service discovery</h3>
+
+<p>The SendEmail will be invoked by User service, so User service needs to know the address of Notificator, the typical service discovery problem. Of course in our local environment we know how to connect to the service as we use Docker Compose, but it may be more difficult in real distributed environment.</p>
+
+<p>Let&rsquo;s start with registering our Notificator service in the etcd. Basically etcd is a distributed reliable key-value store, widely used for service discovery. go-kit supports other technologies for service discovery: eureka, consul, zookeeper, etc.</p>
+
+<p>Let&rsquo;s add it to our Docker Compose so it will be available for our servers. Copied from Internet:</p>
+
+<script type="application/javascript" src="//gist.github.com/plutov/67785366196bc3d16861f50ba8ace169.js"></script>
+
+<p>Let&rsquo;s register Notificator in etcd:</p>
+
+<script type="application/javascript" src="//gist.github.com/plutov/89bff9da6099b59b0f4d7c4b27123127.js"></script>
+
+<p>We should always remember to deregister service when our program is stopped or crashed. Now etcd knows about our service, in this example we have only 1 instance, but in real life it could be more of course.</p>
+
+<p>Now let&rsquo;s test our Notificator service and check if it is able to register in etcd:</p>
+
+<pre><code>docker-compose up -d etcd
+docker-compose up -d notificator
+</code></pre>
+
+<p>Now let&rsquo;s get back to our Users service and invoke the Notificator service, basically we&rsquo;re going to send a fictional notification to user after it&rsquo;s created.</p>
+
+<p>As Notificator is a gRPC service, so we need to share a client stub file with our client, in our case Users service.</p>
+
+<p>The protobuf client stub code is located in <code>notificator/pkg/grpc/pb/notificator.pb.go</code>, and we can just import this package to our cient.</p>
+
+<script type="application/javascript" src="//gist.github.com/plutov/224de0fd545246cb9b9d49329c5fa909.js"></script>
+
+<p>But as we registered Notificator in etcd we can replace hardcoded Notificator address by getting it from etcd.</p>
+
+<script type="application/javascript" src="//gist.github.com/plutov/c76c0a1d24c07f0d038d534ae56ae98d.js"></script>
+
+<p>We get the first entry as we have only one, but in real system it may be hundreads of entries, so we can apply some logic for instance selection, for example Round Robin.</p>
+
+<p>Now let&rsquo;s start our Users service and test this out:</p>
+
+<pre><code>docker-compose up users
+</code></pre>
+
+<p>We&rsquo;re going to call the http endpoint to create a user:</p>
+
+<pre><code>curl -XPOST http://localhost:8802/create -d '{&quot;email&quot;: &quot;test&quot;}'
+</code></pre>
+
+<h3 id="conclusion">Conclusion</h3>
+
+<p>In this video we have implemented fictional Notificator gRPC service, registered it in etcd and invoked from another service Users.</p>
+
+<p>In the next video we&rsquo;re going to review the service authorization through JWT (SON Web Tokens).</p>
+
+</div>
+
+        <footer class="post-footer clearfix">
+    
+        <p class="post-tags">
+            <span>Tagged:</span>
+            
+            
+                <a href="/tags/go/">go</a>
+                , 
+            
+                <a href="/tags/packagemain/">packagemain</a>
+                , 
+            
+                <a href="/tags/microservices/">microservices</a>
+                , 
+            
+                <a href="/tags/grpc/">grpc</a>
+                , 
+            
+                <a href="/tags/docker/">docker</a>
+                
+            
+        </p>
+    
+
+    <div class="share">
+	<a class="icon-twitter" href="https://twitter.com/share?text=Microservices%20with%20go-kit.%20Part%202&url=%2fgo-kit-2%2f"
+		onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+		<i class="fa fa-twitter"></i>
+		<span class="hidden">Twitter</span>
+	</a>
+
+	<a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=%2fgo-kit-2%2f"
+		onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+		<i class="fa fa-facebook"></i>
+		<span class="hidden">Facebook</span>
+	</a>
+
+	<a class="icon-google-plus" href="https://plus.google.com/share?url=%2fgo-kit-2%2f"
+	  onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+	  <i class="fa fa-google-plus"></i>
+		<span class="hidden">Google+</span>
+	</a>
+
+	<a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&title=Microservices%20with%20go-kit.%20Part%202&url=%2fgo-kit-2%2f&summary="
+	   onclick="window.open(this.href, 'linkedin-share', 'width=554,height=481');return false;">
+	   <i class="fa fa-linkedin"></i>
+	   <span class="hidden">LinkedIn</span>
+	</a>
+</div>
+
+</footer>
+
+		<link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+	#mc_embed_signup{
+		width:100%;
+		border: 1px solid #dddbcc;
+		border-radius: 3px;
+		margin: 20px 0;
+		background: #f1f0ea;
+	}
+	#mc_embed_signup .button { background: #f03838 !important; }
+</style>
+<div id="mc_embed_signup">
+<form action="//pliutau.us15.list-manage.com/subscribe/post?u=48e0bc513d92114dd04b36ffa&amp;id=862c25c5fb" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <div id="mc_embed_signup_scroll">
+	<label for="mce-EMAIL">Get the latest posts delivered right to your inbox.</label>
+	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+    
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_48e0bc513d92114dd04b36ffa_862c25c5fb" tabindex="-1" value=""></div>
+    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+    </div>
+</form>
+</div>
+
+        
+    <div class="comments">
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "pliutau" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:inline-block;width:100%;height:90px;margin-top:20px;margin-bottom:20px;"
+     data-ad-client="ca-pub-9796117147060610"
+     data-ad-slot="8595828683"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+    </article>
+</div>
+
+                </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <p class="footer-copyright site-title-wrapper">
+                    <span>&copy; 2018 Alex Pliutau. All rights reserved.</span>
+                </p>
+            </div>
+        </footer>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+		<script type="text/javascript">
+			hljs.initHighlightingOnLoad();
+		</script>
+    </body>
+</html>
+

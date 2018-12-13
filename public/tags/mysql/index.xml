@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mysql on Alex Pliutau</title>
+    <link>/tags/mysql/</link>
+    <description>Recent content in Mysql on Alex Pliutau</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Alex Pliutau</copyright>
+    <lastBuildDate>Fri, 26 May 2017 13:27:00 +0700</lastBuildDate>
+    
+	<atom:link href="/tags/mysql/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Working with DB datetime/date columns in Go</title>
+      <link>/working-with-db-time-in-go/</link>
+      <pubDate>Fri, 26 May 2017 13:27:00 +0700</pubDate>
+      
+      <guid>/working-with-db-time-in-go/</guid>
+      <description>This post shows how to work with DATETIME/DATE columns in DB and use Go standard time.Time avoiding manual string parsing. This article contains examples using 2 packages: database/sql and github.com/go-sql-driver/mysql.
+Retrieve nullable time field using NullTime type MySQL, PostgreSQL drivers in Go provide this nullable type which represents a time.Time that may be NULL. NullTime implements the Scanner interface so it can be used as a scan destination:
+ Use parseTime=true Assuming you&amp;rsquo;re using the go-sql-driver/mysql you can ask the driver to scan DATE and DATETIME automatically to time.</description>
+    </item>
+    
+  </channel>
+</rss>

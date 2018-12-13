@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Concurrency on Alex Pliutau</title>
+    <link>/tags/concurrency/</link>
+    <description>Recent content in Concurrency on Alex Pliutau</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Alex Pliutau</copyright>
+    <lastBuildDate>Thu, 21 Jul 2016 07:52:29 +0700</lastBuildDate>
+    
+	<atom:link href="/tags/concurrency/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Concurrency. Data race</title>
+      <link>/concurrency-data-race/</link>
+      <pubDate>Thu, 21 Jul 2016 07:52:29 +0700</pubDate>
+      
+      <guid>/concurrency-data-race/</guid>
+      <description>What does data race mean in Golang? Data race is a common mistake in concurrent systems. A data race occurs when two goroutines access the same variable concurrently and at least one of the accesses is a write. It’s really hard to recognize it without specific tools or without an eagle eye, because when you run a program it’s always a chance that you won’t see your mistake or it will be very transparent.</description>
+    </item>
+    
+  </channel>
+</rss>

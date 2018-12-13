@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Glide on Alex Pliutau</title>
+    <link>/tags/glide/</link>
+    <description>Recent content in Glide on Alex Pliutau</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Alex Pliutau</copyright>
+    <lastBuildDate>Fri, 26 Aug 2016 14:17:34 +0700</lastBuildDate>
+    
+	<atom:link href="/tags/glide/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>UUID without dependencies in Go</title>
+      <link>/uuid-without-dependencies/</link>
+      <pubDate>Fri, 26 Aug 2016 14:17:34 +0700</pubDate>
+      
+      <guid>/uuid-without-dependencies/</guid>
+      <description>Today I realized that size of my vendor/ folder in Golang project is around 150M. I am using glide there. There are 24 dependencies (it&amp;rsquo;s a program with multiple data storage connectors, notifications, etc.), so I decided to review it and reduce amount of 3rd party libraries.
+First of all I have checked glide-report and removed 2 unused packages. Go-world has a lot of packages that are awesome and can save your time, but not your program&amp;rsquo;s performance.</description>
+    </item>
+    
+  </channel>
+</rss>

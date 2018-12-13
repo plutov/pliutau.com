@@ -1,0 +1,736 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Alex Pliutau</title>
+    <link>/tags/</link>
+    <description>Recent content in Tags on Alex Pliutau</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Alex Pliutau</copyright>
+    <lastBuildDate>Sun, 13 Mar 2016 15:11:13 +0700</lastBuildDate>
+    
+	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Android</title>
+      <link>/tags/android/</link>
+      <pubDate>Sun, 13 Mar 2016 15:11:13 +0700</pubDate>
+      
+      <guid>/tags/android/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Atom</title>
+      <link>/tags/atom/</link>
+      <pubDate>Mon, 21 Nov 2016 12:42:54 +0700</pubDate>
+      
+      <guid>/tags/atom/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Aws</title>
+      <link>/tags/aws/</link>
+      <pubDate>Thu, 09 Aug 2018 14:35:51 +0700</pubDate>
+      
+      <guid>/tags/aws/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Bash</title>
+      <link>/tags/bash/</link>
+      <pubDate>Tue, 15 Aug 2017 23:09:17 +0700</pubDate>
+      
+      <guid>/tags/bash/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Benchmarking</title>
+      <link>/tags/benchmarking/</link>
+      <pubDate>Tue, 26 Jan 2016 16:10:23 +0700</pubDate>
+      
+      <guid>/tags/benchmarking/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Blog</title>
+      <link>/tags/blog/</link>
+      <pubDate>Wed, 20 Jan 2016 14:10:50 +0700</pubDate>
+      
+      <guid>/tags/blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Blogging</title>
+      <link>/tags/blogging/</link>
+      <pubDate>Thu, 27 Jul 2017 12:11:13 +0700</pubDate>
+      
+      <guid>/tags/blogging/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Bot</title>
+      <link>/tags/bot/</link>
+      <pubDate>Wed, 23 May 2018 08:27:36 +0700</pubDate>
+      
+      <guid>/tags/bot/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cli</title>
+      <link>/tags/cli/</link>
+      <pubDate>Tue, 15 Aug 2017 23:09:17 +0700</pubDate>
+      
+      <guid>/tags/cli/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Clickhouse</title>
+      <link>/tags/clickhouse/</link>
+      <pubDate>Wed, 06 Jul 2016 16:15:39 +0700</pubDate>
+      
+      <guid>/tags/clickhouse/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Concurrency</title>
+      <link>/tags/concurrency/</link>
+      <pubDate>Thu, 21 Jul 2016 07:52:29 +0700</pubDate>
+      
+      <guid>/tags/concurrency/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Db</title>
+      <link>/tags/db/</link>
+      <pubDate>Fri, 26 May 2017 13:27:00 +0700</pubDate>
+      
+      <guid>/tags/db/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Docker</title>
+      <link>/tags/docker/</link>
+      <pubDate>Thu, 06 Dec 2018 10:01:43 +0100</pubDate>
+      
+      <guid>/tags/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Dockerfile</title>
+      <link>/tags/dockerfile/</link>
+      <pubDate>Sun, 30 Apr 2017 12:47:27 +0700</pubDate>
+      
+      <guid>/tags/dockerfile/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Elixir</title>
+      <link>/tags/elixir/</link>
+      <pubDate>Fri, 06 Oct 2017 13:28:45 +0700</pubDate>
+      
+      <guid>/tags/elixir/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Engineering Manager</title>
+      <link>/tags/engineering-manager/</link>
+      <pubDate>Sat, 12 May 2018 09:21:50 +0700</pubDate>
+      
+      <guid>/tags/engineering-manager/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Experiment</title>
+      <link>/tags/experiment/</link>
+      <pubDate>Mon, 24 Apr 2017 20:39:13 +0700</pubDate>
+      
+      <guid>/tags/experiment/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Face Detection</title>
+      <link>/tags/face-detection/</link>
+      <pubDate>Fri, 19 Jan 2018 10:32:25 +0700</pubDate>
+      
+      <guid>/tags/face-detection/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Facebox</title>
+      <link>/tags/facebox/</link>
+      <pubDate>Thu, 09 Aug 2018 14:35:51 +0700</pubDate>
+      
+      <guid>/tags/facebox/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Gc</title>
+      <link>/tags/gc/</link>
+      <pubDate>Fri, 21 Jul 2017 15:48:14 +0700</pubDate>
+      
+      <guid>/tags/gc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Git</title>
+      <link>/tags/git/</link>
+      <pubDate>Tue, 15 Aug 2017 23:09:17 +0700</pubDate>
+      
+      <guid>/tags/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Gitconfig</title>
+      <link>/tags/gitconfig/</link>
+      <pubDate>Fri, 28 Apr 2017 10:47:24 +0700</pubDate>
+      
+      <guid>/tags/gitconfig/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Github</title>
+      <link>/tags/github/</link>
+      <pubDate>Tue, 02 Jan 2018 14:35:14 +0700</pubDate>
+      
+      <guid>/tags/github/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Gitignore</title>
+      <link>/tags/gitignore/</link>
+      <pubDate>Fri, 28 Apr 2017 10:47:24 +0700</pubDate>
+      
+      <guid>/tags/gitignore/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Glide</title>
+      <link>/tags/glide/</link>
+      <pubDate>Fri, 26 Aug 2016 14:17:34 +0700</pubDate>
+      
+      <guid>/tags/glide/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Go</title>
+      <link>/tags/go/</link>
+      <pubDate>Thu, 06 Dec 2018 10:01:43 +0100</pubDate>
+      
+      <guid>/tags/go/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Go 1.8</title>
+      <link>/tags/go-1.8/</link>
+      <pubDate>Fri, 17 Feb 2017 10:32:23 +0700</pubDate>
+      
+      <guid>/tags/go-1.8/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Go Bindata</title>
+      <link>/tags/go-bindata/</link>
+      <pubDate>Tue, 02 Jan 2018 14:35:14 +0700</pubDate>
+      
+      <guid>/tags/go-bindata/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Golang</title>
+      <link>/tags/golang/</link>
+      <pubDate>Fri, 19 Jan 2018 10:32:25 +0700</pubDate>
+      
+      <guid>/tags/golang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Gomobile</title>
+      <link>/tags/gomobile/</link>
+      <pubDate>Mon, 25 Jan 2016 13:12:43 +0700</pubDate>
+      
+      <guid>/tags/gomobile/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Google Assistant</title>
+      <link>/tags/google-assistant/</link>
+      <pubDate>Mon, 02 Apr 2018 16:07:19 +0700</pubDate>
+      
+      <guid>/tags/google-assistant/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Google Cloud Platform</title>
+      <link>/tags/google-cloud-platform/</link>
+      <pubDate>Mon, 02 Apr 2018 16:07:19 +0700</pubDate>
+      
+      <guid>/tags/google-cloud-platform/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Google Home</title>
+      <link>/tags/google-home/</link>
+      <pubDate>Mon, 02 Apr 2018 16:07:19 +0700</pubDate>
+      
+      <guid>/tags/google-home/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Google Speech Api</title>
+      <link>/tags/google-speech-api/</link>
+      <pubDate>Wed, 26 Jul 2017 14:50:34 +0700</pubDate>
+      
+      <guid>/tags/google-speech-api/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Gophercon</title>
+      <link>/tags/gophercon/</link>
+      <pubDate>Fri, 20 Jul 2018 15:34:10 +0700</pubDate>
+      
+      <guid>/tags/gophercon/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Goreleaseparty</title>
+      <link>/tags/goreleaseparty/</link>
+      <pubDate>Fri, 17 Feb 2017 10:32:23 +0700</pubDate>
+      
+      <guid>/tags/goreleaseparty/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Grammarly</title>
+      <link>/tags/grammarly/</link>
+      <pubDate>Thu, 27 Jul 2017 12:11:13 +0700</pubDate>
+      
+      <guid>/tags/grammarly/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Grpc</title>
+      <link>/tags/grpc/</link>
+      <pubDate>Tue, 14 Aug 2018 16:29:32 +0700</pubDate>
+      
+      <guid>/tags/grpc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Html/Template</title>
+      <link>/tags/html-template/</link>
+      <pubDate>Tue, 02 Jan 2018 14:35:14 +0700</pubDate>
+      
+      <guid>/tags/html-template/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hugo</title>
+      <link>/tags/hugo/</link>
+      <pubDate>Wed, 20 Jan 2016 14:10:50 +0700</pubDate>
+      
+      <guid>/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Image Recognition</title>
+      <link>/tags/image-recognition/</link>
+      <pubDate>Mon, 08 Jan 2018 17:25:16 +0700</pubDate>
+      
+      <guid>/tags/image-recognition/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ios</title>
+      <link>/tags/ios/</link>
+      <pubDate>Sun, 13 Mar 2016 15:11:13 +0700</pubDate>
+      
+      <guid>/tags/ios/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Java</title>
+      <link>/tags/java/</link>
+      <pubDate>Sun, 13 Mar 2016 15:11:13 +0700</pubDate>
+      
+      <guid>/tags/java/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ldflags</title>
+      <link>/tags/ldflags/</link>
+      <pubDate>Tue, 01 Mar 2016 10:18:54 +0700</pubDate>
+      
+      <guid>/tags/ldflags/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Logpacker</title>
+      <link>/tags/logpacker/</link>
+      <pubDate>Mon, 03 Apr 2017 12:47:55 +0700</pubDate>
+      
+      <guid>/tags/logpacker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Machine Learning</title>
+      <link>/tags/machine-learning/</link>
+      <pubDate>Fri, 19 Jan 2018 10:32:25 +0700</pubDate>
+      
+      <guid>/tags/machine-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Machinebox</title>
+      <link>/tags/machinebox/</link>
+      <pubDate>Thu, 09 Aug 2018 14:35:51 +0700</pubDate>
+      
+      <guid>/tags/machinebox/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Memory</title>
+      <link>/tags/memory/</link>
+      <pubDate>Thu, 22 Sep 2016 17:23:43 +0700</pubDate>
+      
+      <guid>/tags/memory/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Microservices</title>
+      <link>/tags/microservices/</link>
+      <pubDate>Tue, 14 Aug 2018 16:29:32 +0700</pubDate>
+      
+      <guid>/tags/microservices/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mobile</title>
+      <link>/tags/mobile/</link>
+      <pubDate>Sun, 13 Mar 2016 15:11:13 +0700</pubDate>
+      
+      <guid>/tags/mobile/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mock</title>
+      <link>/tags/mock/</link>
+      <pubDate>Mon, 27 Feb 2017 10:15:26 +0700</pubDate>
+      
+      <guid>/tags/mock/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Monorepo</title>
+      <link>/tags/monorepo/</link>
+      <pubDate>Mon, 03 Apr 2017 12:47:55 +0700</pubDate>
+      
+      <guid>/tags/monorepo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mysql</title>
+      <link>/tags/mysql/</link>
+      <pubDate>Fri, 26 May 2017 13:27:00 +0700</pubDate>
+      
+      <guid>/tags/mysql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Nlu</title>
+      <link>/tags/nlu/</link>
+      <pubDate>Wed, 23 May 2018 08:27:36 +0700</pubDate>
+      
+      <guid>/tags/nlu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Oauth2</title>
+      <link>/tags/oauth2/</link>
+      <pubDate>Wed, 30 May 2018 14:48:29 +0700</pubDate>
+      
+      <guid>/tags/oauth2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Open Source</title>
+      <link>/tags/open-source/</link>
+      <pubDate>Wed, 22 Feb 2017 20:21:15 +0700</pubDate>
+      
+      <guid>/tags/open-source/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Opencv</title>
+      <link>/tags/opencv/</link>
+      <pubDate>Fri, 19 Jan 2018 10:32:25 +0700</pubDate>
+      
+      <guid>/tags/opencv/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Opensource</title>
+      <link>/tags/opensource/</link>
+      <pubDate>Thu, 21 Jan 2016 00:04:23 +0700</pubDate>
+      
+      <guid>/tags/opensource/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Packagemain</title>
+      <link>/tags/packagemain/</link>
+      <pubDate>Tue, 14 Aug 2018 16:29:32 +0700</pubDate>
+      
+      <guid>/tags/packagemain/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Paypal</title>
+      <link>/tags/paypal/</link>
+      <pubDate>Thu, 02 Mar 2017 11:25:19 +0700</pubDate>
+      
+      <guid>/tags/paypal/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Plugins</title>
+      <link>/tags/plugins/</link>
+      <pubDate>Tue, 04 Apr 2017 20:45:14 +0700</pubDate>
+      
+      <guid>/tags/plugins/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Practice Go</title>
+      <link>/tags/practice-go/</link>
+      <pubDate>Tue, 18 Sep 2018 15:51:00 +0700</pubDate>
+      
+      <guid>/tags/practice-go/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Profiling</title>
+      <link>/tags/profiling/</link>
+      <pubDate>Thu, 22 Sep 2016 17:23:43 +0700</pubDate>
+      
+      <guid>/tags/profiling/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>/tags/python/</link>
+      <pubDate>Sun, 26 Nov 2017 13:23:53 +0700</pubDate>
+      
+      <guid>/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Radical Candor</title>
+      <link>/tags/radical-candor/</link>
+      <pubDate>Sat, 12 May 2018 09:21:50 +0700</pubDate>
+      
+      <guid>/tags/radical-candor/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Rasa</title>
+      <link>/tags/rasa/</link>
+      <pubDate>Sun, 26 Nov 2017 13:23:53 +0700</pubDate>
+      
+      <guid>/tags/rasa/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Raspberry Pi</title>
+      <link>/tags/raspberry-pi/</link>
+      <pubDate>Mon, 05 Feb 2018 10:02:15 +0700</pubDate>
+      
+      <guid>/tags/raspberry-pi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Rest</title>
+      <link>/tags/rest/</link>
+      <pubDate>Sun, 08 Oct 2017 14:48:53 +0700</pubDate>
+      
+      <guid>/tags/rest/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Slack</title>
+      <link>/tags/slack/</link>
+      <pubDate>Wed, 23 May 2018 08:27:36 +0700</pubDate>
+      
+      <guid>/tags/slack/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Swaggger</title>
+      <link>/tags/swaggger/</link>
+      <pubDate>Mon, 03 Oct 2016 12:27:19 +0700</pubDate>
+      
+      <guid>/tags/swaggger/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Systray</title>
+      <link>/tags/systray/</link>
+      <pubDate>Tue, 02 Jan 2018 14:35:14 +0700</pubDate>
+      
+      <guid>/tags/systray/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Telnet</title>
+      <link>/tags/telnet/</link>
+      <pubDate>Fri, 13 Oct 2017 16:37:59 +0700</pubDate>
+      
+      <guid>/tags/telnet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tensorflow</title>
+      <link>/tags/tensorflow/</link>
+      <pubDate>Mon, 08 Jan 2018 17:25:16 +0700</pubDate>
+      
+      <guid>/tags/tensorflow/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Testing</title>
+      <link>/tags/testing/</link>
+      <pubDate>Tue, 07 Aug 2018 11:02:46 +0700</pubDate>
+      
+      <guid>/tags/testing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Thoughts</title>
+      <link>/tags/thoughts/</link>
+      <pubDate>Sat, 13 May 2017 16:39:24 +0700</pubDate>
+      
+      <guid>/tags/thoughts/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Voice Recognition</title>
+      <link>/tags/voice-recognition/</link>
+      <pubDate>Wed, 26 Jul 2017 14:50:34 +0700</pubDate>
+      
+      <guid>/tags/voice-recognition/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Wit</title>
+      <link>/tags/wit/</link>
+      <pubDate>Wed, 23 May 2018 08:27:36 +0700</pubDate>
+      
+      <guid>/tags/wit/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Wizeline</title>
+      <link>/tags/wizeline/</link>
+      <pubDate>Sat, 12 May 2018 09:21:50 +0700</pubDate>
+      
+      <guid>/tags/wizeline/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Workshop</title>
+      <link>/tags/workshop/</link>
+      <pubDate>Wed, 08 Nov 2017 15:30:11 +0700</pubDate>
+      
+      <guid>/tags/workshop/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Youtube</title>
+      <link>/tags/youtube/</link>
+      <pubDate>Mon, 25 Dec 2017 23:31:33 +0700</pubDate>
+      
+      <guid>/tags/youtube/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

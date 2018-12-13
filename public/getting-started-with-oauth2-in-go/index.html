@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Getting Started with OAuth2 in Go @ Alex Pliutau's Blog</title>
+        <meta name="description" content="This is a text version of this video: packagemain #11: Getting started with OAuth2 in Go.
+Getting started with OAuth2 in Go Authentication usually is very important part in any application. You can always implement your own authentication system, but it will require a lot of work, registration, forgot password form, etc. That&rsquo;s why OAuth2 was created, to allow user to log in using one of the many accounts user already has.">
+        <meta name="keywords" content="go, oauth2, alex pliutau, golang, go, programming, docker, swagger, git">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="generator" content="Hugo 0.52" />
+        <meta name="robots" content="index,follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:title" content="Getting Started with OAuth2 in Go">
+<meta property="og:description" content="This is a text version of this video: packagemain #11: Getting started with OAuth2 in Go.
+Getting started with OAuth2 in Go Authentication usually is very important part in any application. You can always implement your own authentication system, but it will require a lot of work, registration, forgot password form, etc. That&rsquo;s why OAuth2 was created, to allow user to log in using one of the many accounts user already has.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="/getting-started-with-oauth2-in-go/">
+
+<meta property="og:image" content="/oauth2.jpg" />
+
+
+        <link rel="stylesheet" href="/dist/styles.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+		<link rel="shortcut icon" href="/favicon.ico">
+		
+			<script id="dsq-count-scr" src="//pliutau.disqus.com/count.js" async></script>
+		
+    </head>
+    <body>
+        
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-72731922-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+        <div id="wrapper">
+            <header class="site-header">
+                <div class="container">
+                    <div class="site-title-wrapper">
+                        
+                            <a class="button-square button-social hint--top" data-hint="Twitter" title="Twitter" href="https://twitter.com/pliutau">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Youtube" title="Youtube" href="https://www.youtube.com/packagemain">
+                                <i class="fa fa-youtube"></i>
+                            </a>
+                        
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Github" title="Github" href="https://github.com/plutov">
+                                <i class="fa fa-github-alt"></i>
+                            </a>
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Stack Overflow" title="Stack Overflow" href="https://stackoverflow.com/users/350294/pltvs">
+                                <i class="fa fa-stack-overflow"></i>
+                            </a>
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="LinkedIn" title="LinkedIn" href="https://linkedin.com/in/pltvs/">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                        
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Email" title="Email" href="mailto:a.pliutau@gmail.com">
+                                <i class="fa fa-envelope"></i>
+                            </a>
+                        
+                        
+                    </div>
+
+                    <ul class="site-nav">
+                        
+    <li class="site-nav-item">
+        <a title="Blog" href="/">Blog</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="About" href="/page/about/">About</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Hire Me" href="/page/hire-me/">Hire Me</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Subscribe" href="https://eepurl.com/cDoD09">Subscribe</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Buy me a coffee" href="https://www.buymeacoffee.com/packagemain">Buy me a coffee</a>
+    </li>
+
+                    </ul>
+                </div>
+            </header>
+
+            <div id="container">
+
+
+<div class="container">
+    <article class="post-container" itemscope="" itemtype="http://schema.org/BlogPosting">
+        <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Getting Started with OAuth2 in Go</h1>
+    
+    <p class="post-date">
+        <span>Published <time datetime="2018-05-30"  itemprop="datePublished">Wed, May 30, 2018</time></span>
+        <span>by</span>
+        <span itemscope="" itemprop="author" itemtype="https://schema.org/Person">
+            <span itemprop="name">
+                <a href="https://pliutau.com" itemprop="url" rel="author">Alex Pliutau</a>
+            </span>
+        </span>
+    </p>
+</header>
+		<footer class="post-footer clearfix share-middle">
+    <div class="share">
+	<a class="icon-twitter" href="https://twitter.com/share?text=Getting%20Started%20with%20OAuth2%20in%20Go&url=%2fgetting-started-with-oauth2-in-go%2f"
+		onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+		<i class="fa fa-twitter"></i>
+		<span class="hidden">Twitter</span>
+	</a>
+
+	<a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=%2fgetting-started-with-oauth2-in-go%2f"
+		onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+		<i class="fa fa-facebook"></i>
+		<span class="hidden">Facebook</span>
+	</a>
+
+	<a class="icon-google-plus" href="https://plus.google.com/share?url=%2fgetting-started-with-oauth2-in-go%2f"
+	  onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+	  <i class="fa fa-google-plus"></i>
+		<span class="hidden">Google+</span>
+	</a>
+
+	<a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&title=Getting%20Started%20with%20OAuth2%20in%20Go&url=%2fgetting-started-with-oauth2-in-go%2f&summary="
+	   onclick="window.open(this.href, 'linkedin-share', 'width=554,height=481');return false;">
+	   <i class="fa fa-linkedin"></i>
+	   <span class="hidden">LinkedIn</span>
+	</a>
+</div>
+
+</footer>
+
+		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:inline-block;width:100%;height:90px;margin-top:20px;margin-bottom:20px;"
+     data-ad-client="ca-pub-9796117147060610"
+     data-ad-slot="8595828683"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+        <div class="post-content clearfix" itemprop="articleBody">
+    
+
+    
+
+<p><img src="/oauth2.jpg" alt="oauth2" /></p>
+
+<p>This is a text version of this video: <a href="https://youtu.be/OdyXIi6DGYw">packagemain #11: Getting started with OAuth2 in Go</a>.</p>
+
+<h3 id="getting-started-with-oauth2-in-go">Getting started with OAuth2 in Go</h3>
+
+<p>Authentication usually is very important part in any application. You can always implement your own authentication system, but it will require a lot of work, registration, forgot password form, etc. That&rsquo;s why OAuth2 was created, to allow user to log in using one of the many accounts user already has.</p>
+
+<p>In this video we&rsquo;ll create a simple web page with Google login using oauth2 Go package.</p>
+
+<h3 id="google-project-oauth2-keys">Google Project, OAuth2 keys</h3>
+
+<p>First of all, let&rsquo;s create our Google OAuth2 keys.</p>
+
+<ul>
+<li>Go to <a href="https://console.developers.google.com/">Google Cloud Platform</a></li>
+<li>Create new project or use an existing one</li>
+<li>Go to Credentials</li>
+<li>Click &ldquo;Create credentials&rdquo;</li>
+<li>Choose &ldquo;OAuth client ID&rdquo;</li>
+<li>Add authorized redirect URL, in our case it will be <code>localhost:8080/callback</code></li>
+<li>Get client id and client secret</li>
+<li>Save it in a safe place</li>
+</ul>
+
+<h3 id="how-oauth2-works-with-google">How OAuth2 works with Google</h3>
+
+<ul>
+<li>Obtain OAuth 2.0 credentials from the Google API Console.</li>
+<li>Obtain an access token from the Google Authorization Server.</li>
+<li>Send the access token to an API.</li>
+<li>Refresh the access token, if necessary.</li>
+</ul>
+
+<h3 id="structure">Structure</h3>
+
+<p>We&rsquo;ll do everything in 1 main.go file, and register 3 URL handlers:
+ - /
+ - /login
+ - /callback</p>
+
+<h3 id="initial-handlers-and-oauth2-config">Initial handlers and OAuth2 config</h3>
+
+<pre><code>go get golang.org/x/oauth2
+</code></pre>
+
+<p>We save google client id and secret in env variables and only use os.Getenv in the code.</p>
+
+<pre><code>package main
+
+import (
+	&quot;net/http&quot;
+	&quot;os&quot;
+
+	&quot;golang.org/x/oauth2&quot;
+	&quot;golang.org/x/oauth2/google&quot;
+)
+
+
+var (
+	googleOauthConfig *oauth2.Config
+)
+
+func init() {
+	googleOauthConfig = &amp;oauth2.Config{
+		RedirectURL:  &quot;http://localhost:8080/callback&quot;,
+		ClientID:     os.Getenv(&quot;GOOGLE_CLIENT_ID&quot;),
+		ClientSecret: os.Getenv(&quot;GOOGLE_CLIENT_SECRET&quot;),
+		Scopes:       []string{&quot;https://www.googleapis.com/auth/userinfo.email&quot;},
+		Endpoint:     google.Endpoint,
+	}
+}
+
+func main() {
+	//http.HandleFunc(&quot;/&quot;, handleMain)
+	//http.HandleFunc(&quot;/login&quot;, handleGoogleLogin)
+	//http.HandleFunc(&quot;/callback&quot;, handleGoogleCallback)
+	http.ListenAndServe(&quot;:8080&quot;, nil)
+}
+</code></pre>
+
+<h3 id="toc_5">/</h3>
+
+<p>Now let&rsquo;s render an HTML on index page</p>
+
+<pre><code>func handleMain(w http.ResponseWriter, r *http.Request) {
+	var htmlIndex = `&lt;html&gt;
+&lt;body&gt;
+	&lt;a href=&quot;/login&quot;&gt;Google Log In&lt;/a&gt;
+&lt;/body&gt;
+&lt;/html&gt;`
+
+	fmt.Fprintf(w, htmlIndex)
+}
+</code></pre>
+
+<h3 id="login">/login</h3>
+
+<p>We send random state string. In our cause it&rsquo;s not random.</p>
+
+<pre><code>var (
+	// TODO: randomize it
+	oauthStateString = &quot;pseudo-random&quot;
+)
+
+func handleGoogleLogin(w http.ResponseWriter, r *http.Request) {
+	url := googleOauthConfig.AuthCodeURL(oauthStateString)
+	http.Redirect(w, r, url, http.StatusTemporaryRedirect)
+}
+</code></pre>
+
+<h3 id="callback">/callback</h3>
+
+<ol>
+<li>check state</li>
+<li>use <code>code</code> to get token</li>
+<li>use token to get user info</li>
+</ol>
+
+<pre><code>func handleGoogleCallback(w http.ResponseWriter, r *http.Request) {
+	content, err := getUserInfo(r.FormValue(&quot;state&quot;), r.FormValue(&quot;code&quot;))
+	if err != nil {
+		fmt.Println(err.Error())
+		http.Redirect(w, r, &quot;/&quot;, http.StatusTemporaryRedirect)
+		return
+	}
+
+	fmt.Fprintf(w, &quot;Content: %s\n&quot;, content)
+}
+
+func getUserInfo(state string, code string) ([]byte, error) {
+	if state != oauthStateString {
+		return nil, fmt.Errorf(&quot;invalid oauth state&quot;)
+	}
+
+	token, err := googleOauthConfig.Exchange(oauth2.NoContext, code)
+	if err != nil {
+		return nil, fmt.Errorf(&quot;code exchange failed: %s&quot;, err.Error())
+	}
+
+	response, err := http.Get(&quot;https://www.googleapis.com/oauth2/v2/userinfo?access_token=&quot; + token.AccessToken)
+	if err != nil {
+		return nil, fmt.Errorf(&quot;failed getting user info: %s&quot;, err.Error())
+	}
+
+	defer response.Body.Close()
+	contents, err := ioutil.ReadAll(response.Body)
+	if err != nil {
+		return nil, fmt.Errorf(&quot;failed reading response body: %s&quot;, err.Error())
+	}
+
+	return contents, nil
+}
+</code></pre>
+
+<h3 id="test-it">Test it</h3>
+
+<pre><code>go run main.go
+</code></pre>
+
+<h3 id="conclusion">Conclusion</h3>
+
+<p>That&rsquo;s all what we need to do to integrate OAath2 with Google in Go. As you can see, it&rsquo;s only 70 lines of code.</p>
+
+<p>Also, there is a nice package <a href="https://github.com/markbates/goth">https://github.com/markbates/goth</a> from Mark Bates which provides multi-provider authentications.</p>
+
+<p><a href="https://github.com/plutov/packagemain/tree/master/11-oauth2">Full code</a>.</p>
+
+</div>
+
+        <footer class="post-footer clearfix">
+    
+        <p class="post-tags">
+            <span>Tagged:</span>
+            
+            
+                <a href="/tags/go/">go</a>
+                , 
+            
+                <a href="/tags/oauth2/">oauth2</a>
+                
+            
+        </p>
+    
+
+    <div class="share">
+	<a class="icon-twitter" href="https://twitter.com/share?text=Getting%20Started%20with%20OAuth2%20in%20Go&url=%2fgetting-started-with-oauth2-in-go%2f"
+		onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+		<i class="fa fa-twitter"></i>
+		<span class="hidden">Twitter</span>
+	</a>
+
+	<a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=%2fgetting-started-with-oauth2-in-go%2f"
+		onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+		<i class="fa fa-facebook"></i>
+		<span class="hidden">Facebook</span>
+	</a>
+
+	<a class="icon-google-plus" href="https://plus.google.com/share?url=%2fgetting-started-with-oauth2-in-go%2f"
+	  onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+	  <i class="fa fa-google-plus"></i>
+		<span class="hidden">Google+</span>
+	</a>
+
+	<a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&title=Getting%20Started%20with%20OAuth2%20in%20Go&url=%2fgetting-started-with-oauth2-in-go%2f&summary="
+	   onclick="window.open(this.href, 'linkedin-share', 'width=554,height=481');return false;">
+	   <i class="fa fa-linkedin"></i>
+	   <span class="hidden">LinkedIn</span>
+	</a>
+</div>
+
+</footer>
+
+		<link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+	#mc_embed_signup{
+		width:100%;
+		border: 1px solid #dddbcc;
+		border-radius: 3px;
+		margin: 20px 0;
+		background: #f1f0ea;
+	}
+	#mc_embed_signup .button { background: #f03838 !important; }
+</style>
+<div id="mc_embed_signup">
+<form action="//pliutau.us15.list-manage.com/subscribe/post?u=48e0bc513d92114dd04b36ffa&amp;id=862c25c5fb" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <div id="mc_embed_signup_scroll">
+	<label for="mce-EMAIL">Get the latest posts delivered right to your inbox.</label>
+	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+    
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_48e0bc513d92114dd04b36ffa_862c25c5fb" tabindex="-1" value=""></div>
+    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+    </div>
+</form>
+</div>
+
+        
+    <div class="comments">
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "pliutau" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:inline-block;width:100%;height:90px;margin-top:20px;margin-bottom:20px;"
+     data-ad-client="ca-pub-9796117147060610"
+     data-ad-slot="8595828683"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+    </article>
+</div>
+
+                </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <p class="footer-copyright site-title-wrapper">
+                    <span>&copy; 2018 Alex Pliutau. All rights reserved.</span>
+                </p>
+            </div>
+        </footer>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+		<script type="text/javascript">
+			hljs.initHighlightingOnLoad();
+		</script>
+    </body>
+</html>
+

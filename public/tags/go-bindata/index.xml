@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Go Bindata on Alex Pliutau</title>
+    <link>/tags/go-bindata/</link>
+    <description>Recent content in Go Bindata on Alex Pliutau</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Alex Pliutau</copyright>
+    <lastBuildDate>Tue, 02 Jan 2018 14:35:14 +0700</lastBuildDate>
+    
+	<atom:link href="/tags/go-bindata/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Year Of Commits: simple systray program in Go</title>
+      <link>/year-of-commits/</link>
+      <pubDate>Tue, 02 Jan 2018 14:35:14 +0700</pubDate>
+      
+      <guid>/year-of-commits/</guid>
+      <description>Happy New Year Gophers! One of my goals for 2018 is to commit a code to GitHub every single day. So &amp;ldquo;Contributions&amp;rdquo; on GitHub will look like this:
+To track this process I decided to write a Go program, which will be always in my tray, and which will show how many days in a row I committed something to Github.
+Tadaa! yearofcommits
+It&amp;rsquo;s a single-file command line tool using the following packages:</description>
+    </item>
+    
+    <item>
+      <title>How to build Go plugin with data inside</title>
+      <link>/how-to-build-go-plugin-with-data-inside/</link>
+      <pubDate>Tue, 04 Apr 2017 20:45:14 +0700</pubDate>
+      
+      <guid>/how-to-build-go-plugin-with-data-inside/</guid>
+      <description>Go 1.8 gives us a new tool for creating shared libraries, called plugins! This new plugin buildmode is currently only supported on Linux. But what if we build plugin with data in binary format inside? So we can ship only one .so file.
+I tried with go-bindata tool.
+Plugin to find a city by http.Request It&amp;rsquo;s for experimental usage only!
+This project contains an example with Go plugin which contains free GeoLite2 MaxMind&amp;rsquo;s database of ip addresses.</description>
+    </item>
+    
+    <item>
+      <title>How to use go-bindata with html/template</title>
+      <link>/go-bindata-html-template/</link>
+      <pubDate>Mon, 27 Mar 2017 14:26:12 +0700</pubDate>
+      
+      <guid>/go-bindata-html-template/</guid>
+      <description>What is go-bindata and why do we need it? go-bindata converts any text or binary file into Go source code, which is useful for embedding data into Go programs. So you can build your whole project into 1 binary file for easier delivery.
+html/template html/template&amp;rsquo;s functions Parse, ParseFiles works only with files on the filesystem, so we need to implement a port to work with both approaches: files or go-bindata.</description>
+    </item>
+    
+  </channel>
+</rss>

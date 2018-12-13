@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Packagemain on Alex Pliutau</title>
+    <link>/tags/packagemain/</link>
+    <description>Recent content in Packagemain on Alex Pliutau</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Alex Pliutau</copyright>
+    <lastBuildDate>Tue, 14 Aug 2018 16:29:32 +0700</lastBuildDate>
+    
+	<atom:link href="/tags/packagemain/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Microservices with go-kit. Part 2</title>
+      <link>/go-kit-2/</link>
+      <pubDate>Tue, 14 Aug 2018 16:29:32 +0700</pubDate>
+      
+      <guid>/go-kit-2/</guid>
+      <description>This is a text version of the &amp;ldquo;packagemain #13: Microservices with go-kit. Part 2&amp;rdquo; video.
+ Part 1  In the previous video we prepared a local environment for our services using kit command line tool. In this video we&amp;rsquo;ll continue to work with this code.
+Let&amp;rsquo;s implement our Notificator service first by writing the proto definition as it&amp;rsquo;s supposed to be a gRPC service. We aleady have pre-generated file notificator/pkg/grpc/pb/notificator.</description>
+    </item>
+    
+    <item>
+      <title>Microservices with go-kit. Part 1</title>
+      <link>/gi-kit-1/</link>
+      <pubDate>Mon, 30 Jul 2018 11:28:51 +0700</pubDate>
+      
+      <guid>/gi-kit-1/</guid>
+      <description>This is a text version of the &amp;ldquo;packagemain #12: Microservices with go-kit. Part 1&amp;rdquo; video.
+Nowadays, Microservices is one of the most popular buzz-word in the field of software architecture.
+There are different definitions of the word &amp;ldquo;microservice&amp;rdquo;, I like to say that Microservice is what single programmer can design, implement, deploy, and maintain.
+In a monolithic application, components invoke one another via language‑level method or function calls. In contrast, a microservices‑based application is a distributed system running on multiple machines.</description>
+    </item>
+    
+    <item>
+      <title>Building a Slack Bot with Go and Wit.ai</title>
+      <link>/building-slack-bot-with-go/</link>
+      <pubDate>Wed, 23 May 2018 08:27:36 +0700</pubDate>
+      
+      <guid>/building-slack-bot-with-go/</guid>
+      <description>Building a Slack Bot with Go and Wit.ai This is a text version of this video: packagemain #9: Building Slack Bot with Go and Wit.ai.
+We will build a simple Slack Bot with NLU functionality to get some useful information from Wolfram. No worries if you didn&amp;rsquo;t use Wolfram before, it&amp;rsquo;s a computational knowledge engine which can give you a short answer to your question.
+There are different platforms for NLU, such as LUIS.</description>
+    </item>
+    
+    <item>
+      <title>Video series: Running Go programs on Raspberry Pi</title>
+      <link>/video-series-running-go-programs-on-raspberry-pi/</link>
+      <pubDate>Mon, 05 Feb 2018 10:02:15 +0700</pubDate>
+      
+      <guid>/video-series-running-go-programs-on-raspberry-pi/</guid>
+      <description>I started new video series about writing and running Go programs on Raspberry Pi. In these videos I will cover:
+ Capture image on Raspberry Pi 3 from webcamera Use Facebox from https://machinebox.io to detect faces on image Greet user using Text-To-Speech Receive and parse user reply using Speech-To-Text  Videos:
+ Part 1 Part 2 Part 3  </description>
+    </item>
+    
+  </channel>
+</rss>

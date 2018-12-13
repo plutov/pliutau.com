@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Go tools are awesome @ Alex Pliutau's Blog</title>
+        <meta name="description" content="Yes, they are. And that&rsquo;s why I love Go. Almost all important tools come together with Go installation, but there are also some you can install additionally depends on your needs: golint, errcheck, etc.
+Let&rsquo;s start with standard Go tools.
+go get The most common way to install a Go package is to use a go get. If you need fixed versions you may use dep for dependencies management. go get downloads the packages named by the import paths, along with their dependencies.">
+        <meta name="keywords" content="go, alex pliutau, golang, go, programming, docker, swagger, git">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="generator" content="Hugo 0.52" />
+        <meta name="robots" content="index,follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:title" content="Go tools are awesome">
+<meta property="og:description" content="Yes, they are. And that&rsquo;s why I love Go. Almost all important tools come together with Go installation, but there are also some you can install additionally depends on your needs: golint, errcheck, etc.
+Let&rsquo;s start with standard Go tools.
+go get The most common way to install a Go package is to use a go get. If you need fixed versions you may use dep for dependencies management. go get downloads the packages named by the import paths, along with their dependencies.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="/go-tools-are-awesome/">
+
+<meta property="og:image" content="/gotools.jpeg" />
+
+
+        <link rel="stylesheet" href="/dist/styles.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+		<link rel="shortcut icon" href="/favicon.ico">
+		
+			<script id="dsq-count-scr" src="//pliutau.disqus.com/count.js" async></script>
+		
+    </head>
+    <body>
+        
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-72731922-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+        <div id="wrapper">
+            <header class="site-header">
+                <div class="container">
+                    <div class="site-title-wrapper">
+                        
+                            <a class="button-square button-social hint--top" data-hint="Twitter" title="Twitter" href="https://twitter.com/pliutau">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Youtube" title="Youtube" href="https://www.youtube.com/packagemain">
+                                <i class="fa fa-youtube"></i>
+                            </a>
+                        
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Github" title="Github" href="https://github.com/plutov">
+                                <i class="fa fa-github-alt"></i>
+                            </a>
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Stack Overflow" title="Stack Overflow" href="https://stackoverflow.com/users/350294/pltvs">
+                                <i class="fa fa-stack-overflow"></i>
+                            </a>
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="LinkedIn" title="LinkedIn" href="https://linkedin.com/in/pltvs/">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                        
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Email" title="Email" href="mailto:a.pliutau@gmail.com">
+                                <i class="fa fa-envelope"></i>
+                            </a>
+                        
+                        
+                    </div>
+
+                    <ul class="site-nav">
+                        
+    <li class="site-nav-item">
+        <a title="Blog" href="/">Blog</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="About" href="/page/about/">About</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Hire Me" href="/page/hire-me/">Hire Me</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Subscribe" href="https://eepurl.com/cDoD09">Subscribe</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Buy me a coffee" href="https://www.buymeacoffee.com/packagemain">Buy me a coffee</a>
+    </li>
+
+                    </ul>
+                </div>
+            </header>
+
+            <div id="container">
+
+
+<div class="container">
+    <article class="post-container" itemscope="" itemtype="http://schema.org/BlogPosting">
+        <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Go tools are awesome</h1>
+    
+    <p class="post-date">
+        <span>Published <time datetime="2017-12-11"  itemprop="datePublished">Mon, Dec 11, 2017</time></span>
+        <span>by</span>
+        <span itemscope="" itemprop="author" itemtype="https://schema.org/Person">
+            <span itemprop="name">
+                <a href="https://pliutau.com" itemprop="url" rel="author">Alex Pliutau</a>
+            </span>
+        </span>
+    </p>
+</header>
+		<footer class="post-footer clearfix share-middle">
+    <div class="share">
+	<a class="icon-twitter" href="https://twitter.com/share?text=Go%20tools%20are%20awesome&url=%2fgo-tools-are-awesome%2f"
+		onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+		<i class="fa fa-twitter"></i>
+		<span class="hidden">Twitter</span>
+	</a>
+
+	<a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=%2fgo-tools-are-awesome%2f"
+		onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+		<i class="fa fa-facebook"></i>
+		<span class="hidden">Facebook</span>
+	</a>
+
+	<a class="icon-google-plus" href="https://plus.google.com/share?url=%2fgo-tools-are-awesome%2f"
+	  onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+	  <i class="fa fa-google-plus"></i>
+		<span class="hidden">Google+</span>
+	</a>
+
+	<a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&title=Go%20tools%20are%20awesome&url=%2fgo-tools-are-awesome%2f&summary="
+	   onclick="window.open(this.href, 'linkedin-share', 'width=554,height=481');return false;">
+	   <i class="fa fa-linkedin"></i>
+	   <span class="hidden">LinkedIn</span>
+	</a>
+</div>
+
+</footer>
+
+		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:inline-block;width:100%;height:90px;margin-top:20px;margin-bottom:20px;"
+     data-ad-client="ca-pub-9796117147060610"
+     data-ad-slot="8595828683"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+        <div class="post-content clearfix" itemprop="articleBody">
+    
+
+    
+
+<p><img src="/gotools.jpeg" alt="gotools" /></p>
+
+<p>Yes, they are. And that&rsquo;s why I love Go. Almost all important tools come together with Go installation, but there are also some you can install additionally depends on your needs: golint, errcheck, etc.</p>
+
+<p>Let&rsquo;s start with standard Go tools.</p>
+
+<h3 id="go-get">go get</h3>
+
+<p>The most common way to install a Go package is to use a <code>go get</code>. If you need fixed versions you may use <a href="https://github.com/golang/dep">dep</a> for dependencies management. <code>go get</code> downloads the packages named by the import paths, along with their dependencies. It then installs the named packages, like <code>go install</code>.</p>
+
+<pre><code>go get github.com/golang/lint/golint
+</code></pre>
+
+<p>There are some helpful flags:
+ - <code>-u</code> forces the tool to sync with the latest version of the repo.
+ - <code>-d</code> if you just want to clone a repo to your GOPATH and skip the building and installation phase.</p>
+
+<h3 id="go-build-go-install">go build / go install</h3>
+
+<p>These 2 commands compile packages and dependencies. Both <code>go install</code> and <code>go build</code> will compile the package in the current directory when ran without additional arguments. If the package is <code>package main</code>, go build will place the resulting executable in the current directory. go install will put it in <code>$GOPATH/bin</code> (using the first element of $GOPATH if you have more than one).
+Additionally <code>go install</code> will install compiled dependencies in <code>$GOPATH/pkg</code>. To achieve the same effect with <code>go build</code>, use <code>go build -i</code>.
+If the package is not package main, go install will compile the package and install it in <code>$GOPATH/pkg</code>.</p>
+
+<p>The <code>go build</code> command lets you build an executable file for any Go-supported target platform, on your platform. This means you can test, release and distribute your application without building those executables on the target platforms you wish to use.</p>
+
+<pre><code>GOOS=windows GOARCH=amd64 go build github.com/mholt/caddy/caddy
+</code></pre>
+
+<p>If you are curious about the Go toolchain, or using a cross-C compiler and wondering about flags passed to the external compiler, or suspicious about a linker bug, use <code>-x</code> to see all the invocations.</p>
+
+<pre><code>go build -x
+WORK=/var/folders/2g/_fnx086940v6k_yt88fdtqw80000gn/T/go-build614085896
+mkdir -p $WORK/github.com/plutov/go-snake-telnet/_obj/
+mkdir -p $WORK/github.com/plutov/go-snake-telnet/_obj/exe/
+...
+</code></pre>
+
+<p>I often use <code>-ldflags</code> option when build Go programs:
+ - To <a href="/optimize-go-binary-size/">optimize Go Binary Size</a>.
+ - To set variable value during the build.</p>
+
+<pre><code>go build -ldflags=&quot;-X main.Version 1.0.0&quot;
+</code></pre>
+
+<p><code>go build -gcflags</code> used to pass flags to the Go compiler. <code>go tool compile -help</code> lists all the flags that can be passed to the compiler.</p>
+
+<h3 id="go-test">go test</h3>
+
+<p>This command has a lot of options, but the ones I use often are:
+ - <code>-race</code> to run <a href="https://blog.golang.org/race-detector">Go race detector</a>.
+ - <code>-run</code> to filter tests to run by regex and the -run flag: <code>go test -run=FunctionName</code>.
+ - <code>-bench</code> to run benchmarks.
+ - <code>-cpuprofile cpu.out</code> writes a CPU profile to the specified file before exiting.
+ - <code>-memprofile mem.out</code> writes a memory profile to the file after all tests have passed.
+ - I always use <code>-v</code>. It prints the test name, its status (failed or passed), how much it took to run the test, any logs from the test case, etc.
+ - <code>-cover</code> measures the percentage of lines of code that are executed while running a suite of tests.</p>
+
+<h3 id="go-list">go list</h3>
+
+<p>It lists the packages named by the import paths, one per line.</p>
+
+<h3 id="go-env">go env</h3>
+
+<p>Prints Go environment information:</p>
+
+<pre><code>go env
+GOARCH=&quot;amd64&quot;
+GOBIN=&quot;/Users/pltvs/go/bin&quot;
+...
+</code></pre>
+
+<h3 id="go-fmt">go fmt</h3>
+
+<p>Most used tool for me, because I run it on file save. It will reformat your code based on Go&rsquo;s standards.</p>
+
+<p>There is also <code>goimports</code> based on <code>gofmt</code> which updates your Go import lines, adding missing ones and removing unreferenced ones.</p>
+
+<h3 id="go-vet">go vet</h3>
+
+<p>I also run it on save, <code>go vet</code> examines Go source code and reports suspicious constructs, such as <code>Printf</code> calls whose arguments do not align with the format string.</p>
+
+<h3 id="go-generate">go generate</h3>
+
+<p>The <code>go generate</code> command was added in Go 1.4, &ldquo;to automate the running of tools to generate source code before compilation.&rdquo;</p>
+
+<p>The Go tool scans the files relevant to the current package for lines with a &ldquo;magic comment&rdquo; of the form <code>//go:generate command arguments</code>. This command does not have to do anything related to Go or code generation. For example:</p>
+
+<pre><code>package project
+
+//go:generate echo Hello, Go Generate!
+
+func Add(x, y int) int {
+	return x + y
+}
+</code></pre>
+
+<pre><code>$ go generate
+Hello, Go Generate!
+</code></pre>
+
+<h3 id="tools-for-reading-code">Tools for reading code</h3>
+
+<p>We spend more time reading code than writing it, and as such, tooling that helps us reading code is an important addition to the tool box of any good gopher.</p>
+
+<h3 id="go-doc-godoc">go doc / godoc</h3>
+
+<p>This sounds quite similar to javadoc and other similar tools, but Go documentation does not have any extra formatting rules. Everything is plain text.</p>
+
+<p>For instance, we can get information about json.Encoder by running:</p>
+
+<pre><code>go doc json.Encoder
+package json // import &quot;encoding/json&quot;
+
+type Encoder struct {
+        // Has unexported fields.
+}
+...
+</code></pre>
+
+<p>If <code>go doc</code> is able to give us information about any identifier in our GOPATH, <code>godoc</code> is able to provide full documentation for packages in text form:</p>
+
+<pre><code>godoc errors
+use 'godoc cmd/errors' for documentation on the errors command
+
+PACKAGE DOCUMENTATION
+
+package errors
+...
+</code></pre>
+
+<h3 id="non-standard-go-tools">Non standard go tools</h3>
+
+<p>Let&rsquo;s see what tools community created to make Gophers happy.</p>
+
+<h3 id="golint">golint</h3>
+
+<p>I also run it on file save.</p>
+
+<pre><code>go get -u github.com/golang/lint/golint
+</code></pre>
+
+<h3 id="errcheck">errcheck</h3>
+
+<pre><code>go get github.com/kisielk/errcheck
+</code></pre>
+
+<p>This tool detects when an error is silently ignored. This means that for a function that returns at least one error we are omitting to check the returned values.</p>
+
+<p>Given a <code>foo() error</code> function, we&rsquo;ll say that:</p>
+
+<ul>
+<li><code>foo()</code> is silently omitting the error, while</li>
+<li><code>_ = foo()</code> is omitting the error explicitly.</li>
+</ul>
+
+<h3 id="p-s">P.S.</h3>
+
+<p>Go community is very active and always creating new useful tools, please leave a comment if you know some other tools you find useful.</p>
+
+</div>
+
+        <footer class="post-footer clearfix">
+    
+        <p class="post-tags">
+            <span>Tagged:</span>
+            
+            
+                <a href="/tags/go/">go</a>
+                
+            
+        </p>
+    
+
+    <div class="share">
+	<a class="icon-twitter" href="https://twitter.com/share?text=Go%20tools%20are%20awesome&url=%2fgo-tools-are-awesome%2f"
+		onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+		<i class="fa fa-twitter"></i>
+		<span class="hidden">Twitter</span>
+	</a>
+
+	<a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=%2fgo-tools-are-awesome%2f"
+		onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+		<i class="fa fa-facebook"></i>
+		<span class="hidden">Facebook</span>
+	</a>
+
+	<a class="icon-google-plus" href="https://plus.google.com/share?url=%2fgo-tools-are-awesome%2f"
+	  onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+	  <i class="fa fa-google-plus"></i>
+		<span class="hidden">Google+</span>
+	</a>
+
+	<a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&title=Go%20tools%20are%20awesome&url=%2fgo-tools-are-awesome%2f&summary="
+	   onclick="window.open(this.href, 'linkedin-share', 'width=554,height=481');return false;">
+	   <i class="fa fa-linkedin"></i>
+	   <span class="hidden">LinkedIn</span>
+	</a>
+</div>
+
+</footer>
+
+		<link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+	#mc_embed_signup{
+		width:100%;
+		border: 1px solid #dddbcc;
+		border-radius: 3px;
+		margin: 20px 0;
+		background: #f1f0ea;
+	}
+	#mc_embed_signup .button { background: #f03838 !important; }
+</style>
+<div id="mc_embed_signup">
+<form action="//pliutau.us15.list-manage.com/subscribe/post?u=48e0bc513d92114dd04b36ffa&amp;id=862c25c5fb" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <div id="mc_embed_signup_scroll">
+	<label for="mce-EMAIL">Get the latest posts delivered right to your inbox.</label>
+	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+    
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_48e0bc513d92114dd04b36ffa_862c25c5fb" tabindex="-1" value=""></div>
+    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+    </div>
+</form>
+</div>
+
+        
+    <div class="comments">
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "pliutau" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:inline-block;width:100%;height:90px;margin-top:20px;margin-bottom:20px;"
+     data-ad-client="ca-pub-9796117147060610"
+     data-ad-slot="8595828683"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+    </article>
+</div>
+
+                </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <p class="footer-copyright site-title-wrapper">
+                    <span>&copy; 2018 Alex Pliutau. All rights reserved.</span>
+                </p>
+            </div>
+        </footer>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+		<script type="text/javascript">
+			hljs.initHighlightingOnLoad();
+		</script>
+    </body>
+</html>
+

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Docker on Alex Pliutau</title>
+    <link>/tags/docker/</link>
+    <description>Recent content in Docker on Alex Pliutau</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Alex Pliutau</copyright>
+    <lastBuildDate>Thu, 06 Dec 2018 10:01:43 +0100</lastBuildDate>
+    
+	<atom:link href="/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Docker and Go modules</title>
+      <link>/go-modules-docker/</link>
+      <pubDate>Thu, 06 Dec 2018 10:01:43 +0100</pubDate>
+      
+      <guid>/go-modules-docker/</guid>
+      <description>As you may know Go 1.11 includes opt-in feature for versioned modules. Before go modules Gophers used dependency managers like dep or glide, but with go modules you don&amp;rsquo;t need a 3rd-party manager as they are included into standard go toolchain.
+Also modules allow for the deprecation of the GOPATH, which was a blocker for some newcomers in Go.
+In this video I am going to demonstrate how to enable go modules for your program and then package it with Docker.</description>
+    </item>
+    
+    <item>
+      <title>Microservices with go-kit. Part 2</title>
+      <link>/go-kit-2/</link>
+      <pubDate>Tue, 14 Aug 2018 16:29:32 +0700</pubDate>
+      
+      <guid>/go-kit-2/</guid>
+      <description>This is a text version of the &amp;ldquo;packagemain #13: Microservices with go-kit. Part 2&amp;rdquo; video.
+ Part 1  In the previous video we prepared a local environment for our services using kit command line tool. In this video we&amp;rsquo;ll continue to work with this code.
+Let&amp;rsquo;s implement our Notificator service first by writing the proto definition as it&amp;rsquo;s supposed to be a gRPC service. We aleady have pre-generated file notificator/pkg/grpc/pb/notificator.</description>
+    </item>
+    
+    <item>
+      <title>Deploying Facebox to AWS ECS</title>
+      <link>/deploying-facebox-to-aws-ecs/</link>
+      <pubDate>Thu, 09 Aug 2018 14:35:51 +0700</pubDate>
+      
+      <guid>/deploying-facebox-to-aws-ecs/</guid>
+      <description>Currently I am building a product on top of face recognition functionality and I am using Facebox with go-sdk as it&amp;rsquo;s the easiest way to add face recognition features to your project. And it&amp;rsquo;s super developer friendly:
+docker run -p 8080:8080 -e &amp;quot;MB_KEY=$MB_KEY&amp;quot; machinebox/facebox  Today it&amp;rsquo;s time for me to deploy the project. And since we use AWS I have to deploy my Facebox instance to ECS (Elastic Container Service).</description>
+    </item>
+    
+    <item>
+      <title>Image Recognition in Go using Tensorflow</title>
+      <link>/image-recognition-in-go-using-tensorflow/</link>
+      <pubDate>Mon, 08 Jan 2018 17:25:16 +0700</pubDate>
+      
+      <guid>/image-recognition-in-go-using-tensorflow/</guid>
+      <description>This is a text version of this video: packagemain #4: Image Recognition in Go using Tensorflow.
+Tensorflow is a computation library that represents computations with graphs. Its core is implemented in C++ and there are also bindings for different languages, including Go.
+In the last few years the field of machine learning has made tremendous progress on addressing the difficult problem of image recognition.
+One of the challenges with machine learning is figuring out how to deploy trained models into production environments.</description>
+    </item>
+    
+    <item>
+      <title>Multi-stage Dockerfile for Golang application</title>
+      <link>/multi-stage-dockerfile-for-golang-application/</link>
+      <pubDate>Sun, 30 Apr 2017 12:47:27 +0700</pubDate>
+      
+      <guid>/multi-stage-dockerfile-for-golang-application/</guid>
+      <description>A common workaround for building Golang application in Docker is to have 2 Dockerfiles - one to perform a build and another to ship the results of the first build without tooling in the first image. It called Builder Pattern.
+Starting from Docker v17.0.5 it will be possible to do it via single Dockerfile using multi-stage builds.
+Application Let&amp;rsquo;s start with &amp;ldquo;Hello world&amp;rdquo; application:
+package main import &amp;quot;fmt&amp;quot; func main() { fmt.</description>
+    </item>
+    
+    <item>
+      <title>Golang Docker Skeleton</title>
+      <link>/go-docker-skeleton/</link>
+      <pubDate>Fri, 30 Sep 2016 14:11:48 +0700</pubDate>
+      
+      <guid>/go-docker-skeleton/</guid>
+      <description>I really like templates and standards in the companies or a single team. Of course each company has it&amp;rsquo;s own application layout, because it depends on tools, people and goals. Also everyone wants to save a time. In the SOA century we have to create new projects, repositories more often and often, create Dockerfile again, think about layout, write a documentation. In this post I want to share my template created for Go applications that work in Docker, which I am using in my projects.</description>
+    </item>
+    
+    <item>
+      <title>Docker test environment</title>
+      <link>/docker-test-environment/</link>
+      <pubDate>Sat, 30 Jan 2016 20:02:55 +0700</pubDate>
+      
+      <guid>/docker-test-environment/</guid>
+      <description>My colleague Andrey Sinitsyn wrote a very nice article how we are testing LogPacker Cluster with help of Docker.
+Original Article</description>
+    </item>
+    
+  </channel>
+</rss>

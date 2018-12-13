@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Pros and Cons: Golang in a Monorepo @ Alex Pliutau's Blog</title>
+        <meta name="description" content="Monorepo - is a monolithic code repository which can contain different services (or whatever you want to call them), CLI, libraries, etc. Did you hear that Facebook/Google uses a giant monorepo? And they do it for reasons.
+I tried both approaches in Go: with monorepo or with multirepo. And I personally prefer the first one (but of course depending on a project).
+Advantage 1. Simplified organization A structure of your project is important for organization.">
+        <meta name="keywords" content="go, golang, monorepo, logpacker, alex pliutau, golang, go, programming, docker, swagger, git">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="generator" content="Hugo 0.52" />
+        <meta name="robots" content="index,follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:title" content="Pros and Cons: Golang in a Monorepo">
+<meta property="og:description" content="Monorepo - is a monolithic code repository which can contain different services (or whatever you want to call them), CLI, libraries, etc. Did you hear that Facebook/Google uses a giant monorepo? And they do it for reasons.
+I tried both approaches in Go: with monorepo or with multirepo. And I personally prefer the first one (but of course depending on a project).
+Advantage 1. Simplified organization A structure of your project is important for organization.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="/pros_and_cons_golang_in_monorepo/">
+
+<meta property="og:image" content="/git-repository-comparison.png" />
+
+
+        <link rel="stylesheet" href="/dist/styles.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+		<link rel="shortcut icon" href="/favicon.ico">
+		
+			<script id="dsq-count-scr" src="//pliutau.disqus.com/count.js" async></script>
+		
+    </head>
+    <body>
+        
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-72731922-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+        <div id="wrapper">
+            <header class="site-header">
+                <div class="container">
+                    <div class="site-title-wrapper">
+                        
+                            <a class="button-square button-social hint--top" data-hint="Twitter" title="Twitter" href="https://twitter.com/pliutau">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Youtube" title="Youtube" href="https://www.youtube.com/packagemain">
+                                <i class="fa fa-youtube"></i>
+                            </a>
+                        
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Github" title="Github" href="https://github.com/plutov">
+                                <i class="fa fa-github-alt"></i>
+                            </a>
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Stack Overflow" title="Stack Overflow" href="https://stackoverflow.com/users/350294/pltvs">
+                                <i class="fa fa-stack-overflow"></i>
+                            </a>
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="LinkedIn" title="LinkedIn" href="https://linkedin.com/in/pltvs/">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                        
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Email" title="Email" href="mailto:a.pliutau@gmail.com">
+                                <i class="fa fa-envelope"></i>
+                            </a>
+                        
+                        
+                    </div>
+
+                    <ul class="site-nav">
+                        
+    <li class="site-nav-item">
+        <a title="Blog" href="/">Blog</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="About" href="/page/about/">About</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Hire Me" href="/page/hire-me/">Hire Me</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Subscribe" href="https://eepurl.com/cDoD09">Subscribe</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Buy me a coffee" href="https://www.buymeacoffee.com/packagemain">Buy me a coffee</a>
+    </li>
+
+                    </ul>
+                </div>
+            </header>
+
+            <div id="container">
+
+
+<div class="container">
+    <article class="post-container" itemscope="" itemtype="http://schema.org/BlogPosting">
+        <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Pros and Cons: Golang in a Monorepo</h1>
+    
+    <p class="post-date">
+        <span>Published <time datetime="2017-04-03"  itemprop="datePublished">Mon, Apr 3, 2017</time></span>
+        <span>by</span>
+        <span itemscope="" itemprop="author" itemtype="https://schema.org/Person">
+            <span itemprop="name">
+                <a href="https://pliutau.com" itemprop="url" rel="author">Alex Pliutau</a>
+            </span>
+        </span>
+    </p>
+</header>
+		<footer class="post-footer clearfix share-middle">
+    <div class="share">
+	<a class="icon-twitter" href="https://twitter.com/share?text=Pros%20and%20Cons%3a%20Golang%20in%20a%20Monorepo&url=%2fpros_and_cons_golang_in_monorepo%2f"
+		onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+		<i class="fa fa-twitter"></i>
+		<span class="hidden">Twitter</span>
+	</a>
+
+	<a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=%2fpros_and_cons_golang_in_monorepo%2f"
+		onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+		<i class="fa fa-facebook"></i>
+		<span class="hidden">Facebook</span>
+	</a>
+
+	<a class="icon-google-plus" href="https://plus.google.com/share?url=%2fpros_and_cons_golang_in_monorepo%2f"
+	  onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+	  <i class="fa fa-google-plus"></i>
+		<span class="hidden">Google+</span>
+	</a>
+
+	<a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&title=Pros%20and%20Cons%3a%20Golang%20in%20a%20Monorepo&url=%2fpros_and_cons_golang_in_monorepo%2f&summary="
+	   onclick="window.open(this.href, 'linkedin-share', 'width=554,height=481');return false;">
+	   <i class="fa fa-linkedin"></i>
+	   <span class="hidden">LinkedIn</span>
+	</a>
+</div>
+
+</footer>
+
+		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:inline-block;width:100%;height:90px;margin-top:20px;margin-bottom:20px;"
+     data-ad-client="ca-pub-9796117147060610"
+     data-ad-slot="8595828683"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+        <div class="post-content clearfix" itemprop="articleBody">
+    
+
+    
+
+<p><img src="/git-repository-comparison.png" alt="git-repository-comparison" /></p>
+
+<p>Monorepo - is a monolithic code repository which can contain different services (or whatever you want to call them), CLI, libraries, etc. Did you hear that Facebook/Google uses a giant monorepo? And they do it for reasons.</p>
+
+<p>I tried both approaches in Go: with monorepo or with multirepo. And I personally prefer the first one (but of course depending on a project).</p>
+
+<h3 id="advantage-1-simplified-organization">Advantage 1. Simplified organization</h3>
+
+<p>A structure of your project is important for organization. The quicker someone can visualize the project as a whole the faster they can contribute. In Golang we are not forced with a folder convention so your team can use their ideals to find a solution. Below is an example from <a href="https://logpacker.com">LogPacker</a>:</p>
+
+<pre><code>├──cmd
+│  ├──landing
+│  │  └──landing.go
+│  ├──scheduler
+│  │  └──scheduler.go
+│  └──userspace
+│     └──userspace.go
+├──db
+│  ├──migrations
+├──pkg
+│  ├──shared
+│  ├──db
+│  ├──mailer
+│  └──...
+├──templates
+├──vendor
+├──glide.yaml
+├──Makefile
+├──docker-compose.yaml
+└──README.md
+</code></pre>
+
+<p>Layout of the codebase is easily understood, as it is organized in a single tree.</p>
+
+<h3 id="advantage-2-devenv">Advantage 2. Devenv</h3>
+
+<p>It&rsquo;s very easy now to get a development environment set up to run builds and tests, you need only clone one repo and use Docker Compose (or whatever you have). Technically it&rsquo;s possible to make it with multiple repositories, but monorepo does a good design work for it.</p>
+
+<h3 id="advantage-3-third-party-dependencies">Advantage 3. Third party Dependencies</h3>
+
+<p>Using a monorepo solves the issue of vendoring third party dependencies. Every service within monorepo uses the same version of a third party library, and whenever the library is upgraded, every project which makes use of it is built and tested automatically. In our example we have common <code>glide.yaml</code> for all services.</p>
+
+<h3 id="advantage-4-tooling">Advantage 4. Tooling</h3>
+
+<p>Many of the tools in the Go ecosystem work even better when used in a monorepo. For example, <code>gorename</code> is incredibly useful. Any changes made will be compiled and tested across all internal services. Also we can have single <code>Makefile</code> with targets test, build, run, etc.</p>
+
+<h3 id="advantage-5-productivity-increases">Advantage 5. Productivity increases</h3>
+
+<p>The ability to make atomic changes is also a very powerful feature of the monolithic model. A developer can make a major change touching hundreds or thousands of files across the repository in a single consistent operation. For instance, a developer can rename a type or function in a single commit and yet not break any builds or tests.</p>
+
+<p>With a monorepo, you just refactor the API and all of its callers in one commit. That’s not always trivial, but it’s much easier than it would be with lots of small repos.</p>
+
+<p>No switches from one repo to another depending on which part of the codebase you are working on.</p>
+
+<h3 id="disadvantage-1-collaboration-across-teams">Disadvantage 1. Collaboration across teams</h3>
+
+<p>For small organizations it can be an advantage, because all developers work with the same codebase, so collaboration between teams becomes natural. But if monorepo have many commits per day to many different projects, &ldquo;feature branches&rdquo; can quickly become out of date. Or developer from one project can easily break some integration part or tests.</p>
+
+<h3 id="disadvantage-2-time">Disadvantage 2. Time</h3>
+
+<p>For large codebases, clones, pulls, and pushes take too much time, which is inefficient.</p>
+
+<h3 id="disadvantage-3-ownership">Disadvantage 3. Ownership</h3>
+
+<p>A small team can own and independently develop and deploy the full stack of a microservice if it&rsquo;s hosted is separate repository.</p>
+
+<h3 id="conclusion">Conclusion</h3>
+
+<p>When it comes to repository hosting discussion, I agree with Google and Facebook: I prefer monolithic repositories. My point isn&rsquo;t that you should definitely switch to a monorepo, it&rsquo;s that using a monorepo isn’t totally unreasonable.</p>
+
+<p>Feel free to disagree or share opinions or thoughts.</p>
+
+</div>
+
+        <footer class="post-footer clearfix">
+    
+        <p class="post-tags">
+            <span>Tagged:</span>
+            
+            
+                <a href="/tags/go/">go</a>
+                , 
+            
+                <a href="/tags/golang/">golang</a>
+                , 
+            
+                <a href="/tags/monorepo/">monorepo</a>
+                , 
+            
+                <a href="/tags/logpacker/">logpacker</a>
+                
+            
+        </p>
+    
+
+    <div class="share">
+	<a class="icon-twitter" href="https://twitter.com/share?text=Pros%20and%20Cons%3a%20Golang%20in%20a%20Monorepo&url=%2fpros_and_cons_golang_in_monorepo%2f"
+		onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+		<i class="fa fa-twitter"></i>
+		<span class="hidden">Twitter</span>
+	</a>
+
+	<a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=%2fpros_and_cons_golang_in_monorepo%2f"
+		onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+		<i class="fa fa-facebook"></i>
+		<span class="hidden">Facebook</span>
+	</a>
+
+	<a class="icon-google-plus" href="https://plus.google.com/share?url=%2fpros_and_cons_golang_in_monorepo%2f"
+	  onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+	  <i class="fa fa-google-plus"></i>
+		<span class="hidden">Google+</span>
+	</a>
+
+	<a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&title=Pros%20and%20Cons%3a%20Golang%20in%20a%20Monorepo&url=%2fpros_and_cons_golang_in_monorepo%2f&summary="
+	   onclick="window.open(this.href, 'linkedin-share', 'width=554,height=481');return false;">
+	   <i class="fa fa-linkedin"></i>
+	   <span class="hidden">LinkedIn</span>
+	</a>
+</div>
+
+</footer>
+
+		<link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+	#mc_embed_signup{
+		width:100%;
+		border: 1px solid #dddbcc;
+		border-radius: 3px;
+		margin: 20px 0;
+		background: #f1f0ea;
+	}
+	#mc_embed_signup .button { background: #f03838 !important; }
+</style>
+<div id="mc_embed_signup">
+<form action="//pliutau.us15.list-manage.com/subscribe/post?u=48e0bc513d92114dd04b36ffa&amp;id=862c25c5fb" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <div id="mc_embed_signup_scroll">
+	<label for="mce-EMAIL">Get the latest posts delivered right to your inbox.</label>
+	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+    
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_48e0bc513d92114dd04b36ffa_862c25c5fb" tabindex="-1" value=""></div>
+    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+    </div>
+</form>
+</div>
+
+        
+    <div class="comments">
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "pliutau" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:inline-block;width:100%;height:90px;margin-top:20px;margin-bottom:20px;"
+     data-ad-client="ca-pub-9796117147060610"
+     data-ad-slot="8595828683"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+    </article>
+</div>
+
+                </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <p class="footer-copyright site-title-wrapper">
+                    <span>&copy; 2018 Alex Pliutau. All rights reserved.</span>
+                </p>
+            </div>
+        </footer>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+		<script type="text/javascript">
+			hljs.initHighlightingOnLoad();
+		</script>
+    </body>
+</html>
+

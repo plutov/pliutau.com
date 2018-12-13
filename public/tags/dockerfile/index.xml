@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dockerfile on Alex Pliutau</title>
+    <link>/tags/dockerfile/</link>
+    <description>Recent content in Dockerfile on Alex Pliutau</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Alex Pliutau</copyright>
+    <lastBuildDate>Sun, 30 Apr 2017 12:47:27 +0700</lastBuildDate>
+    
+	<atom:link href="/tags/dockerfile/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Multi-stage Dockerfile for Golang application</title>
+      <link>/multi-stage-dockerfile-for-golang-application/</link>
+      <pubDate>Sun, 30 Apr 2017 12:47:27 +0700</pubDate>
+      
+      <guid>/multi-stage-dockerfile-for-golang-application/</guid>
+      <description>A common workaround for building Golang application in Docker is to have 2 Dockerfiles - one to perform a build and another to ship the results of the first build without tooling in the first image. It called Builder Pattern.
+Starting from Docker v17.0.5 it will be possible to do it via single Dockerfile using multi-stage builds.
+Application Let&amp;rsquo;s start with &amp;ldquo;Hello world&amp;rdquo; application:
+package main import &amp;quot;fmt&amp;quot; func main() { fmt.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Logpacker on Alex Pliutau</title>
+    <link>/tags/logpacker/</link>
+    <description>Recent content in Logpacker on Alex Pliutau</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Alex Pliutau</copyright>
+    <lastBuildDate>Mon, 03 Apr 2017 12:47:55 +0700</lastBuildDate>
+    
+	<atom:link href="/tags/logpacker/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Pros and Cons: Golang in a Monorepo</title>
+      <link>/pros_and_cons_golang_in_monorepo/</link>
+      <pubDate>Mon, 03 Apr 2017 12:47:55 +0700</pubDate>
+      
+      <guid>/pros_and_cons_golang_in_monorepo/</guid>
+      <description>Monorepo - is a monolithic code repository which can contain different services (or whatever you want to call them), CLI, libraries, etc. Did you hear that Facebook/Google uses a giant monorepo? And they do it for reasons.
+I tried both approaches in Go: with monorepo or with multirepo. And I personally prefer the first one (but of course depending on a project).
+Advantage 1. Simplified organization A structure of your project is important for organization.</description>
+    </item>
+    
+    <item>
+      <title>Game Of Logs: 2 tests about Go</title>
+      <link>/game-of-logs/</link>
+      <pubDate>Thu, 07 Apr 2016 13:21:51 +0700</pubDate>
+      
+      <guid>/game-of-logs/</guid>
+      <description>In LogPacker we have prepared 4 interactive tests, 2 for Golang and 2 for Docker. Enjoy and share results!
+Golang War I
+Golang War II
+All Games</description>
+    </item>
+    
+    <item>
+      <title>GoMobile: Library development for IOS/Android</title>
+      <link>/gomobile-library-development-for-ios-and-android/</link>
+      <pubDate>Sun, 13 Mar 2016 15:11:13 +0700</pubDate>
+      
+      <guid>/gomobile-library-development-for-ios-and-android/</guid>
+      <description>Read full article
+Cross platform development of mobile applications was quite popular back then. This approach was used by most companies in the time of mobile branch establishment. The main reasons for using this approach were simple – lack of professionals in the market, slow development speed and unreasonable cost. Unfortunately, in most cases this approach did not justify itself. But why not to give that approach the second chance? Technology took a big step forward and theoretically we can get a high-quality product.</description>
+    </item>
+    
+    <item>
+      <title>Docker test environment</title>
+      <link>/docker-test-environment/</link>
+      <pubDate>Sat, 30 Jan 2016 20:02:55 +0700</pubDate>
+      
+      <guid>/docker-test-environment/</guid>
+      <description>My colleague Andrey Sinitsyn wrote a very nice article how we are testing LogPacker Cluster with help of Docker.
+Original Article</description>
+    </item>
+    
+  </channel>
+</rss>

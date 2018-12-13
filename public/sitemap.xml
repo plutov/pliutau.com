@@ -1,0 +1,938 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>/go-modules-docker/</loc>
+    <lastmod>2018-12-06T10:01:43+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/practice-go-broken-node/</loc>
+    <lastmod>2018-09-18T15:51:00+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/go-kit-2/</loc>
+    <lastmod>2018-08-14T16:29:32+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/page/hire-me/</loc>
+    <lastmod>2018-08-14T14:10:50+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/deploying-facebox-to-aws-ecs/</loc>
+    <lastmod>2018-08-09T14:35:51+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/table-driven-tests-in-go/</loc>
+    <lastmod>2018-08-07T11:02:46+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/gi-kit-1/</loc>
+    <lastmod>2018-07-30T11:28:51+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/practice-go-warriors/</loc>
+    <lastmod>2018-07-24T14:36:06+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/gophercon-vietnam-2018/</loc>
+    <lastmod>2018-07-20T15:34:10+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/getting-started-with-oauth2-in-go/</loc>
+    <lastmod>2018-05-30T14:48:29+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/building-slack-bot-with-go/</loc>
+    <lastmod>2018-05-23T08:27:36+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/transitioning-from-eng-to-em/</loc>
+    <lastmod>2018-05-12T09:21:50+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/building-google-home-action-in-go/</loc>
+    <lastmod>2018-04-02T16:07:19+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/video-series-running-go-programs-on-raspberry-pi/</loc>
+    <lastmod>2018-02-05T10:02:15+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/face-detection-in-go-machinebox-opencv/</loc>
+    <lastmod>2018-01-19T10:32:25+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/image-recognition-in-go-using-tensorflow/</loc>
+    <lastmod>2018-01-08T17:25:16+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/year-of-commits/</loc>
+    <lastmod>2018-01-02T14:35:14+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/practice-go-mosaicphoto/</loc>
+    <lastmod>2018-01-01T18:40:39+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/packagemain/</loc>
+    <lastmod>2017-12-25T23:31:33+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/go-tools-are-awesome/</loc>
+    <lastmod>2017-12-11T10:39:55+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/create-bot-with-nlu-in-python/</loc>
+    <lastmod>2017-11-26T13:23:53+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/practice-go-spiral/</loc>
+    <lastmod>2017-11-20T14:54:59+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/microservices-with-go-workshop-vetnam/</loc>
+    <lastmod>2017-11-08T15:30:11+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/practice-go-missingnumbers/</loc>
+    <lastmod>2017-11-08T08:29:17+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/practice-go-secret-message/</loc>
+    <lastmod>2017-10-17T22:08:41+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/go-snake-telnet/</loc>
+    <lastmod>2017-10-13T16:37:59+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/slack-stranger-bot-in-go/</loc>
+    <lastmod>2017-10-12T10:17:18+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/benchmark-grpc-protobuf-vs-http-json/</loc>
+    <lastmod>2017-10-08T14:48:53+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/building-rest-server-with-elixir/</loc>
+    <lastmod>2017-10-06T13:28:45+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/handle-http-request-errors-in-go/</loc>
+    <lastmod>2017-10-05T08:36:05+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/wizeline-academy-microservices-with-go/</loc>
+    <lastmod>2017-09-30T00:29:24+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/practice-go-coins/</loc>
+    <lastmod>2017-09-27T04:44:01+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/o_simple_cli_to_open_repo_in_browser/</loc>
+    <lastmod>2017-08-15T23:09:17+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/grammarly-is-must-have-tool-for-bloggers/</loc>
+    <lastmod>2017-07-27T12:11:13+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/voice-recognition-games/</loc>
+    <lastmod>2017-07-26T14:50:34+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/git-gc/</loc>
+    <lastmod>2017-07-21T15:48:14+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/using-different-git-emails/</loc>
+    <lastmod>2017-07-09T22:28:23+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/practice-go-reverse-parentheses/</loc>
+    <lastmod>2017-06-23T12:21:26+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/working-with-db-time-in-go/</loc>
+    <lastmod>2017-05-26T13:27:00+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/practice-go-function-frequency/</loc>
+    <lastmod>2017-05-20T15:44:32+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/what_is_your_life_purpose/</loc>
+    <lastmod>2017-05-13T16:39:24+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/practice-go-lastlettergame/</loc>
+    <lastmod>2017-05-07T14:12:12+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/multi-stage-dockerfile-for-golang-application/</loc>
+    <lastmod>2017-04-30T12:47:27+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/useful-global-git-config-and-ignore-rules/</loc>
+    <lastmod>2017-04-28T10:47:24+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/different-ways-to-block-go-runtime-forever/</loc>
+    <lastmod>2017-04-24T20:39:13+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/practice-go-webscraping/</loc>
+    <lastmod>2017-04-19T20:32:35+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/practice-go-romannumerals/</loc>
+    <lastmod>2017-04-05T12:25:05+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/how-to-build-go-plugin-with-data-inside/</loc>
+    <lastmod>2017-04-04T20:45:14+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/pros_and_cons_golang_in_monorepo/</loc>
+    <lastmod>2017-04-03T12:47:55+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/practice-go-shorthash/</loc>
+    <lastmod>2017-03-30T12:48:24+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/practice-go-buildword/</loc>
+    <lastmod>2017-03-28T17:31:07+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/go-bindata-html-template/</loc>
+    <lastmod>2017-03-27T14:26:12+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/golang_tips_1/</loc>
+    <lastmod>2017-03-23T12:40:02+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/gh_in_gopath/</loc>
+    <lastmod>2017-03-22T15:54:14+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/practice-go-sumdecimal/</loc>
+    <lastmod>2017-03-20T12:32:20+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/practice-go-wordladder/</loc>
+    <lastmod>2017-03-10T15:41:47+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/practice-go-merge-sort/</loc>
+    <lastmod>2017-03-08T12:37:17+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/practice-go-jaro/</loc>
+    <lastmod>2017-03-03T12:25:20+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/separate_unit_integration_tests/</loc>
+    <lastmod>2017-03-02T11:25:19+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/practice-go-anagram/</loc>
+    <lastmod>2017-02-28T23:50:07+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/how_to_mock_exec_command/</loc>
+    <lastmod>2017-02-27T10:15:26+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/playgo/</loc>
+    <lastmod>2017-02-22T20:21:15+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/practice-go-floyd/</loc>
+    <lastmod>2017-02-21T11:56:01+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/go18_release_whats_new/</loc>
+    <lastmod>2017-02-17T10:32:23+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/practice-go-chess/</loc>
+    <lastmod>2017-02-15T12:12:35+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/watermark_image_pkg/</loc>
+    <lastmod>2016-11-21T22:42:17+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/go_fonts/</loc>
+    <lastmod>2016-11-21T12:42:54+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/perfect_func_main/</loc>
+    <lastmod>2016-11-16T17:07:40+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/swaggerize-your-api/</loc>
+    <lastmod>2016-10-03T12:27:19+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/go-docker-skeleton/</loc>
+    <lastmod>2016-09-30T14:11:48+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/memory_leaks_in_mux_router/</loc>
+    <lastmod>2016-09-22T17:23:43+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/struct-render-helper/</loc>
+    <lastmod>2016-09-08T10:17:34+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/uuid-without-dependencies/</loc>
+    <lastmod>2016-08-26T14:17:34+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/concurrency-data-race/</loc>
+    <lastmod>2016-07-21T07:52:29+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/clickhouse-go-1/</loc>
+    <lastmod>2016-07-06T16:15:39+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/game-of-logs/</loc>
+    <lastmod>2016-04-07T13:21:51+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/working-with-db-nulls/</loc>
+    <lastmod>2016-04-07T09:17:49+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/gomobile-library-development-for-ios-and-android/</loc>
+    <lastmod>2016-03-13T15:11:13+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/optimize-go-binary-size/</loc>
+    <lastmod>2016-03-01T10:18:54+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/go-lang-test/</loc>
+    <lastmod>2016-02-05T18:08:43+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/docker-test-environment/</loc>
+    <lastmod>2016-01-30T20:02:55+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/measure-performance-changes/</loc>
+    <lastmod>2016-01-26T16:10:23+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/gomobile-bind-types/</loc>
+    <lastmod>2016-01-25T13:12:43+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/go-client-for-paypal/</loc>
+    <lastmod>2016-01-21T00:04:23+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/page/about/</loc>
+    <lastmod>2016-01-20T14:10:50+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/hello-folks/</loc>
+    <lastmod>2016-01-20T14:10:50+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2018-12-06T10:01:43+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/android/</loc>
+    <lastmod>2016-03-13T15:11:13+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/atom/</loc>
+    <lastmod>2016-11-21T12:42:54+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/aws/</loc>
+    <lastmod>2018-08-09T14:35:51+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/bash/</loc>
+    <lastmod>2017-08-15T23:09:17+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/benchmarking/</loc>
+    <lastmod>2016-01-26T16:10:23+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/blog/</loc>
+    <lastmod>2016-01-20T14:10:50+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/blogging/</loc>
+    <lastmod>2017-07-27T12:11:13+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/bot/</loc>
+    <lastmod>2018-05-23T08:27:36+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/cli/</loc>
+    <lastmod>2017-08-15T23:09:17+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/clickhouse/</loc>
+    <lastmod>2016-07-06T16:15:39+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/concurrency/</loc>
+    <lastmod>2016-07-21T07:52:29+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/db/</loc>
+    <lastmod>2017-05-26T13:27:00+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/docker/</loc>
+    <lastmod>2018-12-06T10:01:43+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/dockerfile/</loc>
+    <lastmod>2017-04-30T12:47:27+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/elixir/</loc>
+    <lastmod>2017-10-06T13:28:45+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/engineering-manager/</loc>
+    <lastmod>2018-05-12T09:21:50+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/experiment/</loc>
+    <lastmod>2017-04-24T20:39:13+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/face-detection/</loc>
+    <lastmod>2018-01-19T10:32:25+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/facebox/</loc>
+    <lastmod>2018-08-09T14:35:51+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/gc/</loc>
+    <lastmod>2017-07-21T15:48:14+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/git/</loc>
+    <lastmod>2017-08-15T23:09:17+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/gitconfig/</loc>
+    <lastmod>2017-04-28T10:47:24+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/github/</loc>
+    <lastmod>2018-01-02T14:35:14+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/gitignore/</loc>
+    <lastmod>2017-04-28T10:47:24+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/glide/</loc>
+    <lastmod>2016-08-26T14:17:34+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/go/</loc>
+    <lastmod>2018-12-06T10:01:43+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/go-1.8/</loc>
+    <lastmod>2017-02-17T10:32:23+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/go-bindata/</loc>
+    <lastmod>2018-01-02T14:35:14+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/golang/</loc>
+    <lastmod>2018-01-19T10:32:25+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/gomobile/</loc>
+    <lastmod>2016-01-25T13:12:43+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/google-assistant/</loc>
+    <lastmod>2018-04-02T16:07:19+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/google-cloud-platform/</loc>
+    <lastmod>2018-04-02T16:07:19+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/google-home/</loc>
+    <lastmod>2018-04-02T16:07:19+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/google-speech-api/</loc>
+    <lastmod>2017-07-26T14:50:34+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/gophercon/</loc>
+    <lastmod>2018-07-20T15:34:10+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/goreleaseparty/</loc>
+    <lastmod>2017-02-17T10:32:23+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/grammarly/</loc>
+    <lastmod>2017-07-27T12:11:13+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/grpc/</loc>
+    <lastmod>2018-08-14T16:29:32+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/html-template/</loc>
+    <lastmod>2018-01-02T14:35:14+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/hugo/</loc>
+    <lastmod>2016-01-20T14:10:50+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/image-recognition/</loc>
+    <lastmod>2018-01-08T17:25:16+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/ios/</loc>
+    <lastmod>2016-03-13T15:11:13+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/java/</loc>
+    <lastmod>2016-03-13T15:11:13+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/ldflags/</loc>
+    <lastmod>2016-03-01T10:18:54+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/logpacker/</loc>
+    <lastmod>2017-04-03T12:47:55+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/machine-learning/</loc>
+    <lastmod>2018-01-19T10:32:25+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/machinebox/</loc>
+    <lastmod>2018-08-09T14:35:51+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/memory/</loc>
+    <lastmod>2016-09-22T17:23:43+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/microservices/</loc>
+    <lastmod>2018-08-14T16:29:32+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/mobile/</loc>
+    <lastmod>2016-03-13T15:11:13+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/mock/</loc>
+    <lastmod>2017-02-27T10:15:26+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/monorepo/</loc>
+    <lastmod>2017-04-03T12:47:55+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/mysql/</loc>
+    <lastmod>2017-05-26T13:27:00+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/nlu/</loc>
+    <lastmod>2018-05-23T08:27:36+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/oauth2/</loc>
+    <lastmod>2018-05-30T14:48:29+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/open-source/</loc>
+    <lastmod>2017-02-22T20:21:15+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/opencv/</loc>
+    <lastmod>2018-01-19T10:32:25+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/opensource/</loc>
+    <lastmod>2016-01-21T00:04:23+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/packagemain/</loc>
+    <lastmod>2018-08-14T16:29:32+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/page/</loc>
+    <lastmod>2018-08-14T14:10:50+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/paypal/</loc>
+    <lastmod>2017-03-02T11:25:19+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/plugins/</loc>
+    <lastmod>2017-04-04T20:45:14+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/practice-go/</loc>
+    <lastmod>2018-09-18T15:51:00+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/profiling/</loc>
+    <lastmod>2016-09-22T17:23:43+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/python/</loc>
+    <lastmod>2017-11-26T13:23:53+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/radical-candor/</loc>
+    <lastmod>2018-05-12T09:21:50+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/rasa/</loc>
+    <lastmod>2017-11-26T13:23:53+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/raspberry-pi/</loc>
+    <lastmod>2018-02-05T10:02:15+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/rest/</loc>
+    <lastmod>2017-10-08T14:48:53+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/slack/</loc>
+    <lastmod>2018-05-23T08:27:36+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/swaggger/</loc>
+    <lastmod>2016-10-03T12:27:19+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/systray/</loc>
+    <lastmod>2018-01-02T14:35:14+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2016-03-13T15:11:13+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/telnet/</loc>
+    <lastmod>2017-10-13T16:37:59+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/tensorflow/</loc>
+    <lastmod>2018-01-08T17:25:16+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/testing/</loc>
+    <lastmod>2018-08-07T11:02:46+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/thoughts/</loc>
+    <lastmod>2017-05-13T16:39:24+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/voice-recognition/</loc>
+    <lastmod>2017-07-26T14:50:34+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/wit/</loc>
+    <lastmod>2018-05-23T08:27:36+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/wizeline/</loc>
+    <lastmod>2018-05-12T09:21:50+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/workshop/</loc>
+    <lastmod>2017-11-08T15:30:11+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/youtube/</loc>
+    <lastmod>2017-12-25T23:31:33+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+</urlset>

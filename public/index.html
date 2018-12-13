@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Alex Pliutau's Blog</title>
+        <meta name="description" content="Alex Pliutau&#39;s blog. My thoughts about golang, programming, backend, devops, docker, etc.">
+        <meta name="keywords" content="alex pliutau, golang, go, programming, docker, swagger, git">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="generator" content="Hugo 0.52" />
+        <meta name="robots" content="index,follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:title" content="Alex Pliutau">
+<meta property="og:description" content="Alex Pliutau&#39;s blog. My thoughts about golang, programming, backend, devops, docker, etc.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="/">
+
+
+        <link rel="stylesheet" href="/dist/styles.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+            <link href="/index.xml" rel="alternate" type="application/rss+xml">
+        
+		<link rel="shortcut icon" href="/favicon.ico">
+		
+			<script id="dsq-count-scr" src="//pliutau.disqus.com/count.js" async></script>
+		
+    </head>
+    <body>
+        
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-72731922-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+        <div id="wrapper">
+            <header class="site-header">
+                <div class="container">
+                    <div class="site-title-wrapper">
+                        
+                            <a class="button-square button-social hint--top" data-hint="Twitter" title="Twitter" href="https://twitter.com/pliutau">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Youtube" title="Youtube" href="https://www.youtube.com/packagemain">
+                                <i class="fa fa-youtube"></i>
+                            </a>
+                        
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Github" title="Github" href="https://github.com/plutov">
+                                <i class="fa fa-github-alt"></i>
+                            </a>
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Stack Overflow" title="Stack Overflow" href="https://stackoverflow.com/users/350294/pltvs">
+                                <i class="fa fa-stack-overflow"></i>
+                            </a>
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="LinkedIn" title="LinkedIn" href="https://linkedin.com/in/pltvs/">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                        
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Email" title="Email" href="mailto:a.pliutau@gmail.com">
+                                <i class="fa fa-envelope"></i>
+                            </a>
+                        
+                        
+                    </div>
+
+                    <ul class="site-nav">
+                        
+    <li class="site-nav-item">
+        <a title="Blog" href="/">Blog</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="About" href="/page/about/">About</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Hire Me" href="/page/hire-me/">Hire Me</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Subscribe" href="https://eepurl.com/cDoD09">Subscribe</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Buy me a coffee" href="https://www.buymeacoffee.com/packagemain">Buy me a coffee</a>
+    </li>
+
+                    </ul>
+                </div>
+            </header>
+
+            <div id="container">
+
+
+<div id="post-index" class="container">
+    
+
+
+    <ol class="post-list">
+        
+        
+            <li class="post-stub" itemprop="blogPost" itemscope="" itemtype="https://schema.org/BlogPosting">
+    <a href="/go-modules-docker/" itemprop="url" title="Go to post detail">
+        <h4 class="post-stub-title" itemprop="name">Docker and Go modules</h4>
+        <time class="post-stub-date" datetime="2018-12-06">Published Thu, Dec 6, 2018</time>
+		<div class="comments-count disqus-comment-count" data-disqus-url="/go-modules-docker/">0 Comments</div>
+    </a>
+</li>
+        
+            <li class="post-stub" itemprop="blogPost" itemscope="" itemtype="https://schema.org/BlogPosting">
+    <a href="/practice-go-broken-node/" itemprop="url" title="Go to post detail">
+        <h4 class="post-stub-title" itemprop="name">Practice Go. Find Broken Node</h4>
+        <time class="post-stub-date" datetime="2018-09-18">Published Tue, Sep 18, 2018</time>
+		<div class="comments-count disqus-comment-count" data-disqus-url="/practice-go-broken-node/">0 Comments</div>
+    </a>
+</li>
+        
+            <li class="post-stub" itemprop="blogPost" itemscope="" itemtype="https://schema.org/BlogPosting">
+    <a href="/go-kit-2/" itemprop="url" title="Go to post detail">
+        <h4 class="post-stub-title" itemprop="name">Microservices with go-kit. Part 2</h4>
+        <time class="post-stub-date" datetime="2018-08-14">Published Tue, Aug 14, 2018</time>
+		<div class="comments-count disqus-comment-count" data-disqus-url="/go-kit-2/">0 Comments</div>
+    </a>
+</li>
+        
+            <li class="post-stub" itemprop="blogPost" itemscope="" itemtype="https://schema.org/BlogPosting">
+    <a href="/page/hire-me/" itemprop="url" title="Go to post detail">
+        <h4 class="post-stub-title" itemprop="name">Hire Me</h4>
+        <time class="post-stub-date" datetime="2018-08-14">Published Tue, Aug 14, 2018</time>
+		<div class="comments-count disqus-comment-count" data-disqus-url="/page/hire-me/">0 Comments</div>
+    </a>
+</li>
+        
+            <li class="post-stub" itemprop="blogPost" itemscope="" itemtype="https://schema.org/BlogPosting">
+    <a href="/deploying-facebox-to-aws-ecs/" itemprop="url" title="Go to post detail">
+        <h4 class="post-stub-title" itemprop="name">Deploying Facebox to AWS ECS</h4>
+        <time class="post-stub-date" datetime="2018-08-09">Published Thu, Aug 9, 2018</time>
+		<div class="comments-count disqus-comment-count" data-disqus-url="/deploying-facebox-to-aws-ecs/">0 Comments</div>
+    </a>
+</li>
+        
+            <li class="post-stub" itemprop="blogPost" itemscope="" itemtype="https://schema.org/BlogPosting">
+    <a href="/table-driven-tests-in-go/" itemprop="url" title="Go to post detail">
+        <h4 class="post-stub-title" itemprop="name">Table driven tests in Go</h4>
+        <time class="post-stub-date" datetime="2018-08-07">Published Tue, Aug 7, 2018</time>
+		<div class="comments-count disqus-comment-count" data-disqus-url="/table-driven-tests-in-go/">0 Comments</div>
+    </a>
+</li>
+        
+            <li class="post-stub" itemprop="blogPost" itemscope="" itemtype="https://schema.org/BlogPosting">
+    <a href="/gi-kit-1/" itemprop="url" title="Go to post detail">
+        <h4 class="post-stub-title" itemprop="name">Microservices with go-kit. Part 1</h4>
+        <time class="post-stub-date" datetime="2018-07-30">Published Mon, Jul 30, 2018</time>
+		<div class="comments-count disqus-comment-count" data-disqus-url="/gi-kit-1/">0 Comments</div>
+    </a>
+</li>
+        
+            <li class="post-stub" itemprop="blogPost" itemscope="" itemtype="https://schema.org/BlogPosting">
+    <a href="/practice-go-warriors/" itemprop="url" title="Go to post detail">
+        <h4 class="post-stub-title" itemprop="name">Practice Go: Warriors</h4>
+        <time class="post-stub-date" datetime="2018-07-24">Published Tue, Jul 24, 2018</time>
+		<div class="comments-count disqus-comment-count" data-disqus-url="/practice-go-warriors/">0 Comments</div>
+    </a>
+</li>
+        
+            <li class="post-stub" itemprop="blogPost" itemscope="" itemtype="https://schema.org/BlogPosting">
+    <a href="/gophercon-vietnam-2018/" itemprop="url" title="Go to post detail">
+        <h4 class="post-stub-title" itemprop="name">Organizing the first GopherCon in Vietnam</h4>
+        <time class="post-stub-date" datetime="2018-07-20">Published Fri, Jul 20, 2018</time>
+		<div class="comments-count disqus-comment-count" data-disqus-url="/gophercon-vietnam-2018/">0 Comments</div>
+    </a>
+</li>
+        
+            <li class="post-stub" itemprop="blogPost" itemscope="" itemtype="https://schema.org/BlogPosting">
+    <a href="/getting-started-with-oauth2-in-go/" itemprop="url" title="Go to post detail">
+        <h4 class="post-stub-title" itemprop="name">Getting Started with OAuth2 in Go</h4>
+        <time class="post-stub-date" datetime="2018-05-30">Published Wed, May 30, 2018</time>
+		<div class="comments-count disqus-comment-count" data-disqus-url="/getting-started-with-oauth2-in-go/">0 Comments</div>
+    </a>
+</li>
+        
+            <li class="post-stub" itemprop="blogPost" itemscope="" itemtype="https://schema.org/BlogPosting">
+    <a href="/building-slack-bot-with-go/" itemprop="url" title="Go to post detail">
+        <h4 class="post-stub-title" itemprop="name">Building a Slack Bot with Go and Wit.ai</h4>
+        <time class="post-stub-date" datetime="2018-05-23">Published Wed, May 23, 2018</time>
+		<div class="comments-count disqus-comment-count" data-disqus-url="/building-slack-bot-with-go/">0 Comments</div>
+    </a>
+</li>
+        
+            <li class="post-stub" itemprop="blogPost" itemscope="" itemtype="https://schema.org/BlogPosting">
+    <a href="/transitioning-from-eng-to-em/" itemprop="url" title="Go to post detail">
+        <h4 class="post-stub-title" itemprop="name">Transitioning from Engineer to Engineering Manager</h4>
+        <time class="post-stub-date" datetime="2018-05-12">Published Sat, May 12, 2018</time>
+		<div class="comments-count disqus-comment-count" data-disqus-url="/transitioning-from-eng-to-em/">0 Comments</div>
+    </a>
+</li>
+        
+            <li class="post-stub" itemprop="blogPost" itemscope="" itemtype="https://schema.org/BlogPosting">
+    <a href="/building-google-home-action-in-go/" itemprop="url" title="Go to post detail">
+        <h4 class="post-stub-title" itemprop="name">Building Google Home Action in Go</h4>
+        <time class="post-stub-date" datetime="2018-04-02">Published Mon, Apr 2, 2018</time>
+		<div class="comments-count disqus-comment-count" data-disqus-url="/building-google-home-action-in-go/">0 Comments</div>
+    </a>
+</li>
+        
+            <li class="post-stub" itemprop="blogPost" itemscope="" itemtype="https://schema.org/BlogPosting">
+    <a href="/video-series-running-go-programs-on-raspberry-pi/" itemprop="url" title="Go to post detail">
+        <h4 class="post-stub-title" itemprop="name">Video series: Running Go programs on Raspberry Pi</h4>
+        <time class="post-stub-date" datetime="2018-02-05">Published Mon, Feb 5, 2018</time>
+		<div class="comments-count disqus-comment-count" data-disqus-url="/video-series-running-go-programs-on-raspberry-pi/">0 Comments</div>
+    </a>
+</li>
+        
+            <li class="post-stub" itemprop="blogPost" itemscope="" itemtype="https://schema.org/BlogPosting">
+    <a href="/face-detection-in-go-machinebox-opencv/" itemprop="url" title="Go to post detail">
+        <h4 class="post-stub-title" itemprop="name">Face Detection in Go using OpenCV and MachineBox</h4>
+        <time class="post-stub-date" datetime="2018-01-19">Published Fri, Jan 19, 2018</time>
+		<div class="comments-count disqus-comment-count" data-disqus-url="/face-detection-in-go-machinebox-opencv/">0 Comments</div>
+    </a>
+</li>
+        
+            <li class="post-stub" itemprop="blogPost" itemscope="" itemtype="https://schema.org/BlogPosting">
+    <a href="/image-recognition-in-go-using-tensorflow/" itemprop="url" title="Go to post detail">
+        <h4 class="post-stub-title" itemprop="name">Image Recognition in Go using Tensorflow</h4>
+        <time class="post-stub-date" datetime="2018-01-08">Published Mon, Jan 8, 2018</time>
+		<div class="comments-count disqus-comment-count" data-disqus-url="/image-recognition-in-go-using-tensorflow/">0 Comments</div>
+    </a>
+</li>
+        
+            <li class="post-stub" itemprop="blogPost" itemscope="" itemtype="https://schema.org/BlogPosting">
+    <a href="/year-of-commits/" itemprop="url" title="Go to post detail">
+        <h4 class="post-stub-title" itemprop="name">Year Of Commits: simple systray program in Go</h4>
+        <time class="post-stub-date" datetime="2018-01-02">Published Tue, Jan 2, 2018</time>
+		<div class="comments-count disqus-comment-count" data-disqus-url="/year-of-commits/">0 Comments</div>
+    </a>
+</li>
+        
+            <li class="post-stub" itemprop="blogPost" itemscope="" itemtype="https://schema.org/BlogPosting">
+    <a href="/practice-go-mosaicphoto/" itemprop="url" title="Go to post detail">
+        <h4 class="post-stub-title" itemprop="name">Practice Go: Mosaic Photo</h4>
+        <time class="post-stub-date" datetime="2018-01-01">Published Mon, Jan 1, 2018</time>
+		<div class="comments-count disqus-comment-count" data-disqus-url="/practice-go-mosaicphoto/">0 Comments</div>
+    </a>
+</li>
+        
+            <li class="post-stub" itemprop="blogPost" itemscope="" itemtype="https://schema.org/BlogPosting">
+    <a href="/packagemain/" itemprop="url" title="Go to post detail">
+        <h4 class="post-stub-title" itemprop="name">packagemain: Youtube channel about Programming in Go</h4>
+        <time class="post-stub-date" datetime="2017-12-25">Published Mon, Dec 25, 2017</time>
+		<div class="comments-count disqus-comment-count" data-disqus-url="/packagemain/">0 Comments</div>
+    </a>
+</li>
+        
+            <li class="post-stub" itemprop="blogPost" itemscope="" itemtype="https://schema.org/BlogPosting">
+    <a href="/go-tools-are-awesome/" itemprop="url" title="Go to post detail">
+        <h4 class="post-stub-title" itemprop="name">Go tools are awesome</h4>
+        <time class="post-stub-date" datetime="2017-12-11">Published Mon, Dec 11, 2017</time>
+		<div class="comments-count disqus-comment-count" data-disqus-url="/go-tools-are-awesome/">0 Comments</div>
+    </a>
+</li>
+        
+            <li class="post-stub" itemprop="blogPost" itemscope="" itemtype="https://schema.org/BlogPosting">
+    <a href="/create-bot-with-nlu-in-python/" itemprop="url" title="Go to post detail">
+        <h4 class="post-stub-title" itemprop="name">Create a bot with NLU in Python</h4>
+        <time class="post-stub-date" datetime="2017-11-26">Published Sun, Nov 26, 2017</time>
+		<div class="comments-count disqus-comment-count" data-disqus-url="/create-bot-with-nlu-in-python/">0 Comments</div>
+    </a>
+</li>
+        
+            <li class="post-stub" itemprop="blogPost" itemscope="" itemtype="https://schema.org/BlogPosting">
+    <a href="/practice-go-spiral/" itemprop="url" title="Go to post detail">
+        <h4 class="post-stub-title" itemprop="name">Practice Go: Print Spiral</h4>
+        <time class="post-stub-date" datetime="2017-11-20">Published Mon, Nov 20, 2017</time>
+		<div class="comments-count disqus-comment-count" data-disqus-url="/practice-go-spiral/">0 Comments</div>
+    </a>
+</li>
+        
+            <li class="post-stub" itemprop="blogPost" itemscope="" itemtype="https://schema.org/BlogPosting">
+    <a href="/microservices-with-go-workshop-vetnam/" itemprop="url" title="Go to post detail">
+        <h4 class="post-stub-title" itemprop="name">Coming soon: Microservices with Go Workshop, Vietnam, HCMC</h4>
+        <time class="post-stub-date" datetime="2017-11-08">Published Wed, Nov 8, 2017</time>
+		<div class="comments-count disqus-comment-count" data-disqus-url="/microservices-with-go-workshop-vetnam/">0 Comments</div>
+    </a>
+</li>
+        
+            <li class="post-stub" itemprop="blogPost" itemscope="" itemtype="https://schema.org/BlogPosting">
+    <a href="/practice-go-missingnumbers/" itemprop="url" title="Go to post detail">
+        <h4 class="post-stub-title" itemprop="name">Practice Go: Missing Numbers</h4>
+        <time class="post-stub-date" datetime="2017-11-08">Published Wed, Nov 8, 2017</time>
+		<div class="comments-count disqus-comment-count" data-disqus-url="/practice-go-missingnumbers/">0 Comments</div>
+    </a>
+</li>
+        
+            <li class="post-stub" itemprop="blogPost" itemscope="" itemtype="https://schema.org/BlogPosting">
+    <a href="/practice-go-secret-message/" itemprop="url" title="Go to post detail">
+        <h4 class="post-stub-title" itemprop="name">Practice Go: Secret Message</h4>
+        <time class="post-stub-date" datetime="2017-10-17">Published Tue, Oct 17, 2017</time>
+		<div class="comments-count disqus-comment-count" data-disqus-url="/practice-go-secret-message/">0 Comments</div>
+    </a>
+</li>
+        
+            <li class="post-stub" itemprop="blogPost" itemscope="" itemtype="https://schema.org/BlogPosting">
+    <a href="/go-snake-telnet/" itemprop="url" title="Go to post detail">
+        <h4 class="post-stub-title" itemprop="name">Snake over Telnet in Go</h4>
+        <time class="post-stub-date" datetime="2017-10-13">Published Fri, Oct 13, 2017</time>
+		<div class="comments-count disqus-comment-count" data-disqus-url="/go-snake-telnet/">0 Comments</div>
+    </a>
+</li>
+        
+            <li class="post-stub" itemprop="blogPost" itemscope="" itemtype="https://schema.org/BlogPosting">
+    <a href="/slack-stranger-bot-in-go/" itemprop="url" title="Go to post detail">
+        <h4 class="post-stub-title" itemprop="name">Slack Stranger Bot in Go</h4>
+        <time class="post-stub-date" datetime="2017-10-12">Published Thu, Oct 12, 2017</time>
+		<div class="comments-count disqus-comment-count" data-disqus-url="/slack-stranger-bot-in-go/">0 Comments</div>
+    </a>
+</li>
+        
+            <li class="post-stub" itemprop="blogPost" itemscope="" itemtype="https://schema.org/BlogPosting">
+    <a href="/benchmark-grpc-protobuf-vs-http-json/" itemprop="url" title="Go to post detail">
+        <h4 class="post-stub-title" itemprop="name">Benchmarking gRPC&#43;Protobuf vs HTTP&#43;JSON in Go</h4>
+        <time class="post-stub-date" datetime="2017-10-08">Published Sun, Oct 8, 2017</time>
+		<div class="comments-count disqus-comment-count" data-disqus-url="/benchmark-grpc-protobuf-vs-http-json/">0 Comments</div>
+    </a>
+</li>
+        
+            <li class="post-stub" itemprop="blogPost" itemscope="" itemtype="https://schema.org/BlogPosting">
+    <a href="/building-rest-server-with-elixir/" itemprop="url" title="Go to post detail">
+        <h4 class="post-stub-title" itemprop="name">Building REST Server with Elixir</h4>
+        <time class="post-stub-date" datetime="2017-10-06">Published Fri, Oct 6, 2017</time>
+		<div class="comments-count disqus-comment-count" data-disqus-url="/building-rest-server-with-elixir/">0 Comments</div>
+    </a>
+</li>
+        
+            <li class="post-stub" itemprop="blogPost" itemscope="" itemtype="https://schema.org/BlogPosting">
+    <a href="/handle-http-request-errors-in-go/" itemprop="url" title="Go to post detail">
+        <h4 class="post-stub-title" itemprop="name">Handle HTTP Request Errors in Go</h4>
+        <time class="post-stub-date" datetime="2017-10-05">Published Thu, Oct 5, 2017</time>
+		<div class="comments-count disqus-comment-count" data-disqus-url="/handle-http-request-errors-in-go/">0 Comments</div>
+    </a>
+</li>
+        
+            <li class="post-stub" itemprop="blogPost" itemscope="" itemtype="https://schema.org/BlogPosting">
+    <a href="/wizeline-academy-microservices-with-go/" itemprop="url" title="Go to post detail">
+        <h4 class="post-stub-title" itemprop="name">Wizeline Academy: Microservices with Go</h4>
+        <time class="post-stub-date" datetime="2017-09-30">Published Sat, Sep 30, 2017</time>
+		<div class="comments-count disqus-comment-count" data-disqus-url="/wizeline-academy-microservices-with-go/">0 Comments</div>
+    </a>
+</li>
+        
+            <li class="post-stub" itemprop="blogPost" itemscope="" itemtype="https://schema.org/BlogPosting">
+    <a href="/practice-go-coins/" itemprop="url" title="Go to post detail">
+        <h4 class="post-stub-title" itemprop="name">Practice Go. Coins</h4>
+        <time class="post-stub-date" datetime="2017-09-27">Published Wed, Sep 27, 2017</time>
+		<div class="comments-count disqus-comment-count" data-disqus-url="/practice-go-coins/">0 Comments</div>
+    </a>
+</li>
+        
+            <li class="post-stub" itemprop="blogPost" itemscope="" itemtype="https://schema.org/BlogPosting">
+    <a href="/o_simple_cli_to_open_repo_in_browser/" itemprop="url" title="Go to post detail">
+        <h4 class="post-stub-title" itemprop="name">o means open. Simple CLI tool to open repository in browser.</h4>
+        <time class="post-stub-date" datetime="2017-08-15">Published Tue, Aug 15, 2017</time>
+		<div class="comments-count disqus-comment-count" data-disqus-url="/o_simple_cli_to_open_repo_in_browser/">0 Comments</div>
+    </a>
+</li>
+        
+            <li class="post-stub" itemprop="blogPost" itemscope="" itemtype="https://schema.org/BlogPosting">
+    <a href="/grammarly-is-must-have-tool-for-bloggers/" itemprop="url" title="Go to post detail">
+        <h4 class="post-stub-title" itemprop="name">Grammarly is a Must-Have Tool for Bloggers</h4>
+        <time class="post-stub-date" datetime="2017-07-27">Published Thu, Jul 27, 2017</time>
+		<div class="comments-count disqus-comment-count" data-disqus-url="/grammarly-is-must-have-tool-for-bloggers/">0 Comments</div>
+    </a>
+</li>
+        
+            <li class="post-stub" itemprop="blogPost" itemscope="" itemtype="https://schema.org/BlogPosting">
+    <a href="/voice-recognition-games/" itemprop="url" title="Go to post detail">
+        <h4 class="post-stub-title" itemprop="name">Games based on Voice Recognition</h4>
+        <time class="post-stub-date" datetime="2017-07-26">Published Wed, Jul 26, 2017</time>
+		<div class="comments-count disqus-comment-count" data-disqus-url="/voice-recognition-games/">0 Comments</div>
+    </a>
+</li>
+        
+            <li class="post-stub" itemprop="blogPost" itemscope="" itemtype="https://schema.org/BlogPosting">
+    <a href="/git-gc/" itemprop="url" title="Go to post detail">
+        <h4 class="post-stub-title" itemprop="name">Garbage Collection in Git</h4>
+        <time class="post-stub-date" datetime="2017-07-21">Published Fri, Jul 21, 2017</time>
+		<div class="comments-count disqus-comment-count" data-disqus-url="/git-gc/">0 Comments</div>
+    </a>
+</li>
+        
+            <li class="post-stub" itemprop="blogPost" itemscope="" itemtype="https://schema.org/BlogPosting">
+    <a href="/using-different-git-emails/" itemprop="url" title="Go to post detail">
+        <h4 class="post-stub-title" itemprop="name">Using different Git emails</h4>
+        <time class="post-stub-date" datetime="2017-07-09">Published Sun, Jul 9, 2017</time>
+		<div class="comments-count disqus-comment-count" data-disqus-url="/using-different-git-emails/">0 Comments</div>
+    </a>
+</li>
+        
+            <li class="post-stub" itemprop="blogPost" itemscope="" itemtype="https://schema.org/BlogPosting">
+    <a href="/practice-go-reverse-parentheses/" itemprop="url" title="Go to post detail">
+        <h4 class="post-stub-title" itemprop="name">Practice Go: Reverse Parentheses</h4>
+        <time class="post-stub-date" datetime="2017-06-23">Published Fri, Jun 23, 2017</time>
+		<div class="comments-count disqus-comment-count" data-disqus-url="/practice-go-reverse-parentheses/">0 Comments</div>
+    </a>
+</li>
+        
+            <li class="post-stub" itemprop="blogPost" itemscope="" itemtype="https://schema.org/BlogPosting">
+    <a href="/working-with-db-time-in-go/" itemprop="url" title="Go to post detail">
+        <h4 class="post-stub-title" itemprop="name">Working with DB datetime/date columns in Go</h4>
+        <time class="post-stub-date" datetime="2017-05-26">Published Fri, May 26, 2017</time>
+		<div class="comments-count disqus-comment-count" data-disqus-url="/working-with-db-time-in-go/">0 Comments</div>
+    </a>
+</li>
+        
+            <li class="post-stub" itemprop="blogPost" itemscope="" itemtype="https://schema.org/BlogPosting">
+    <a href="/practice-go-function-frequency/" itemprop="url" title="Go to post detail">
+        <h4 class="post-stub-title" itemprop="name">Practice Go: Function Frequency</h4>
+        <time class="post-stub-date" datetime="2017-05-20">Published Sat, May 20, 2017</time>
+		<div class="comments-count disqus-comment-count" data-disqus-url="/practice-go-function-frequency/">0 Comments</div>
+    </a>
+</li>
+        
+            <li class="post-stub" itemprop="blogPost" itemscope="" itemtype="https://schema.org/BlogPosting">
+    <a href="/what_is_your_life_purpose/" itemprop="url" title="Go to post detail">
+        <h4 class="post-stub-title" itemprop="name">What is your life purpose?</h4>
+        <time class="post-stub-date" datetime="2017-05-13">Published Sat, May 13, 2017</time>
+		<div class="comments-count disqus-comment-count" data-disqus-url="/what_is_your_life_purpose/">0 Comments</div>
+    </a>
+</li>
+        
+            <li class="post-stub" itemprop="blogPost" itemscope="" itemtype="https://schema.org/BlogPosting">
+    <a href="/practice-go-lastlettergame/" itemprop="url" title="Go to post detail">
+        <h4 class="post-stub-title" itemprop="name">Practice Go: First Letter, Last Letter game</h4>
+        <time class="post-stub-date" datetime="2017-05-07">Published Sun, May 7, 2017</time>
+		<div class="comments-count disqus-comment-count" data-disqus-url="/practice-go-lastlettergame/">0 Comments</div>
+    </a>
+</li>
+        
+            <li class="post-stub" itemprop="blogPost" itemscope="" itemtype="https://schema.org/BlogPosting">
+    <a href="/multi-stage-dockerfile-for-golang-application/" itemprop="url" title="Go to post detail">
+        <h4 class="post-stub-title" itemprop="name">Multi-stage Dockerfile for Golang application</h4>
+        <time class="post-stub-date" datetime="2017-04-30">Published Sun, Apr 30, 2017</time>
+		<div class="comments-count disqus-comment-count" data-disqus-url="/multi-stage-dockerfile-for-golang-application/">0 Comments</div>
+    </a>
+</li>
+        
+            <li class="post-stub" itemprop="blogPost" itemscope="" itemtype="https://schema.org/BlogPosting">
+    <a href="/useful-global-git-config-and-ignore-rules/" itemprop="url" title="Go to post detail">
+        <h4 class="post-stub-title" itemprop="name">Useful Git global config and ignore rules</h4>
+        <time class="post-stub-date" datetime="2017-04-28">Published Fri, Apr 28, 2017</time>
+		<div class="comments-count disqus-comment-count" data-disqus-url="/useful-global-git-config-and-ignore-rules/">0 Comments</div>
+    </a>
+</li>
+        
+            <li class="post-stub" itemprop="blogPost" itemscope="" itemtype="https://schema.org/BlogPosting">
+    <a href="/different-ways-to-block-go-runtime-forever/" itemprop="url" title="Go to post detail">
+        <h4 class="post-stub-title" itemprop="name">Different ways to block Go runtime forever</h4>
+        <time class="post-stub-date" datetime="2017-04-24">Published Mon, Apr 24, 2017</time>
+		<div class="comments-count disqus-comment-count" data-disqus-url="/different-ways-to-block-go-runtime-forever/">0 Comments</div>
+    </a>
+</li>
+        
+            <li class="post-stub" itemprop="blogPost" itemscope="" itemtype="https://schema.org/BlogPosting">
+    <a href="/practice-go-webscraping/" itemprop="url" title="Go to post detail">
+        <h4 class="post-stub-title" itemprop="name">Practice Go: Web Scraping</h4>
+        <time class="post-stub-date" datetime="2017-04-19">Published Wed, Apr 19, 2017</time>
+		<div class="comments-count disqus-comment-count" data-disqus-url="/practice-go-webscraping/">0 Comments</div>
+    </a>
+</li>
+        
+            <li class="post-stub" itemprop="blogPost" itemscope="" itemtype="https://schema.org/BlogPosting">
+    <a href="/practice-go-romannumerals/" itemprop="url" title="Go to post detail">
+        <h4 class="post-stub-title" itemprop="name">Practice Go: Roman Numerals</h4>
+        <time class="post-stub-date" datetime="2017-04-05">Published Wed, Apr 5, 2017</time>
+		<div class="comments-count disqus-comment-count" data-disqus-url="/practice-go-romannumerals/">0 Comments</div>
+    </a>
+</li>
+        
+            <li class="post-stub" itemprop="blogPost" itemscope="" itemtype="https://schema.org/BlogPosting">
+    <a href="/how-to-build-go-plugin-with-data-inside/" itemprop="url" title="Go to post detail">
+        <h4 class="post-stub-title" itemprop="name">How to build Go plugin with data inside</h4>
+        <time class="post-stub-date" datetime="2017-04-04">Published Tue, Apr 4, 2017</time>
+		<div class="comments-count disqus-comment-count" data-disqus-url="/how-to-build-go-plugin-with-data-inside/">0 Comments</div>
+    </a>
+</li>
+        
+            <li class="post-stub" itemprop="blogPost" itemscope="" itemtype="https://schema.org/BlogPosting">
+    <a href="/pros_and_cons_golang_in_monorepo/" itemprop="url" title="Go to post detail">
+        <h4 class="post-stub-title" itemprop="name">Pros and Cons: Golang in a Monorepo</h4>
+        <time class="post-stub-date" datetime="2017-04-03">Published Mon, Apr 3, 2017</time>
+		<div class="comments-count disqus-comment-count" data-disqus-url="/pros_and_cons_golang_in_monorepo/">0 Comments</div>
+    </a>
+</li>
+        
+            <li class="post-stub" itemprop="blogPost" itemscope="" itemtype="https://schema.org/BlogPosting">
+    <a href="/practice-go-shorthash/" itemprop="url" title="Go to post detail">
+        <h4 class="post-stub-title" itemprop="name">Practice Go. Short Hash</h4>
+        <time class="post-stub-date" datetime="2017-03-30">Published Thu, Mar 30, 2017</time>
+		<div class="comments-count disqus-comment-count" data-disqus-url="/practice-go-shorthash/">0 Comments</div>
+    </a>
+</li>
+        
+    </ol>
+
+    <div class="post-navigation">
+        
+
+    <nav class="pagination" role="navigation">
+        <span class="page-number">Page 1 of 2</span>
+        
+        
+            <a class="older-posts" href="/page/2/">Older Posts &rarr;</a>
+        
+    </nav>
+
+    </div>
+</div>
+
+                </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <p class="footer-copyright site-title-wrapper">
+                    <span>&copy; 2018 Alex Pliutau. All rights reserved.</span>
+                </p>
+            </div>
+        </footer>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+		<script type="text/javascript">
+			hljs.initHighlightingOnLoad();
+		</script>
+    </body>
+</html>

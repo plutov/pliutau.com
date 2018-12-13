@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Go 1.8 released. What is new? @ Alex Pliutau's Blog</title>
+        <meta name="description" content="Go team has released new version on February 16. You can get it from the download page. To celebrate the release, Go User Groups around the world are holding release parties this week. Spread the word using hashtag #GoReleaseParty.
+And in this article I will talk in short what&rsquo;s new in Go 1.8.
+HTTP graceful shutdown It is now possible to call srv.Close() to halt an http.Server immediately, or srv.">
+        <meta name="keywords" content="go, goreleaseparty, go-1.8, golang, alex pliutau, golang, go, programming, docker, swagger, git">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="generator" content="Hugo 0.52" />
+        <meta name="robots" content="index,follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:title" content="Go 1.8 released. What is new?">
+<meta property="og:description" content="Go team has released new version on February 16. You can get it from the download page. To celebrate the release, Go User Groups around the world are holding release parties this week. Spread the word using hashtag #GoReleaseParty.
+And in this article I will talk in short what&rsquo;s new in Go 1.8.
+HTTP graceful shutdown It is now possible to call srv.Close() to halt an http.Server immediately, or srv.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="/go18_release_whats_new/">
+
+
+        <link rel="stylesheet" href="/dist/styles.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+		<link rel="shortcut icon" href="/favicon.ico">
+		
+			<script id="dsq-count-scr" src="//pliutau.disqus.com/count.js" async></script>
+		
+    </head>
+    <body>
+        
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-72731922-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+        <div id="wrapper">
+            <header class="site-header">
+                <div class="container">
+                    <div class="site-title-wrapper">
+                        
+                            <a class="button-square button-social hint--top" data-hint="Twitter" title="Twitter" href="https://twitter.com/pliutau">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Youtube" title="Youtube" href="https://www.youtube.com/packagemain">
+                                <i class="fa fa-youtube"></i>
+                            </a>
+                        
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Github" title="Github" href="https://github.com/plutov">
+                                <i class="fa fa-github-alt"></i>
+                            </a>
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Stack Overflow" title="Stack Overflow" href="https://stackoverflow.com/users/350294/pltvs">
+                                <i class="fa fa-stack-overflow"></i>
+                            </a>
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="LinkedIn" title="LinkedIn" href="https://linkedin.com/in/pltvs/">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                        
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Email" title="Email" href="mailto:a.pliutau@gmail.com">
+                                <i class="fa fa-envelope"></i>
+                            </a>
+                        
+                        
+                    </div>
+
+                    <ul class="site-nav">
+                        
+    <li class="site-nav-item">
+        <a title="Blog" href="/">Blog</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="About" href="/page/about/">About</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Hire Me" href="/page/hire-me/">Hire Me</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Subscribe" href="https://eepurl.com/cDoD09">Subscribe</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Buy me a coffee" href="https://www.buymeacoffee.com/packagemain">Buy me a coffee</a>
+    </li>
+
+                    </ul>
+                </div>
+            </header>
+
+            <div id="container">
+
+
+<div class="container">
+    <article class="post-container" itemscope="" itemtype="http://schema.org/BlogPosting">
+        <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Go 1.8 released. What is new?</h1>
+    
+    <p class="post-date">
+        <span>Published <time datetime="2017-02-17"  itemprop="datePublished">Fri, Feb 17, 2017</time></span>
+        <span>by</span>
+        <span itemscope="" itemprop="author" itemtype="https://schema.org/Person">
+            <span itemprop="name">
+                <a href="https://pliutau.com" itemprop="url" rel="author">Alex Pliutau</a>
+            </span>
+        </span>
+    </p>
+</header>
+		<footer class="post-footer clearfix share-middle">
+    <div class="share">
+	<a class="icon-twitter" href="https://twitter.com/share?text=Go%201.8%20released.%20What%20is%20new%3f&url=%2fgo18_release_whats_new%2f"
+		onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+		<i class="fa fa-twitter"></i>
+		<span class="hidden">Twitter</span>
+	</a>
+
+	<a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=%2fgo18_release_whats_new%2f"
+		onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+		<i class="fa fa-facebook"></i>
+		<span class="hidden">Facebook</span>
+	</a>
+
+	<a class="icon-google-plus" href="https://plus.google.com/share?url=%2fgo18_release_whats_new%2f"
+	  onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+	  <i class="fa fa-google-plus"></i>
+		<span class="hidden">Google+</span>
+	</a>
+
+	<a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&title=Go%201.8%20released.%20What%20is%20new%3f&url=%2fgo18_release_whats_new%2f&summary="
+	   onclick="window.open(this.href, 'linkedin-share', 'width=554,height=481');return false;">
+	   <i class="fa fa-linkedin"></i>
+	   <span class="hidden">LinkedIn</span>
+	</a>
+</div>
+
+</footer>
+
+		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:inline-block;width:100%;height:90px;margin-top:20px;margin-bottom:20px;"
+     data-ad-client="ca-pub-9796117147060610"
+     data-ad-slot="8595828683"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+        <div class="post-content clearfix" itemprop="articleBody">
+    
+
+    
+
+<p>Go team has released new version on February 16. You can get it from the <a href="https://golang.org/dl/">download</a> page. To celebrate the release, Go User Groups around the world are holding release parties this week. Spread the word using hashtag <a href="https://twitter.com/hashtag/goreleaseparty">#GoReleaseParty</a>.</p>
+
+<p>And in this article I will talk in short what&rsquo;s new in Go 1.8.</p>
+
+<h3 id="http-graceful-shutdown">HTTP graceful shutdown</h3>
+
+<p>It is now possible to call <code>srv.Close()</code> to halt an <code>http.Server</code> immediately, or <code>srv.Shutdown(ctx)</code> to stop and gracefully drain the server of connections.</p>
+
+<h3 id="http-2-0-server-push-via-http-pusher">HTTP/2.0 server push via http.Pusher</h3>
+
+<p>If a web server supports HTTP/2.0, the http.ResponseWriter provided to handlers will also implement the new http.Pusher interface. Handlers can use its functionality to trigger a Server Push for a resource by providing an HTTP method, path, and request headers.</p>
+
+<h3 id="changes-in-database-sql">Changes in database/sql</h3>
+
+<p>The database/sql package has several major additions that give more control over database queries and allow users to take advantage of additional database features.</p>
+
+<ul>
+<li>Queries take a context.Context that can be used to cancel queries.</li>
+<li>Native database column types are exposed via <code>sql.ColumnType</code>.</li>
+<li>Queries can be executed with named parameters if the underlying driver implements support for them.</li>
+</ul>
+
+<h3 id="plugins">Plugins</h3>
+
+<p>Plugin support is implemented via the new <a href="https://tip.golang.org/pkg/plugin/">plugin</a> stdlib package. This will allow Go programs to load additional code—like plugins—while the program is running.</p>
+
+<h3 id="universal-slice-sorting">Universal slice sorting</h3>
+
+<p>It&rsquo;s implemented via new <a href="https://tip.golang.org/pkg/sort/#Slice">sort.Slice</a> function. This allows any slice to be sorted by providing a comparator callback rather than creating a specialized sort.Interface implementation.</p>
+
+<h3 id="tls-additions">TLS additions</h3>
+
+<ul>
+<li>Support for ChaCha20-Poly1305 based cipher suites</li>
+<li>More flexible config APIs</li>
+</ul>
+
+<h3 id="import-path-of-context">Import path of context</h3>
+
+<p>Yes, finally.</p>
+
+<pre><code>-import &quot;golang.org/x/next/context&quot;
++import &quot;context&quot;
+</code></pre>
+
+<h3 id="runtime">Runtime</h3>
+
+<p>Some improvements in runtime:</p>
+
+<ul>
+<li>gc pause (&lt; 1ms)</li>
+<li>build (15% speedup)</li>
+<li>defer (10-35% speedup)</li>
+<li>cgo (45% speedup)</li>
+</ul>
+
+<h3 id="ssa-improvements">SSA improvements</h3>
+
+<ul>
+<li>20-30% reduction in binary size</li>
+<li>5-35% speedup</li>
+</ul>
+
+<h3 id="default-gopath">Default $GOPATH</h3>
+
+<p><code>$HOME/go</code> on Unix.</p>
+
+<h3 id="go-bug">go bug</h3>
+
+<p>Just run <code>go bug</code> and you ill be redirected to a &ldquo;New Issue&rdquo; page.</p>
+
+</div>
+
+        <footer class="post-footer clearfix">
+    
+        <p class="post-tags">
+            <span>Tagged:</span>
+            
+            
+                <a href="/tags/go/">go</a>
+                , 
+            
+                <a href="/tags/goreleaseparty/">goreleaseparty</a>
+                , 
+            
+                <a href="/tags/go-1.8/">go-1.8</a>
+                , 
+            
+                <a href="/tags/golang/">golang</a>
+                
+            
+        </p>
+    
+
+    <div class="share">
+	<a class="icon-twitter" href="https://twitter.com/share?text=Go%201.8%20released.%20What%20is%20new%3f&url=%2fgo18_release_whats_new%2f"
+		onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+		<i class="fa fa-twitter"></i>
+		<span class="hidden">Twitter</span>
+	</a>
+
+	<a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=%2fgo18_release_whats_new%2f"
+		onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+		<i class="fa fa-facebook"></i>
+		<span class="hidden">Facebook</span>
+	</a>
+
+	<a class="icon-google-plus" href="https://plus.google.com/share?url=%2fgo18_release_whats_new%2f"
+	  onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+	  <i class="fa fa-google-plus"></i>
+		<span class="hidden">Google+</span>
+	</a>
+
+	<a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&title=Go%201.8%20released.%20What%20is%20new%3f&url=%2fgo18_release_whats_new%2f&summary="
+	   onclick="window.open(this.href, 'linkedin-share', 'width=554,height=481');return false;">
+	   <i class="fa fa-linkedin"></i>
+	   <span class="hidden">LinkedIn</span>
+	</a>
+</div>
+
+</footer>
+
+		<link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+	#mc_embed_signup{
+		width:100%;
+		border: 1px solid #dddbcc;
+		border-radius: 3px;
+		margin: 20px 0;
+		background: #f1f0ea;
+	}
+	#mc_embed_signup .button { background: #f03838 !important; }
+</style>
+<div id="mc_embed_signup">
+<form action="//pliutau.us15.list-manage.com/subscribe/post?u=48e0bc513d92114dd04b36ffa&amp;id=862c25c5fb" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <div id="mc_embed_signup_scroll">
+	<label for="mce-EMAIL">Get the latest posts delivered right to your inbox.</label>
+	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+    
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_48e0bc513d92114dd04b36ffa_862c25c5fb" tabindex="-1" value=""></div>
+    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+    </div>
+</form>
+</div>
+
+        
+    <div class="comments">
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "pliutau" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:inline-block;width:100%;height:90px;margin-top:20px;margin-bottom:20px;"
+     data-ad-client="ca-pub-9796117147060610"
+     data-ad-slot="8595828683"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+    </article>
+</div>
+
+                </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <p class="footer-copyright site-title-wrapper">
+                    <span>&copy; 2018 Alex Pliutau. All rights reserved.</span>
+                </p>
+            </div>
+        </footer>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+		<script type="text/javascript">
+			hljs.initHighlightingOnLoad();
+		</script>
+    </body>
+</html>
+

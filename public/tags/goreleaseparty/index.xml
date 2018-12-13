@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Goreleaseparty on Alex Pliutau</title>
+    <link>/tags/goreleaseparty/</link>
+    <description>Recent content in Goreleaseparty on Alex Pliutau</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Alex Pliutau</copyright>
+    <lastBuildDate>Fri, 17 Feb 2017 10:32:23 +0700</lastBuildDate>
+    
+	<atom:link href="/tags/goreleaseparty/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Go 1.8 released. What is new?</title>
+      <link>/go18_release_whats_new/</link>
+      <pubDate>Fri, 17 Feb 2017 10:32:23 +0700</pubDate>
+      
+      <guid>/go18_release_whats_new/</guid>
+      <description>Go team has released new version on February 16. You can get it from the download page. To celebrate the release, Go User Groups around the world are holding release parties this week. Spread the word using hashtag #GoReleaseParty.
+And in this article I will talk in short what&amp;rsquo;s new in Go 1.8.
+HTTP graceful shutdown It is now possible to call srv.Close() to halt an http.Server immediately, or srv.</description>
+    </item>
+    
+  </channel>
+</rss>

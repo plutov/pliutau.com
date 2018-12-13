@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Google Assistant on Alex Pliutau</title>
+    <link>/tags/google-assistant/</link>
+    <description>Recent content in Google Assistant on Alex Pliutau</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Alex Pliutau</copyright>
+    <lastBuildDate>Mon, 02 Apr 2018 16:07:19 +0700</lastBuildDate>
+    
+	<atom:link href="/tags/google-assistant/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Building Google Home Action in Go</title>
+      <link>/building-google-home-action-in-go/</link>
+      <pubDate>Mon, 02 Apr 2018 16:07:19 +0700</pubDate>
+      
+      <guid>/building-google-home-action-in-go/</guid>
+      <description>Google Home This is a text version of this video: packagemain #10: Building Google Home Action in Go.
+Google Home is a voice Assistant, similar to Amazon Alexa, but working with Google services. It has a lot of built-in integrations, but what is interesting for us developes is that we can build our programs for it. Google call them Actions.
+We will build an Action, which will help user to find an air quality index of the city user is located in.</description>
+    </item>
+    
+  </channel>
+</rss>

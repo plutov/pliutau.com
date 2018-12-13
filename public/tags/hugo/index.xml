@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hugo on Alex Pliutau</title>
+    <link>/tags/hugo/</link>
+    <description>Recent content in Hugo on Alex Pliutau</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Alex Pliutau</copyright>
+    <lastBuildDate>Wed, 20 Jan 2016 14:10:50 +0700</lastBuildDate>
+    
+	<atom:link href="/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Welcome to Alex Pliutau&#39;s blog</title>
+      <link>/hello-folks/</link>
+      <pubDate>Wed, 20 Jan 2016 14:10:50 +0700</pubDate>
+      
+      <guid>/hello-folks/</guid>
+      <description>Let me introduce myself I started my blogging with Russian content at plutov.by. Then I decided to share my thoughts in English to reach more people interested in this stuff.
+Currently I live and work in Saigon. Here we have an eCommerce project Lazada where I work as Team Lead in DevOps team.
+What shall I post? Materials, examples, thoughts about Go, DevOps, PHP, CI/CD, open source and more.</description>
+    </item>
+    
+  </channel>
+</rss>

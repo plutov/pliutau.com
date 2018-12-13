@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Youtube on Alex Pliutau</title>
+    <link>/tags/youtube/</link>
+    <description>Recent content in Youtube on Alex Pliutau</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Alex Pliutau</copyright>
+    <lastBuildDate>Mon, 25 Dec 2017 23:31:33 +0700</lastBuildDate>
+    
+	<atom:link href="/tags/youtube/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>packagemain: Youtube channel about Programming in Go</title>
+      <link>/packagemain/</link>
+      <pubDate>Mon, 25 Dec 2017 23:31:33 +0700</pubDate>
+      
+      <guid>/packagemain/</guid>
+      <description>I&amp;rsquo;m really enjoying to share some stuff about Golang and related technologies. I am blogging here and also on dev.to.
+But I want to try the new way to share things, by doing live streams or record a videos where I&amp;rsquo;ll share my screen and we can implement together some interesting functionality.
+So I just created a channel packagemain where I share the following topics: - Programming in Go - Go code review - Solving Algorithms with Go - Implement Bots with NLP - Performance optimizations</description>
+    </item>
+    
+  </channel>
+</rss>

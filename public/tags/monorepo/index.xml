@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Monorepo on Alex Pliutau</title>
+    <link>/tags/monorepo/</link>
+    <description>Recent content in Monorepo on Alex Pliutau</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Alex Pliutau</copyright>
+    <lastBuildDate>Mon, 03 Apr 2017 12:47:55 +0700</lastBuildDate>
+    
+	<atom:link href="/tags/monorepo/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Pros and Cons: Golang in a Monorepo</title>
+      <link>/pros_and_cons_golang_in_monorepo/</link>
+      <pubDate>Mon, 03 Apr 2017 12:47:55 +0700</pubDate>
+      
+      <guid>/pros_and_cons_golang_in_monorepo/</guid>
+      <description>Monorepo - is a monolithic code repository which can contain different services (or whatever you want to call them), CLI, libraries, etc. Did you hear that Facebook/Google uses a giant monorepo? And they do it for reasons.
+I tried both approaches in Go: with monorepo or with multirepo. And I personally prefer the first one (but of course depending on a project).
+Advantage 1. Simplified organization A structure of your project is important for organization.</description>
+    </item>
+    
+  </channel>
+</rss>

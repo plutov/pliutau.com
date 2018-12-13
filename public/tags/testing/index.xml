@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Testing on Alex Pliutau</title>
+    <link>/tags/testing/</link>
+    <description>Recent content in Testing on Alex Pliutau</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Alex Pliutau</copyright>
+    <lastBuildDate>Tue, 07 Aug 2018 11:02:46 +0700</lastBuildDate>
+    
+	<atom:link href="/tags/testing/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Table driven tests in Go</title>
+      <link>/table-driven-tests-in-go/</link>
+      <pubDate>Tue, 07 Aug 2018 11:02:46 +0700</pubDate>
+      
+      <guid>/table-driven-tests-in-go/</guid>
+      <description>In practice-go we often use table driven testing to be able to test all function scenarios. For example the FindAnagrams() function returns us a list of anagrams found in the dictionary for given input. To be able to test this function properly we need to test multiple cases, like empty input, valid input, invalid input, etc. We could right different asserts to make it, but it&amp;rsquo;s much more easier to use table tests.</description>
+    </item>
+    
+    <item>
+      <title>How to separate Unit and Integration tests in Go</title>
+      <link>/separate_unit_integration_tests/</link>
+      <pubDate>Thu, 02 Mar 2017 11:25:19 +0700</pubDate>
+      
+      <guid>/separate_unit_integration_tests/</guid>
+      <description>Usually integration tests take long time, because they&amp;rsquo;re doing real requests to real system. And it&amp;rsquo;s not necessary to run them every time we type go test. For example we have Golang client to work with PayPal SDK, it has some exported functions to send data to PayPal, then parse response and handle errors. So I wrote test functions to check that our client works properly with the real system, and be aware if PayPal changes response format or error codes.</description>
+    </item>
+    
+    <item>
+      <title>How to mock exec.Command in Go</title>
+      <link>/how_to_mock_exec_command/</link>
+      <pubDate>Mon, 27 Feb 2017 10:15:26 +0700</pubDate>
+      
+      <guid>/how_to_mock_exec_command/</guid>
+      <description>In some of my projects we have code that needs to run external executables, and it&amp;rsquo;s very difficult to test them, especially when your function is based on some kind of stdout parcing. So how to mock these commands in Go? Let&amp;rsquo;s check how this goal is achieved in os/exec package. In exec_test.go we can see a helperCommand. When running go tests, the go tool compiles an executable from your code, runs it and passes all the flags.</description>
+    </item>
+    
+    <item>
+      <title>Quiz yourself in Golang. Part 1</title>
+      <link>/go-lang-test/</link>
+      <pubDate>Fri, 05 Feb 2016 18:08:43 +0700</pubDate>
+      
+      <guid>/go-lang-test/</guid>
+      <description>30 basic questions to measure your Golang knowledge. Answers and .go files you can find on GitHub page.
+Don&amp;rsquo;t hesitate to create a Pull Request in case of some found errors, typos.
+What&amp;rsquo;s the output of the following code? package main import &amp;quot;fmt&amp;quot; const ( a = iota b = iota c = iota ) const ( d, e, f = iota, iota, iota ) func main() { fmt.Println(a, b, c, d, e, f) }   a.</description>
+    </item>
+    
+    <item>
+      <title>Measure performance changes with benchcmp</title>
+      <link>/measure-performance-changes/</link>
+      <pubDate>Tue, 26 Jan 2016 16:10:23 +0700</pubDate>
+      
+      <guid>/measure-performance-changes/</guid>
+      <description>go test -bench=. Go has a great option to write your benchmarks and run it together with go test with option -bench. To create a benchmark function you must do the following:
+package anonymizer import &amp;quot;testing&amp;quot; func BenchmarkAnonymizerShortString(b *testing.B) { for n := 0; n &amp;lt; b.N; n++ { Anonymizer(&amp;quot;This is a secret message with my private email john@gmail.com&amp;quot;) } } func BenchmarkAnonymizerLongString(b *testing.B) { for n := 0; n &amp;lt; b.</description>
+    </item>
+    
+  </channel>
+</rss>

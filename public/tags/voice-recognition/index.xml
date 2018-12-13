@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Voice Recognition on Alex Pliutau</title>
+    <link>/tags/voice-recognition/</link>
+    <description>Recent content in Voice Recognition on Alex Pliutau</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Alex Pliutau</copyright>
+    <lastBuildDate>Wed, 26 Jul 2017 14:50:34 +0700</lastBuildDate>
+    
+	<atom:link href="/tags/voice-recognition/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Games based on Voice Recognition</title>
+      <link>/voice-recognition-games/</link>
+      <pubDate>Wed, 26 Jul 2017 14:50:34 +0700</pubDate>
+      
+      <guid>/voice-recognition-games/</guid>
+      <description>Hi, folks!
+Last Saturday I was very inspired by Alexa skills using server-side Swift talk organized by Wizeline Vietnam team. Speakers made a demo of how can we use Alex Skill in League of Legends (LoL). This Skill enables a user to retrieve the statistics of the enemy team mid-match using voice-enabled commands.
+I went home with an idea of building a game, fully based on voice recognition, without any interface.</description>
+    </item>
+    
+  </channel>
+</rss>
