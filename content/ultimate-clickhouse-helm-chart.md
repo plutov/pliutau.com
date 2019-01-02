@@ -3,10 +3,13 @@ title = "Ultimate ClickHouse Helm Chart"
 date = "2019-01-02T13:29:37+01:00"
 type = "post"
 tags = ["clickhouse", "helm", "kubernetes"]
+og_image = "/clickhouse-helm.jpg"
 +++
+![clickhouse-helm.jpg](/clickhouse-helm.jpg)
+
 Seems like ClickHouse is experiencing growth in industries like IoT, Web Analytics, AdTech, Log Management, because of its robustness with big amounts of data.
 
-IMO it's a great tool but missing developer community support. For example there is no built-in UI, no official Helm Chart, etc. But is it a problem? I think no, it's possible to build a robust dev / prod environment using the right tools.
+IMO it's a great tool but missing developer community support. For example there is no built-in UI, no official Helm Chart, etc. But is it a problem? I don't think it is, it's possible to build a robust dev / prod environment using the right tools.
 
 In this article I am going to explain the [Helm Chart I prepared](https://github.com/plutov/clickhouse-helm) for the ClickHouse.
 
@@ -16,15 +19,15 @@ Let's list what do we need to have in our ClickHouse Kubernetes-based environmen
 
 ### Scalability
 
-Since you decided to use ClickHouse you're expecting a lot of data in your system. You have to prepare your cluster to be able to read and write this data. ClickHouse has different ways to setup the replication, for example [circular replication cluster topology](https://www.altinity.com/blog/2018/5/10/circular-replication-cluster-topology-in-clickhouse), or [data distribution](https://www.altinity.com/blog/2017/6/5/clickhouse-data-distribution). What's common here is that you need an easy way to scale your cluster, add shards, or add replicas.
+Since you decided to use ClickHouse you're expecting a lot of data in your system. You have to prepare your cluster to be able to read and write this data. ClickHouse has different ways to setup the replication, for example [circular replication cluster topology](https://www.altinity.com/blog/2018/5/10/circular-replication-cluster-topology-in-clickhouse), or [data distribution](https://www.altinity.com/blog/2017/6/5/clickhouse-data-distribution). What's common here is that you need an easy way to scale your cluster, add/remove shards, or add/remove replicas.
 
 ### Monitoring
 
-When you have it deployed it's crucial to have a monitoring of everything related to it, because you don't want to be blind with TBs of data.
+It's crucial to have a monitoring of everything when you deployed it, because you don't want to be blind with TBs of data.
 
 ### GUI (or optional?)
 
-Sometimes it's very handy to have web-based gui to run some queries, of course with limited access.
+Sometimes it's very handy to have web-based gui to run some queries, of course with limited access. It is also fine to use ClickHouse CLI.
 
 ### Security
 
@@ -49,7 +52,7 @@ Data should persist after any possible crash.
 
 ## Helm Chart
 
-Thanks to Helm we can spin up the whole environment with a single command. Also we can configure each environment using `values` config files.
+Thanks to Helm we can spin up the whole environment with a single command. Also we can configure each environment using `values.yaml` config files.
 
 ### Custom ClickHouse image
 
@@ -65,8 +68,8 @@ ClickHouse uses Zookeeper for replication / distribution, so we have to prepare 
 
 - Cluster. 2 replicas by default
 - Zookeeper. 2 replicas by default
-- Graphite
-- Users
+- Graphite. 1 replica
+- Users. writer and reader
 
 ### Statefulset with PVC
 
@@ -78,11 +81,11 @@ ClickHouse client is deployed to the same environment.
 
 ### GUI
 
-For GUI I added Tabix.UI, where you can connect to your ClickHouse server and execute queries.
+For GUI I added [Tabix.UI](http://tabix.io), where you can connect to your ClickHouse server and execute queries.
 
 ### Graphite
 
-ClickHouse does not have such a tool packaged, but there are several 3rd-party monitoring solutions that can be used. Graphite is one of the popular options, and it can be natively integrated with ClickHouse.
+ClickHouse does not have a tool for monitoring packaged, but there are several 3rd-party monitoring solutions that can be used. Graphite is one of the popular options, and it can be natively integrated with ClickHouse.
 
 ## Run it
 
