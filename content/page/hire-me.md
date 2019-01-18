@@ -9,7 +9,7 @@ og_image = "https://pliutau.com/me.png"
 
 ### Hi! I'm Alex Pliutau
 
-I am a backend engineer with a passion for APIs, Web, Microservices, etc. I'm also a weekend motorcycle rider 🏍, currently living in Bertlin. I'm looking for my next thing, maybe that'll be you!
+I am a backend engineer with a passion for APIs, Web, Microservices, etc. I'm also a weekend motorcycle rider 🏍, currently living in Berlin. I'm looking for my next thing, maybe that'll be you!
 
 ### What
 
@@ -20,7 +20,6 @@ Ideally you:
  - Care about inclusion and diversion in your organization.
  - Provide professional development opportunities.
  - Work with Go, Docker, Kubernetes.
- - Provide a relocation package for me and my wife.
 
 ### Where
 
@@ -28,8 +27,7 @@ I'm happy to relocate 🌎.
 
 ### About me
 
-I'm a senior backend engineer with over 8 years of experience, currently working mostly with Go and Microservices, applying [twelve-factor](https://12factor.net/) methodology. I've worked at both small and large companies bringing products from concept
-to release in a variety of environments.
+I'm a Senior Backend Engineer with over 8 years of experience, currently working mostly with Go and Microservices, applying [twelve-factor](https://12factor.net/) methodology. I've worked at both small and large companies bringing products from concept to release in a variety of environments.
 
 Things I do:
 
