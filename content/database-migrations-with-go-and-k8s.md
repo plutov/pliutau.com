@@ -23,12 +23,6 @@ Steps:
 1. Prepare your migrations and store them in one of the available `migrate`'s sources (I will show an example with Google Storage)
 2. Add `initContainers` section to your k8s deployment.
 
-```yaml
-initContainers:
-  - name: migrations
-    image: migrate/migrate:latest
-    command: ['/migrate']
-    args: ['-source', 'gcs://bucket/migrations', '-database', 'mongodb://mongo-0.mongo.default.svc.cluster.local:27017/db', 'up']
-```
+{{< gist plutov 029d31b817c3c8c866d1967367acbd62 >}}
 
 Now Kubernetes will run this container before starting the main pod. You will be able to see logs why migrations are failing.
