@@ -37,16 +37,11 @@ paginate= 50
     weight = 2
 
 [[menu.main]]
-    name = "Hire Me"
-    url = "/page/hire-me/"
-    weight = 3
-
-[[menu.main]]
     name = "Subscribe"
     url = "https://eepurl.com/cDoD09"
-    weight = 4
+    weight = 3
 
 [[menu.main]]
     name = "Buy me a coffee"
     url = "https://www.buymeacoffee.com/packagemain"
-    weight = 5
+    weight = 4
