@@ -13,7 +13,7 @@ baseURL = "https://pliutau.com/"
 [Params]
     intro = false
     github = "https://github.com/plutov"
-    linkedin = "https://linkedin.com/in/pltvs/"
+    linkedin = "https://linkedin.com/in/pltvs"
     twitter = "https://twitter.com/pliutau"
     youtube = "https://www.youtube.com/packagemain"
     stackoverflow = "https://stackoverflow.com/users/350294/pltvs"
