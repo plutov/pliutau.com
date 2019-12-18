@@ -49,6 +49,6 @@ baseURL = "https://pliutau.com/"
 [deployment]
 
 [[deployment.targets]]
-name = "s3"
-URL = "s3://pliutau.com?region=us-east-1"
-cloudFrontDistributionID = "E1OWQZ20D426RZ"
+    name = "s3"
+    URL = "s3://pliutau.com?region=us-east-1"
+    cloudFrontDistributionID = "E1OWQZ20D426RZ"
