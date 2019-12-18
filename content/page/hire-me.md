@@ -36,6 +36,6 @@ Things I do:
 
 If you think I'm a good fit for your organization, please drop an email at [a.pliutau@gmail.com](mailto:a.pliutau@gmail.com).
 
-For more details about my work experience, you can find my CV [here](https://s3.amazonaws.com/pliutau.com/cv.pdf).
+For more details about my work experience, you can find my CV [here](https://pliutau.com/cv.pdf).
 
 [@pliutau](https://twitter.com/pliutau)

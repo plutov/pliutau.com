@@ -4,6 +4,7 @@ languageCode = "en-us"
 copyright = "Alex Pliutau"
 disqusShortname = "pliutau"
 paginate= 50
+baseURL = "https://pliutau.com/"
 
 [Author]
     name = "Alex Pliutau"
@@ -23,7 +24,7 @@ paginate= 50
     shareGooglePlus = true
     shareLinkedIn = true
     dateFormat = "Mon, Jan 2, 2006"
-    description = "Alex Pliutau's blog. My thoughts about golang, programming, backend, devops, docker, etc."
+    description = "Alex Pliutau blog. My thoughts about software engineering, golang, programming, backend, devops, docker, kubernetes, etc."
 
 [[menu.main]]
     name = "Blog"
@@ -44,3 +45,10 @@ paginate= 50
     name = "Buy me a coffee"
     url = "https://www.buymeacoffee.com/packagemain"
     weight = 4
+
+[deployment]
+
+[[deployment.targets]]
+name = "s3"
+URL = "s3://pliutau.com?region=us-east-1"
+cloudFrontDistributionID = "E1OWQZ20D426RZ"
