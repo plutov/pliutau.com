@@ -3,3 +3,5 @@
 ### Deploy
 
 Automatically deployed to S3 using Github Actions.
+
+### Ruun locally
