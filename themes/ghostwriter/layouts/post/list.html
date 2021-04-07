@@ -3,6 +3,8 @@
 <div id="post-index" class="container">
     {{ partial "intro.html" . }}
 
+    {{ partial "adsense-feed.html" . }}
+
     <ol class="post-list">
         {{ $pag := .Paginate .Data.Pages }}
         {{ range $pag.Pages }}
