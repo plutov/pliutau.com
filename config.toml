@@ -1,54 +1,100 @@
-title = "Alex Pliutau"
-theme = "ghostwriter"
-languageCode = "en-us"
-copyright = "Alex Pliutau"
-disqusShortname = "pliutau"
-paginate= 10
-baseURL = "https://pliutau.com/"
+baseURL = "https://pliutau.com"
+languageCode = "en"
+DefaultContentLanguage = "en"
+title = "Alex Pliutau's Blog"
+theme = "anatole"
+summarylength = 10
+enableEmoji = true
+enableRobotsTXT = true
+# Enable Disqus
+#disqusShortname = ""
+# Google Analytics
+googleAnalytics = "UA-72731922-1"
+# Syntax highlighting
+pygmentsUseClasses = true
+pygmentsCodeFences = true
+pygmentsCodefencesGuessSyntax = true
 
-[Author]
-    name = "Alex Pliutau"
-    profile = "https://pliutau.com"
+[params]
+title = "I'm Alex Pliutau"
+author = "Alex Pliutau"
+#copyright = "2020-2021"
+description = "Call me Alex"
+profilePicture = "/me.png"
+keywords = "go, golang, programming, devops, microservices, cloud, kubernetes"
+favicon = "/"
+# example ["css/custom.css"]
+customCss = []
+# example ["js/custom.js"]
+customJs = []
+mainSections = ["post"]
+#images = ["images/site-feature-image.png"]
+doNotLoadAnimations = false
 
-[Params]
-    intro = false
-    github = "https://github.com/plutov"
-    linkedin = "https://linkedin.com/in/pltvs"
-    twitter = "https://twitter.com/pliutau"
-    youtube = "https://www.youtube.com/packagemain"
-    stackoverflow = "https://stackoverflow.com/users/350294/pltvs"
-    email = "a.pliutau@gmail.com"
-    opengraph = true
-    shareTwitter = true
-    shareFacebook = true
-    shareGooglePlus = true
-    shareLinkedIn = true
-    dateFormat = "Mon, Jan 2, 2006"
-    description = "Alex Pliutau blog. My thoughts about software engineering, golang, programming, backend, devops, docker, kubernetes, etc."
+# Form Spree Contact Form
+#contactFormAction = "https://formspree.io/f/your-form-hash-here"
+# Google Site Verify
+#googleSiteVerify = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+# indexDateFormat = "Mon, Jan 2, 2006"
+# listDateFormat = "Jan 2"
+# singleDateFormat = "Mon, Jan 2, 2006"
+# Commento Comments
+# CommentoURL = "https://commento.example.com/js/commento.js"
+# Read More links for truncated summaries
+# readMore = true
+# postSectionName = "blog"
+[params.simpleAnalytics]
+
+# enable = true
+# customurl = "https://analytics.example.com"
+## Math settings
+[params.math]
+enable = false # options: true, false. Enable math support globally, default: false. You can always enable math on per page.
+use = "katex" # options: "katex", "mathjax". default is "katex".
+
+## Social links
+# use 'fab' when brand icons, use 'fas' when standard solid icons.
+[[params.socialIcons]]
+icon = "fab fa-youtube"
+title = "GitHub"
+url = "https://www.youtube.com/packagemain"
+
+[[params.socialIcons]]
+icon = "fab fa-github"
+title = "GitHub"
+url = "https://github.com/plutov"
+
+[[params.socialIcons]]
+icon = "fab fa-twitter"
+title = "GitHub"
+url = "https://twitter.com/pliutau"
+
+[[params.socialIcons]]
+icon = "fab fa-linkedin"
+title = "Linkedin"
+url = "http://linkedin.com/in/pltvs"
+
+[[params.socialIcons]]
+icon = "fas fa-envelope"
+title = "e-mail"
+url = "mailto:a@pliutau.com"
+
+## Menu items
+[menu]
 
 [[menu.main]]
-    name = "Blog"
-    url = "/"
-    weight = 1
+name = "Blog"
+url = "/"
+weight = 1
 
 [[menu.main]]
-    name = "About"
-    url = "/page/about/"
-    weight = 2
-
-[[menu.main]]
-    name = "Subscribe"
-    url = "https://eepurl.com/cDoD09"
-    weight = 3
-
-[[menu.main]]
-    name = "Buy me a coffee"
-    url = "https://www.buymeacoffee.com/packagemain"
-    weight = 4
+name = "Subscribe"
+url = "https://eepurl.com/cDoD09"
+weight = 3
 
 [deployment]
 
 [[deployment.targets]]
-    name = "s3"
-    URL = "s3://pliutau.com?region=us-east-1"
-    cloudFrontDistributionID = "E1OWQZ20D426RZ"
+name = "s3"
+URL = "s3://pliutau.com?region=us-east-1"
+cloudFrontDistributionID = "E1OWQZ20D426RZ"
