@@ -3,7 +3,7 @@ theme = "ghostwriter"
 languageCode = "en-us"
 copyright = "Alex Pliutau"
 disqusShortname = "pliutau"
-paginate= 50
+paginate= 10
 baseURL = "https://pliutau.com/"
 
 [Author]
