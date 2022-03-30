@@ -30,6 +30,7 @@ customJs = []
 mainSections = ["post"]
 #images = ["images/site-feature-image.png"]
 doNotLoadAnimations = false
+displayMode = "dark"
 
 # Form Spree Contact Form
 #contactFormAction = "https://formspree.io/f/your-form-hash-here"
