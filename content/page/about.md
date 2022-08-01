@@ -6,7 +6,9 @@ og_image = "https://pliutau.com/me.png"
 +++
 ![Alex Pliutau](https://pliutau.com/me.png)
 
-I am a backend engineer with a passion for APIs, Web, Microservices, DevSecOps, CI/CD etc. I'm also a weekend motorcycle rider 🏍, currently living in Berlin.
+I am a backend engineer with a passion for APIs, Web, Cloud, Microservices, DevOps, Kubernetes etc.
+
+Engineering Lead at [Solsten](https://solsten.io).
 
 Things I do:
 
