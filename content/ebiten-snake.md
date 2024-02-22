@@ -3,11 +3,11 @@ date = "2022-08-01T16:08:07+02:00"
 title = "Snake game in Go using Ebiten"
 tags = [ "Go", "Golang", "game", "ebiten" ]
 type = "post"
-og_image = "https://ebiten.org/images/gopherandgame.png"
+og_image = "https://ebitengine.org/images/gopherandgame.png"
 +++
-![Snake game in Go using Ebiten](https://ebiten.org/images/gopherandgame.png)
+![Snake game in Go using Ebiten](https://ebitengine.org/images/gopherandgame.png)
 
-[Ebiten](https://ebiten.org/) is an open source game library in Go for building 2D games that can be ran across multiple platforms. Ebiten games work on desktop, web browsers (through WebAssembly), as well as on Mobile and even on Nintendo Switch.
+[Ebiten](https://ebitengine.org/) is an open source game library in Go for building 2D games that can be ran across multiple platforms. Ebiten games work on desktop, web browsers (through WebAssembly), as well as on Mobile and even on Nintendo Switch.
 
 I wanted to make a video building this game on my [package main Youtube channel](https://youtube.com/c/packagemain), but it would be too long, therefore I'm presenting you a text version of it.
 
