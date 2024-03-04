@@ -59,7 +59,7 @@ All you need is to get familiar with the DSL syntax, which is pretty simple. As 
 
 I created a simple example of Task Management Software to demonstrate the C4 model and Structurizr DSL.
 
-```json
+```
 workspace {
 
     model {
