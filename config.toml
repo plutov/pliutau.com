@@ -9,7 +9,6 @@ enableRobotsTXT = true
 # Enable Disqus
 #disqusShortname = ""
 # Google Analytics
-googleAnalytics = "UA-72731922-1"
 gtagId = "G-J98HDV96R0"
 # Syntax highlighting
 pygmentsUseClasses = true
@@ -88,11 +87,6 @@ url = "mailto:a@pliutau.com"
 name = "Blog"
 url = "/"
 weight = 1
-
-[[menu.main]]
-name = "Subscribe"
-url = "https://eepurl.com/cDoD09"
-weight = 3
 
 [deployment]
 

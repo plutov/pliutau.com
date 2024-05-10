@@ -1,7 +1,7 @@
 +++
 date = "2022-08-01T16:08:07+02:00"
 title = "Snake game in Go using Ebiten"
-tags = [ "Go", "Golang", "game", "ebiten" ]
+tags = [ "go", "golang", "game", "ebiten" ]
 type = "post"
 og_image = "https://ebitengine.org/images/gopherandgame.png"
 +++
