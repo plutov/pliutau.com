@@ -9,6 +9,7 @@ enableRobotsTXT = true
 # Enable Disqus
 #disqusShortname = ""
 # Google Analytics
+googleAnalytics = "G-J98HDV96R0"
 gtagId = "G-J98HDV96R0"
 # Syntax highlighting
 pygmentsUseClasses = true
@@ -16,6 +17,8 @@ pygmentsCodeFences = true
 pygmentsCodefencesGuessSyntax = true
 
 [params]
+googleAnalytics = "G-J98HDV96R0"
+gtagId = "G-J98HDV96R0"
 title = "I'm Alex Pliutau"
 author = "Alex Pliutau"
 #copyright = "2020-2021"
