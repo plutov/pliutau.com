@@ -2,9 +2,7 @@
 type = "page"
 title = "Now"
 date = "2024-05-22T14:00:00+01:00"
-og_image = "https://pliutau.com/me.png"
 +++
-![Alex Pliutau](https://pliutau.com/me.png)
 
 This page is a summary of what's going on in my life currently.
 
