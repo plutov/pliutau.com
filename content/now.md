@@ -1,7 +1,7 @@
 +++
-type = "page"
+type = "post"
 title = "Now"
-date = "2024-05-22T14:00:00+01:00"
+date = "2024-05-22T10:00:00+01:00"
 +++
 
 This page is a summary of what's going on in my life currently.
