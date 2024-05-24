@@ -1,5 +1,5 @@
 +++
-type = "post"
+type = "page"
 title = "Now"
 date = "2024-05-22T10:00:00+01:00"
 +++
