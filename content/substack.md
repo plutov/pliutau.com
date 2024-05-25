@@ -5,7 +5,7 @@ tags = [ "Substack" ]
 type = "post"
 +++
 
-Today me nad my friend/colleague Julien Singler are starting a new Substack Newsletter called "package main" (this name may sound familiar).
+Today me and my friend/colleague Julien Singler are starting a new Substack Newsletter called "package main" (this name may sound familiar).
 
 It's one-stop shop for mastering Backend, Cloud, DevOps, APIs, etc. We'll provide you with hands-on, practical and real-world tutorials that you can use to build your software development skills.
 
