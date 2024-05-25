@@ -69,6 +69,11 @@ name = "Blog"
 url = "/"
 weight = 1
 
+[[menu.main]]
+name = "Substack"
+url = "https://packagemain.substack.com/?utm_campaign=pliutau.com"
+weight = 2
+
 [deployment]
 
 [[deployment.targets]]
