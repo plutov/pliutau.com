@@ -10,6 +10,14 @@
     <meta name="google-site-verification" content="{{ .Site.Params.googleSiteVerify }}">
     {{- end -}}
 
+    {{ if .Params.og_image }}
+    <meta property="og:image" content="https://pliutau.com{{ .Params.og_image }}"/>
+    <meta property="og:image:secure_url" content="https://pliutau.com{{ .Params.og_image }}"/>
+    {{ else }}
+    <meta property="og:image" content="https://pliutau.com/me.png"/>
+    <meta property="og:image:secure_url" content="https://pliutau.com/me.png"/>
+    {{ end }}
+
     <!-- CSS -->
     {{ $style := resources.Get "css/style.css" | resources.Minify | resources.Fingerprint }}
     <link rel="stylesheet"
