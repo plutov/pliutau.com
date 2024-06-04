@@ -19,6 +19,13 @@
                 {{ end }}
             </div>
 
+            <iframe
+            src="https://packagemain.tech/embed"
+            width="100%"
+            height="150"
+            frameborder="0"
+            scrolling="no"
+            ></iframe>
             {{ .Content }}
 
             {{- if (eq .Params.contact true) -}}
@@ -31,28 +38,15 @@
                 {{ with .Page.Params.Categories }}{{ partial "taxonomy/categories.html" . }}{{ end }}
                 {{ with .Page.Params.Tags }}{{ partial "taxonomy/tags.html" . }}{{ end }}
             </div>
+            
+            <iframe
+            src="https://packagemain.tech/embed"
+            width="100%"
+            height="150"
+            frameborder="0"
+            scrolling="no"
+            ></iframe>
         </div>
-
-        {{ if and (or (eq .Type "post") (eq .Type .Site.Params.postSectionName)) (ne .Page.Params.disableComments true) }}
-            {{- if .Site.DisqusShortname -}}
-                <div id="fb_comments_container">
-                    <h2>{{ i18n "comments" }}</h2>
-                    {{ template "_internal/disqus.html" . }}
-                </div>
-            {{- end -}}
-            {{- if .Site.Params.utterances.repo -}}
-            <div id="fb_comments_container">
-                <h2>{{ i18n "comments" }}</h2>
-                {{ partial "comments/utterances.html" . }}
-            </div>
-            {{- end -}}
-            {{- if .Site.Params.CommentoURL -}}
-            <div id="fb_comments_container">
-                <h2>{{ i18n "comments" }}</h2>
-                {{ partial "comments/commento.html" . }}
-            </div>
-            {{- end -}}
-        {{ end }}
     </div>
 
 {{ end }}

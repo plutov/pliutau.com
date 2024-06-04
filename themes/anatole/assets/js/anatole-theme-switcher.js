@@ -12,12 +12,8 @@ function init() {
     // initialize default value
     const theme = getTheme();
 
-    // check if a preferred color theme is set for users that have never been to our site
-    const userPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
     if (theme === null) {
-        if (userPrefersDark) {
-            setTheme('dark');
-        } else if (!document.documentElement.getAttribute('data-theme')) {
+        if (!document.documentElement.getAttribute('data-theme')) {
             setTheme('light');
         } else {
             setTheme(document.documentElement.getAttribute('data-theme'));
