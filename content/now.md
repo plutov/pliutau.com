@@ -6,7 +6,9 @@ date = "2024-05-22T10:00:00+01:00"
 
 This page is a summary of what's going on in my life currently.
 
-Last updated: **2024-05-22**
+Last updated: **2024-07-18**
+
+Currently writing the [packagemain.tech](https://packagemain.tech) Newsletter about Backend, Go, Cloud, Kubernetes and more.
 
 **Professionally**, I'm leading an engineering team at [Solsten](https://solsten.io), deeply involved in Cloud, Infrastructure, Backend and general product dev.
 
@@ -16,4 +18,5 @@ Last year I started running on a regular basis and completed my first half marat
 
 ## Changelog
 
+- 2024-07-18: Initial now page
 - 2024-05-22: Initial now page
