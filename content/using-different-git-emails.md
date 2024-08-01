@@ -30,7 +30,4 @@ Git **2.13** introduces [conditional configuration includes](https://git-scm.com
     email = wizeline@example.com
 ```
 
-<iframe src="http://showterm.io/9a748f5bfbc041f2d1a2b" width="100%" height="240">
-</iframe>
-
 Note: To check it, make sure you are in a Git directory, non-Git directories will always show the default configuration.
