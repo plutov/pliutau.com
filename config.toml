@@ -70,7 +70,7 @@ url = "/"
 weight = 1
 
 [[menu.main]]
-name = "Substack"
+name = "Newsletter"
 url = "https://packagemain.tech/"
 weight = 2
 
