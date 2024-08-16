@@ -28,35 +28,154 @@ This struct should be flexible but also limited so the user can't see internal f
 
 We make fields `BaseURL` and `HTTPClient` exportable, so users can use their own HTTP client if necessary.
 
-{{< gist plutov 56eb72d31852807b3e8883e539e38197 >}}
+```go
+package facest
+
+import (
+	"net/http"
+	"time"
+)
+
+const (
+	BaseURLV1 = "https://api.facest.io/v1"
+)
+
+type Client struct {
+	BaseURL    string
+	apiKey     string
+	HTTPClient *http.Client
+}
+
+func NewClient(apiKey string) *Client {
+	return &Client{
+		BaseURL: BaseURLV1,
+		apiKey:  apiKey,
+		HTTPClient: &http.Client{
+			Timeout: time.Minute,
+		},
+	}
+}
+```
 
 Now let's move on and implement "Get Faces" endpoint, which returns the list of results and supports pagination, which means our function should support pagination options as input.
 
 As I noticed in API, success responses and error responses always follow the same structure, so we can define them separately from data types and don't make them exported since this is not relevant information to the user.
 
-{{< gist plutov 50be7bf3066137765fc7e1969028bb3c >}}
+```go
+type errorResponse struct {
+	Code    int    `json:"code"`
+	Message string `json:"message"`
+}
+
+type successResponse struct {
+	Code int         `json:"code"`
+	Data interface{} `json:"data"`
+}
+```
 
 Make sure you don't write all endpoints in the same .go file, but group them and use separate files. For example you may group by resource type, anything that starts with `/v1/faces` goes into `faces.go` file.
 
 I usually start by defining the types, you can do it manually or by converting JSON to go using [JSON-to-Go tool](https://mholt.github.io/json-to-go/).
 
-{{< gist plutov eea2eec7ed862bcacf65beb456e8ec90 >}}
+```go
+package facest
+
+import "time"
+
+type FacesList struct {
+	Count      int    `json:"count"`
+	PagesCount int    `json:"pages_count"`
+	Faces      []Face `json:"faces"`
+}
+
+type Face struct {
+	FaceToken  string      `json:"face_token"`
+	FaceID     string      `json:"face_id"`
+	FaceImages []FaceImage `json:"face_images"`
+	CreatedAt  time.Time   `json:"created_at"`
+}
+
+type FaceImage struct {
+	ImageToken string    `json:"image_token"`
+	ImageURL   string    `json:"image_url"`
+	CreatedAt  time.Time `json:"created_at"`
+}
+```
 
 The `GetFaces` function should support pagination and we can do this by adding func arguments, but these arguments are optional, and they may be changed in the future. So it makes sense to group them into a special struct:
 
-{{< gist plutov cce836297a0489e1deb51d0cd6de9db5 >}}
+```go
+type FacesListOptions struct {
+	Limit int `json:"limit"`
+	Page  int `json:"page"`
+}
+```
 
 One more argument our function should support, and it's the context, which will let users control the API call. Users can create a Context, pass it to our func. Simple use case: cancel API call if it takes more than 5 seconds.
 
 Now it's time to make API call itself:
 
-{{< gist plutov 9fc659650dbdcfae06598e611e8d0983 >}}
+```go
+func (c *Client) GetFaces(ctx context.Context, options *FacesListOptions) (*FacesList, error) {
+	limit := 100
+	page := 1
+	if options != nil {
+		limit = options.Limit
+		page = options.Page
+	}
+
+	req, err := http.NewRequest("GET", fmt.Sprintf("%s/faces?limit=%d&page=%d", c.BaseURL, limit, page), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	req = req.WithContext(ctx)
+
+	res := FacesList{}
+	if err := c.sendRequest(req, &res); err != nil {
+		return nil, err
+	}
+
+	return &res, nil
+}
+```
 
 Since all API endpoints act in the same manner, helper function `sendRequest` is created to avoid code duplication. It will set common headers (content type, auth header), make request, check for errors, parse response.
 
 Note that we're considering status codes < 200 and >= 400 as errors and parse response into `errorResponse`. It depends on the API design though, your API may handle errors differently.
 
-{{< gist plutov 04c317b4f20addaeba009e98d2e12a18 >}}
+```go
+func (c *Client) sendRequest(req *http.Request, v interface{}) error {
+	req.Header.Set("Content-Type", "application/json; charset=utf-8")
+	req.Header.Set("Accept", "application/json; charset=utf-8")
+	req.Header.Set("Authorization", fmt.Sprintf("Bearer %s", c.apiKey))
+
+	res, err := c.HTTPClient.Do(req)
+	if err != nil {
+		return err
+	}
+
+	defer res.Body.Close()
+
+	if res.StatusCode < http.StatusOK || res.StatusCode >= http.StatusBadRequest {
+		var errRes errorResponse
+		if err = json.NewDecoder(res.Body).Decode(&errRes); err == nil {
+			return errors.New(errRes.Message)
+		}
+
+		return fmt.Errorf("unknown error, status code: %d", res.StatusCode)
+	}
+
+	fullResponse := successResponse{
+		Data: v,
+	}
+	if err = json.NewDecoder(res.Body).Decode(&fullResponse); err != nil {
+		return err
+	}
+
+	return nil
+}
+```
 
 ## Tests
 
@@ -64,7 +183,35 @@ So now we have SDK with single API endpoint covered, which is enough for this ex
 
 Tests are almost required here, and there can be 2 types of them: unit tests and integration tests. For the second one we'll call real API. Let's write a simple test.
 
-{{< gist plutov a5f3e60575b05a6e44c239442cd707e8 >}}
+```go
+// +build integration
+
+package facest
+
+import (
+	"os"
+	"testing"
+
+	"github.com/stretchr/testify/assert"
+)
+
+func TestGetFaces(t *testing.T) {
+	c := NewClient(os.Getenv("FACEST_INTEGRATION_API_KEY"))
+
+	ctx := context.Background()
+	res, err := c.GetFaces(nil)
+
+	assert.Nil(t, err, "expecting nil error")
+	assert.NotNil(t, res, "expecting non-nil result")
+
+	assert.Equal(t, 1, res.Count, "expecting 1 face found")
+	assert.Equal(t, 1, res.PagesCount, "expecting 1 PAGE found")
+
+	assert.Equal(t, "integration_face_id", res.Faces[0].FaceID, "expecting correct face_id")
+	assert.NotEmpty(t, res.Faces[0].FaceToken, "expecting non-empty face_token")
+	assert.Greater(t, len(res.Faces[0].FaceImages), 0, "expecting non-empty face_images")
+}
+```
 
 Note that this test uses env. var where API Key is set. By doing this, we're making sure that they are not public. And later we can configure our build system to propagate this env. var using secrets.
 

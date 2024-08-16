@@ -12,7 +12,7 @@ This post is a text version of [packagemain #6: Building Desktop App in Go using
 As we all know, Go is mostly used to build APIs, web backends, CLI tools. But what's interesting is that Go can be used in places we were not expecting to see it.
 
 For example, we can build a Desktop App with Go and Vue.js using [Wails](https://wails.app) framework.
- 
+
 This framework is new and still in beta, but I was surprised how easy it was to develop, build and package an app with it.
 
 Wails provides the ability to wrap both Go code and a web frontend into a single binary. The Wails CLI makes this easy for you, by handling project creation, compilation, and bundling.
@@ -43,7 +43,7 @@ Our project consists of Go backend and Vue.js frontend. `main.go` will be our en
 
 There are 2 main components to share data between Backend and Frontend: Binding and Events.
 
-Binding is a single method that allows you to expose (bind) your Go code to the frontend. 
+Binding is a single method that allows you to expose (bind) your Go code to the frontend.
 
 Also, Wails provides a unified Events system similar to Javascript's native events system. This means that any event that is sent from either Go or Javascript can be picked up by either side. Data may be passed along with any event. This allows you to do neat things like have background processes running in Go and notifying the frontend of any updates.
 
@@ -54,7 +54,7 @@ Let's develop a backend part first, to get CPU Usage and send it to the frontend
 We will create a new package and define a type which I'll expose (bind) to the frontend.
 
 pkg/sys/sys.go:
-```
+```go
 package sys
 
 import (
@@ -179,7 +179,7 @@ mounted: function() {
 }
 ```
 
-## Gauge Bar 
+## Gauge Bar
 
 It would be nice to display CPU Usage with a gauge bar, so we will include a third party dependency for that, simply by using `npm`:
 
@@ -243,4 +243,3 @@ I really enjoyed working with `Wails`, and the Events concept makes it really ea
 Check it out at [wails.app](https://wails.app) or on Github at [github.com/wailsapp/wails](https://github.com/wailsapp/wails)
 
 [Full code for this article on GitHub](https://github.com/plutov/packagemain/tree/master/16-wails-desktop-app)
-

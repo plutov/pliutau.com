@@ -26,7 +26,27 @@ In this tutorial we'll deploy nginx server which will serve static files from GC
 
 Our Docker image should have `gcsfuse` binary in it, so here is our Dockerfile with nginx and gcsfuse:
 
-{{< gist plutov bb78a840a371e6e329e4ba3266b06d27 >}}
+```Dockerfile
+FROM golang:1.10.0-alpine AS gcsfuse
+
+RUN apk add --no-cache git
+ENV GOPATH /go
+RUN go get -u github.com/googlecloudplatform/gcsfuse
+
+FROM nginx:alpine
+
+RUN apk add --no-cache ca-certificates fuse
+
+COPY --from=gcsfuse /go/bin/gcsfuse /usr/local/bin
+
+# Bucket files will be mounted here
+RUN mkdir -p /usr/share/nginx/bucket-data
+
+# Or any other port you use in nginx.cong
+EXPOSE 3000
+
+CMD ["nginx", "-g", "daemon off;"]
+```
 
 ### Kubernetes Resources
 
@@ -38,10 +58,104 @@ We'll create the following resources:
 
 We'll use Container Lifecycle Hooks to mount and unmount GCS bucket.
 
-{{< gist plutov 4e13fd277f26d3cbe8954c359e49138c >}}
+```yaml
+#...
+
+securityContext:
+  privileged: true
+  capabilities:
+    add:
+      - SYS_ADMIN
+lifecycle:
+  postStart:
+    exec:
+      command: ["gcsfuse", "-o", "nonempty,allow_other", "bucket-name", "/usr/share/nginx/bucket-data"]
+  preStop:
+    exec:
+      command: ["fusermount", "-u", "/usr/share/nginx/bucket-data"]
+
+#...
+```
 
 Note, that we use `allow_other` FUSE option which overrides the security measure restricting file access to the user mounting the filesystem. This is needed specifically for nginx case, when nginx process is runnning with nginx user. You may remove this option for better security.
 
 All Kubernetes resources:
 
-{{< gist plutov 34d904edaa07d57bc0c1b84bc42114e4 >}}
+```yaml
+apiVersion: v1
+kind: Secret
+metadata:
+  name: sa-secret
+data:
+  sa_json: YOUR_SERVICE_ACCOUNT_BASE64_KEY
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gcs-k8s-example
+  labels:
+    app.kubernetes.io/name: gcs-k8s-example
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: gcs-k8s-example
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: gcs-k8s-example
+    spec:
+      volumes:
+      - name: sa-volume
+        secret:
+          secretName: sa-secret
+          items:
+          - key: sa_json
+            path: sa_credentials.json
+      containers:
+        - name: gcs-k8s-example
+          image: "YOUR_IMAGE:latest"
+          imagePullPolicy: Always
+          volumeMounts:
+          - name: sa-volume
+            mountPath: /etc/gcp
+            readOnly: true
+          ports:
+            - name: http
+              containerPort: 3000
+              protocol: TCP
+          env:
+            - name: GOOGLE_APPLICATION_CREDENTIALS
+              value: /etc/gcp/sa_credentials.json
+          securityContext:
+            privileged: true
+            capabilities:
+              add:
+                - SYS_ADMIN
+          lifecycle:
+            postStart:
+              exec:
+                command: ["gcsfuse", "-o", "nonempty,allow_other", "bucket-name", "/usr/share/nginx/bucket-data"]
+            preStop:
+              exec:
+                command: ["fusermount", "-u", "/usr/share/nginx/bucket-data"]
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: gcs-k8s-example
+  labels:
+    app.kubernetes.io/name: gcs-k8s-example
+spec:
+  type: NodePort
+  ports:
+    - port: 3000
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    app.kubernetes.io/name: gcs-k8s-example
+```

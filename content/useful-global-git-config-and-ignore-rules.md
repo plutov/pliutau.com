@@ -23,8 +23,6 @@ Shortcuts for `git clone`:
 ```
 [url "https://github.com/"]
     insteadOf = gh:
-[url "https://gist.github.com/"]
-    insteadOf = gist:
 [url "https://bitbucket.org/"]
     insteadOf = bb:
 ```

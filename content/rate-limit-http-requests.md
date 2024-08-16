@@ -15,7 +15,28 @@ In this tutorial, we'll create a simple middleware for rate limiting based on th
 
 Let's start with building a simple HTTP server, that has very simple endpoint. It could be a heavy endpoint, that's why we want to add a rate limit there.
 
-{{< gist plutov 6da1f4fcccf97c0c4282d81f20ba7391 >}}
+```go
+package main
+
+import (
+	"log"
+	"net/http"
+)
+
+func main() {
+	mux := http.NewServeMux()
+	mux.HandleFunc("/", okHandler)
+
+	if err := http.ListenAndServe(":8888", mux); err != nil {
+		log.Fatalf("unable to start server: %s", err.Error())
+	}
+}
+
+func okHandler(w http.ResponseWriter, r *http.Request) {
+	// Some very expensive database call
+	w.Write([]byte("alles gut"))
+}
+```
 
 In `main.go` we start the server on `:8888` and have a single endpoint `/`.
 
@@ -25,7 +46,64 @@ We will use `x/time/rate` Go package which provides a token bucket rate-limiter 
 
 Since we want to implement rate limiter per IP address, we will also need to maintain a map of limiters.
 
-{{< gist plutov 147290e88e4cd10c2850e542df4b5031 >}}
+```go
+package main
+
+import (
+	"sync"
+
+	"golang.org/x/time/rate"
+)
+
+// IPRateLimiter .
+type IPRateLimiter struct {
+	ips map[string]*rate.Limiter
+	mu  *sync.RWMutex
+	r   rate.Limit
+	b   int
+}
+
+// NewIPRateLimiter .
+func NewIPRateLimiter(r rate.Limit, b int) *IPRateLimiter {
+	i := &IPRateLimiter{
+		ips: make(map[string]*rate.Limiter),
+		mu:  &sync.RWMutex{},
+		r:   r,
+		b:   b,
+	}
+
+	return i
+}
+
+// AddIP creates a new rate limiter and adds it to the ips map,
+// using the IP address as the key
+func (i *IPRateLimiter) AddIP(ip string) *rate.Limiter {
+	i.mu.Lock()
+	defer i.mu.Unlock()
+
+	limiter := rate.NewLimiter(i.r, i.b)
+
+	i.ips[ip] = limiter
+
+	return limiter
+}
+
+// GetLimiter returns the rate limiter for the provided IP address if it exists.
+// Otherwise calls AddIP to add IP address to the map
+func (i *IPRateLimiter) GetLimiter(ip string) *rate.Limiter {
+	i.mu.Lock()
+	limiter, exists := i.ips[ip]
+
+	if !exists {
+		i.mu.Unlock()
+		return i.AddIP(ip)
+	}
+
+	i.mu.Unlock()
+
+	return limiter
+}
+```
 
 `NewIPRateLimiter` creates an instance of IP limiter, and HTTP server will have to call `GetLimiter` of this instance to get limiter for the specified IP (from the map or generate a new one).
 
@@ -35,7 +113,42 @@ Let's upgrade our HTTP Server and add middleware to all endpoints, so if IP has 
 
 In the `limitMiddleware` function we call the global limiter's `Allow()` method each time the middleware receives an HTTP request. If there are no tokens left in the bucket `Allow()` will return false and we send the user a 429 Too Many Requests response. Otherwise, calling `Allow()` will consume exactly one token from the bucket and we pass on control to the next handler in the chain.
 
-{{< gist plutov dc64347e0fb611c588e927bc48eb806c >}}
+```go
+package main
+
+import (
+	"log"
+	"net/http"
+)
+
+var limiter = NewIPRateLimiter(1, 5)
+
+func main() {
+	mux := http.NewServeMux()
+	mux.HandleFunc("/", okHandler)
+
+	if err := http.ListenAndServe(":8888", limitMiddleware(mux)); err != nil {
+		log.Fatalf("unable to start server: %s", err.Error())
+	}
+}
+
+func limitMiddleware(next http.Handler) http.Handler {
+	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		limiter := limiter.GetLimiter(r.RemoteAddr)
+		if !limiter.Allow() {
+			http.Error(w, http.StatusText(http.StatusTooManyRequests), http.StatusTooManyRequests)
+			return
+		}
+
+		next.ServeHTTP(w, r)
+	})
+}
+
+func okHandler(w http.ResponseWriter, r *http.Request) {
+	// Some very expensive database call
+	w.Write([]byte("alles gut"))
+}
+```
 
 ### Build & Run
 
@@ -55,7 +168,9 @@ brew install vegeta
 
 We need to create a simple config file saying what requests do we want to produce.
 
-{{< gist plutov a71235f9822ee927975715b0a2f13edc >}}
+```
+GET http://localhost:8888/
+```
 
 And then run attack for 10 seconds with 100 requests per time unit.
 

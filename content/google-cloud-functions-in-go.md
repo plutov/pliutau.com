@@ -19,7 +19,9 @@ The first step is to ensure that you have a Google Cloud Platform account with B
 
 Once you have setup your project, the next step is to enable the Google Cloud Functions API for your project. You can do it from Cloud Console or from your terminal using `gcloud` tool.
 
-{{< gist plutov 17e2f63ab56913ce3c8babf5b6a3fa23 >}}
+```
+gcloud services enable cloudfunctions.googleapis.com
+```
 
 ## HTTP function
 
@@ -27,23 +29,69 @@ It will be a simple HTTP function which generates a random number and sends it t
 
 Let's create our topic first:
 
-{{< gist plutov 6ea3a4903bbdfe8f55e461f6c137518b >}}
+```
+gcloud pubsub topics create randomNumbers
+```
 
 I will create a separate folder / package for this function.
 
-{{< gist plutov d4fffa879b7b2bd73043b0a8b7733d48 >}}
+```go
+package api
+
+import (
+	"context"
+	"math/rand"
+	"net/http"
+	"os"
+	"strconv"
+	"time"
+
+	"cloud.google.com/go/pubsub"
+)
+
+const topicName = "randomNumbers"
+
+// Send generates random integer and sends it to Cloud Pub/Sub
+func Send(w http.ResponseWriter, r *http.Request) {
+	ctx := context.Background()
+	client, err := pubsub.NewClient(ctx, os.Getenv("PROJECT_ID"))
+	if err != nil {
+		w.WriteHeader(http.StatusInternalServerError)
+		w.Write([]byte(err.Error()))
+		return
+	}
+
+	topic := client.Topic(topicName)
+
+	rand.Seed(time.Now().UnixNano())
+
+	result := topic.Publish(ctx, &pubsub.Message{
+		Data: []byte(strconv.Itoa(rand.Intn(1000))),
+	})
+	id, err := result.Get(ctx)
+	if err != nil {
+		w.WriteHeader(http.StatusInternalServerError)
+		w.Write([]byte(err.Error()))
+		return
+	}
+
+	w.WriteHeader(http.StatusCreated)
+	w.Write([]byte(id))
+}
+```
 
 Our package uses `cloud.google.com/go/pubsub` package, so let's initialize go modules.
 
-{{< gist plutov 0ac661fa07ad18118c7d3e3a4fc312bc >}}
-
-If you have external dependencies, you have to vendor them under the library package locally before deploying.
-
-{{< gist plutov 4af5afc694ea50b8bd7ba2c8bc529902 >}}
+```
+go mod init
+go mod tidy
+```
 
 Now it's time to deploy it:
 
-{{< gist plutov a111d43568788da8c32da8220b0b99b3 >}}
+```
+gcloud functions deploy api --entry-point Send --runtime go111 --trigger-http --set-env-vars PROJECT_ID=projectname-227718
+```
 
 Where `api` is a name, `Send` is an entrypoint function, `--trigger-http` tells that it is HTTP function. And we also set a PROJECT_ID env var.
 
@@ -51,23 +99,52 @@ The deployment may take few minutes.
 
 HTTP functions can be reached without an additional API gateway layer. Cloud Functions give you an HTTPS URL. After the function is deployed, you can invoke the function by entering the URL into your browser.
 
-{{< gist plutov a45bf5dde07e65023c9f771beb9d0319 >}}
+```
+availableMemoryMb: 256
+entryPoint: Send
+environmentVariables:
+  PROJECT_ID: projectname-227718
+httpsTrigger:
+  url: https://us-central1-projectname-227718.cloudfunctions.net/api
+```
 
 ## Background function
 
 Since Google Cloud background functions can be triggered from Pub/Sub, let's just write a function which will simply log a payload of event triggering it.
 
-{{< gist plutov 6abea7a8aa2ad97637d04527bac2405d >}}
+```go
+package consumer
+
+import (
+	"context"
+	"log"
+)
+
+type event struct {
+	Data []byte
+}
+
+// Receive func logs an event payload
+func Receive(ctx context.Context, e event) error {
+	log.Printf("%s", string(e.Data))
+
+	return nil
+}
+```
 
 Note: we don't need go modules in consumer.
 
 The deployment part is very similar to HTTP function, except how we're triggering this function.
 
-{{< gist plutov ae95d2bd55104383edc747df5285b1b4 >}}
+```
+gcloud functions deploy consumer --entry-point Receive --runtime go111 --trigger-topic=randomNumbers
+```
 
 Let's check logs now after execution.
 
-{{< gist plutov 3a6842564d0bc07a38dfe0b4d8a193ff >}}
+```
+gcloud functions logs read consumer
+```
 
 ## Conclusion
 
@@ -77,7 +154,11 @@ Please share your experience with Google Cloud Functions in Go, are you missing 
 
 To cleanup let's delete everything we created: function and pub/sub topic.
 
-{{< gist plutov 78ec3ac0b91d1820628de6f5459c8d52 >}}
+```
+gcloud functions delete api
+gcloud functions delete consumer
+gcloud pubsub topics delete randomNumbers
+```
 
 ## Video
 

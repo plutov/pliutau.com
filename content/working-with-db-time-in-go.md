@@ -11,13 +11,30 @@ This post shows how to work with DATETIME/DATE columns in DB and use Go standard
 
 MySQL, PostgreSQL drivers in Go provide this nullable type which represents a `time.Time` that may be NULL. `NullTime` implements the Scanner interface so it can be used as a scan destination:
 
-{{< gist plutov 7755871af7ac99b095e887ad55e0b28c >}}
+```go
+var nt mysql.NullTime
+err := db.QueryRow("SELECT time FROM foo WHERE id = ?", id).Scan(&nt)
+
+if nt.Valid {
+   // use nt.Time
+} else {
+   // NULL value
+}
+```
 
 ### Use parseTime=true
 
 Assuming you're using the `go-sql-driver/mysql`  you can ask the driver to scan `DATE` and `DATETIME` automatically to `time.Time`, by adding [parseTime=true](https://github.com/go-sql-driver/mysql#timetime-support) to your connection string.
 
-{{< gist plutov 1c1370a2053bef979628d89bdf5e138c >}}
+```go
+db, err := sql.Open("mysql", "root:@/?parseTime=true")
+
+var myTime time.Time
+
+db.QueryRow("SELECT current_timestamp()").Scan(&myTime)
+
+fmt.Println(myTime.Format(time.RFC3339))
+```
 
 ### It doesn't work with TIME column type
 

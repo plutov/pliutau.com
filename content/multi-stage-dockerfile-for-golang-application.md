@@ -15,7 +15,8 @@ Starting from Docker `v17.0.5` it *will* be possible to do it via single Dockerf
 ### Application
 
 Let's start with "Hello world" application:
-```
+
+```go
 package main
 
 import "fmt"
@@ -33,7 +34,7 @@ With multi-stage builds, a Dockerfile allows multiple FROM directives, and the i
 
 The `--from` flag uses a zero-based index for the stage. You either reference stages by using offsets (like `--from=0`) or by using names. To name a stage use the syntax FROM [image] as [name].
 
-```
+```Dockerfile
 FROM golang:1.8.1
 
 WORKDIR /go/src/github.com/plutov/golang-multi-stage/
