@@ -3,7 +3,7 @@ languageCode = "en"
 DefaultContentLanguage = "en"
 title = "Alex Pliutau Blog"
 theme = "anatole"
-summarylength = 10
+summarylength = 25
 enableEmoji = true
 enableRobotsTXT = true
 googleAnalytics = "G-J98HDV96R0"
@@ -11,6 +11,22 @@ gtagId = "G-J98HDV96R0"
 pygmentsUseClasses = true
 pygmentsCodeFences = true
 pygmentsCodefencesGuessSyntax = true
+
+[markup]
+[markup.highlight]
+anchorLineNos = false
+codeFences = true
+guessSyntax = false
+hl_Lines = ''
+hl_inline = false
+lineAnchors = ''
+lineNoStart = 1
+lineNos = false
+lineNumbersInTable = true
+noClasses = true
+noHl = false
+style = 'onedark'
+tabWidth = 4
 
 [params]
 googleAnalytics = "G-J98HDV96R0"
