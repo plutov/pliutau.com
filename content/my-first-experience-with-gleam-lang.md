@@ -206,7 +206,7 @@ fn process_website_recursively(
 }
 ```
 
-You may ask why to use recursion here? *There are no loops in Gleam!* I think I could live with that as long as it promises immutability and no side effects.
+You may ask why to use recursion here? **There are no loops in Gleam!** I think I could live with that as long as it promises immutability and no side effects.
 
 ## Running in different runtimes
 
@@ -243,11 +243,13 @@ pub fn parse_config_file_test() {
 }
 ```
 
-I wanted to name the filw differently but I couldn't. Does that mean I can't have multiple test files in Gleam?
+I wanted to name the file differently but I couldn't. Does that mean I can't have multiple test files in Gleam?
 
 ## IDE Support
 
 I am using Zed and it just asked me to integrate the Gleam Language Server and it worked well.
+
+![gleam-zed](/gleam-zed.png)
 
 ## Conclusion
 
