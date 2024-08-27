@@ -69,7 +69,7 @@ I chose this project as I could learn about the following aspects:
 Creating a new project:
 
 ```bash
-gleam new websites_checker2
+gleam new websites_checker
 ```
 
 This command creates a folder with a predefined structure. The boilerplate code is minimal, and I was able to start coding right away. Basically I focused on `src/websites_checker.gleam` and `test/websites_checker_test.gleam` files.
