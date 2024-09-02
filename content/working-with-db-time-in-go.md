@@ -1,8 +1,10 @@
 +++
 date = "2017-05-26T13:27:00+07:00"
 title = "Working with DB datetime/date columns in Go"
-tags = [ "go", "db", "golang", "mysql" ]
+tags = [ "go", "golang", "databases", "sql" ]
 type = "post"
+og_image = "/godefault.png"
+description = "How to work with DATETIME/DATE columns and use Go standard time.Time avoiding manual string parsing."
 +++
 
 This post shows how to work with DATETIME/DATE columns in DB and use Go standard `time.Time` avoiding manual string parsing. This article contains examples using 2 packages: `database/sql` and `github.com/go-sql-driver/mysql`.

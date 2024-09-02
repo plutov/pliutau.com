@@ -1,8 +1,10 @@
 +++
 date = "2016-04-07T09:17:49+07:00"
 title = "Working with DB nulls in Golang"
-tags = [ "Go", "DB" ]
+tags = [ "go", "golang", "databases", "sql" ]
 type = "post"
+og_image = "/godefault.png"
+descrription = "How to work with NULL values and Go structs using sql.NullString, sql.NullInt64, etc types."
 +++
 
 This post shows how to marshall NULL values from the database into Go struct and how to avoid mistakes during fetching optional values with SELECT query. I'll show standard types sql.NullString, sql.NullInt64, etc types.
