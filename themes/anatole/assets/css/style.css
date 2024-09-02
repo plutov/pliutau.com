@@ -1146,3 +1146,14 @@ a.btn {
 }
 
 /* (CONTACT) FORM END */
+
+/* Code Highlighting */
+.highlight > div {
+	border-radius: 8px;
+	padding: 0 1em;
+}
+
+.highlight > pre {
+	border-radius: 8px;
+	padding: 1em;
+}

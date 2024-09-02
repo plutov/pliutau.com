@@ -1,7 +1,7 @@
 baseURL = "https://pliutau.com"
 languageCode = "en"
 DefaultContentLanguage = "en"
-title = "Alex Pliutau Blog"
+title = "Alex Pliutau - Blog"
 theme = "anatole"
 summarylength = 25
 enableEmoji = true
@@ -90,9 +90,18 @@ name = "Newsletter"
 url = "https://packagemain.tech/"
 weight = 2
 
+[[menu.main]]
+name = "Now"
+url = "/now"
+weight = 3
+
 [deployment]
 
 [[deployment.targets]]
 name = "s3"
 URL = "s3://pliutau.com?region=us-east-1"
 cloudFrontDistributionID = "E1OWQZ20D426RZ"
+
+[[deployment.matchers]]
+pattern = "^.+\\.(html|xml|json)$"
+gzip = true

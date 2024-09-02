@@ -4,6 +4,7 @@ title = "Snake game in Go using Ebiten"
 tags = [ "go", "golang", "game", "ebiten" ]
 type = "post"
 og_image = "/ebitengopherandgame.png"
+description = "Creating a Snake game in Go using Ebiten library and running it in the browser with WebAssembly."
 +++
 ![Snake game in Go using Ebiten](https://ebitengine.org/images/gopherandgame.png)
 

@@ -4,6 +4,7 @@ title = "My first experience with Gleam Language"
 tags = [ "gleam", "erlang" ]
 type = "post"
 og_image = "/gleam.png"
+description = "This post shares my personal experience with the Gleam language."
 +++
 ![gleam-lang](/gleam.png)
 

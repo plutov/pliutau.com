@@ -18,5 +18,5 @@ Last year I started running on a regular basis and completed my first half marat
 
 ## Changelog
 
-- 2024-07-18: Initial now page
+- 2024-07-18: Add packagemain.tech
 - 2024-05-22: Initial now page
