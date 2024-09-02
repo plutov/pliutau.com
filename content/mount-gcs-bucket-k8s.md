@@ -2,8 +2,9 @@
 title = "Mounting Google Cloud Storage bucket to Kubernetes Pod"
 date = "2020-04-23T12:57:00+02:00"
 type = "post"
-tags = ["kubernetes", "k8s", "gcp", "gcs"]
+tags = ["kubernetes", "k8s", "google cloud", "gcp", "cloud storage", "gcs"]
 og_image = "/gcs-k8s.png"
+description = "Mounting Google Cloud Storage bucket to Kubernetes Pod using gcsfuse"
 +++
 ![Mounting Google Cloud Storage bucket to Kubernetes Pod](/gcs-k8s.png)
 
