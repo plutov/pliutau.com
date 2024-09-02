@@ -1,7 +1,7 @@
 +++
 date = 2024-09-02T13:00:00+02:00
 title = "An Ode to Logging"
-tags = [ "poetry", "logging , "tracing", "grafana" ]
+tags = [ "poetry", "logging" , "tracing", "grafana" ]
 type = "post"
 og_image = "/logging-poetry.png"
 description = "A funny poem about logging, tracing, and monitoring."
