@@ -92,7 +92,7 @@ weight = 2
 
 [[menu.main]]
 name = "Now"
-url = "/now"
+url = "/now/"
 weight = 3
 
 [deployment]
