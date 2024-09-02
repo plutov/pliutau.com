@@ -403,6 +403,8 @@ a:active {
 
 .post .post-content img {
 	max-width: 100%;
+	display: block;
+	margin: auto;
 }
 
 .post .post-footer {
