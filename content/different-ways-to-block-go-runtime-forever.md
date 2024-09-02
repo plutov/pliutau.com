@@ -1,17 +1,19 @@
 +++
 date = "2017-04-24T20:39:13+07:00"
 title = "Different ways to block Go runtime forever"
-tags = [ "Go", "Golang", "experiment" ]
+tags = [ "go", "golang" ]
 type = "post"
+og_image = "/godefault.png"
+description = "There are a lot of ways of blocking runtime forever, I will show all of them for better understanding of blocking in Go."
 +++
 
-The current design of Go's runtime assumes that the programmer is responsible for detecting when to terminate a goroutine and when to terminate the program. A program can be terminated in a normal way by calling `os.Exit` or by returning from the `main()` function. There are a lot of ways of blocking runtime forever, I will show all of them for better understanding of blocking in Go.
+The design of Go's runtime assumes that the programmer is responsible for detecting when to terminate a goroutine and when to terminate the program. Normally, a program can be terminated in a normal way by calling `os.Exit` or by returning from the `main()` function. There are a lot of ways of blocking runtime forever, I will show all of them for better understanding of blocking in Go.
 
 ### 1. Using sync.WaitGroup
 
 Wait blocks until the WaitGroup counter is zero.
 
-```
+```go
 package main
 
 import "sync"
@@ -27,7 +29,7 @@ func main() {
 
 An empty `select{}` statement blocks indefinitely i.e. forever. It is similar and in practice equivalent to an empty `for{}` statement.
 
-```
+```go
 package main
 
 func main() {
@@ -39,7 +41,7 @@ func main() {
 
 The easiest way which will use 100% of CPU.
 
-```
+```go
 package main
 
 func main() {
@@ -51,7 +53,7 @@ func main() {
 
 If the lock is already in use, the calling goroutine blocks until the mutex is available.
 
-```
+```go
 package main
 
 import "sync"
@@ -67,7 +69,7 @@ func main() {
 
 Empty channels will block until there is something to receive.
 
-```
+```go
 package main
 
 func main() {
@@ -80,7 +82,7 @@ func main() {
 
 Works for channels created without `make`.
 
-```
+```go
 package main
 
 func main() {
