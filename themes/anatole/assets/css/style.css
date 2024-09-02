@@ -424,7 +424,7 @@ a:active {
 }
 
 .post .post-footer .info .separator a {
-	margin-right: 0.2em;
+	margin-right: 1em;
 }
 
 .post .post-footer .meta .info .date {
@@ -453,10 +453,6 @@ a:active {
 
 .post figure.big {
 	max-width: 100vw;
-}
-
-.info {
-	margin: 1em;
 }
 
 .info span {
