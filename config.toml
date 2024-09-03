@@ -75,7 +75,7 @@ url = "http://linkedin.com/in/pltvs"
 [[params.socialIcons]]
 icon = "fas fa-envelope"
 title = "e-mail"
-url = "mailto:a@pliutau.com"
+url = "mailto:alex.pliutau@gmail.com"
 
 ## Menu items
 [menu]
