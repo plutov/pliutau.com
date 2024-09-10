@@ -391,9 +391,10 @@ a:active {
 .post .post-content a {
 	text-decoration: none;
 	letter-spacing: 1px;
-	color: #2660ab;
+	color: #2f69b3;
 	overflow-wrap: break-word;
 	word-wrap: break-word;
+	font-weight: 600;
 }
 
 .post .post-content a:hover {
@@ -1081,6 +1082,10 @@ a.btn {
 	.sidebar {
 		padding-left: 15%;
 		width: 25%;
+	}
+	.page-top {
+		width: 35%;
+		right: 25%;
 	}
 }
 
