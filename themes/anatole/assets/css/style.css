@@ -51,13 +51,14 @@ body {
 }
 
 p {
-	line-height: 1.9em;
+	line-height: 1.8em;
 	font-weight: 400;
 	font-size: 15px;
 }
 
-.post-content ul > li {
-	line-height: 1em;
+.post-content ul > li,
+.post-content ol > li {
+	line-height: 1.8em;
 }
 
 a {
@@ -308,7 +309,7 @@ a:active {
 
 .sidebar .logo-title .title h3 {
 	text-transform: uppercase;
-	font-size: 2rem;
+	font-size: 12px;
 	font-weight: bold;
 	letter-spacing: 2px;
 	line-height: 1;

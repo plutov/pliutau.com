@@ -5,13 +5,12 @@ type = "post"
 tags = ["go", "golang", "api"]
 og_image = "/api-client.jpg"
 +++
-![Writing REST API Client in Go](/api-client.jpg)
 
 API clients are very helpful when you're shipping your REST APIs to the public. And Go makes it easy, for you as a developer, as well as for your users, thanks to its idiomatic design and type system. But what defines a good API client?
 
 In this tutorial, we're going to review some best practices of writing a good SDK in Go.
 
-We'll be using [Facest.io API](https://docs.facest.io) as an example.
+We'll be using [Facest.io API](https://docs.facest.io) (this project is shut down) as an example.
 
 Before we begin to write any code, we should study the API to understand the main aspects of it such as:
 
