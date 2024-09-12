@@ -1,7 +1,7 @@
 +++
 date = "2016-07-21T07:52:29+07:00"
 title = "Concurrency. Data race"
-tags = [ "Go", "Concurrency" ]
+tags = [ "golang", "concurrency" ]
 type = "post"
 +++
 What does data race mean in Golang? Data race is a common mistake in concurrent systems. A data race occurs when two goroutines access the same variable concurrently and at least one of the accesses is a write. It’s really hard to recognize it without specific tools or without an eagle eye, because when you run a program it’s always a chance that you won’t see your mistake or it will be very transparent.

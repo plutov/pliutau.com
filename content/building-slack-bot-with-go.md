@@ -2,7 +2,7 @@
 title = "Building a Slack Bot with Go and Wit.ai"
 date = "2018-05-23T08:27:36+07:00"
 type = "post"
-tags = ["go", "bot", "slack", "nlu", "wit", "packagemain"]
+tags = ["golang", "bot", "slack", "nlu", "wit", "packagemain.tech"]
 og_image = "/wit.jpg"
 +++
 

@@ -1,7 +1,7 @@
 +++
 date = "2016-09-22T17:23:43+07:00"
 title = "Memory leaks with mux.Router in Go"
-tags= [ "Go", "Memory", "Profiling" ]
+tags= [ "golang", "memory", "profiling" ]
 type = "post"
 +++
 Today we found that our web server written in Go has memory leaks and consume around 300M of memory, which is really a lot for our app. After restart it's back to ~10M but each hour increased by few more. Golang has nice built-in tools to debug and find leaks.

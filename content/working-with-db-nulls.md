@@ -1,7 +1,7 @@
 +++
 date = "2016-04-07T09:17:49+07:00"
 title = "Working with DB nulls in Golang"
-tags = [ "go", "golang", "databases", "sql" ]
+tags = [ "golang", "databases", "sql" ]
 type = "post"
 og_image = "/godefault.png"
 descrription = "How to work with NULL values and Go structs using sql.NullString, sql.NullInt64, etc types."

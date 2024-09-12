@@ -2,7 +2,7 @@
 title: "Logging in Go using logrus"
 date: 2021-04-12T09:23:54+02:00
 type: "post"
-tags: ["go", "golang", "logging", "logs", "logrus"]
+tags: ["golang", "logging", "logs", "logrus"]
 og_image: "/22.png"
 ---
 

@@ -1,7 +1,7 @@
 +++
 date = "2016-10-03T12:27:19+07:00"
 title = "Swaggerize your APIs"
-tags = [ "Go", "Swaggger" ]
+tags = [ "golang", "swaggger" ]
 type = "post"
 +++
 

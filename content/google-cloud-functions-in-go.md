@@ -2,7 +2,7 @@
 title = "Google Cloud Functions in Go"
 date = "2019-01-21T09:15:41+01:00"
 type = "post"
-tags = ["go", "gcp", "google cloud functions"]
+tags = ["golang", "google cloud", "google cloud functions"]
 og_image = "/googlecloudfu.png"
 +++
 ![googlecloudfu.png](/googlecloudfu.png)

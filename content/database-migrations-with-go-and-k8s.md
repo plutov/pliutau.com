@@ -2,7 +2,7 @@
 title = "Database Migrations with Go and Kubernetes"
 date = "2019-02-18T11:41:00+01:00"
 type = "post"
-tags = ["go", "k8s", "golang", "kubernetes", "database"]
+tags = ["golang", "kubernetes", "database", "mysql"]
 +++
 Applications with database layer mostly need to execute database migration as part of its deployment process. Usually, running migrations is the first step when deploying the application.
 

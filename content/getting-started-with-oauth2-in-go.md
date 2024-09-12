@@ -2,7 +2,7 @@
 title = "Getting Started with OAuth2 in Go"
 date = "2018-05-30T14:48:29+07:00"
 type = "post"
-tags = ["go","oauth2"]
+tags = ["golang","oauth2"]
 og_image = "/oauth2.jpg"
 +++
 ![oauth2](/oauth2.jpg)

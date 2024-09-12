@@ -1,7 +1,7 @@
 +++
 date = "2017-04-04T20:45:14+07:00"
 title = "How to build Go plugin with data inside"
-tags = [ "Go", "Plugins", "Golang", "go-bindata" ]
+tags = [ "golang", "plugins" ]
 type = "post"
 +++
 Go 1.8 gives us a new tool for creating shared libraries, called plugins! This new plugin buildmode is currently only supported on Linux. But what if we build plugin with data in binary format inside? So we can ship only one `.so` file.

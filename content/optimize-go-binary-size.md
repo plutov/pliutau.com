@@ -1,7 +1,7 @@
 +++
 date = "2016-03-01T10:18:54+07:00"
 title = "Optimize Go binary size"
-tags = [ "Go", "ldflags" ]
+tags = [ "golang", "binary" ]
 type = "post"
 +++
 

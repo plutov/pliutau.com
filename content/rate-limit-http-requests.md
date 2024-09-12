@@ -2,7 +2,7 @@
 title = "Rate Limiting HTTP Requests in Go based on IP address"
 date = "2019-08-09T10:52:38+02:00"
 type = "post"
-tags = ["go", "golang", "http", "ratelimit"]
+tags = ["golang", "http", "ratelimit"]
 +++
 
 If you are running HTTP server and want to rate limit requests to the endpoints, you can use well-maintained tools such as [github.com/didip/tollbooth](https://github.com/didip/tollbooth). But if you're building something very simple, it's not that hard to implement it on your own.

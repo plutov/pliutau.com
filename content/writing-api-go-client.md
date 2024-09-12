@@ -2,7 +2,7 @@
 title = "Writing REST API Client in Go"
 date = "2020-04-27T12:36:20+02:00"
 type = "post"
-tags = ["go", "golang", "api"]
+tags = ["golang", "api"]
 og_image = "/api-client.jpg"
 +++
 

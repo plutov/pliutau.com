@@ -2,7 +2,7 @@
 title = "Snake over Telnet in Go"
 date = "2017-10-13T16:37:59+07:00"
 type = "post"
-tags = ["go","telnet"]
+tags = ["golang","telnet"]
 og_image = "/godefault.png"
 +++
 Telnet games were very popular some time ago, especially this Star Wars movie: `telnet towel.blinkenlights.nl`.

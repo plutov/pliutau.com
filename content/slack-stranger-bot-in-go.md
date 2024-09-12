@@ -2,7 +2,7 @@
 title = "Slack Stranger Bot in Go"
 date = "2017-10-12T10:17:18+07:00"
 type = "post"
-tags = ["go","slack"]
+tags = ["golang","slack"]
 og_image = "/wizeline-random.png"
 +++
 ![wizeline-random.png](/wizeline-random.png)

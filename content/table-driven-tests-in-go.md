@@ -2,7 +2,7 @@
 title = "Table driven tests in Go"
 date = "2018-08-07T11:02:46+07:00"
 type = "post"
-tags = ["testing", "go"]
+tags = ["testing", "golang"]
 og_image = "/table.png"
 +++
 ![Table driven tests in Go](/table.png)

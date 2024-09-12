@@ -1,7 +1,7 @@
 +++
 date = "2016-02-05T18:08:43+07:00"
 title = "Quiz yourself in Golang. Part 1"
-tags = [ "Go", "Testing" ]
+tags = [ "golang", "testing" ]
 type = "post"
 +++
 30 basic questions to measure your Golang knowledge. Answers and .go files you can find on [GitHub page](https://github.com/logpacker/go-questions).

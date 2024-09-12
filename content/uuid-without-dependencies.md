@@ -1,7 +1,7 @@
 +++
 date = "2016-08-26T14:17:34+07:00"
 title = "UUID without dependencies in Go"
-tags = [ "Go", "glide" ]
+tags = [ "golang", "glide" ]
 type = "post"
 +++
 

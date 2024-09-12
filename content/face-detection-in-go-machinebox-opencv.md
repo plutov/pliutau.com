@@ -2,7 +2,7 @@
 title = "Face Detection in Go using OpenCV and MachineBox"
 date = "2018-01-19T10:32:25+07:00"
 type = "post"
-tags = ["go", "machine learning", "face detection", "golang", "machinebox", "opencv"]
+tags = ["golang", "machine learning", "face detection", "machinebox", "opencv"]
 og_image = "/DETECT.jpg"
 +++
 ![Face Detection in Go using OpenCV and MachineBox](/DETECT.jpg)

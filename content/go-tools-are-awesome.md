@@ -2,7 +2,7 @@
 title = "Go tools are awesome"
 date = "2017-12-11T10:39:55+07:00"
 type = "post"
-tags = ["go"]
+tags = ["golang"]
 og_image = "/gotools.jpeg"
 +++
 ![gotools](/gotools.jpeg)

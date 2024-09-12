@@ -2,7 +2,7 @@
 title = "Building Desktop App in Go using Wails"
 date = "2019-05-06T21:27:13+02:00"
 type = "post"
-tags = ["go", "golang", "vuejs", "wails"]
+tags = ["golang", "vuejs", "wails"]
 og_image = "/desktop+wails.jpg"
 +++
 ![desktop+wails.jpg](/desktop+wails.jpg)

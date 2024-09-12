@@ -2,7 +2,7 @@
 title = "Building Google Home Action in Go"
 date = "2018-04-02T16:07:19+07:00"
 type = "post"
-tags = ["go","google home","google assistant","google cloud platform"]
+tags = ["golang","google home","google assistant","google cloud platform"]
 og_image = "/grpc-json.png"
 +++
 ![Building Google Home Action in Go](/GoogleHome1.jpg)

@@ -1,6 +1,6 @@
 +++
 date = "2017-03-27T14:26:12+07:00"
-tags = ["Go","html/template","go-bindata"]
+tags = ["golang","html"]
 title = "How to use go-bindata with html/template"
 type = "post"
 +++

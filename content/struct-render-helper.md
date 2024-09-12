@@ -1,7 +1,7 @@
 +++
 date = "2016-09-08T10:17:34+07:00"
 title = "Go templates. Helper to render a struct"
-tags = [ "Go" ]
+tags = [ "golang" ]
 type = "post"
 +++
 

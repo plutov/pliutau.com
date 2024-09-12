@@ -1,6 +1,6 @@
 +++
 date = "2017-10-08T14:48:53+07:00"
-tags = ["go","grpc","rest"]
+tags = ["golang","grpc","rest"]
 title = "Benchmarking gRPC+Protobuf vs HTTP+JSON in Go"
 type = "post"
 og_image = "/grpc-json.png"

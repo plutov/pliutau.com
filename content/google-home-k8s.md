@@ -2,7 +2,7 @@
 title = "Google Home Action to manage your Kubernetes cluster"
 date = "2019-08-26T12:22:12+02:00"
 type = "post"
-tags = ["google home", "google assistant", "kubernetes", "k8s", "golang", "go", "dialogflow"]
+tags = ["google home", "google assistant", "kubernetes", "golang", "dialogflow"]
 +++
 
 I always wanted to find a good use case of Google Home to make some DevOps tasks funnier. For example voice deployments, system metrics, etc. Since I use Kubernetes a lot, I thought it would be fun to control it via voice commands.

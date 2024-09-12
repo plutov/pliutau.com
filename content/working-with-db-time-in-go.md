@@ -1,7 +1,7 @@
 +++
 date = "2017-05-26T13:27:00+07:00"
 title = "Working with DB datetime/date columns in Go"
-tags = [ "go", "golang", "databases", "sql" ]
+tags = [ "golang", "databases", "sql" ]
 type = "post"
 og_image = "/godefault.png"
 description = "How to work with DATETIME/DATE columns and use Go standard time.Time avoiding manual string parsing."

@@ -1,7 +1,7 @@
 +++
 date = "2017-04-24T20:39:13+07:00"
 title = "Different ways to block Go runtime forever"
-tags = [ "go", "golang" ]
+tags = [ "golang" ]
 type = "post"
 og_image = "/godefault.png"
 description = "There are a lot of ways of blocking runtime forever, I will show all of them for better understanding of blocking in Go."

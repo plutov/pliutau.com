@@ -2,7 +2,7 @@
 title = "Writing testable Go code"
 date = "2020-05-04T21:34:44+02:00"
 type = "post"
-tags = ["go", "golang", "testing", "unittesting"]
+tags = ["golang", "testing", "unittesting"]
 og_image = "/testable-go.jpg"
 +++
 ![Writing testable Go code](/testable-go.jpg)
