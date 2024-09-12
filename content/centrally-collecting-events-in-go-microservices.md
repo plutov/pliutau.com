@@ -79,8 +79,6 @@ syntax = "proto3";
 
 package event;
 
-option go_package = "github.com/12traits/logeater/pkg/event";
-
 service Event {
     rpc Push (EventEntry) returns (EventResponse) {}
 }
