@@ -3,7 +3,7 @@ title = "Centrally Collecting Events from Go Microservices"
 date = 2024-09-12T13:00:00+02:00
 type = "post"
 tags = ["golang", "microservices", "bigquery", "metabase", "grpc"]
-og_image = "/godefault.png"
+og_image = "/logeater/cover.png"
 +++
 
 In the beginning at [Solsten](https://solsten.io) our engineering team focused on building products, tools, services but we never had the time to measure what was going on in our platform (it was an early-stage startup). Even though we had a feeling of what was right or not thanks to our customers, the pain grew too strong and forced our department to allocate time in order to measure things.
