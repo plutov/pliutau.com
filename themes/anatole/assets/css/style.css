@@ -61,6 +61,10 @@ p {
     line-height: 1.8em;
 }
 
+.post-content p code {
+    background-color: #a7f1e9;
+}
+
 a {
     text-decoration: none;
 }
@@ -1316,6 +1320,7 @@ html[data-theme="dark"] {
 .chroma {
     color: #abb2bf;
     background-color: #282c34;
+    line-height: 1.5em;
 }
 /* Other */
 .chroma .x {
