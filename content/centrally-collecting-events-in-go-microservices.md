@@ -34,7 +34,7 @@ service: Which service this event comes from
 type: A namespaced type (ex: cart.add, cart.remove, cart.reset)
 ```
 
-More specific columns are also added since our core business works around the concepts of companies, dashboards, segments and users. However, they are optional and sometimes not required as not all our verticals require them.
+More specific columns are also added. However, they are optional and sometimes not required as not all our verticals require them.
 
 ### Namespaces
 
@@ -90,10 +90,7 @@ message EventEntry {
     string service = 2;
     string type = 3;
     optional string user_id = 4;
-    optional string company_id = 5;
-    optional string dashboard_id = 6;
-    optional string segment_id = 7;
-    optional string details = 8;
+    optional string details = 5;
 }
 
 message EventResponse {
