@@ -19,13 +19,13 @@ So I wrote this Stranger Bot to meet strangers in your Slack, explore new people
  - Bot will forward all next messages sent by user to Bot to the Stranger user. Without mentioning who sent this message.
  - Any user can type `Bye` to finish the conversation, and type `Hi` again to start a new random one.
 
-Here is an example of how it works at Wizeline:
+Here is an example of how it works at my company:
 
 > **alex.pliutau** [10:29 PM]
 >
 > hi
 >
-> **Random WizelinerAPP** [10:29 PM]
+> **Stranger Bot** [10:29 PM]
 >
 > Connecting to a random Stranger ...
 >
@@ -39,7 +39,7 @@ Here is an example of how it works at Wizeline:
 >
 > So it will work to find random person to talk
 >
-> **Random WizelinerAPP** [10:31 PM]
+> **Stranger Bot** [10:31 PM]
 >
 > wat
 >
@@ -49,21 +49,21 @@ Here is an example of how it works at Wizeline:
 >
 > bye
 >
-> **Random WizelinerAPP** [10:31 PM]
+> **Stranger Bot** [10:31 PM]
 >
 > Bye! You finished conversation with the Stranger. Type hi again if you want to start a new random one.
 >
-> **Random WizelinerAPP** [10:31 PM]
+> **Stranger Bot** [10:31 PM]
 >
 > Bye! You finished conversation with the Stranger. Type "hi" again if you want to start a new random one.
 
 ### Try it
 
-- Clone [slack-stranger-bot](https://github.com/wizeline/slack-stranger-bot)
+- Clone [slack-stranger-bot](https://github.com/plutov/slack-stranger-bot)
 - Create App in Slack and copy `API Token`
 - Install [Docker](https://docs.docker.com/engine/installation/)
 - Run `docker build -t stranger . && docker run stranger -e SLACK_TOKEN=<token>` with a valid token
 
 ### Contribute
 
-All code is open sourced. Feel free to [contribute](https://github.com/wizeline/slack-stranger-bot/pulls) or raise an [issue](https://github.com/wizeline/slack-stranger-bot/issues).
+All code is open sourced. Feel free to [contribute](https://github.com/plutov/slack-stranger-bot).

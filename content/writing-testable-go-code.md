@@ -110,8 +110,8 @@ func TestGetAverageStarsPerRepo(t *testing.T) {
 
 	for _, tt := range tests {
 		t.Run(tt.username, func(t *testing.T) {
-            got, err := GetAverageStarsPerRepo(tt.username)
-            // Don't omit errors even in tests
+      got, err := GetAverageStarsPerRepo(tt.username)
+      // Don't omit errors even in tests
 			if err != nil {
 				t.Errorf("expecting nil err, got %v", err)
 			}

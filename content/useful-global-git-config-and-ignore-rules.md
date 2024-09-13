@@ -11,16 +11,16 @@ I am working with `git` every single day, from different machines and accounts. 
 
 ### ~/.gitconfig
 
-I have user-specific configuration located in `~/.gitconfig`, you can check it [here](https://github.com/plutov/gitbootstrap/blob/master/.gitconfig).
+I have user-specific configuration located in `~/.gitconfig`. Common exclude rules, ignoring temporary files, IDE files, logs, binary files, etc. You don't want to see them in repository, right?
 
-Common exclude rules, ignoring temporary files, IDE files, logs, binary files, etc. You don't want to see them in repository, right?
-```
+```bash
 [core]
     excludesfile = ~/.gitignore
 ```
 
 Shortcuts for `git clone`:
-```
+
+```bash
 [url "https://github.com/"]
     insteadOf = gh:
 [url "https://bitbucket.org/"]
@@ -33,7 +33,8 @@ git clone gh:plutov/gitbootstrap
 ```
 
 Then I have colors setup and diff tool setup:
-```
+
+```bash
 [color]
     ui = auto
     interactive = auto
@@ -62,7 +63,8 @@ Then I have colors setup and diff tool setup:
 ```
 
 And some useful aliases:
-```
+
+```bash
 [alias]
     # ...
     reh = reset --hard
