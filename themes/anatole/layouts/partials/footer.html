@@ -1,5 +1,2 @@
-{{- partial "medium-zoom.html" . -}}
-{{- partial "math.html" . -}}
-{{- if and (hugo.IsProduction) (.Site.Params.gtagId) -}}
-    {{ partial "google-analytics-gtag-async.html" . }}
-{{- end -}}
+{{- if and (hugo.IsProduction) (.Site.Params.gtagId) -}} {{ partial
+"google-analytics-gtag-async.html" . }} {{- end -}}

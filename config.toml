@@ -45,12 +45,6 @@ mainSections = ["post"]
 doNotLoadAnimations = false
 displayMode = "light"
 
-[params.simpleAnalytics]
-
-[params.math]
-enable = false # options: true, false. Enable math support globally, default: false. You can always enable math on per page.
-use = "katex" # options: "katex", "mathjax". default is "katex".
-
 ## Social links
 # use 'fab' when brand icons, use 'fas' when standard solid icons.
 [[params.socialIcons]]
@@ -72,11 +66,6 @@ url = "https://twitter.com/pliutau"
 icon = "fab fa-linkedin"
 title = "Linkedin"
 url = "http://linkedin.com/in/pltvs"
-
-[[params.socialIcons]]
-icon = "fas fa-envelope"
-title = "e-mail"
-url = "mailto:alex.pliutau@gmail.com"
 
 ## Menu items
 [menu]
