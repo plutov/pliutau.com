@@ -239,4 +239,4 @@ You can find the full source code [here](https://github.com/plutov/websites_moni
 
 - [Discuss this post on OCaml Community Forum](https://discuss.ocaml.org/t/my-first-experience-with-ocaml/15297)
 - [Discuss this post on Hacker News](https://news.ycombinator.com/item?id=41568762)
-- [Discuss this post on X](https://x.com/pliutau)
+- [Discuss this post on X](https://x.com/pliutau/status/1836067286303617237)
