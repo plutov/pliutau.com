@@ -29,6 +29,8 @@ websites:
     interval: 10
 ```
 
+You can find the full source code [here](https://github.com/plutov/websites_monitoring).
+
 ### Installing OCaml
 
 OCaml comes with two compilers: one translating sources into native binaries and another turning sources into a bytecode format. It offers a great runtime performance and has always been exceptionally reliable and stable.
@@ -230,3 +232,5 @@ Will I be confident deploying this program to production? Probably not. But it k
 Was my journey learning OCaml and doing first steps easy? Probably not. I wish the documentation was easily accessible for the newcomers and structured better. Ideally in one place.
 
 But definitely it was enjoyable and I am 100% sure I will be continuing playing with OCaml and maybe publish some libraries.
+
+You can find the full source code [here](https://github.com/plutov/websites_monitoring).
