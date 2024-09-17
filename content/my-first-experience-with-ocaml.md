@@ -15,11 +15,11 @@ Please keep in mind that I am relatively new to functional programming and mainl
 
 I started with the [official documentation](https://ocaml.org/docs), which was enough to get an overview of the language and its type model, install the development tools and compile a small "hello world" application. However as I dove deeper I discovered other resources as well, such as [Real World OCaml](https://dev.realworldocaml.org/), [OCamlverse](https://ocamlverse.net/), [OCaml Operators](https://www.craigfe.io/operator-lookup/) where I could find the information I couldn't find on the official page.
 
-It all gave me a feeling that there is a need for more better structured resources (especially for newcomers), which should probably live on the official website. Ideally with some interactive step-by-step language tour.
+It all gave me a feeling that there is a need for better-structured resources (especially for newcomers), which should probably live on the official website. Ideally with some interactive step-by-step language tour.
 
 ### Program
 
-My idea was to build a daemon that receives a Yaml configuration with the list of websites and monitors them concurrently, the results are stored in SQLite database afterwards.
+My idea was to build a daemon that receives a Yaml configuration with the list of websites and monitors them concurrently, the results are stored in SQLite database afterward.
 
 ```yaml
 websites:
@@ -73,7 +73,7 @@ websites_monitoring/
 └── websites_monitoring.opam
 ```
 
-As you can see there are 3 `dune` files, one `dune-project` file and one `websites_monitoring.opam` file, all of them responsible for building and managing dependencies. It felt like extra work when I had to chnage **lib** dependencies, I had to add them to both `lib/dube` and `dune-project` files as well as run `dune build @install` which updates `websites_monitoring.opam`.
+As you can see there are 3 `dune` files, one `dune-project` file and one `websites_monitoring.opam` file, all of them responsible for building and managing dependencies. It felt like extra work when I had to change **lib** dependencies, I had to add them to both `lib/dune` and `dune-project` files as well as run `dune build @install` which updates `websites_monitoring.opam`.
 
 Once I added some pseudo code it was time to build an executable:
 
@@ -165,7 +165,7 @@ let get_websites_from_file(config_filename: string) : website list =
 
 Since I have the list of websites I wanted to process each website concurrently with some interval between runs. I couldn't use `Domains` for that, because the amount of websites could be larger than the amount of cores available.
 
-It seems there are [many libraries](https://ocamlverse.net/content/parallelism.html) to implement concurrency or parallelism in OCaml and it's not abvious what to use. I think that it's the case with OCaml in general, the stdlib is quite minimal and there are many small independent libraries. Which is not an issue maybe, but hard to navigate especially for newcomers.
+It seems there are [many libraries](https://ocamlverse.net/content/parallelism.html) to implement concurrency or parallelism in OCaml and it's not obvious what to use. I think that it's the case with OCaml in general, the stdlib is quite minimal and there are many small independent libraries. Which is not an issue maybe, but hard to navigate especially for newcomers.
 
 So I went with [domainslib](https://github.com/ocaml-multicore/domainslib) library:
 
@@ -225,8 +225,8 @@ ENTRYPOINT ["/home/opam/websites_monitoring/_build/install/default/bin/monitorin
 
 ### Conclusion
 
-Will I be confident deploying this program to production? Probably not. But it kinda works. I would like to unserstand the domainslib better and maybe try few other approaches. And probably run some performance tests.
+Will I be confident deploying this program to production? Probably not. But it kinda works. I would like to understand the domainslib better and maybe try few other approaches. And probably run some performance tests.
 
-Was my journey learning OCaml and doing first steps easy? Probably not. I wish the documentation was easier accessible for the newcomers and structured better. Ideally in one place.
+Was my journey learning OCaml and doing first steps easy? Probably not. I wish the documentation was easily accessible for the newcomers and structured better. Ideally in one place.
 
 But definitely it was enjoyable and I am 100% sure I will be continuing playing with OCaml and maybe publish some libraries.
