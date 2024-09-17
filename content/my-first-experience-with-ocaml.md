@@ -205,6 +205,32 @@ I actually spent a lot of time battling the `segmentation fault` error because t
 
 It was actually hard to find a library that does synchronous HTTP calls, everything uses LWT or Async.
 
+### Tests
+
+There seem to be different ways of defining your tests, but I went with a simple approach of running the tests manually in let():
+
+```ocaml
+open Monitoring
+
+let test_get_websites_from_file () =
+  let websites = Config.get_websites_from_file "test_websites.yaml" in
+  assert (List.length websites = 2);
+
+  let first = List.hd websites in
+  assert (first.url = "https://ocaml.org");
+  assert (first.interval = 20)
+
+let () =
+  Unix.chdir "../../../test/";
+  test_get_websites_from_file ();
+```
+
+And then I could run:
+
+```bash
+dune runtest
+```
+
 ### Containerization
 
 `ocaml/opam` Docker image works well and I was able to quickly put my application into a container. I don't plan to deploy this app, so didn't worry much about multi-stage builds for now, just wanted to make sure it works.
