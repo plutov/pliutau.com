@@ -7,7 +7,11 @@
                 src="{{ .Site.Params.profilePicture | relURL }}"
                 alt="profile picture"
             />
-            <h3 title=""><a href="/">{{ .Site.Params.Title }}</a></h3>
+            <h3 title="">
+                <a href="/">
+                    Hi <span class="wave">👋</span>,<br />I'm Alex Pliutau
+                </a>
+            </h3>
             <div class="description">
                 <p>
                     {{ replace .Site.Params.description "\n" "<br />" | safeHTML
