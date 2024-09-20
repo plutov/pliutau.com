@@ -264,3 +264,7 @@ I enjoyed writing this project in Gleam. My favorite parts were:
 Learning Gleam has given me a lot of ideas and I'm looking forward to writing more projects in it.
 
 You can see the full code in the [websites_checker repository](https://github.com/plutov/websites_checker) and please reach out to me if you have any suggestions for it.
+
+## Conclusion
+
+- [Discuss this post on X](https://x.com/pliutau/status/1828394149508165959)
