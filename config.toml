@@ -67,6 +67,11 @@ icon = "fab fa-linkedin"
 title = "Linkedin"
 url = "http://linkedin.com/in/pltvs"
 
+[[params.socialIcons]]
+icon = "fas fa-envelope"
+title = "Email"
+url = "mailto:alex.pliutau@gmail.com"
+
 ## Menu items
 [menu]
 
