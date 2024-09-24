@@ -29,7 +29,7 @@ html[data-theme="dark"] {
     --form-button-hover-border-color: #fff;
     --pre-bg-color: rgb(33, 33, 45);
     --nav-text-color: rgb(191, 191, 191);
-    --tag-color: rgb(191, 191, 191);
+    --tag-color: #000;
     --blockquote-text-color: #808080;
     --blockquote-border-color: #424242;
 }
@@ -107,6 +107,7 @@ p {
 
 .post-content p code {
     background-color: #a7f1e9;
+    color: var(--tag-color);
 }
 
 a {
@@ -526,7 +527,7 @@ html[data-theme="dark"] .theme-switch-item span:after {
 
 .post .post-footer .meta a {
     text-decoration: none;
-    color: var(--body-color);
+    color: var(--tag-color);
 }
 
 .post .post-footer .meta a:hover {
