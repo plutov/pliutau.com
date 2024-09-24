@@ -284,8 +284,15 @@ a:active {
 
 .theme-switch-item {
     float: right;
-    font-size: 2em;
     margin-top: -5px;
+}
+
+html[data-theme="light"] .theme-switch-item span:after {
+    content: "🌜";
+}
+
+html[data-theme="dark"] .theme-switch-item span:after {
+    content: "🌞";
 }
 
 .page-top .information {
@@ -379,10 +386,6 @@ a:active {
     flex: 7;
 }
 
-.sidebar .social-links i {
-    margin-right: 3px;
-}
-
 .sidebar .social-links li {
     display: inline;
     padding: 0 4px;
@@ -390,7 +393,8 @@ a:active {
 }
 
 .sidebar .social-links a {
-    color: var(--heading-color);
+    background-color: #a7f1e9;
+    padding: 4px;
 }
 
 .sidebar .social-links a:hover {

@@ -41,9 +41,9 @@ function init() {
   } else {
     // load a stored theme
     if (theme === "light") {
-      document.documentElement.setAttribute("data-theme", "light");
+      setTheme("light");
     } else {
-      document.documentElement.setAttribute("data-theme", "dark");
+      setTheme("dark");
     }
   }
 }

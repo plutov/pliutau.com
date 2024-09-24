@@ -15,13 +15,13 @@
             {{ if or (eq .Type "post") (eq .Type .Site.Params.postSectionName)
             }}
             <div class="info">
-                <em class="fas fa-calendar-day"></em>
+                <span>📅</span>
                 <span class="date"
                     >{{ if isset .Site.Params "singledateformat" }} {{
                     .Date.Format .Site.Params.singleDateFormat }} {{ else }}
                     {{.Date.Format "Mon, Jan 2, 2006"}} {{ end }}</span
                 >
-                <em class="fas fa-stopwatch"></em>
+                <span>⏱️</span>
                 <span class="reading-time"
                     >{{ i18n "reading_time" .ReadingTime }}</span
                 >

@@ -46,30 +46,20 @@ doNotLoadAnimations = false
 displayMode = "light"
 
 ## Social links
-# use 'fab' when brand icons, use 'fas' when standard solid icons.
 [[params.socialIcons]]
-icon = "fab fa-youtube"
-title = "GitHub"
-url = "https://www.youtube.com/packagemain"
-
-[[params.socialIcons]]
-icon = "fab fa-github"
-title = "GitHub"
+title = "github"
 url = "https://github.com/plutov"
 
 [[params.socialIcons]]
-icon = "fab fa-twitter"
-title = "GitHub"
-url = "https://twitter.com/pliutau"
+title = "x"
+url = "https://x.com/pliutau"
 
 [[params.socialIcons]]
-icon = "fab fa-linkedin"
-title = "Linkedin"
+title = "linkedin"
 url = "http://linkedin.com/in/pltvs"
 
 [[params.socialIcons]]
-icon = "fas fa-envelope"
-title = "Email"
+title = "email"
 url = "mailto:alex.pliutau@gmail.com"
 
 ## Menu items
