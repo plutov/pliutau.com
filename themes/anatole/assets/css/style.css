@@ -593,26 +593,20 @@ html[data-theme="dark"] .theme-switch-item span:after {
     list-style: none;
     margin: 0;
     padding: 0;
-    height: 15px;
 }
 
 .pagination ul li {
-    margin: 0 2px 0 2px;
+    margin: 0 6px 0 6px;
     display: inline;
     line-height: 1;
+    width: 15px;
 }
 
 .pagination ul li a {
     text-decoration: none;
-    color: var(--body-color);
-}
-
-.pagination .pre {
-    float: left;
-}
-
-.pagination .next {
-    float: right;
+    background: #a7f1e9;
+    padding: 8px;
+    text-align: center;
 }
 
 .like-reblog-buttons {

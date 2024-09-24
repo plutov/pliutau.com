@@ -2,7 +2,7 @@
 <ul class="pagination">
     {{ range $paginator.Pagers }}
     <li class="pagination__item">
-        <a href="{{ .URL }}" class="pagination__link"> {{ .PageNumber }} </a>
+        <a href="{{ .URL }}" class="pagination__link">{{ .PageNumber }}</a>
     </li>
     {{ end }}
 </ul>
