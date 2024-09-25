@@ -19,12 +19,6 @@ When it comes to **operating systems**, I was primarily working on macOS since I
 
 Now let's dive into a **software** a bit. I've been using VS Code for many years, and only recently switched to [Zed](https://zed.dev), nothing changed much there, but I like snappy editors that are really fast to open and run search over the codebase. I have a very slim setup with litle amount of plugins and Github Copilot. I don't use integrated terminal as for the last 2 years I've been using [Warp](https://www.warp.dev/) and it's really working well for me.
 
-Another software that I replaced recently is Docker Desktop, which I've been using since... well, since I installed Docker on my Macbook. I am currently using [Orbstack](https://orbstack.dev/) which is faster, has VMs and features like HTTPs and more. It takes few seconds to create a Ubuntu VM with orb cli:
-
-```bash
-orb create ubuntu test-machine
-```
-
 And then there are things like [Brave](https://brave.com/) browser, [Obsidian](https://obsidian.md/) for taking notes and a few other small apps. I hope they all work when I finally switch to Linux :)
 
 Anyway, the point here is that all these changes gave me a truly refreshing **change of scenery**, another perspective on day-to-day tasks and activities. And maybe I go back on few items here and there, but you never know unless you try it.
