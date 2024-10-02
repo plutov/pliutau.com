@@ -3,6 +3,7 @@ date = "2016-01-26T16:10:23+07:00"
 title = "Measure performance changes with benchcmp"
 tags = [ "golang", "benchmarking", "testing" ]
 type = "post"
+og_image = "/go_default.png"
 +++
 
 #### go test -bench=.
