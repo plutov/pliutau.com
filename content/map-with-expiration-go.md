@@ -3,7 +3,7 @@ date = "2024-10-02T20:17:12+02:00"
 title = "Map with Expiration in Go"
 tags = [ "golang" ]
 type = "post"
-og_image = "/go_default.png"
+og_image = "/godefault.png"
 +++
 
 In some cases your application doesn't need Redis, and internal in-memory map with locks and expiration will suffice.
