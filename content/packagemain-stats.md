@@ -1,5 +1,5 @@
 +++
-date = 2024-09-02T14:00:00+02:00
+date = 2024-10-04T10:00:00+02:00
 title = "packagemain.tech - Progress, Stats, and Future Plans"
 tags = [ "packagemain", "newsletter", "substack" ]
 type = "post"
@@ -11,11 +11,11 @@ On May 30th, 2024, me and my friend/colleague Julien posted our first article on
 
 ### Some stats first
 
-1. **18 articles** published.
-2. **2.5k+ subscribers**.
-3. Earned **€254.80** (few paid subscribers and one sponsor).
+1. **20 articles** published.
+2. **5k+ subscribers**.
+3. Earned ~**€400** (few paid subscribers and one sponsor).
 
-![stats](/pm_stats2.png)
+![stats](/pm_stats3.png)
 
 ### Our principles
 
@@ -28,7 +28,7 @@ Over this time we have learned a lot about the format we want to use for this ne
 
 ### How did we get here?
 
-I learned that many newsletters with good content as well don't reach these numbers, so let me just share what we did to get here:
+I learned that many newsletters with good content well don't reach these numbers, so let me just share what we did to get here:
 
 - **Consistency**. We published an article every week, sometimes even two.
 - **Branding**. Custom domain, logo, etc. I wish it could be even better but we're not designers.
@@ -40,6 +40,7 @@ I learned that many newsletters with good content as well don't reach these numb
 Few comments on Substack. It was a random decision to start writing on Substack, but I'm *mostly* happy with it. There is a lot of great functionality like recommendations which I mentioned above, post scheduling, analytics, payments etc. But few things could be improved:
 
 - **Code Highlighting**. It's a pain to write code in Substack. We're using a workaround with images, or just pasting the code as is in the greay box.
+- **Editor**. I wish it could support Markdown.
 - **Substack App and Notes**. In the beginning I tried to engage in different conversations in Substack Notes, but realized that it's not worth it. The audience is too small and everyone is an author there.
 
 ### Future plans
@@ -50,5 +51,6 @@ We're still motivated to continue writing good articles, so nothing changes here
 
 - [packagemain.tech](https://packagemain.tech)
 - [our github](https://github.com/plutov/packagemain)
+- [YouTube](https://www.youtube.com/packagemain)
 - [freeCodeCamp](https://www.freecodecamp.org/news/author/pltvs/)
 - [medium](https://medium.com/@pliutau)
