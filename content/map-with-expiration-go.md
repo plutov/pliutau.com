@@ -30,47 +30,51 @@ type item struct {
 type TTLMap struct {
     m map[string]*item
     // For safe access to the map
-    l sync.Mutex
+    mu sync.Mutex
 }
 
 func New(size int, maxTTL int) (m *TTLMap) {
-  // map is created with the given length
+    // map is created with the given length
     m = &TTLMap{m: make(map[string]*item, size)}
 
     // this goroutine will clean up the map from old items
     go func() {
-      // You can adjust this ticker to be more or less frequent
+        // You can adjust this ticker to be more or less frequent
         for now := range time.Tick(time.Second) {
-            m.l.Lock()
+            m.mu.Lock()
             for k, v := range m.m {
-                if now.Unix()-v.lastAccess > int64(maxTTL) {
+                if now.Unix() - v.lastAccess > int64(maxTTL) {
                     delete(m.m, k)
                 }
             }
-            m.l.Unlock()
+            m.mu.Unlock()
         }
     }()
 
     return
 }
 
+// Put adds a new item to the map or updates the existing one
 func (m *TTLMap) Put(k string, v interface{}) {
-    m.l.Lock()
-    defer m.l.Unlock()
+    m.mu.Lock()
+    defer m.mu.Unlock()
 
     it, ok := m.m[k]
     if !ok {
         it = &item{
             value: v,
         }
-        m.m[k] = it
     }
+    it.value = v
     it.lastAccess = time.Now().Unix()
+    m.m[k] = it
 }
 
+// Get returns the value of the given key if it exists
 func (m *TTLMap) Get(k string) (interface{}, bool) {
-    m.l.Lock()
-    defer m.l.Unlock()
+    m.mu.Lock()
+    defer m.mu.Unlock()
+
     if it, ok := m.m[k]; ok {
         it.lastAccess = time.Now().Unix()
         return it.value, true
@@ -79,10 +83,14 @@ func (m *TTLMap) Get(k string) (interface{}, bool) {
     return nil, false
 }
 
+// Delete removes the item from the map
 func (m *TTLMap) Delete(k string) {
-    m.l.Lock()
-    defer m.l.Unlock()
-    delete(m.m, k)
+    m.mu.Lock()
+    defer m.mu.Unlock()
+
+    if it, ok := m.m[k]; ok {
+        delete(m.m, k)
+    }
 }
 ```
 
