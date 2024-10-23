@@ -6,7 +6,7 @@ tags = ["golang", "bot", "slack", "nlu", "wit", "packagemain.tech"]
 og_image = "/wit.jpg"
 +++
 
-![wit](/wit.jpg)
+If you're looking to create AI agents and bots without any coding, [Runbear](https://runbear.io/posts/How-to-Build-Your-Own-AI-Slack-Bot?utm_source=pliutau-a) makes it super easy by offering a no-code platform that integrates seamlessly with Slack, MS Teams, HubSpot, and Zendesk, allowing you to set up custom AI assistants in just minutes.
 
 ### Building a Slack Bot with Go and Wit.ai
 
