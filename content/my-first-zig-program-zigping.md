@@ -23,7 +23,7 @@ I code in both Zed and Neovim, and it's very straightforward to setup [Zig LSP c
 
 ## Build System
 
-Ok, here I spent some time... For example, adding dependencies in Zig is not as simple as `go get` or `yarn add`, you have to fetch them manually first, then configure them in your `build.zig` file.
+Ok, here I spent some time... For example, adding dependencies in Zig is not as simple as `go get` or `yarn add`, you have to fetch them manually first using `zig fetch`, then configure them in your `build.zig` file.
 
 But on the other hand, this concept is really neat, so you can write your regular Zig code to package your program.
 
