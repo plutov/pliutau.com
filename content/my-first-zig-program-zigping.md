@@ -93,7 +93,7 @@ while (running.load(.monotonic)) {
 
 ## Error Handling
 
-After years of writing Go, I got used to `if err := func(); err != nil { ...` construct and I'm a admirer or it. And you can do a very similar handling in Zig, plus there is a nice use of `try/catch`.
+After years of writing Go, I got used to `if err := func(); err != nil { ...` construct and I'm a admirer of it. And you can do a very similar handling in Zig, plus there is a nice use of `try/catch`.
 
 You can simply use `try` if your function can return an error:
 
