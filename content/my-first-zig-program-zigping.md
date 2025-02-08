@@ -9,13 +9,13 @@ description = "A brief note on my first experience with Zig"
 
 For me the best way to learn something new is to actually build something with it. Yes, there is some hype around Zig nowadays (Ghostty, Bun are build in Zig), but don't listen to it, go try it out and see for yourself if it solves your problem or not.
 
+![zigping](/zigping.png)
+
 So, after briefly exploring the language features of Zig, I decided to tackle a small project.
 
 I love TUIs and decided to build a program similar to famous [gping](https://github.com/orf/gping). Why? I think it's a good learning ground as it means we have to work with network, threads, terminal, etc. I called it [zigping](https://github.com/plutov/zigping) :)
 
 Small note: I am coming from Go, where the memory is managed and the garbage collector handles allocation and deallocation automatically. But not in Zig!
-
-![zigping](/zigping.png)
 
 ## Setting up the dev environment
 
@@ -166,20 +166,6 @@ Zig is good at inferring the types automatically, so you don't have to always wr
 ## Syntax
 
 Nothing to complain about, but required semicolons?
-
-Ah, and also, no chained conditionals?
-
-```zig
-// you can't write that
-if (a > 0 && b > 0) {}
-
-// this is ok
-if (a > 0) {
-    if (b > 0) {
-
-    }
-}
-```
 
 ## Resources
 

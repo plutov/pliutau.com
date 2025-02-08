@@ -25,7 +25,7 @@ We will use DialogFlow API V1, V2 is slightly different in terms of request/resp
 
 Now let's decide the future user flow.
 
-There are 2 ways to start to talk to our Action: explicit invocation and implicit invocation. Explicit one is triggered when we tell Google "Talk to <action name>". In implicit invocation we can set up custom messages, but we will skip this option for our demo program. Basically you need to create an intent and describe possible sentences user may say.
+There are 2 ways to start to talk to our Action: explicit invocation and implicit invocation. Explicit one is triggered when we tell Google "Talk to {action name}". In implicit invocation we can set up custom messages, but we will skip this option for our demo program. Basically you need to create an intent and describe possible sentences user may say.
 
 We need to know user's location to get information, so first of all we need to ask for this permission. Google Action has functionality to ask for location permission. We need to send specific response to DialogFlow after user started to talk to Action.
 
@@ -45,7 +45,7 @@ Go to Fulfillment. There are 2 options to write a backend logic: using custom we
 
 You should already have Google Cloud project and `gcloud` SDK installed, so we can write `app.yaml` file to describe handlers and runtime:
 
-```
+```yaml
 runtime: go
 api_version: go1
 
@@ -56,7 +56,7 @@ handlers:
 
 Dialogflow will send 2 different requests to 1 endpoint: 1 for `location_permission` and 2 to `get` results.
 
-```
+```go
 package app
 
 import (
@@ -92,7 +92,7 @@ func handle(w http.ResponseWriter, r *http.Request) {
 
 In `handleLocationPermissionAction` we need to send back a specific response which will tell Dialogflow to ask for `DEVICE_PRECISE_LOCATION` permission. We set a question message telling user why we need location.
 
-```
+```go
 func handleLocationPermissionAction(w http.ResponseWriter, r *http.Request, dfReq DialogFlowRequest) {
 	json.NewEncoder(w).Encode(DialogFlowLocationResponse{
 		Speech: "PLACEHOLDER_FOR_PERMISSION",

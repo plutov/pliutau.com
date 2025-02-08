@@ -32,10 +32,10 @@ tabWidth = 4
 [params]
 googleAnalytics = "G-J98HDV96R0"
 gtagId = "G-J98HDV96R0"
-title = "Hi👋, I'm Alex Pliutau"
+title = "Alex Pliutau"
 author = "Alex Pliutau"
 copyright = "2025"
-description = "Staff Software Engineer BINARLY. Passionate about Backend, Go, DevOps."
+description = "Staff SWE @BINARLY\nPassionate about Backend, Go, DevOps."
 profilePicture = "/me.jpg"
 keywords = "backend, golang, programming, devops, microservices, cloud, kubernetes, api, software"
 favicon = "/"
