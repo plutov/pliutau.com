@@ -1161,6 +1161,14 @@ a.btn {
     --chr-gu-color: #75715e;
 }
 
+/* Fixes iOS font sizing anomaly */
+code {
+    text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
 /* Background */
 .bg {
     color: #abb2bf;
@@ -1171,6 +1179,7 @@ a.btn {
     color: #abb2bf;
     background-color: var(--secondary-bg-color);
     line-height: 1.5em;
+	font-size: 14px;
 }
 /* Other */
 .chroma .x {
@@ -1180,6 +1189,10 @@ a.btn {
 }
 /* CodeLine */
 .chroma .cl {
+	font-size: 14px;;
+}
+.chroma .cl span {
+	font-size: 14px;
 }
 /* LineLink */
 .chroma .lnlinks {
@@ -1226,6 +1239,7 @@ a.btn {
 /* Line */
 .chroma .line {
     display: flex;
+	font-size: 14px;
 }
 /* Keyword */
 .chroma .k {

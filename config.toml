@@ -22,12 +22,12 @@ hl_Lines = ''
 hl_inline = false
 lineAnchors = ''
 lineNoStart = 1
-lineNos = false
+lineNos = true
 lineNumbersInTable = true
 noClasses = true
 noHl = false
 style = 'onedark'
-tabWidth = 4
+tabWidth = 2
 
 [params]
 googleAnalytics = "G-J98HDV96R0"
