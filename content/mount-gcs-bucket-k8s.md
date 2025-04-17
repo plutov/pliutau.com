@@ -8,7 +8,7 @@ description = "Mounting Google Cloud Storage bucket to Kubernetes Pod using gcsf
 +++
 ![Mounting Google Cloud Storage bucket to Kubernetes Pod](/gcs-k8s.png)
 
-You may ask why doing this if we can use PersistentVolume? Though there may be multiple scenarios when mounting GCS bucket to you Kubernetes Pod is a good option:
+You may ask why doing this if we can use a PersistentVolume? Though there may be multiple scenarios when mounting a GCS bucket to you Kubernetes Pod is a good option:
 
 - You already have data in GCS bucket used by other services / people and you want to access it from your application deployed to k8s by using standard file system semantics.
 - You want write files by using standard file system semantics directly to GCS bucket to have access later.

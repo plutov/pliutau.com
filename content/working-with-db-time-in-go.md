@@ -7,7 +7,7 @@ og_image = "/godefault.png"
 description = "How to work with DATETIME/DATE columns and use Go standard time.Time avoiding manual string parsing."
 +++
 
-This post shows how to work with DATETIME/DATE columns in DB and use Go standard `time.Time` avoiding manual string parsing. This article contains examples using 2 packages: `database/sql` and `github.com/go-sql-driver/mysql`.
+This post shows how to work with `DATETIME`` / `DATE` database columns and use Go standard `time.Time` avoiding manual string parsing. This article contains examples using 2 packages: `database/sql` and `github.com/go-sql-driver/mysql`.
 
 ### Retrieve nullable time field using NullTime type
 
@@ -20,13 +20,13 @@ err := db.QueryRow("SELECT time FROM foo WHERE id = ?", id).Scan(&nt)
 if nt.Valid {
    // use nt.Time
 } else {
-   // NULL value
+   // NULL value if Valid is false
 }
 ```
 
 ### Use parseTime=true
 
-Assuming you're using the `go-sql-driver/mysql`  you can ask the driver to scan `DATE` and `DATETIME` automatically to `time.Time`, by adding [parseTime=true](https://github.com/go-sql-driver/mysql#timetime-support) to your connection string.
+You can ask the driver to scan `DATE` and `DATETIME` automatically to `time.Time`, by adding [parseTime=true](https://github.com/go-sql-driver/mysql#timetime-support) to your connection string (DSN).
 
 ```go
 db, err := sql.Open("mysql", "root:@/?parseTime=true")
@@ -38,6 +38,7 @@ db.QueryRow("SELECT current_timestamp()").Scan(&myTime)
 fmt.Println(myTime.Format(time.RFC3339))
 ```
 
-### It doesn't work with TIME column type
+### Limitation: TIME column type
 
-Notice that this doesn't work with `current_time`. If you must use `current_time` you'll need to do the parsing by yourself.
+Note that `parseTime=tru`e does not automatically convert the MySQL `TIME` column type to `time.Time`. The `TIM`E type represents a time of day or duration, not a full timestamp. You should scan `TIME` columns into `[]byte` or string and handle the parsing manually if needed.
+
